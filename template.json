@@ -1,0 +1,155 @@
+{
+    "Actor": {
+        "types": ["Jugador"],
+            "Jugador": {
+                "Salud": {
+                    "value": 0,
+                    "max": 0,
+                    "min": 0
+                },
+                "Estabilidad": {
+                  "value": 0,
+                  "max": 0,
+                  "min": 0
+                },
+                "Poder": {
+                  "value": 0,
+                  "max": 0,
+                  "min": 0
+                },
+                "Proezas": {
+                  "value": 0,
+                  "max": 0,
+                  "min": 0
+                },
+                "Carisma": 0,
+                "Destreza": 0,
+                "Fuerza": 0,
+                "Inteligencia": 0,
+                "Percepción": 0,
+                "Agilidad": 0,
+                "Aplomo": 0,
+                "Perspicacia": 0,
+                "Resistencia_Física": 0,
+                "Resistencia_Mental": 0,
+                "Protección_Daño": 0,
+                "Protección_Agilidad": 0,
+                "Protección_Penalización": 0,
+                "Iniciativa": 0,
+                "Recuerdo_Cuando": "false",
+                "Habilidades": {
+                  "Atletismo":{
+                    "Valor": 1,
+                    "Atributo": "Destreza"
+                  },
+                  "Auxilio":{
+                    "Valor": 1,
+                    "Atributo": "Inteligencia"
+                  },
+                  "Conducir":{
+                    "Valor": 1,
+                    "Atributo": "Destreza"
+                  },
+                  "Conversación":{
+                    "Valor": 1,
+                    "Atributo": "Carisma"
+                  },
+                  "Cultura":{
+                    "Valor": 1,
+                    "Atributo": "Inteligencia"
+                  },
+                  "Entorno":{
+                    "Valor": 1,
+                    "Atributo": "Percepción"
+                  },
+                  "Fuerza bruta":{
+                    "Valor": 1,
+                    "Atributo": "Fuerza"
+                  },
+                  "Idioma ext. 1":{
+                    "Valor": 1,
+                    "Atributo": "Inteligencia"
+                  },
+                  "Idioma ext. 2":{
+                    "Valor": 1,
+                    "Atributo": "Inteligencia"
+                  },
+                  "Información":{
+                    "Valor": 1,
+                    "Atributo": "Inteligencia"
+                  },
+                  "Intimidación":{
+                    "Valor": 1,
+                    "Atributo": "Carisma"
+                  },
+                  "Lucha":{
+                    "Valor": 1,
+                    "Atributo": "Destreza"
+                  },
+                  "Mecánica":{
+                    "Valor": 1,
+                    "Atributo": "Inteligencia"
+                  },
+                  "Memoria":{
+                    "Valor": 1,
+                    "Atributo": "Inteligencia"
+                  },
+                  "Observación":{
+                    "Valor": 1,
+                    "Atributo": "Percepción"
+                  },
+                  "Ocultación":{
+                    "Valor": 1,
+                    "Atributo": "Destreza"
+                  },
+                  "Oído":{
+                    "Valor": 1,
+                    "Atributo": "Percepción"
+                  },
+                  "Psicología":{
+                    "Valor": 1,
+                    "Atributo": "Percepción"
+                  },
+                  "Puntería":{
+                    "Valor": 1,
+                    "Atributo": "Percepción"
+                  },
+                  "Rastreo":{
+                    "Valor": 1,
+                    "Atributo": "Percepción"
+                  },
+                  "Seducción":{
+                    "Valor": 1,
+                    "Atributo": "Carisma"
+                  },
+                  "Sigilo":{
+                    "Valor": 1,
+                    "Atributo": "Destreza"
+                  },
+                  "Simulación":{
+                    "Valor": 1,
+                    "Atributo": "Carisma"
+                  },
+                  "Supervivencia":{
+                    "Valor": 1,
+                    "Atributo": "Percepción"
+                  },
+                  "Magia_Psiónica":{
+                    "Valor": 1,
+                    "Atributo": "Inteligencia"
+                  },
+                  "Auxilio":{
+                    "Valor": 1,
+                    "Atributo": "Inteligencia"
+                  }
+                },
+                "Profesión": "",
+                "Defecto_Leve": "",
+                "Defecto_Grave": "",
+                "Biografía": "",
+                "Experiencia": 0
+
+
+            }
+    }
+}
