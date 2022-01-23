@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Bangers";
+    src: url("/systems/ysystem/fonts/Bangers.ttf");
+}
+
 .espacio_habilidades {
   columns: 3;
   left: 22px;
@@ -16,4 +21,222 @@
 
 ol.lista-habilidades {
   list-style-type: none;
+}
+
+img {
+  border: none !important;
+  max-width: 100%;
+}
+.PJ-foto {
+  top: 1.5em;
+  left: 22.5em;
+  position: absolute;
+  width: 12em;
+  height: 12em;
+  text-align: center;
+  z-index: 0;
+}
+
+.PJ-foto img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
+}
+
+.PJ-nombre {
+  position: absolute;
+  top: 1.2em;
+  text-align: center;
+  z-index: 6;
+  left: 2em;
+  width: 17.5em;
+  background-color: blue;
+}
+
+.PJ-nombre input[type='text'] {
+  background-color: transparent;
+  font-family: inherit;
+  width: 10.6em;
+  font-size: 1.6em;
+  text-align: center;
+  color: Black !important;
+  border: none;
+}
+
+.espacio_atributos {
+  opacity: 0.5;
+  left: 9px;
+  top: 39px;
+  width: 56em;
+  height: 16em;
+  position: absolute;
+  background-color: green;
+}
+
+.atributo_select {
+  background-color: transparent;
+  position: absolute;
+  appearance: none;
+  text-align: center;
+  z-index: 6;
+  width: 1em;
+  height: 1em;
+  font-family: "Bangers";
+  color: Black !important;
+  font-size: 3em;
+}
+.atributo_select select{
+  appearance: none;
+  text-align: center;
+  font-family: "Bangers";
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+}
+
+.atributo_Carisma {
+  top: 1.7em;
+  left: 0.8em;
+}
+
+.atributo_Destreza {
+  top: 1.7em;
+  left: 3.1em;
+}
+
+.atributo_Fuerza {
+  top: 1.7em;
+  left: 5.3em;
+}
+
+.atributo_Inteligencia {
+  top: 3.7em;
+  left: 1.9em;
+}
+
+.atributo_Percepción {
+  top: 3.7em;
+  left: 4.2em;
+}
+
+.caract_valor {
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Bangers";
+  color: Black !important;
+  font-size: 3em;
+}
+
+.caract_Agilidad {
+  position: absolute;
+  top: 1em;
+  left: 11.8em;
+}
+
+.caract_Aplomo {
+  position: absolute;
+  top: 1em;
+  left: 14em;
+}
+
+.caract_Perspicacia {
+  position: absolute;
+  top: 1em;
+  left: 16.2em;
+}
+
+.caract_bono {
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Bangers";
+  color: Black !important;
+  font-size: 1.7em;
+}
+
+.caract_Agilidad_bono {
+  position: absolute;
+  top: 1.2em;
+  left: 23.5em;
+}
+
+.caract_Aplomo_bono {
+  position: absolute;
+  top: 1.2em;
+  left: 27.4em;
+}
+
+.caract_Perspicacia_bono {
+  position: absolute;
+  top: 1.2em;
+  left: 31.1em;
+}
+
+.caract_Proezas_valor_input {
+  background-color: transparent;
+  position: absolute;
+  top: 3em;
+  left: 11.6em;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Bangers";
+  color: Black !important;
+  font-size: 3em;
+}
+.caract_Proezas_valor_input input{
+  text-align: center;
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+  height: auto;
+}
+
+.caract_Proezas_Valor {
+  position: absolute;
+  top: 1.2em;
+  left: 31.1em;
+}
+
+.caract_Proezas_Max {
+  position: absolute;
+  top: 3em;
+  left: 12.8em;
+}
+
+.caract_Iniciativa {
+  position: absolute;
+  top: 3em;
+  left: 14.4em;
+}
+
+.caract_Estorbo {
+  position: absolute;
+  top: 3em;
+  left: 16.3em;
+}
+
+.espacio_vida {
+  opacity: 0.5;
+  left: 22px;
+  top: 264px;
+  width: 54em;
+  height: 7em;
+  position: absolute;
+  background-color: yellow;
+}
+
+.caract_R_Física {
+  position: absolute;
+  top: 0.8em;
+  left: 13.6em;
+}
+
+.caract_R_Mental {
+  position: absolute;
+  top: 0.8em;
+  left: 15.9em;
 }

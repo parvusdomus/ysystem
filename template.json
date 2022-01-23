@@ -45,6 +45,7 @@
                 "Protección_Agilidad": 0,
                 "Protección_Penalización": 0,
                 "Iniciativa": 0,
+                "Estorbo": 0,
                 "Recuerdo_Cuando": "false",
                 "Habilidades": {
                   "Atletismo":{

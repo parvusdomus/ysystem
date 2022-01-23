@@ -1,11 +1,82 @@
 <form class="{{cssClass}} flexcol" autocomplete="off">
   <img class="content-background" src="/systems/ysystem/assets/fichas/PJ-Bg.svg" alt="?"/>
-
-  <div class=espacio_habilidades>
+  <div class=espacio_atributos>
+    <div class="PJ-nombre"><input name="name" type="text" value="{{name}}" placeholder='Nombre'
+                                         onClick="this.select();"/></div>
+      <div class="PJ-foto">
+        <img class="profile-img" src="{{img}}" data-edit="img" title="{{name}}" alt='Imagen del Personaje'/>
+      </div>
+    <select class="atributo_Carisma atributo_select" name="data.Carisma" data-dtype="Number">
+      {{#select data.Carisma}}
+      <option value="0">+0</option>
+      <option value="1">+1</option>
+      <option value="2">+2</option>
+      <option value="4">+4</option>
+      <option value="6">+6</option>
+      {{/select}}
+    </select>
+    <select class="atributo_Destreza atributo_select" name="data.Destreza" data-dtype="Number">
+      {{#select data.Destreza}}
+      <option value="0">+0</option>
+      <option value="1">+1</option>
+      <option value="2">+2</option>
+      <option value="4">+4</option>
+      <option value="6">+6</option>
+      {{/select}}
+    </select>
+    <select class="atributo_Fuerza atributo_select" name="data.Fuerza" data-dtype="Number">
+      {{#select data.Fuerza}}
+      <option value="0">+0</option>
+      <option value="1">+1</option>
+      <option value="2">+2</option>
+      <option value="4">+4</option>
+      <option value="6">+6</option>
+      {{/select}}
+    </select>
+    <select class="atributo_Inteligencia atributo_select" name="data.Inteligencia" data-dtype="Number">
+      {{#select data.Inteligencia}}
+      <option value="0">+0</option>
+      <option value="1">+1</option>
+      <option value="2">+2</option>
+      <option value="4">+4</option>
+      <option value="6">+6</option>
+      {{/select}}
+    </select>
+    <select class="atributo_Percepción atributo_select" name="data.Percepción" data-dtype="Number">
+      {{#select data.Percepción}}
+      <option value="0">+0</option>
+      <option value="1">+1</option>
+      <option value="2">+2</option>
+      <option value="4">+4</option>
+      <option value="6">+6</option>
+      {{/select}}
+    </select>
+    <label class="caract_Agilidad caract_valor">{{data.Agilidad.Valor}}</label>
+    <label class="caract_Agilidad_bono caract_bono">{{data.Agilidad.Bono}}</label>
+    <label class="caract_Aplomo caract_valor">{{data.Aplomo.Valor}}</label>
+    <label class="caract_Aplomo_bono caract_bono">{{data.Aplomo.Bono}}</label>
+    <label class="caract_Perspicacia caract_valor">{{data.Perspicacia.Valor}}</label>
+    <label class="caract_Perspicacia_bono caract_bono">{{data.Perspicacia.Bono}}</label>
+    <div class="caract_Proezas_valor_input">
+        <input type="text" name="data.Proezas.value" value="{{data.Proezas.value}}" data-dtype="Number" maxlength="2"/>
+      </div>
+    <label class="caract_Proezas_Max caract_valor">{{data.Proezas.max}}</label>
+    <label class="caract_Iniciativa caract_valor">{{data.Iniciativa}}</label>
+    <label class="caract_Estorbo caract_valor">{{data.Estorbo}}</label>
+  </div>
+  <div class="espacio_vida">
+    <label class="caract_R_Física caract_valor">{{data.Resistencia_Física}}</label>
+    <label class="caract_R_Mental caract_valor">{{data.Resistencia_Mental}}</label>
+  </div>
+  <div class="espacio_habilidades">
     <ol class="lista-habilidades">
         {{#each data.Habilidades as |habilidad id|}}
           <li class=habilidad>
-            <label>{{habilidad.Nombre}}</label><span><i class="fas fa-circle"></i><i class="far fa-circle"></i><i class="far fa-circle"></i></span>
+            <label>{{habilidad.Nombre}}</label><span class="mod_habilidad" data-habilidad_id="{{id}}">
+              {{#if (gt habilidad.Valor 0)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
+              {{#if (gt habilidad.Valor 1)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
+              {{#if (gt habilidad.Valor 2)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
+            </span>
           </li>
         {{/each}}
   </div>
