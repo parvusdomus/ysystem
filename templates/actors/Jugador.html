@@ -1,5 +1,14 @@
 <form class="{{cssClass}} flexcol" autocomplete="off">
   <img class="content-background" src="/systems/ysystem/assets/fichas/PJ-Bg.svg" alt="?"/>
 
+  <div class=espacio_habilidades>
+    <ol class="lista-habilidades">
+        {{#each data.Habilidades as |habilidad id|}}
+          <li class=habilidad>
+            <label>{{habilidad.Nombre}}</label>
+          </li>
+        {{/each}}
+  </div>
+
 
 </form>

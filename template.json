@@ -48,106 +48,127 @@
                 "Recuerdo_Cuando": "false",
                 "Habilidades": {
                   "Atletismo":{
+                    "Nombre": "Atletismo",
                     "Valor": 1,
                     "Atributo": "Destreza"
                   },
                   "Auxilio":{
+                    "Nombre": "Auxilio",
                     "Valor": 1,
                     "Atributo": "Inteligencia"
                   },
                   "Conducir":{
+                    "Nombre": "Conducir",
                     "Valor": 1,
                     "Atributo": "Destreza"
                   },
                   "Conversación":{
+                    "Nombre": "Conversación",
                     "Valor": 1,
                     "Atributo": "Carisma"
                   },
                   "Cultura":{
+                    "Nombre": "Cultura",
                     "Valor": 1,
                     "Atributo": "Inteligencia"
                   },
                   "Entorno":{
+                    "Nombre": "Entorno",
                     "Valor": 1,
                     "Atributo": "Percepción"
                   },
-                  "Fuerza bruta":{
+                  "Fuerza_bruta":{
+                    "Nombre": "Fuerza bruta",
                     "Valor": 1,
                     "Atributo": "Fuerza"
                   },
-                  "Idioma ext. 1":{
+                  "Idioma_ext_1":{
+                    "Nombre": "Idioma ext. [1]",
                     "Valor": 1,
                     "Atributo": "Inteligencia"
                   },
-                  "Idioma ext. 2":{
+                  "Idioma_ext_2":{
+                    "Nombre": "Idioma ext. [2]",
                     "Valor": 1,
                     "Atributo": "Inteligencia"
                   },
                   "Información":{
+                    "Nombre": "Información",
                     "Valor": 1,
                     "Atributo": "Inteligencia"
                   },
                   "Intimidación":{
+                    "Nombre": "Intimidación",
                     "Valor": 1,
                     "Atributo": "Carisma"
                   },
                   "Lucha":{
+                    "Nombre": "Lucha",
                     "Valor": 1,
                     "Atributo": "Destreza"
                   },
                   "Mecánica":{
+                    "Nombre": "Mecánica",
                     "Valor": 1,
                     "Atributo": "Inteligencia"
                   },
                   "Memoria":{
+                    "Nombre": "Memoria",
                     "Valor": 1,
                     "Atributo": "Inteligencia"
                   },
                   "Observación":{
+                    "Nombre": "Observación",
                     "Valor": 1,
                     "Atributo": "Percepción"
                   },
                   "Ocultación":{
+                    "Nombre": "Ocultación",
                     "Valor": 1,
                     "Atributo": "Destreza"
                   },
                   "Oído":{
+                    "Nombre": "Oído",
                     "Valor": 1,
                     "Atributo": "Percepción"
                   },
                   "Psicología":{
+                    "Nombre": "Psicología",
                     "Valor": 1,
                     "Atributo": "Percepción"
                   },
                   "Puntería":{
+                    "Nombre": "Puntería",
                     "Valor": 1,
                     "Atributo": "Percepción"
                   },
                   "Rastreo":{
+                    "Nombre": "Rastreo",
                     "Valor": 1,
                     "Atributo": "Percepción"
                   },
                   "Seducción":{
+                    "Nombre": "Seducción",
                     "Valor": 1,
                     "Atributo": "Carisma"
                   },
                   "Sigilo":{
+                    "Nombre": "Sigilo",
                     "Valor": 1,
                     "Atributo": "Destreza"
                   },
                   "Simulación":{
+                    "Nombre": "Simulación",
                     "Valor": 1,
                     "Atributo": "Carisma"
                   },
                   "Supervivencia":{
+                    "Nombre": "Supervivencia",
                     "Valor": 1,
                     "Atributo": "Percepción"
                   },
                   "Magia_Psiónica":{
-                    "Valor": 1,
-                    "Atributo": "Inteligencia"
-                  },
-                  "Auxilio":{
+                    "Nombre": "Magia/Psiónica",
                     "Valor": 1,
                     "Atributo": "Inteligencia"
                   }

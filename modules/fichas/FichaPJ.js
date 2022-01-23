@@ -15,6 +15,8 @@ export default class FichaYsystem extends ActorSheet{
       if (this.actor.data.type == 'Jugador') {
         this._prepareCharacterItems(data);
         //this._calculaValores(data);
+        console.log ("ACTOR")
+        console.log (this.actor)
       }
       return data;
     }
