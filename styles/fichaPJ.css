@@ -1,0 +1,19 @@
+.espacio_habilidades {
+  columns: 3;
+  left: 22px;
+  top: 355px;
+  width: 54em;
+  height: 16em;
+  position: absolute;
+  background-color: red;
+}
+
+.habilidad{
+  font-size: 1.4em;
+  display: flex;
+  justify-content: space-between;
+}
+
+ol.lista-habilidades {
+  list-style-type: none;
+}

@@ -10,7 +10,7 @@
   "esmodules": [
       "ysystem.js"
     ],
-  "styles": [],
+  "styles": ["styles/fichaPJ.css"],
   "packs": [],
   "languages": [],
   "socket": false,
