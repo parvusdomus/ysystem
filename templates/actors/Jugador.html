@@ -65,7 +65,19 @@
     <label class="caract_Estorbo caract_valor">{{data.Estorbo}}</label>
   </div>
   <div class="espacio_vida">
+    <div class="PJ-defecto_grave"><input name="data.Defecto_Grave" type="text" value="{{data.Defecto_Grave}}" placeholder='Defecto Grave'
+                                         onClick="this.select();"/></div>
+    <div class="PJ-defecto_leve"><input name="data.Defecto_Leve" type="text" value="{{data.Defecto_Leve}}" placeholder='Defecto Leve'
+                                        onClick="this.select();"/></div>
+    <div class="caract_Salud_valor_input">
+      <input type="text" name="data.Salud.value" value="{{data.Salud.value}}" data-dtype="Number" maxlength="2"/>
+    </div>
+    <label class="caract_Salud_max caract_valor">{{data.Salud.max}}</label>
     <label class="caract_R_Física caract_valor">{{data.Resistencia_Física}}</label>
+    <div class="caract_Estabilidad_valor_input">
+      <input type="text" name="data.Estabilidad.value" value="{{data.Estabilidad.value}}" data-dtype="Number" maxlength="2"/>
+    </div>
+    <label class="caract_Estabilidad_max caract_valor">{{data.Estabilidad.max}}</label>
     <label class="caract_R_Mental caract_valor">{{data.Resistencia_Mental}}</label>
   </div>
   <div class="espacio_habilidades">

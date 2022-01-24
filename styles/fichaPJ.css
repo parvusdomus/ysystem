@@ -6,7 +6,7 @@
 .espacio_habilidades {
   columns: 3;
   left: 22px;
-  top: 355px;
+  top: 363px;
   width: 54em;
   height: 16em;
   position: absolute;
@@ -28,11 +28,11 @@ img {
   max-width: 100%;
 }
 .PJ-foto {
-  top: 1.5em;
-  left: 22.5em;
+  top: 4.1em;
+  left: 23.1em;
   position: absolute;
-  width: 12em;
-  height: 12em;
+  width: 10em;
+  height: 10em;
   text-align: center;
   z-index: 0;
 }
@@ -84,6 +84,7 @@ img {
   font-family: "Bangers";
   color: Black !important;
   font-size: 3em;
+  border: none;
 }
 .atributo_select select{
   appearance: none;
@@ -95,27 +96,27 @@ img {
 }
 
 .atributo_Carisma {
-  top: 1.7em;
+  top: 1.5em;
   left: 0.8em;
 }
 
 .atributo_Destreza {
-  top: 1.7em;
+  top: 1.5em;
   left: 3.1em;
 }
 
 .atributo_Fuerza {
-  top: 1.7em;
+  top: 1.5em;
   left: 5.3em;
 }
 
 .atributo_Inteligencia {
-  top: 3.7em;
+  top: 3.5em;
   left: 1.9em;
 }
 
 .atributo_Percepción {
-  top: 3.7em;
+  top: 3.5em;
   left: 4.2em;
 }
 
@@ -229,14 +230,106 @@ img {
   background-color: yellow;
 }
 
+.PJ-defecto_grave {
+  position: absolute;
+  top: 0.5em;
+  text-align: center;
+  z-index: 6;
+  left: 6.4em;
+  width: 17.5em;
+  background-color: blue;
+}
+
+.PJ-defecto_grave input[type='text'] {
+  background-color: transparent;
+  font-family: inherit;
+  width: 10.6em;
+  font-size: 1.6em;
+  text-align: center;
+  color: Black !important;
+  border: none;
+}
+
+.PJ-defecto_leve {
+  position: absolute;
+  top: 3.7em;
+  text-align: center;
+  z-index: 6;
+  left: 6.4em;
+  width: 17.5em;
+  background-color: blue;
+}
+
+.PJ-defecto_leve input[type='text'] {
+  background-color: transparent;
+  font-family: inherit;
+  width: 10.6em;
+  font-size: 1.6em;
+  text-align: center;
+  color: Black !important;
+  border: none;
+}
+
+.caract_Salud_valor_input {
+  background-color: transparent;
+  position: absolute;
+  top: 0.7em;
+  left: 8.2em;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Bangers";
+  color: Black !important;
+  font-size: 3em;
+}
+.caract_Salud_valor_input input{
+  text-align: center;
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+  height: auto;
+}
+
+.caract_Salud_max {
+  position: absolute;
+  top: 0.7em;
+  left: 9.3em;
+}
+
 .caract_R_Física {
   position: absolute;
-  top: 0.8em;
-  left: 13.6em;
+  top: 0.7em;
+  left: 11.1em;
+}
+
+.caract_Estabilidad_valor_input {
+  background-color: transparent;
+  position: absolute;
+  top: 0.7em;
+  left: 13.1em;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Bangers";
+  color: Black !important;
+  font-size: 3em;
+}
+.caract_Estabilidad_valor_input input{
+  text-align: center;
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+  height: auto;
+}
+
+.caract_Estabilidad_max {
+  position: absolute;
+  top: 0.7em;
+  left: 14.3em;
 }
 
 .caract_R_Mental {
   position: absolute;
-  top: 0.8em;
-  left: 15.9em;
+  top: 0.7em;
+  left: 16.1em;
 }
