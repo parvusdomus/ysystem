@@ -1,7 +1,6 @@
 import FichaYsystem from "./modules/fichas/FichaPJ.js";
 import FichaObjetoYsystem from "./modules/fichas/FichaObjeto.js";
-
-//import { preloadHandlebarsTemplates } from "./module/preloadTemplates.js";
+import { preloadHandlebarsTemplates } from "./modules/preloadTemplates.js";
 
 Hooks.once("init", function(){
     console.log("test | INICIALIZANDO HOJAS DE PERSONAJE DE Ysystem");
@@ -17,7 +16,7 @@ Hooks.once("init", function(){
       types: ['Arma','Armadura','Escudo']
     });
     console.log ("test | HOJAS INICIALIZADAS");
-    //console.log ("test | CARGANDO TEMPLATES");
-    //preloadHandlebarsTemplates();
-    //console.log ("test | TEMPLATES CARGADOS");
+    console.log ("test | CARGANDO TEMPLATES");
+    preloadHandlebarsTemplates();
+    console.log ("test | TEMPLATES CARGADOS");
 });

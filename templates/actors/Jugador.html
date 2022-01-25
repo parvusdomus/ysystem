@@ -64,44 +64,30 @@
     <label class="caract_Iniciativa caract_valor">{{data.Iniciativa}}</label>
     <label class="caract_Estorbo caract_valor">{{data.Estorbo}}</label>
   </div>
-  <div class="espacio_vida">
-    <div class="PJ-defecto_grave"><input name="data.Defecto_Grave" type="text" value="{{data.Defecto_Grave}}" placeholder='Defecto Grave'
-                                         onClick="this.select();"/></div>
-    <div class="PJ-defecto_leve"><input name="data.Defecto_Leve" type="text" value="{{data.Defecto_Leve}}" placeholder='Defecto Leve'
-                                        onClick="this.select();"/></div>
-    <div class="caract_Salud_valor_input">
-      <input type="text" name="data.Salud.value" value="{{data.Salud.value}}" data-dtype="Number" maxlength="2"/>
-    </div>
-    <label class="caract_Salud_max caract_valor">{{data.Salud.max}}</label>
-    <label class="caract_R_Física caract_valor">{{data.Resistencia_Física}}</label>
-    <div class="caract_Estabilidad_valor_input">
-      <input type="text" name="data.Estabilidad.value" value="{{data.Estabilidad.value}}" data-dtype="Number" maxlength="2"/>
-    </div>
-    <label class="caract_Estabilidad_max caract_valor">{{data.Estabilidad.max}}</label>
-    <label class="caract_R_Mental caract_valor">{{data.Resistencia_Mental}}</label>
-  </div>
-  <div class="espacio_habilidades">
-    <ol class="lista-habilidades">
-        {{#each data.Habilidades as |habilidad id|}}
-          <li class=habilidad>
-            <label>{{habilidad.Nombre}}</label>
-              {{#if (eq habilidad.Atributo "Percepción")}}<label> (P)</label>{{/if}}
-              {{#if (eq habilidad.Atributo "Carisma")}}<label> (C)</label>{{/if}}
-              {{#if (eq habilidad.Atributo "Destreza")}}<label> (D)</label>{{/if}}
-              {{#if (eq habilidad.Atributo "Inteligencia")}}<label> (I)</label>{{/if}}
-              {{#if (eq habilidad.Atributo "Fuerza")}}<label> (F)</label>{{/if}}
-              <span class="mod_habilidad" data-habilidad_id="{{id}}">
-              {{#if (gt habilidad.Valor 0)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
-              {{#if (gt habilidad.Valor 1)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
-              {{#if (gt habilidad.Valor 2)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
-            </span>
-          </li>
-        {{/each}}
-  </div>
-  <div class="espacio_armas">
+  <div class="character-tabs-info sheet-body">
 
+  {{!-- Sheet Tab Navigation --}}
+  <div class="character-tabs ysystem_charsheet_tab">
+    <nav class="sheet-tabs tabs" data-group="primary">
+      <a class="item general-tab" data-tab="general">General</a>
+      <a class="item equipo-tab" data-tab="equipo">Equipo</a>
+      <a class="item biografia-tab" data-tab="biografia">Biografía</a>
+    </nav>
   </div>
-  <div class="espacio_armaduras">
 
+  {{!-- General Tab --}}
+  <div class="tab Jugador_general" data-group="primary" data-tab="general">
+    {{> "/systems/ysystem/templates/actors/Jugador_partes/general.html"}}
   </div>
+
+  {{!-- Equipo Tab --}}
+  <div class="tab Jugador_equipo" data-group="primary" data-tab="equipo">
+    {{> "/systems/ysystem/templates/actors/Jugador_partes/equipo.html"}}
+  </div>
+
+  {{!-- Biografía Tab --}}
+  <div class="tab Jugador_biografia" data-group="primary" data-tab="biografia">
+    {{> "/systems/ysystem/templates/actors/Jugador_partes/bio.html"}}
+  </div>
+</div>
 </form>
