@@ -10,7 +10,6 @@
   width: 54em;
   height: 16em;
   position: absolute;
-  background-color: red;
 }
 
 .habilidad{
@@ -27,6 +26,7 @@ img {
   border: none !important;
   max-width: 100%;
 }
+
 .PJ-foto {
   top: 4.1em;
   left: 23.1em;
@@ -43,6 +43,35 @@ img {
   z-index: -1;
 }
 
+.recuerdo_label {
+  position: absolute;
+  top: 0.4em;
+  left: 15.3em;
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 7em;
+  font-family: "Bangers";
+  color: Black !important;
+  font-size: 1.5em;
+}
+
+.PJ_nombre_img {
+  top: 0.6em;
+  left: 0.5em;
+  position: absolute;
+  width: 21em;
+  height: 2.7em;
+  text-align: center;
+  z-index: 0;
+}
+
+.PJ_nombre_img img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
+}
+
 .PJ-nombre {
   position: absolute;
   top: 1.2em;
@@ -50,7 +79,6 @@ img {
   z-index: 6;
   left: 2em;
   width: 17.5em;
-  background-color: blue;
 }
 
 .PJ-nombre input[type='text'] {
@@ -64,13 +92,21 @@ img {
 }
 
 .espacio_atributos {
-  opacity: 0.5;
   left: 9px;
   top: 39px;
   width: 56em;
   height: 16em;
   position: absolute;
-  background-color: green;
+}
+
+.atributo_label {
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 4em;
+  font-family: "Bangers";
+  color: Black !important;
+  font-size: 1.5em;
 }
 
 .atributo_select {
@@ -95,29 +131,139 @@ img {
   border: none;
 }
 
+.carisma_label {
+  position: absolute;
+  top: 5.4em;
+  left: 0.7em;
+}
+
+.carisma_img {
+  top: 3.6em;
+  left: 1.7em;
+  position: absolute;
+  width: 4.5em;
+  height: 4.5em;
+  text-align: center;
+  z-index: 0;
+}
+
+.carisma_img img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
+}
+
 .atributo_Carisma {
-  top: 1.5em;
+  top: 1.4em;
   left: 0.8em;
 }
 
+.destreza_label {
+  position: absolute;
+  top: 5.4em;
+  left: 5.2em;
+}
+
+.destreza_img {
+  top: 3.6em;
+  left: 8.7em;
+  position: absolute;
+  width: 4.5em;
+  height: 4.5em;
+  text-align: center;
+  z-index: 0;
+}
+
+.destreza_img img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
+}
+
 .atributo_Destreza {
-  top: 1.5em;
+  top: 1.4em;
   left: 3.1em;
 }
 
+.fuerza_label {
+  position: absolute;
+  top: 5.4em;
+  left: 9.5em;
+}
+
+.fuerza_img {
+  top: 3.6em;
+  left: 15.2em;
+  position: absolute;
+  width: 4.5em;
+  height: 4.5em;
+  text-align: center;
+  z-index: 0;
+}
+
+.fuerza_img img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
+}
+
 .atributo_Fuerza {
-  top: 1.5em;
+  top: 1.4em;
   left: 5.3em;
 }
 
+.inteligencia_label {
+  position: absolute;
+  top: 9.6em;
+  left: 2.7em;
+}
+
+.inteligencia_img {
+  top: 9.7em;
+  left: 4.9em;
+  position: absolute;
+  width: 4.5em;
+  height: 4.5em;
+  text-align: center;
+  z-index: 0;
+}
+
+.inteligencia_img img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
+}
+
 .atributo_Inteligencia {
-  top: 3.5em;
-  left: 1.9em;
+  top: 3.4em;
+  left: 1.8em;
+}
+
+.percepcion_label {
+  position: absolute;
+  top: 9.6em;
+  left: 7.4em;
+}
+
+.percepcion_img {
+  top: 9.7em;
+  left: 11.7em;
+  position: absolute;
+  width: 4.5em;
+  height: 4.5em;
+  text-align: center;
+  z-index: 0;
+}
+
+.percepcion_img img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
 }
 
 .atributo_Percepción {
-  top: 3.5em;
-  left: 4.2em;
+  top: 3.4em;
+  left: 4.1em;
 }
 
 .caract_valor {
@@ -130,16 +276,82 @@ img {
   font-size: 3em;
 }
 
+.agilidad_label {
+  position: absolute;
+  top: 5.1em;
+  left: 23.6em;
+}
+
+.agilidad_img {
+  top: 3.3em;
+  left: 36.1em;
+  position: absolute;
+  width: 4.5em;
+  height: 4.5em;
+  text-align: center;
+  z-index: 0;
+}
+
+.agilidad_img img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
+}
+
 .caract_Agilidad {
   position: absolute;
   top: 1.3em;
-  left: 11.8em;
+  left: 11.7em;
+}
+
+.aplomo_label {
+  position: absolute;
+  top: 5.1em;
+  left: 28.1em;
+}
+
+.aplomo_img {
+  top: 3.3em;
+  left: 43em;
+  position: absolute;
+  width: 4.5em;
+  height: 4.5em;
+  text-align: center;
+  z-index: 0;
+}
+
+.aplomo_img img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
 }
 
 .caract_Aplomo {
   position: absolute;
   top: 1.3em;
   left: 14em;
+}
+
+.perspicacia_label {
+  position: absolute;
+  top: 5.1em;
+  left: 32.4em;
+}
+
+.perspicacia_img {
+  top: 3.3em;
+  left: 49.5em;
+  position: absolute;
+  width: 4.5em;
+  height: 4.5em;
+  text-align: center;
+  z-index: 0;
+}
+
+.perspicacia_img img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
 }
 
 .caract_Perspicacia {
@@ -158,10 +370,42 @@ img {
   font-size: 1.7em;
 }
 
+.agilidad_bono_img {
+  top: 3em;
+  left: 40.7em;
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  z-index: 0;
+}
+
+.agilidad_bono_img img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
+}
+
 .caract_Agilidad_bono {
   position: absolute;
   top: 1.9em;
   left: 23.5em;
+}
+
+.aplomo_bono_img {
+  top: 3em;
+  left: 47.4em;
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  z-index: 0;
+}
+
+.aplomo_bono_img img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
 }
 
 .caract_Aplomo_bono {
@@ -170,11 +414,51 @@ img {
   left: 27.4em;
 }
 
+.perspicacia_bono_img {
+  top: 3em;
+  left: 53.7em;
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  z-index: 0;
+}
+
+.perspicacia_bono_img img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
+}
+
 .caract_Perspicacia_bono {
   position: absolute;
   top: 1.9em;
   left: 31.1em;
 }
+
+.proezas_label {
+  position: absolute;
+  top: 9.3em;
+  left: 24.5em;
+}
+
+.proezas_img {
+  top: 9.2em;
+  left: 35.7em;
+  position: absolute;
+  width: 8em;
+  height: 5em;
+  text-align: center;
+  z-index: 0;
+}
+
+.proezas_img img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
+}
+
+
 
 .caract_Proezas_valor_input {
   background-color: transparent;
@@ -202,10 +486,54 @@ img {
   left: 12.8em;
 }
 
+.iniciativa_label {
+  position: absolute;
+  top: 9.3em;
+  left: 29.1em;
+}
+
+.iniciativa_img {
+  top: 9.4em;
+  left: 44.2em;
+  position: absolute;
+  width: 4.5em;
+  height: 4.5em;
+  text-align: center;
+  z-index: 0;
+}
+
+.iniciativa_img img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
+}
+
 .caract_Iniciativa {
   position: absolute;
   top: 3.4em;
   left: 14.4em;
+}
+
+.estorbo_label {
+  position: absolute;
+  top: 9.3em;
+  left: 32.7em;
+}
+
+.estorbo_img {
+  top: 9.4em;
+  left: 49.9em;
+  position: absolute;
+  width: 4.5em;
+  height: 4.5em;
+  text-align: center;
+  z-index: 0;
+}
+
+.estorbo_img img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
 }
 
 .caract_Estorbo {
@@ -215,13 +543,43 @@ img {
 }
 
 .espacio_vida {
-  opacity: 0.5;
   left: 22px;
   top: 264px;
   width: 54em;
   height: 7em;
   position: absolute;
-  background-color: yellow;
+}
+
+.defecto_label {
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 3em;
+  font-family: "Bangers";
+  color: Black !important;
+  font-size: 2em;
+}
+
+.defecto_grave_label {
+  position: absolute;
+  top: 0.3em;
+  left: -0.5em;
+}
+
+.PJ_defecto_grave_img {
+  top: 0.1em;
+  left: 5.5em;
+  position: absolute;
+  width: 19em;
+  height: 3em;
+  text-align: center;
+  z-index: 0;
+}
+
+.PJ_defecto_grave_img img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
 }
 
 .PJ-defecto_grave {
@@ -231,7 +589,6 @@ img {
   z-index: 6;
   left: 6.4em;
   width: 17.5em;
-  background-color: blue;
 }
 
 .PJ-defecto_grave input[type='text'] {
@@ -244,6 +601,28 @@ img {
   border: none;
 }
 
+.defecto_leve_label {
+  position: absolute;
+  top: 1.8em;
+  left: -0.9em;
+}
+
+.PJ_defecto_leve_img {
+  top: 3.1em;
+  left: 5.5em;
+  position: absolute;
+  width: 19em;
+  height: 3em;
+  text-align: center;
+  z-index: 0;
+}
+
+.PJ_defecto_leve_img img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
+}
+
 .PJ-defecto_leve {
   position: absolute;
   top: 3.7em;
@@ -251,7 +630,6 @@ img {
   z-index: 6;
   left: 6.4em;
   width: 17.5em;
-  background-color: blue;
 }
 
 .PJ-defecto_leve input[type='text'] {
@@ -264,11 +642,43 @@ img {
   border: none;
 }
 
+.caract_label {
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 4em;
+  font-family: "Bangers";
+  color: Black !important;
+  font-size: 1.5em;
+}
+
+.salud_label {
+  position: absolute;
+  top: -0.2em;
+  left: 17.8em;
+}
+
+.PJ_salud_img {
+  top: 1.1em;
+  left: 25.5em;
+  position: absolute;
+  width: 8em;
+  height: 5em;
+  text-align: center;
+  z-index: 0;
+}
+
+.PJ_salud_img img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
+}
+
 .caract_Salud_valor_input {
   background-color: transparent;
   position: absolute;
   top: 0.7em;
-  left: 8.2em;
+  left: 8.3em;
   text-align: center;
   z-index: 6;
   width: 2em;
@@ -287,20 +697,64 @@ img {
 .caract_Salud_max {
   position: absolute;
   top: 0.7em;
-  left: 9.3em;
+  left: 9.4em;
+}
+
+.r_fisica_label {
+  position: absolute;
+  top: -0.2em;
+  left: 22.7em;
+}
+
+.PJ_r_fisica_img {
+  top: 1.4em;
+  left: 34.7em;
+  position: absolute;
+  width: 4.5em;
+  height: 4.5em;
+  text-align: center;
+  z-index: 0;
+}
+
+.PJ_r_fisica_img img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
 }
 
 .caract_R_Física {
   position: absolute;
   top: 0.7em;
-  left: 11.1em;
+  left: 11.3em;
+}
+
+.estabilidad_label {
+  position: absolute;
+  top: -0.2em;
+  left: 28em;
+}
+
+.PJ_estabilidad_img {
+  top: 1.1em;
+  left: 41em;
+  position: absolute;
+  width: 8em;
+  height: 5em;
+  text-align: center;
+  z-index: 0;
+}
+
+.PJ_estabilidad_img img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
 }
 
 .caract_Estabilidad_valor_input {
   background-color: transparent;
   position: absolute;
   top: 0.7em;
-  left: 13.1em;
+  left: 13.4em;
   text-align: center;
   z-index: 6;
   width: 2em;
@@ -319,13 +773,35 @@ img {
 .caract_Estabilidad_max {
   position: absolute;
   top: 0.7em;
-  left: 14.3em;
+  left: 14.5em;
+}
+
+.r_mental_label {
+  position: absolute;
+  top: -0.2em;
+  left: 33.1em;
+}
+
+.PJ_r_mental_img {
+  top: 1.4em;
+  left: 50em;
+  position: absolute;
+  width: 4.5em;
+  height: 4.5em;
+  text-align: center;
+  z-index: 0;
+}
+
+.PJ_r_mental_img img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
 }
 
 .caract_R_Mental {
   position: absolute;
   top: 0.7em;
-  left: 16.1em;
+  left: 16.4em;
 }
 
 .espacio_armas {
@@ -348,4 +824,61 @@ img {
   height: 7em;
   position: absolute;
   background-color: blue;
+}
+
+.ysystem_charsheet_tab{
+  top: 1.8em;
+  left: 28em;
+  width: 7em;
+  font-family: "Bangers";
+  color: Black !important;
+  font-size: 1.5em;
+  text-align: center;
+  position: absolute;
+}
+
+.sheet nav.sheet-tabs {
+    height: 32px;
+    flex: 0 0 32px;
+    margin: 6px 0;
+    line-height: 32px;
+    border-top: 0px solid #b5b3a4;
+    border-bottom: 0px solid #b5b3a4;
+}
+
+.general-tab, .equipo-tab, .biografia-tab {
+  background-image: url(/systems/ysystem/assets/fichas/Tabs.svg);
+  background-position-x: -2px;
+  padding-top: 0.15em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  display: block;
+  background-color: unset !important;
+}
+
+a.general-tab:hover, .equipo-tab:hover, .biografia-tab:hover{
+  background-image: url(/systems/ysystem/assets/fichas/Tabs-Hover.svg);
+  color: LightGrey;
+}
+
+a.general-tab.active, .equipo-tab.active, .biografia-tab.active{
+  background-image: url(/systems/ysystem/assets/fichas/Tabs-Active.svg);
+  color: LightGrey;
+  text-shadow: none !important;
+}
+
+.character-tabs-info {
+  background: transparent !important;
+}
+
+.Jugador_contenedor_biografia{
+  position: absolute;
+  left:0.6em;
+  top: 19em;
+  width: 56em;
+  height: 30em;
+  background-color: orange;
+  overflow-y: scroll;
+  border: none;
+  border-width: 0;
 }

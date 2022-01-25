@@ -1,70 +1,109 @@
 <form class="{{cssClass}} flexcol" autocomplete="off">
   <img class="content-background" src="/systems/ysystem/assets/fichas/PJ-Bg.svg" alt="?"/>
   <div class=espacio_atributos>
+    <label class="recuerdo_label">Recuerdo cuando...</label>
+    <img class="PJ_nombre_img" src="/systems/ysystem/assets/fichas/cuadro_nombre.png" alt="?"/>
     <div class="PJ-nombre"><input name="name" type="text" value="{{name}}" placeholder='Nombre'
                                          onClick="this.select();"/></div>
       <div class="PJ-foto">
         <img class="profile-img" src="{{img}}" data-edit="img" title="{{name}}" alt='Imagen del Personaje'/>
       </div>
-    <select class="atributo_Carisma atributo_select" name="data.Carisma" data-dtype="Number">
-      {{#select data.Carisma}}
-      <option value="0">+0</option>
-      <option value="1">+1</option>
-      <option value="2">+2</option>
-      <option value="4">+4</option>
-      <option value="6">+6</option>
-      {{/select}}
-    </select>
-    <select class="atributo_Destreza atributo_select" name="data.Destreza" data-dtype="Number">
-      {{#select data.Destreza}}
-      <option value="0">+0</option>
-      <option value="1">+1</option>
-      <option value="2">+2</option>
-      <option value="4">+4</option>
-      <option value="6">+6</option>
-      {{/select}}
-    </select>
-    <select class="atributo_Fuerza atributo_select" name="data.Fuerza" data-dtype="Number">
-      {{#select data.Fuerza}}
-      <option value="0">+0</option>
-      <option value="1">+1</option>
-      <option value="2">+2</option>
-      <option value="4">+4</option>
-      <option value="6">+6</option>
-      {{/select}}
-    </select>
-    <select class="atributo_Inteligencia atributo_select" name="data.Inteligencia" data-dtype="Number">
-      {{#select data.Inteligencia}}
-      <option value="0">+0</option>
-      <option value="1">+1</option>
-      <option value="2">+2</option>
-      <option value="4">+4</option>
-      <option value="6">+6</option>
-      {{/select}}
-    </select>
-    <select class="atributo_Percepción atributo_select" name="data.Percepción" data-dtype="Number">
-      {{#select data.Percepción}}
-      <option value="0">+0</option>
-      <option value="1">+1</option>
-      <option value="2">+2</option>
-      <option value="4">+4</option>
-      <option value="6">+6</option>
-      {{/select}}
-    </select>
-    <label class="caract_Agilidad caract_valor">{{data.Agilidad.Valor}}</label>
-    <label class="caract_Agilidad_bono caract_bono">{{data.Agilidad.Bono}}</label>
-    <label class="caract_Aplomo caract_valor">{{data.Aplomo.Valor}}</label>
-    <label class="caract_Aplomo_bono caract_bono">{{data.Aplomo.Bono}}</label>
-    <label class="caract_Perspicacia caract_valor">{{data.Perspicacia.Valor}}</label>
-    <label class="caract_Perspicacia_bono caract_bono">{{data.Perspicacia.Bono}}</label>
-    <div class="caract_Proezas_valor_input">
+      <label class="carisma_label atributo_label">Carisma</label>
+      <img class="carisma_img" src="/systems/ysystem/assets/fichas/circulo_blanco.png" alt="?"/>
+      <select class="atributo_Carisma atributo_select" name="data.Carisma" data-dtype="Number">
+        {{#select data.Carisma}}
+          <option value="0">+0</option>
+          <option value="1">+1</option>
+          <option value="2">+2</option>
+          <option value="4">+4</option>
+          <option value="6">+6</option>
+        {{/select}}
+      </select>
+      <label class="destreza_label atributo_label">Destreza</label>
+      <img class="destreza_img" src="/systems/ysystem/assets/fichas/circulo_blanco.png" alt="?"/>
+      <select class="atributo_Destreza atributo_select" name="data.Destreza" data-dtype="Number">
+        {{#select data.Destreza}}
+          <option value="0">+0</option>
+          <option value="1">+1</option>
+          <option value="2">+2</option>
+          <option value="4">+4</option>
+          <option value="6">+6</option>
+        {{/select}}
+      </select>
+      <label class="fuerza_label atributo_label">Fuerza</label>
+      <img class="fuerza_img" src="/systems/ysystem/assets/fichas/circulo_blanco.png" alt="?"/>
+      <select class="atributo_Fuerza atributo_select" name="data.Fuerza" data-dtype="Number">
+        {{#select data.Fuerza}}
+          <option value="0">+0</option>
+          <option value="1">+1</option>
+          <option value="2">+2</option>
+          <option value="4">+4</option>
+          <option value="6">+6</option>
+        {{/select}}
+      </select>
+      <label class="inteligencia_label atributo_label">Inteligencia</label>
+      <img class="inteligencia_img" src="/systems/ysystem/assets/fichas/circulo_blanco.png" alt="?"/>
+      <select class="atributo_Inteligencia atributo_select" name="data.Inteligencia" data-dtype="Number">
+        {{#select data.Inteligencia}}
+          <option value="0">+0</option>
+          <option value="1">+1</option>
+          <option value="2">+2</option>
+          <option value="4">+4</option>
+          <option value="6">+6</option>
+        {{/select}}
+      </select>
+      <label class="percepcion_label atributo_label">Percepción</label>
+      <img class="percepcion_img" src="/systems/ysystem/assets/fichas/circulo_blanco.png" alt="?"/>
+      <select class="atributo_Percepción atributo_select" name="data.Percepción" data-dtype="Number">
+        {{#select data.Percepción}}
+          <option value="0">+0</option>
+          <option value="1">+1</option>
+          <option value="2">+2</option>
+          <option value="4">+4</option>
+          <option value="6">+6</option>
+        {{/select}}
+      </select>
+      <label class="agilidad_label atributo_label">Agilidad</label>
+      <img class="agilidad_img" src="/systems/ysystem/assets/fichas/circulo_gris.png" alt="?"/>
+      <label class="caract_Agilidad caract_valor">{{data.Agilidad.Valor}}</label>
+      {{#if (eq data.Agilidad.Bono 0)}}
+        <img class="agilidad_bono_img activa_mod" data-bono_nombre="Agilidad" src="/systems/ysystem/assets/fichas/circulo_pequeno.png" alt="?"/>
+      {{else}}
+        <img class="agilidad_bono_img activa_mod" data-bono_nombre="Agilidad" src="/systems/ysystem/assets/fichas/circulo_pequeno_rojo.png" alt="?"/>
+      {{/if}}
+      <label class="caract_Agilidad_bono caract_bono activa_mod" data-bono_nombre="Agilidad">{{data.Agilidad.Bono}}</label>
+      <label class="aplomo_label atributo_label">Aplomo</label>
+      <img class="aplomo_img" src="/systems/ysystem/assets/fichas/circulo_gris.png" alt="?"/>
+      <label class="caract_Aplomo caract_valor">{{data.Aplomo.Valor}}</label>
+      {{#if (eq data.Aplomo.Bono 0)}}
+        <img class="aplomo_bono_img activa_mod" data-bono_nombre="Aplomo" src="/systems/ysystem/assets/fichas/circulo_pequeno.png" alt="?"/>
+      {{else}}
+        <img class="aplomo_bono_img activa_mod" data-bono_nombre="Aplomo" src="/systems/ysystem/assets/fichas/circulo_pequeno_rojo.png" alt="?"/>
+      {{/if}}
+      <label class="caract_Aplomo_bono caract_bono activa_mod" data-bono_nombre="Aplomo">{{data.Aplomo.Bono}}</label>
+      <label class="perspicacia_label atributo_label">Perspicacia</label>
+      <img class="perspicacia_img" src="/systems/ysystem/assets/fichas/circulo_gris.png" alt="?"/>
+      <label class="caract_Perspicacia caract_valor">{{data.Perspicacia.Valor}}</label>
+      {{#if (eq data.Perspicacia.Bono 0)}}
+        <img class="perspicacia_bono_img activa_mod" data-bono_nombre="Perspicacia" src="/systems/ysystem/assets/fichas/circulo_pequeno.png" alt="?"/>
+      {{else}}
+        <img class="perspicacia_bono_img activa_mod" data-bono_nombre="Perspicacia" src="/systems/ysystem/assets/fichas/circulo_pequeno_rojo.png" alt="?"/>
+      {{/if}}
+      <label class="caract_Perspicacia_bono caract_bono activa_mod" data-bono_nombre="Perspicacia">{{data.Perspicacia.Bono}}</label>
+      <label class="proezas_label atributo_label">Proezas</label>
+      <img class="proezas_img" src="/systems/ysystem/assets/fichas/cuadro_dos_valores.png" alt="?"/>
+      <div class="caract_Proezas_valor_input">
         <input type="text" name="data.Proezas.value" value="{{data.Proezas.value}}" data-dtype="Number" maxlength="2"/>
       </div>
-    <label class="caract_Proezas_Max caract_valor">{{data.Proezas.max}}</label>
-    <label class="caract_Iniciativa caract_valor">{{data.Iniciativa}}</label>
-    <label class="caract_Estorbo caract_valor">{{data.Estorbo}}</label>
-  </div>
-  <div class="character-tabs-info sheet-body">
+      <label class="caract_Proezas_Max caract_valor">{{data.Proezas.max}}</label>
+      <label class="iniciativa_label atributo_label">Iniciativa</label>
+      <img class="iniciativa_img" src="/systems/ysystem/assets/fichas/circulo_gris.png" alt="?"/>
+      <label class="caract_Iniciativa caract_valor">{{data.Iniciativa}}</label>
+      <label class="estorbo_label atributo_label">Estorbo</label>
+      <img class="estorbo_img" src="/systems/ysystem/assets/fichas/circulo_gris.png" alt="?"/>
+      <label class="caract_Estorbo caract_valor">{{data.Estorbo}}</label>
+    </div>
+    <div class="character-tabs-info sheet-body">
 
   {{!-- Sheet Tab Navigation --}}
   <div class="character-tabs ysystem_charsheet_tab">

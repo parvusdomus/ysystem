@@ -1,0 +1,46 @@
+.editor {
+  height: 100%;
+  background: transparent;
+}
+
+.tox .tox-toolbar, .tox .tox-toolbar__overflow, .tox .tox-toolbar__primary {
+  background-color: var(--item-active) !important;
+  size: 50%;
+}
+
+.tox .tox-tbtn svg {
+  display: block;
+  fill: var(--default-color);
+}
+
+.tox .tox-tbtn:hover svg {
+  fill: var(--light-color) !important;
+}
+
+.tox .tox-toolbar, .tox .tox-toolbar__overflow, .tox .tox-toolbar__primary {
+  background: var(--item-active) none !important;
+  display: flex;
+  flex: 0 0 auto;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  padding: 0 0;
+  border-bottom: 1px solid var(--header-border);
+}
+
+.tox .tox-edit-area {
+  display: flex;
+  flex: 1;
+  -ms-flex-preferred-size: auto;
+  overflow: hidden;
+  position: relative;
+  padding-left: 0.5em;
+  background-color: var(--form-light);
+}
+
+.tox .tox-editor-container {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  overflow: hidden;
+  background: transparent;
+}

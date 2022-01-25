@@ -1,19 +1,43 @@
 <form class="{{cssClass}}" autocomplete="off">
   <div class="Jugador_contenedor_general">
     <div class="espacio_vida">
+      <label class="defecto_grave_label defecto_label">D. Grave</label>
+      <img class="PJ_defecto_grave_img" src="/systems/ysystem/assets/fichas/cuadro_defecto.png" alt="?"/>
       <div class="PJ-defecto_grave"><input name="data.Defecto_Grave" type="text" value="{{data.Defecto_Grave}}" placeholder='Defecto Grave'
                                            onClick="this.select();"/></div>
+      <label class="defecto_leve_label defecto_label">D. Leve</label>
+      <img class="PJ_defecto_leve_img" src="/systems/ysystem/assets/fichas/cuadro_defecto.png" alt="?"/>
       <div class="PJ-defecto_leve"><input name="data.Defecto_Leve" type="text" value="{{data.Defecto_Leve}}" placeholder='Defecto Leve'
                                           onClick="this.select();"/></div>
+      <label class="salud_label caract_label">Salud</label>
+      {{#if (gt data.Salud.value 10)}}
+        <img class="PJ_salud_img" src="/systems/ysystem/assets/fichas/cuadro_dos_valores.png" alt="?"/>
+      {{else}}
+        {{#if (gt data.Salud.value 6)}}
+          <img class="PJ_salud_img" src="/systems/ysystem/assets/fichas/cuadro_dos_valores_1D.png" alt="?"/>
+        {{else}}
+          {{#if (gt data.Salud.value 3)}}
+            <img class="PJ_salud_img" src="/systems/ysystem/assets/fichas/cuadro_dos_valores_2D.png" alt="?"/>
+          {{else}}
+            <img class="PJ_salud_img" src="/systems/ysystem/assets/fichas/cuadro_dos_valores_3D.png" alt="?"/>
+          {{/if}}
+        {{/if}}
+      {{/if}}
       <div class="caract_Salud_valor_input">
         <input type="text" name="data.Salud.value" value="{{data.Salud.value}}" data-dtype="Number" maxlength="2"/>
       </div>
       <label class="caract_Salud_max caract_valor">{{data.Salud.max}}</label>
+      <label class="r_fisica_label caract_label">R. Física</label>
+      <img class="PJ_r_fisica_img" src="/systems/ysystem/assets/fichas/circulo_gris.png" alt="?"/>
       <label class="caract_R_Física caract_valor">{{data.Resistencia_Física}}</label>
+      <label class="estabilidad_label caract_label">Estabilidad</label>
+      <img class="PJ_estabilidad_img" src="/systems/ysystem/assets/fichas/cuadro_dos_valores.png" alt="?"/>
       <div class="caract_Estabilidad_valor_input">
         <input type="text" name="data.Estabilidad.value" value="{{data.Estabilidad.value}}" data-dtype="Number" maxlength="2"/>
       </div>
       <label class="caract_Estabilidad_max caract_valor">{{data.Estabilidad.max}}</label>
+      <label class="r_mental_label caract_label">R. Mental</label>
+      <img class="PJ_r_mental_img" src="/systems/ysystem/assets/fichas/circulo_gris.png" alt="?"/>
       <label class="caract_R_Mental caract_valor">{{data.Resistencia_Mental}}</label>
     </div>
     <div class="espacio_habilidades">

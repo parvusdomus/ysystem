@@ -119,6 +119,43 @@ activateListeners(html) {
           update.id = this.actor.id;
           this.actor.update(update, {diff: true});
         });
+        //Gasta una proeza para mejorar Agilidad/Perspicacia/Aplomo
+        html.find('.activa_mod').click(ev => {
+          const element = ev.currentTarget;
+          const dataset = element.dataset;
+          const bono_nombre=dataset.bono_nombre;
+          const update = {};
+          update.data = {};
+          var valor_nuevo=0;
+          var proezas=this.actor.data.data.Proezas.value;
+          var valor_actual=Number(this.actor.data.data[bono_nombre].Bono)
+          if (this.actor.data.data.Proezas.value > 0){
+              valor_nuevo=valor_actual+3
+              proezas=this.actor.data.data.Proezas.value-1
+              const bono='data.'+bono_nombre+'.Bono'
+              update[bono] = valor_nuevo;
+              update.id = this.actor.id;
+              this.actor.update(update, {diff: true});
+              this.actor.update ({ 'data.Proezas.value': proezas });
+        }
+        else {
+          ui.notifications.warn("No te quedan puntos de PROEZA!!");
+          return 1;
+        }
+        });
+        //RESETEA Agilidad/Perspicacia/Aplomo
+        html.find('.activa_mod').contextmenu(ev => {
+          const element = ev.currentTarget;
+          const dataset = element.dataset;
+          const bono_nombre=dataset.bono_nombre;
+          const update = {};
+          update.data = {};
+          var valor_nuevo=0;
+          const bono='data.'+bono_nombre+'.Bono'
+          update[bono] = valor_nuevo;
+          update.id = this.actor.id;
+          this.actor.update(update, {diff: true});
+        });
 
         // Borrar objetos
         html.find('.item-delete').click(ev => {
