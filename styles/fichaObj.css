@@ -1,0 +1,153 @@
+.espacio_objeto {
+  opacity: 0.5;
+  left: 2px;
+  top: 31px;
+  width: 22.5em;
+  height: 9.8em;
+  position: absolute;
+  background-color: red;
+}
+
+.Objeto-foto {
+  top: 2.1em;
+  left: 1.6em;
+  position: absolute;
+  width: 6em;
+  height: 6em;
+  text-align: center;
+  z-index: 0;
+}
+
+.Objeto-foto img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
+}
+
+.Objeto-nombre {
+  position: absolute;
+  top: 1.5em;
+  text-align: center;
+  z-index: 6;
+  left: 9em;
+  width: 12.5em;
+  background-color: blue;
+}
+
+.Objeto-nombre input[type='text'] {
+  background-color: transparent;
+  font-family: inherit;
+  width: 6.6em;
+  font-size: 1.6em;
+  text-align: center;
+  color: Black !important;
+  border: none;
+}
+
+.Arma_Habilidad_select {
+  top: 2.4em;
+  left: 9.2em;
+  background-color: transparent;
+  position: absolute;
+  appearance: none;
+  text-align: center;
+  z-index: 6;
+  width: 3em;
+  height: 1em;
+  font-family: "Bangers";
+  color: Black !important;
+  font-size: 1.7em;
+  border: none;
+}
+.Arma_Habilidad_select select{
+  appearance: none;
+  text-align: center;
+  font-family: "Bangers";
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+}
+
+.Arma_Daño_input {
+  background-color: transparent;
+  position: absolute;
+  top: 3.8em;
+  left: 6.8em;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Bangers";
+  color: Black !important;
+  font-size: 1.7em;
+}
+.Arma_Daño_input input{
+  text-align: center;
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+  height: auto;
+}
+
+.Arma_Bono_select {
+  top: 3.8em;
+  left: 9.6em;
+  background-color: transparent;
+  position: absolute;
+  appearance: none;
+  text-align: center;
+  z-index: 6;
+  width: 3em;
+  height: 1em;
+  font-family: "Bangers";
+  color: Black !important;
+  font-size: 1.7em;
+  border: none;
+}
+.Arma_Bono_select select{
+  appearance: none;
+  text-align: center;
+  font-family: "Bangers";
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+}
+
+.Armadura_Nivel_input {
+  background-color: transparent;
+  position: absolute;
+  top: 2.3em;
+  left: 10.3em;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Bangers";
+  color: Black !important;
+  font-size: 1.7em;
+}
+.Armadura_Nivel_input input{
+  text-align: center;
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+  height: auto;
+}
+
+.Armadura_Penalizador_input {
+  background-color: transparent;
+  position: absolute;
+  top: 3.7em;
+  left: 10.3em;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Bangers";
+  color: Black !important;
+  font-size: 1.7em;
+}
+.Armadura_Penalizador_input input{
+  text-align: center;
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+  height: auto;
+}

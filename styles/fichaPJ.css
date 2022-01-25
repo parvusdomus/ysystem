@@ -333,3 +333,25 @@ img {
   top: 0.7em;
   left: 16.1em;
 }
+
+.espacio_armas {
+  opacity: 0.5;
+  columns: 3;
+  left: 22px;
+  top: 590px;
+  width: 27em;
+  height: 7em;
+  position: absolute;
+  background-color: green;
+}
+
+.espacio_armaduras {
+  opacity: 0.5;
+  columns: 3;
+  left: 402px;
+  top: 589px;
+  width: 27em;
+  height: 7em;
+  position: absolute;
+  background-color: blue;
+}

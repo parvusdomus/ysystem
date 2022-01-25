@@ -1,0 +1,18 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+  <img class="content-background" src="/systems/ysystem/assets/fichas/armadura-Bg.svg" alt="?"/>
+  <div class=espacio_objeto>
+    <div class="Objeto-nombre"><input name="name" type="text" value="{{data.name}}" placeholder='Nombre'
+                                         onClick="this.select();"/></div>
+      <div class="Objeto-foto">
+        <img class="profile-img" src="{{data.img}}" data-edit="img" title="{{name}}" alt='Imagen del Objeto'/>
+      </div>
+
+      <div class="Armadura_Nivel_input">
+          <input type="text" name="data.Nivel" value="{{data.data.Nivel}}" data-dtype="Number" maxlength="2"/>
+        </div>
+        <div class="Armadura_Penalizador_input">
+            <input type="text" name="data.Penalizador" value="{{data.data.Penalizador}}" data-dtype="Number" maxlength="2"/>
+          </div>
+
+    </div>
+</form>

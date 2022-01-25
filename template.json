@@ -216,5 +216,21 @@
               "Biografía": ""
             }
 
+    },
+    "Item":{
+    "types": ["Arma", "Armadura", "Escudo"],
+    "Arma":{
+      "Habilidad": "",
+      "Daño": 0,
+      "Bono": ""
+    },
+    "Armadura":{
+      "Nivel": 0,
+      "Penalizador": 0
+    },
+    "Escudo":{
+      "Nivel": 0,
+      "Penalizador": 0
     }
+  }
 }

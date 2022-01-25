@@ -84,7 +84,13 @@
     <ol class="lista-habilidades">
         {{#each data.Habilidades as |habilidad id|}}
           <li class=habilidad>
-            <label>{{habilidad.Nombre}}</label><span class="mod_habilidad" data-habilidad_id="{{id}}">
+            <label>{{habilidad.Nombre}}</label>
+              {{#if (eq habilidad.Atributo "Percepción")}}<label> (P)</label>{{/if}}
+              {{#if (eq habilidad.Atributo "Carisma")}}<label> (C)</label>{{/if}}
+              {{#if (eq habilidad.Atributo "Destreza")}}<label> (D)</label>{{/if}}
+              {{#if (eq habilidad.Atributo "Inteligencia")}}<label> (I)</label>{{/if}}
+              {{#if (eq habilidad.Atributo "Fuerza")}}<label> (F)</label>{{/if}}
+              <span class="mod_habilidad" data-habilidad_id="{{id}}">
               {{#if (gt habilidad.Valor 0)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
               {{#if (gt habilidad.Valor 1)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
               {{#if (gt habilidad.Valor 2)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
@@ -92,6 +98,10 @@
           </li>
         {{/each}}
   </div>
+  <div class="espacio_armas">
 
+  </div>
+  <div class="espacio_armaduras">
 
+  </div>
 </form>
