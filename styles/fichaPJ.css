@@ -6,7 +6,7 @@
 .espacio_habilidades {
   columns: 3;
   left: 22px;
-  top: 363px;
+  top: 390px;
   width: 54em;
   height: 16em;
   position: absolute;
@@ -544,7 +544,7 @@ img {
 
 .espacio_vida {
   left: 22px;
-  top: 264px;
+  top: 284px;
   width: 54em;
   height: 7em;
   position: absolute;
@@ -804,7 +804,7 @@ img {
   left: 16.4em;
 }
 
-.espacio_armas {
+.espacio_armas_equipadas {
   opacity: 0.5;
   columns: 3;
   left: 22px;
@@ -815,7 +815,7 @@ img {
   background-color: green;
 }
 
-.espacio_armaduras {
+.espacio_armaduras_equipadas {
   opacity: 0.5;
   columns: 3;
   left: 402px;
@@ -874,11 +874,71 @@ a.general-tab.active, .equipo-tab.active, .biografia-tab.active{
 .Jugador_contenedor_biografia{
   position: absolute;
   left:0.6em;
-  top: 19em;
+  top: 20em;
   width: 56em;
-  height: 30em;
-  background-color: orange;
+  height: 29em;
+  background-color: rgba(242, 242, 242, 0.4);
   overflow-y: scroll;
   border: none;
   border-width: 0;
+}
+
+.Jugador_contenedor_equipo {
+  left: 22px;
+  background-color: rgba(255, 0, 0, 0.3);
+  top: 284px;
+  width: 54em;
+  height: 29em;
+  position: absolute;
+}
+.espacio_armas {
+  background-color: rgba(0, 0, 255, 0.3);
+  left: 0px;
+  top: 30px;
+  width: 28em;
+  height: 8em;
+  position: absolute;
+}
+.armas{
+  font-size: 1.4em;
+  display: flex;
+  justify-content: space-between;
+}
+
+ol.lista-armas {
+  list-style-type: none;
+}
+
+.Titulo_Equipo {
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Bangers";
+  color: Black !important;
+  font-size: 1.5em;
+}
+
+.Titulo_Arma {
+  position: absolute;
+  top: 0.1em;
+  left: 1.6em;
+}
+
+.Titulo_Habilidad {
+  position: absolute;
+  top: 0.1em;
+  left: 6.6em;
+}
+
+.Titulo_Daño {
+  position: absolute;
+  top: 0.1em;
+  left: 11.6em;
+}
+
+.Titulo_Bono {
+  position: absolute;
+  top: 0.1em;
+  left: 15.6em;
 }

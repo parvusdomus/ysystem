@@ -43,7 +43,7 @@
     <div class="espacio_habilidades">
       <ol class="lista-habilidades">
           {{#each data.Habilidades as |habilidad id|}}
-            <li class=habilidad>
+            <li class="habilidad">
               <label>{{habilidad.Nombre}}</label>
                 {{#if (eq habilidad.Atributo "Percepción")}}<label> (P)</label>{{/if}}
                 {{#if (eq habilidad.Atributo "Carisma")}}<label> (C)</label>{{/if}}
@@ -57,6 +57,7 @@
               </span>
             </li>
           {{/each}}
+        </ol>
     </div>
     <div class="espacio_armas_equipadas">
 

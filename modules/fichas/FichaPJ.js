@@ -54,9 +54,8 @@ this.actor.update ({ 'data.Proezas.max': Proezas });
      const Armas = [];
      const Armaduras = [];
      const Escudos = [];
-     const Hechizos = [];
-     const Objetos = [];
-     const Talentos = [];
+     //const Hechizos = [];
+     //const Objetos = [];
      // Ordena los objetos por tipo y los mete en el array correspondiente
     for (let i of sheetData.items) {
       let item = i.data;
@@ -70,23 +69,19 @@ this.actor.update ({ 'data.Proezas.max': Proezas });
        else if (i.type === "Escudo") {
          Escudos.push(i);
        }
-       else if (i.type === "Hechizo") {
-         Hechizos.push(i);
-       }
-       else if (i.type === "Objeto") {
-         Objetos.push(i);
-       }
-       else if (i.type === "Talento") {
-         Talentos.push(i);
-       }
+       //else if (i.type === "Hechizo") {
+      //   Hechizos.push(i);
+      // }
+      // else if (i.type === "Objeto") {
+      //   Objetos.push(i);
+      // }
     }
     //Asigno cada array al actordata
 actorData.Armas = Armas;
 actorData.Armaduras = Armaduras;
 actorData.Escudos = Escudos;
-actorData.Hechizos = Hechizos;
-actorData.Objetos = Objetos;
-actorData.Talentos = Talentos;
+//actorData.Hechizos = Hechizos;
+//actorData.Objetos = Objetos;
 }
 
 activateListeners(html) {
