@@ -61,6 +61,26 @@ img {
   border: none;
 }
 
+.caract_Experiencia_valor_input {
+  background-color: transparent;
+  position: absolute;
+  top: 1em;
+  left: 0.4em;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Annie";
+  color: Black !important;
+  font-size: 2.5em;
+}
+.caract_Experiencia_valor_input input{
+  text-align: center;
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+  height: auto;
+}
+
 .espacio_atributos {
   left: 9px;
   top: 39px;
@@ -464,13 +484,14 @@ a.habilidades-tab.active, .equipo-tab.active, .biografia-tab.active{
 .Jugador_contenedor_equipo {
   left: 22px;
   background-color: rgba(255, 0, 0, 0.3);
-  top: 300px;
+  top: 258px;
   width: 54em;
-  height: 18em;
+  height: 21em;
   position: absolute;
 }
 .espacio_armas {
   background-color: rgba(0, 0, 255, 0.3);
+  overflow-y: scroll;
   left: 0px;
   top: 30px;
   width: 28em;
@@ -492,7 +513,7 @@ ol.lista-armas {
   text-align: center;
   z-index: 6;
   width: 2em;
-  font-family: "Annie";
+  font-family: "Girassol";
   color: Black !important;
   font-size: 1.5em;
 }
@@ -503,10 +524,180 @@ ol.lista-armas {
   left: 1.6em;
 }
 
+.arma_linea1 {
+  position: relative;
+  left: -1em;
+  overflow: hidden;
+  background-color: transparent;
+  text-overflow: clip;
+  text-align: left;
+  display: inline-block;
+  z-index: 6;
+  width: 7em;
+  height: 1.1em;
+  font-family: "Lora";
+  white-space: nowrap;
+  color: Black !important;
+  font-size: 1em;
+}
+
+.arma_linea2 {
+  position: relative;
+  left: -1.5em;
+  overflow: hidden;
+  background-color: transparent;
+  text-overflow: clip;
+  text-align: center;
+  display: inline-block;
+  z-index: 6;
+  width: 4em;
+  height: 1.1em;
+  font-family: "Lora";
+  white-space: nowrap;
+  color: Black !important;
+  font-size: 1em;
+}
+
+.arma_linea3 {
+  position: relative;
+  left: -2em;
+  overflow: hidden;
+  background-color: transparent;
+  text-overflow: clip;
+  text-align: center;
+  display: inline-block;
+  z-index: 6;
+  width: 5em;
+  height: 1.1em;
+  font-family: "Lora";
+  white-space: nowrap;
+  color: Black !important;
+  font-size: 1em;
+}
+
+.boton_mas_arma {
+  position: absolute;
+  top: 0.5em;
+  left: 1em;
+}
+
+.controles_armas {
+  position: absolute;
+  left: 25.6em;
+  font-size: 0.7em;
+}
+
+.espacio_armaduras {
+  background-color: rgba(0, 255, 255, 0.3);
+  overflow-y: scroll;
+  left: 0px;
+  top: 172px;
+  width: 28em;
+  height: 4em;
+  position: absolute;
+}
+
+.boton_mas_armadura {
+  position: absolute;
+  top: 10.5em;
+  left: 1em;
+}
+
+.armadura_linea1 {
+  position: relative;
+  left: -1em;
+  overflow: hidden;
+  background-color: transparent;
+  text-overflow: clip;
+  text-align: left;
+  display: inline-block;
+  z-index: 6;
+  width: 7em;
+  height: 1.1em;
+  font-family: "Lora";
+  white-space: nowrap;
+  color: Black !important;
+  font-size: 1em;
+}
+
+.armadura_linea2 {
+  position: relative;
+  left: -1.5em;
+  overflow: hidden;
+  background-color: transparent;
+  text-overflow: clip;
+  text-align: center;
+  display: inline-block;
+  z-index: 6;
+  width: 4em;
+  height: 1.1em;
+  font-family: "Lora";
+  white-space: nowrap;
+  color: Black !important;
+  font-size: 1em;
+}
+
+.armadura_linea3 {
+  position: relative;
+  left: -2em;
+  overflow: hidden;
+  background-color: transparent;
+  text-overflow: clip;
+  text-align: center;
+  display: inline-block;
+  z-index: 6;
+  width: 5em;
+  height: 1.1em;
+  font-family: "Lora";
+  white-space: nowrap;
+  color: Black !important;
+  font-size: 1em;
+}
+
+.Titulo_Protección {
+  position: absolute;
+  top: 6.8em;
+  left: 1.6em;
+}
+
+.Titulo_Nivel {
+  position: absolute;
+  top: 6.8em;
+  left: 8.6em;
+}
+
+.Titulo_Efecto {
+  position: absolute;
+  top: 6.8em;
+  left: 12.6em;
+}
+
+
+
+.espacio_escudos {
+  background-color: rgba(0, 255, 0, 0.3);
+  overflow-y: scroll;
+  left: 0px;
+  top: 233px;
+  width: 28em;
+  height: 4em;
+  position: absolute;
+}
+
+.espacio_objetos {
+  background-color: rgba(0, 255, 0, 0.3);
+  overflow-y: scroll;
+  left: 0px;
+  top: 30px;
+  width: 28em;
+  height: 8em;
+  position: absolute;
+}
+
 .Titulo_Habilidad {
   position: absolute;
   top: 0.1em;
-  left: 6.6em;
+  left: 8em;
 }
 
 .recuerdo_Cuando {
@@ -558,7 +749,7 @@ ol.lista-armas {
 .Titulo_Daño {
   position: absolute;
   top: 0.1em;
-  left: 11.6em;
+  left: 13em;
 }
 
 .titulo_Habilidades {

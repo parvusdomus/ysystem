@@ -206,7 +206,7 @@ activateListeners(html) {
               update[recuerdo] = valor_nuevo;
               update.id = this.actor.id;
               this.actor.update(update, {diff: true});
-          
+
         });
 
 
