@@ -578,7 +578,7 @@ ol.lista-armas {
 .boton_mas_arma {
   position: absolute;
   top: 0.5em;
-  left: 1em;
+  left: -1em;
 }
 
 .controles_armas {
@@ -600,7 +600,7 @@ ol.lista-armas {
 .boton_mas_armadura {
   position: absolute;
   top: 10.5em;
-  left: 1em;
+  left: -1em;
 }
 
 .armadura_linea1 {
@@ -622,7 +622,7 @@ ol.lista-armas {
 
 .armadura_linea2 {
   position: relative;
-  left: -1.5em;
+  left: -1em;
   overflow: hidden;
   background-color: transparent;
   text-overflow: clip;
@@ -652,6 +652,75 @@ ol.lista-armas {
   white-space: nowrap;
   color: Black !important;
   font-size: 1em;
+}
+
+.controles_armaduras {
+  position: absolute;
+  left: 25.6em;
+  font-size: 0.7em;
+}
+
+.boton_mas_escudo {
+  position: absolute;
+  top: 16em;
+  left: -1em;
+}
+
+.escudo_linea1 {
+  position: relative;
+  left: -1em;
+  overflow: hidden;
+  background-color: transparent;
+  text-overflow: clip;
+  text-align: left;
+  display: inline-block;
+  z-index: 6;
+  width: 7em;
+  height: 1.1em;
+  font-family: "Lora";
+  white-space: nowrap;
+  color: Black !important;
+  font-size: 1em;
+}
+
+.escudo_linea2 {
+  position: relative;
+  left: -1em;
+  overflow: hidden;
+  background-color: transparent;
+  text-overflow: clip;
+  text-align: center;
+  display: inline-block;
+  z-index: 6;
+  width: 4em;
+  height: 1.1em;
+  font-family: "Lora";
+  white-space: nowrap;
+  color: Black !important;
+  font-size: 1em;
+}
+
+.escudo_linea3 {
+  position: relative;
+  left: -2em;
+  overflow: hidden;
+  background-color: transparent;
+  text-overflow: clip;
+  text-align: center;
+  display: inline-block;
+  z-index: 6;
+  width: 5em;
+  height: 1.1em;
+  font-family: "Lora";
+  white-space: nowrap;
+  color: Black !important;
+  font-size: 1em;
+}
+
+.controles_escudo {
+  position: absolute;
+  left: 25.6em;
+  font-size: 0.7em;
 }
 
 .Titulo_Protección {
@@ -687,10 +756,10 @@ ol.lista-armas {
 .espacio_objetos {
   background-color: rgba(0, 255, 0, 0.3);
   overflow-y: scroll;
-  left: 0px;
-  top: 30px;
-  width: 28em;
-  height: 8em;
+  left: 419px;
+  top: 29px;
+  width: 24em;
+  height: 19em;
   position: absolute;
 }
 
