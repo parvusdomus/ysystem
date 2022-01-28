@@ -26,6 +26,8 @@
 .editor {
   height: 100%;
   background: transparent;
+  font-family: "Lora"
+  font-size: 1em;
 }
 
 .tox .tox-toolbar, .tox .tox-toolbar__overflow, .tox .tox-toolbar__primary {

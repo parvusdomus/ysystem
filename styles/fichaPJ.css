@@ -347,6 +347,7 @@ a.habilidades-tab.active, .equipo-tab.active, .biografia-tab.active{
   overflow-y: scroll;
   border: none;
   border-width: 0;
+  font-family: 'Annie';
 }
 
 .D_Leve_label {
@@ -656,7 +657,7 @@ ol.lista-armas {
 
 .controles_armaduras {
   position: absolute;
-  left: 25.6em;
+  left: 23.6em;
   font-size: 0.7em;
 }
 
@@ -719,7 +720,7 @@ ol.lista-armas {
 
 .controles_escudo {
   position: absolute;
-  left: 25.6em;
+  left: 23.6em;
   font-size: 0.7em;
 }
 
