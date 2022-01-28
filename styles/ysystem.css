@@ -1,3 +1,28 @@
+@font-face {
+    font-family: "Girassol";
+    src: url("/systems/ysystem/fonts/Girassol.ttf");
+}
+
+@font-face {
+    font-family: "Dexotick";
+    src: url("/systems/ysystem/fonts/Dexotick.ttf");
+}
+
+@font-face {
+    font-family: "Annie";
+    src: url("/systems/ysystem/fonts/Annie.ttf");
+}
+
+@font-face {
+    font-family: "Lora";
+    src: url("/systems/ysystem/fonts/Lora.ttf");
+}
+
+@font-face {
+    font-family: "Minion";
+    src: url("/systems/ysystem/fonts/Minion.ttf");
+}
+
 .editor {
   height: 100%;
   background: transparent;

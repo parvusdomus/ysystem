@@ -169,14 +169,16 @@
                     "Atributo": "Percepción"
                   },
                   "Magia_Psiónica":{
-                    "Nombre": "Magia/Psiónica",
+                    "Nombre": "Magia/Psión.",
                     "Valor": 1,
                     "Atributo": "Inteligencia"
                   }
                 },
                 "Profesión": "",
-                "Defecto_Leve": "",
-                "Defecto_Grave": "",
+                "Defecto_Leve": "Defecto Leve",
+                "Defecto_Grave": "OJO",
+                "Talento": "RAAAAAA",
+                "Arquetipo": "DFADAFDADFFDS",
                 "Biografía": "",
                 "Experiencia": 0
             },

@@ -1,19 +1,15 @@
-@font-face {
-    font-family: "Bangers";
-    src: url("/systems/ysystem/fonts/Bangers.ttf");
-}
-
 .espacio_habilidades {
   columns: 3;
   left: 22px;
-  top: 390px;
+  top: 308px;
   width: 54em;
-  height: 16em;
+  height: 17em;
   position: absolute;
 }
 
 .habilidad{
-  font-size: 1.4em;
+  font-size: 1.2em;
+  font-family: "Lora";
   display: flex;
   justify-content: space-between;
 }
@@ -28,8 +24,8 @@ img {
 }
 
 .PJ-foto {
-  top: 4.1em;
-  left: 23.1em;
+  top: 2.3em;
+  left: 43.6em;
   position: absolute;
   width: 10em;
   height: 10em;
@@ -43,51 +39,25 @@ img {
   z-index: -1;
 }
 
-.recuerdo_label {
-  position: absolute;
-  top: 0.4em;
-  left: 15.3em;
-  background-color: transparent;
-  text-align: center;
-  z-index: 6;
-  width: 7em;
-  font-family: "Bangers";
-  color: Black !important;
-  font-size: 1.5em;
-}
-
-.PJ_nombre_img {
-  top: 0.6em;
-  left: 0.5em;
-  position: absolute;
-  width: 21em;
-  height: 2.7em;
-  text-align: center;
-  z-index: 0;
-}
-
-.PJ_nombre_img img {
-  vertical-align: middle;
-  max-height: 100%;
-  z-index: -1;
-}
 
 .PJ-nombre {
   position: absolute;
-  top: 1.2em;
+  top: 2.2em;
   text-align: center;
   z-index: 6;
-  left: 2em;
-  width: 17.5em;
+  left: 10.7em;
+  width: 26.5em;
 }
 
 .PJ-nombre input[type='text'] {
   background-color: transparent;
   font-family: inherit;
-  width: 10.6em;
-  font-size: 1.6em;
+  width: 8.6em;
+  height: 1em;
+  font-size: 3em;
   text-align: center;
-  color: Black !important;
+  font-family: "Dexotick";
+  color: White !important;
   border: none;
 }
 
@@ -99,25 +69,15 @@ img {
   position: absolute;
 }
 
-.atributo_label {
-  background-color: transparent;
-  text-align: center;
-  z-index: 6;
-  width: 4em;
-  font-family: "Bangers";
-  color: Black !important;
-  font-size: 1.5em;
-}
-
 .atributo_select {
   background-color: transparent;
   position: absolute;
   appearance: none;
   text-align: center;
   z-index: 6;
-  width: 1em;
-  height: 1em;
-  font-family: "Bangers";
+  width: 2em;
+  height: 2em;
+  font-family: "Annie";
   color: Black !important;
   font-size: 3em;
   border: none;
@@ -125,145 +85,43 @@ img {
 .atributo_select select{
   appearance: none;
   text-align: center;
-  font-family: "Bangers";
+  font-family: "Annie";
   color: Black !important;
   background-color: transparent;
   border: none;
 }
 
-.carisma_label {
-  position: absolute;
-  top: 5.4em;
-  left: 0.7em;
-}
-
-.carisma_img {
-  top: 3.6em;
-  left: 1.7em;
-  position: absolute;
-  width: 4.5em;
-  height: 4.5em;
-  text-align: center;
-  z-index: 0;
-}
-
-.carisma_img img {
-  vertical-align: middle;
-  max-height: 100%;
-  z-index: -1;
-}
-
 .atributo_Carisma {
-  top: 1.4em;
-  left: 0.8em;
-}
-
-.destreza_label {
-  position: absolute;
-  top: 5.4em;
-  left: 5.2em;
-}
-
-.destreza_img {
-  top: 3.6em;
-  left: 8.7em;
-  position: absolute;
-  width: 4.5em;
-  height: 4.5em;
-  text-align: center;
-  z-index: 0;
-}
-
-.destreza_img img {
-  vertical-align: middle;
-  max-height: 100%;
-  z-index: -1;
+  top: 3.1em;
+  left: 1.9em;
 }
 
 .atributo_Destreza {
-  top: 1.4em;
-  left: 3.1em;
-}
-
-.fuerza_label {
-  position: absolute;
-  top: 5.4em;
-  left: 9.5em;
-}
-
-.fuerza_img {
-  top: 3.6em;
-  left: 15.2em;
-  position: absolute;
-  width: 4.5em;
-  height: 4.5em;
-  text-align: center;
-  z-index: 0;
-}
-
-.fuerza_img img {
-  vertical-align: middle;
-  max-height: 100%;
-  z-index: -1;
+  top: 3.1em;
+  left: 4.2em;
 }
 
 .atributo_Fuerza {
-  top: 1.4em;
-  left: 5.3em;
-}
-
-.inteligencia_label {
-  position: absolute;
-  top: 9.6em;
-  left: 2.7em;
-}
-
-.inteligencia_img {
-  top: 9.7em;
-  left: 4.9em;
-  position: absolute;
-  width: 4.5em;
-  height: 4.5em;
-  text-align: center;
-  z-index: 0;
-}
-
-.inteligencia_img img {
-  vertical-align: middle;
-  max-height: 100%;
-  z-index: -1;
+  top: 3.1em;
+  left: 6.7em;
 }
 
 .atributo_Inteligencia {
-  top: 3.4em;
-  left: 1.8em;
-}
-
-.percepcion_label {
-  position: absolute;
-  top: 9.6em;
-  left: 7.4em;
-}
-
-.percepcion_img {
-  top: 9.7em;
-  left: 11.7em;
-  position: absolute;
-  width: 4.5em;
-  height: 4.5em;
-  text-align: center;
-  z-index: 0;
-}
-
-.percepcion_img img {
-  vertical-align: middle;
-  max-height: 100%;
-  z-index: -1;
+  top: 3.1em;
+  left: 9.2em;
 }
 
 .atributo_Percepción {
-  top: 3.4em;
-  left: 4.1em;
+  top: 3.1em;
+  left: 11.5em;
+}
+
+.espacio_caract {
+  left: 22px;
+  top: 561px;
+  width: 54em;
+  height: 6em;
+  position: absolute;
 }
 
 .caract_valor {
@@ -271,93 +129,27 @@ img {
   text-align: center;
   z-index: 6;
   width: 2em;
-  font-family: "Bangers";
+  font-family: "Annie";
   color: Black !important;
-  font-size: 3em;
-}
-
-.agilidad_label {
-  position: absolute;
-  top: 5.1em;
-  left: 23.6em;
-}
-
-.agilidad_img {
-  top: 3.3em;
-  left: 36.1em;
-  position: absolute;
-  width: 4.5em;
-  height: 4.5em;
-  text-align: center;
-  z-index: 0;
-}
-
-.agilidad_img img {
-  vertical-align: middle;
-  max-height: 100%;
-  z-index: -1;
+  font-size: 2.5em;
 }
 
 .caract_Agilidad {
   position: absolute;
-  top: 1.3em;
-  left: 11.7em;
-}
-
-.aplomo_label {
-  position: absolute;
-  top: 5.1em;
-  left: 28.1em;
-}
-
-.aplomo_img {
-  top: 3.3em;
-  left: 43em;
-  position: absolute;
-  width: 4.5em;
-  height: 4.5em;
-  text-align: center;
-  z-index: 0;
-}
-
-.aplomo_img img {
-  vertical-align: middle;
-  max-height: 100%;
-  z-index: -1;
+  top: 0.4em;
+  left: 0em;
 }
 
 .caract_Aplomo {
   position: absolute;
-  top: 1.3em;
-  left: 14em;
-}
-
-.perspicacia_label {
-  position: absolute;
-  top: 5.1em;
-  left: 32.4em;
-}
-
-.perspicacia_img {
-  top: 3.3em;
-  left: 49.5em;
-  position: absolute;
-  width: 4.5em;
-  height: 4.5em;
-  text-align: center;
-  z-index: 0;
-}
-
-.perspicacia_img img {
-  vertical-align: middle;
-  max-height: 100%;
-  z-index: -1;
+  top: 0.4em;
+  left: 2.6em;
 }
 
 .caract_Perspicacia {
   position: absolute;
-  top: 1.3em;
-  left: 16.2em;
+  top: 0.4em;
+  left: 5.3em;
 }
 
 .caract_bono {
@@ -365,112 +157,40 @@ img {
   text-align: center;
   z-index: 6;
   width: 2em;
-  font-family: "Bangers";
+  font-family: "Annie";
   color: Black !important;
   font-size: 1.7em;
 }
 
-.agilidad_bono_img {
-  top: 3em;
-  left: 40.7em;
-  position: absolute;
-  width: 2em;
-  height: 2em;
-  text-align: center;
-  z-index: 0;
-}
-
-.agilidad_bono_img img {
-  vertical-align: middle;
-  max-height: 100%;
-  z-index: -1;
-}
-
 .caract_Agilidad_bono {
   position: absolute;
-  top: 1.9em;
-  left: 23.5em;
-}
-
-.aplomo_bono_img {
-  top: 3em;
-  left: 47.4em;
-  position: absolute;
-  width: 2em;
-  height: 2em;
-  text-align: center;
-  z-index: 0;
-}
-
-.aplomo_bono_img img {
-  vertical-align: middle;
-  max-height: 100%;
-  z-index: -1;
+  top: 0.7em;
+  left: 2.3em;
 }
 
 .caract_Aplomo_bono {
   position: absolute;
-  top: 1.9em;
-  left: 27.4em;
-}
-
-.perspicacia_bono_img {
-  top: 3em;
-  left: 53.7em;
-  position: absolute;
-  width: 2em;
-  height: 2em;
-  text-align: center;
-  z-index: 0;
-}
-
-.perspicacia_bono_img img {
-  vertical-align: middle;
-  max-height: 100%;
-  z-index: -1;
+  top: 0.7em;
+  left: 6.1em;
 }
 
 .caract_Perspicacia_bono {
   position: absolute;
-  top: 1.9em;
-  left: 31.1em;
+  top: 0.7em;
+  left: 10em;
 }
-
-.proezas_label {
-  position: absolute;
-  top: 9.3em;
-  left: 24.5em;
-}
-
-.proezas_img {
-  top: 9.2em;
-  left: 35.7em;
-  position: absolute;
-  width: 8em;
-  height: 5em;
-  text-align: center;
-  z-index: 0;
-}
-
-.proezas_img img {
-  vertical-align: middle;
-  max-height: 100%;
-  z-index: -1;
-}
-
-
 
 .caract_Proezas_valor_input {
   background-color: transparent;
   position: absolute;
-  top: 3.4em;
-  left: 11.6em;
+  top: 0.4em;
+  left: 8.5em;
   text-align: center;
   z-index: 6;
   width: 2em;
-  font-family: "Bangers";
+  font-family: "Annie";
   color: Black !important;
-  font-size: 3em;
+  font-size: 2.5em;
 }
 .caract_Proezas_valor_input input{
   text-align: center;
@@ -482,209 +202,21 @@ img {
 
 .caract_Proezas_Max {
   position: absolute;
-  top: 3.4em;
-  left: 12.8em;
-}
-
-.iniciativa_label {
-  position: absolute;
-  top: 9.3em;
-  left: 29.1em;
-}
-
-.iniciativa_img {
-  top: 9.4em;
-  left: 44.2em;
-  position: absolute;
-  width: 4.5em;
-  height: 4.5em;
-  text-align: center;
-  z-index: 0;
-}
-
-.iniciativa_img img {
-  vertical-align: middle;
-  max-height: 100%;
-  z-index: -1;
-}
-
-.caract_Iniciativa {
-  position: absolute;
-  top: 3.4em;
-  left: 14.4em;
-}
-
-.estorbo_label {
-  position: absolute;
-  top: 9.3em;
-  left: 32.7em;
-}
-
-.estorbo_img {
-  top: 9.4em;
-  left: 49.9em;
-  position: absolute;
-  width: 4.5em;
-  height: 4.5em;
-  text-align: center;
-  z-index: 0;
-}
-
-.estorbo_img img {
-  vertical-align: middle;
-  max-height: 100%;
-  z-index: -1;
-}
-
-.caract_Estorbo {
-  position: absolute;
-  top: 3.4em;
-  left: 16.3em;
-}
-
-.espacio_vida {
-  left: 22px;
-  top: 284px;
-  width: 54em;
-  height: 7em;
-  position: absolute;
-}
-
-.defecto_label {
-  background-color: transparent;
-  text-align: center;
-  z-index: 6;
-  width: 3em;
-  font-family: "Bangers";
-  color: Black !important;
-  font-size: 2em;
-}
-
-.defecto_grave_label {
-  position: absolute;
-  top: 0.3em;
-  left: -0.5em;
-}
-
-.PJ_defecto_grave_img {
-  top: 0.1em;
-  left: 5.5em;
-  position: absolute;
-  width: 19em;
-  height: 3em;
-  text-align: center;
-  z-index: 0;
-}
-
-.PJ_defecto_grave_img img {
-  vertical-align: middle;
-  max-height: 100%;
-  z-index: -1;
-}
-
-.PJ-defecto_grave {
-  position: absolute;
-  top: 0.5em;
-  text-align: center;
-  z-index: 6;
-  left: 6.4em;
-  width: 17.5em;
-}
-
-.PJ-defecto_grave input[type='text'] {
-  background-color: transparent;
-  font-family: inherit;
-  width: 10.6em;
-  font-size: 1.6em;
-  text-align: center;
-  color: Black !important;
-  border: none;
-}
-
-.defecto_leve_label {
-  position: absolute;
-  top: 1.8em;
-  left: -0.9em;
-}
-
-.PJ_defecto_leve_img {
-  top: 3.1em;
-  left: 5.5em;
-  position: absolute;
-  width: 19em;
-  height: 3em;
-  text-align: center;
-  z-index: 0;
-}
-
-.PJ_defecto_leve_img img {
-  vertical-align: middle;
-  max-height: 100%;
-  z-index: -1;
-}
-
-.PJ-defecto_leve {
-  position: absolute;
-  top: 3.7em;
-  text-align: center;
-  z-index: 6;
-  left: 6.4em;
-  width: 17.5em;
-}
-
-.PJ-defecto_leve input[type='text'] {
-  background-color: transparent;
-  font-family: inherit;
-  width: 10.6em;
-  font-size: 1.6em;
-  text-align: center;
-  color: Black !important;
-  border: none;
-}
-
-.caract_label {
-  background-color: transparent;
-  text-align: center;
-  z-index: 6;
-  width: 4em;
-  font-family: "Bangers";
-  color: Black !important;
-  font-size: 1.5em;
-}
-
-.salud_label {
-  position: absolute;
-  top: -0.2em;
-  left: 17.8em;
-}
-
-.PJ_salud_img {
-  top: 1.1em;
-  left: 25.5em;
-  position: absolute;
-  width: 8em;
-  height: 5em;
-  text-align: center;
-  z-index: 0;
-}
-
-.PJ_salud_img img {
-  vertical-align: middle;
-  max-height: 100%;
-  z-index: -1;
+  top: 0.7em;
+  left: 14.9em;
 }
 
 .caract_Salud_valor_input {
   background-color: transparent;
   position: absolute;
-  top: 0.7em;
-  left: 8.3em;
+  top: 0.4em;
+  left: 11.9em;
   text-align: center;
   z-index: 6;
   width: 2em;
-  font-family: "Bangers";
+  font-family: "Annie";
   color: Black !important;
-  font-size: 3em;
+  font-size: 2.5em;
 }
 .caract_Salud_valor_input input{
   text-align: center;
@@ -697,70 +229,26 @@ img {
 .caract_Salud_max {
   position: absolute;
   top: 0.7em;
-  left: 9.4em;
-}
-
-.r_fisica_label {
-  position: absolute;
-  top: -0.2em;
-  left: 22.7em;
-}
-
-.PJ_r_fisica_img {
-  top: 1.4em;
-  left: 34.7em;
-  position: absolute;
-  width: 4.5em;
-  height: 4.5em;
-  text-align: center;
-  z-index: 0;
-}
-
-.PJ_r_fisica_img img {
-  vertical-align: middle;
-  max-height: 100%;
-  z-index: -1;
+  left: 19.8em;
 }
 
 .caract_R_Física {
   position: absolute;
-  top: 0.7em;
-  left: 11.3em;
-}
-
-.estabilidad_label {
-  position: absolute;
-  top: -0.2em;
-  left: 28em;
-}
-
-.PJ_estabilidad_img {
-  top: 1.1em;
-  left: 41em;
-  position: absolute;
-  width: 8em;
-  height: 5em;
-  text-align: center;
-  z-index: 0;
-}
-
-.PJ_estabilidad_img img {
-  vertical-align: middle;
-  max-height: 100%;
-  z-index: -1;
+  top: 0.4em;
+  left: 14.5em;
 }
 
 .caract_Estabilidad_valor_input {
   background-color: transparent;
   position: absolute;
-  top: 0.7em;
-  left: 13.4em;
+  top: 0.4em;
+  left: 16.8em;
   text-align: center;
   z-index: 6;
   width: 2em;
-  font-family: "Bangers";
+  font-family: "Annie";
   color: Black !important;
-  font-size: 3em;
+  font-size: 2.5em;
 }
 .caract_Estabilidad_valor_input input{
   text-align: center;
@@ -773,64 +261,20 @@ img {
 .caract_Estabilidad_max {
   position: absolute;
   top: 0.7em;
-  left: 14.5em;
-}
-
-.r_mental_label {
-  position: absolute;
-  top: -0.2em;
-  left: 33.1em;
-}
-
-.PJ_r_mental_img {
-  top: 1.4em;
-  left: 50em;
-  position: absolute;
-  width: 4.5em;
-  height: 4.5em;
-  text-align: center;
-  z-index: 0;
-}
-
-.PJ_r_mental_img img {
-  vertical-align: middle;
-  max-height: 100%;
-  z-index: -1;
+  left: 27em;
 }
 
 .caract_R_Mental {
   position: absolute;
-  top: 0.7em;
-  left: 16.4em;
-}
-
-.espacio_armas_equipadas {
-  opacity: 0.5;
-  columns: 3;
-  left: 22px;
-  top: 590px;
-  width: 27em;
-  height: 7em;
-  position: absolute;
-  background-color: green;
-}
-
-.espacio_armaduras_equipadas {
-  opacity: 0.5;
-  columns: 3;
-  left: 402px;
-  top: 589px;
-  width: 27em;
-  height: 7em;
-  position: absolute;
-  background-color: blue;
+  top: 0.4em;
+  left: 19.5em;
 }
 
 .ysystem_charsheet_tab{
-  top: 1.8em;
-  left: 28em;
+  top: 30.8em;
+  left: 16em;
   width: 7em;
-  font-family: "Bangers";
+  font-family: "Annie";
   color: Black !important;
   font-size: 1.5em;
   text-align: center;
@@ -838,7 +282,7 @@ img {
 }
 
 .sheet nav.sheet-tabs {
-    height: 32px;
+    height: 55px;
     flex: 0 0 32px;
     margin: 6px 0;
     line-height: 32px;
@@ -846,23 +290,25 @@ img {
     border-bottom: 0px solid #b5b3a4;
 }
 
-.general-tab, .equipo-tab, .biografia-tab {
+.habilidades-tab, .equipo-tab, .biografia-tab {
   background-image: url(/systems/ysystem/assets/fichas/Tabs.svg);
   background-position-x: -2px;
   padding-top: 0.15em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
   display: block;
   background-color: unset !important;
 }
 
-a.general-tab:hover, .equipo-tab:hover, .biografia-tab:hover{
+a.habilidades-tab:hover, .equipo-tab:hover, .biografia-tab:hover{
   background-image: url(/systems/ysystem/assets/fichas/Tabs-Hover.svg);
+  background-size: 100% 100%;
   color: LightGrey;
 }
 
-a.general-tab.active, .equipo-tab.active, .biografia-tab.active{
+a.habilidades-tab.active, .equipo-tab.active, .biografia-tab.active{
   background-image: url(/systems/ysystem/assets/fichas/Tabs-Active.svg);
+  background-size: 100% 100%;
   color: LightGrey;
   text-shadow: none !important;
 }
@@ -873,22 +319,154 @@ a.general-tab.active, .equipo-tab.active, .biografia-tab.active{
 
 .Jugador_contenedor_biografia{
   position: absolute;
-  left:0.6em;
-  top: 20em;
-  width: 56em;
-  height: 29em;
+  left:22px;
+  top: 346px;
+  width: 54em;
+  height: 14em;
   background-color: rgba(242, 242, 242, 0.4);
   overflow-y: scroll;
   border: none;
   border-width: 0;
 }
 
+.D_Leve_label {
+  position: absolute;
+  top: 13em;
+  left: 0em;
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 7em;
+  font-family: "Girassol";
+  color: Black !important;
+  font-size: 1.5em;
+}
+
+.D_Leve_input {
+  background-color: transparent;
+  position: absolute;
+  top: 9.3em;
+  left: 4.8em;
+  text-align: center;
+  z-index: 6;
+  width: 9em;
+  font-family: "Dexotick";
+  color: Black !important;
+  font-size: 2em;
+}
+.D_Leve_input input{
+  text-align: left;
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+  height: auto;
+}
+
+.D_Grave_label {
+  position: absolute;
+  top: 13em;
+  left: 18.7em;
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 7em;
+  font-family: "Girassol";
+  color: Black !important;
+  font-size: 1.5em;
+}
+
+.D_Grave_input {
+  background-color: transparent;
+  position: absolute;
+  top: 9.3em;
+  left: 19em;
+  text-align: center;
+  z-index: 6;
+  width: 9em;
+  font-family: "Dexotick";
+  color: Black !important;
+  font-size: 2em;
+}
+.D_Grave_input input{
+  text-align: left;
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+  height: auto;
+}
+
+.Talento_label {
+  position: absolute;
+  top: 15em;
+  left: 18em;
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 7em;
+  font-family: "Girassol";
+  color: Black !important;
+  font-size: 1.5em;
+}
+
+.Talento_input {
+  background-color: transparent;
+  position: absolute;
+  top: 10.8em;
+  left: 17.8em;
+  text-align: center;
+  z-index: 6;
+  width: 10em;
+  font-family: "Dexotick";
+  color: Black !important;
+  font-size: 2em;
+}
+.Talento_input input{
+  text-align: left;
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+  height: auto;
+}
+
+.Arquetipo_label {
+  position: absolute;
+  top: 15em;
+  left: -0.6em;
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 7em;
+  font-family: "Girassol";
+  color: Black !important;
+  font-size: 1.5em;
+}
+
+.Arquetipo_input {
+  background-color: transparent;
+  position: absolute;
+  top: 10.8em;
+  left: 4em;
+  text-align: center;
+  z-index: 6;
+  width: 10em;
+  font-family: "Dexotick";
+  color: Black !important;
+  font-size: 2em;
+}
+.Arquetipo_input input{
+  text-align: left;
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+  height: auto;
+}
+
 .Jugador_contenedor_equipo {
   left: 22px;
   background-color: rgba(255, 0, 0, 0.3);
-  top: 284px;
+  top: 300px;
   width: 54em;
-  height: 29em;
+  height: 18em;
   position: absolute;
 }
 .espacio_armas {
@@ -914,7 +492,7 @@ ol.lista-armas {
   text-align: center;
   z-index: 6;
   width: 2em;
-  font-family: "Bangers";
+  font-family: "Annie";
   color: Black !important;
   font-size: 1.5em;
 }
@@ -931,14 +509,67 @@ ol.lista-armas {
   left: 6.6em;
 }
 
+.recuerdo_Cuando {
+  position: absolute;
+  top: 10em;
+  left: 1em;
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 8em;
+  font-family: "Girassol";
+  color: Black !important;
+  font-size: 1.5em;
+}
+
+.Profesion_label {
+  position: absolute;
+  top: 10em;
+  left: 15em;
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 7em;
+  font-family: "Girassol";
+  color: Black !important;
+  font-size: 1.5em;
+}
+
+.Profesion_valor_input {
+  background-color: transparent;
+  position: absolute;
+  top: 7em;
+  left: 15.8em;
+  text-align: center;
+  z-index: 6;
+  width: 11em;
+  font-family: "Dexotick";
+  color: Black !important;
+  font-size: 2em;
+}
+.Profesion_valor_input input{
+  text-align: left;
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+  height: auto;
+}
+
 .Titulo_Daño {
   position: absolute;
   top: 0.1em;
   left: 11.6em;
 }
 
-.Titulo_Bono {
+.titulo_Habilidades {
   position: absolute;
-  top: 0.1em;
-  left: 15.6em;
+  top: 8.3em;
+  left: 9.2em;
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Girassol";
+  color: Black !important;
+  font-size: 2.3em;
 }

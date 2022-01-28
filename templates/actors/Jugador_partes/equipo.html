@@ -1,10 +1,9 @@
-<form class="{{cssClass}}" autocomplete="off">
   <div class="Jugador_contenedor_equipo">
         <label class="Titulo_Arma Titulo_Equipo">Arma</label>
         <label class="Titulo_Habilidad Titulo_Equipo">Habilidad</label>
         <label class="Titulo_Daño Titulo_Equipo">Daño</label>
         <label class="Titulo_Bono Titulo_Equipo">Bono</label>
-        <span class="align_right" style="width:10%"><a class="item-control item-create" data-type="Arma"><i class="fas fa-plus"></i></a></span>
+        <span class="align_right"><a class="item-control item-create" data-type="Arma"><i class="fas fa-plus"></i></a></span>
 
     <div class="espacio_armas">
 
@@ -14,14 +13,19 @@
                 <label class="arma_linea">{{item.name}}</label>
                 <label class="arma_linea">{{item.data.Habilidad}} </label>
                 <label class="arma_linea">{{item.data.Daño}} </label>
-                <label class="arma_linea">{{item.data.Bono}}</label>
-                <a class="item-control item-equip"><i class="fas fa-tshirt"><span class="tooltiptext"></span></i></a>
-                <a class="item-control item-edit"><i class="fas fa-edit"><span class="tooltiptext"></span></i></a>
-                <a class="item-control item-delete"><i class="fas fa-trash"><span class="tooltiptext"></span></i></a>
+                {{#if (eq item.data.Bono "FUE_2")}}
+                  <label class="arma_linea">FUE/2</label>
+                {{else}}
+                  <label class="arma_linea">{{item.data.Bono}}</label>
+                {{/if}}
+                <span>
+                  <a class="item-control item-equip"><i class="fas fa-tshirt"><span class="tooltiptext"></span></i></a>
+                  <a class="item-control item-edit"><i class="fas fa-edit"><span class="tooltiptext"></span></i></a>
+                  <a class="item-control item-delete"><i class="fas fa-trash"><span class="tooltiptext"></span></i></a>
+                </span>
               </li>
           {{/each}}
         </ol>
     </div>
 
   </div>
-</form>

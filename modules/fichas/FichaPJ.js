@@ -173,6 +173,43 @@ activateListeners(html) {
           this.render(false);
         });
 
+        html.find('.recuerdo_toggle').click(ev => {
+          console.log ("RECUERDO TOGGLE")
+          const element = ev.currentTarget;
+          const dataset = element.dataset;
+          const bono_nombre=dataset.bono_nombre;
+          var valor_nuevo="true";
+          const update = {};
+          update.data = {};
+          if (this.actor.data.data.Recuerdo_Cuando == "false"){
+              const recuerdo='data.Recuerdo_Cuando'
+              update[recuerdo] = valor_nuevo;
+              update.id = this.actor.id;
+              this.actor.update(update, {diff: true});
+            }
+          else {
+            ui.notifications.warn("Ya has usado tu RECUERDO esta sesión");
+            return 1;
+          }
+        });
+
+        html.find('.recuerdo_toggle').contextmenu(ev => {
+          console.log ("RECUERDO TOGGLE BOTON DERECHO")
+          const element = ev.currentTarget;
+          const dataset = element.dataset;
+          const bono_nombre=dataset.bono_nombre;
+          var valor_nuevo="false";
+          const update = {};
+          update.data = {};
+
+              const recuerdo='data.Recuerdo_Cuando'
+              update[recuerdo] = valor_nuevo;
+              update.id = this.actor.id;
+              this.actor.update(update, {diff: true});
+          
+        });
+
+
         //AQUI IRIAN LOS LISTENERS DE LAS TIRADAS
 
 }
