@@ -45,7 +45,6 @@
                 "Protección_Agilidad": 0,
                 "Protección_Penalización": 0,
                 "Iniciativa": 0,
-                "Estorbo": 0,
                 "Recuerdo_Cuando": "false",
                 "Recuerdo_Cuando_Activo": "false",
                 "Habilidades": {
@@ -223,9 +222,11 @@
     "Item":{
     "types": ["Arma", "Armadura", "Escudo", "Objeto"],
     "Arma":{
-      "Habilidad": "",
+      "Habilidad": "Lucha",
       "Daño": 0,
-      "Bono": "",
+      "Bono": "FUE",
+      "Ataque": "",
+      "Daño_Total": 0,
       "Equipado": "false"
 
     },

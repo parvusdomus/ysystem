@@ -502,6 +502,7 @@ a.habilidades-tab.active, .equipo-tab.active, .biografia-tab.active{
   width: 28em;
   height: 8em;
   position: absolute;
+  background-color: rgba(242, 242, 242, 0.4);
 }
 .armas{
   font-size: 1.4em;
@@ -599,6 +600,7 @@ ol.lista-armas {
   width: 28em;
   height: 4em;
   position: absolute;
+  background-color: rgba(242, 242, 242, 0.4);
 }
 
 .boton_mas_armadura {
@@ -754,6 +756,7 @@ ol.lista-armas {
   width: 28em;
   height: 4em;
   position: absolute;
+  background-color: rgba(242, 242, 242, 0.4);
 }
 
 .espacio_objetos {
@@ -763,6 +766,7 @@ ol.lista-armas {
   width: 24em;
   height: 13em;
   position: absolute;
+  background-color: rgba(242, 242, 242, 0.4);
 }
 
 .boton_mas_objeto {
@@ -832,7 +836,7 @@ ol.lista-armas {
 .Titulo_Habilidad {
   position: absolute;
   top: 0.1em;
-  left: 8em;
+  left: 7.9em;
 }
 
 .recuerdo_Cuando {

@@ -34,6 +34,21 @@ const R_Mental=12-Number(data.data.Carisma);
 const Proezas=3+Math.floor((data.data.Fuerza+data.data.Inteligencia)/2)
 //FALTA ESTORBO Y ESCUDO Y ARMADURA, PERO TODAVÍA NO EXISTEN ITEMS
 //ACTUALIZO TODOS LOS VALORES
+let Protección_Daño=0;
+let Protección_Penalización=0;
+let Protección_Agilidad=0;
+let Armadura = data.Armaduras.find((k) => k.type === "Armadura" && k.data.Equipado=="true");
+if (Armadura){
+  Protección_Daño=Armadura.data.Nivel;
+  Protección_Penalización+=Armadura.data.Penalizador;
+}
+let Escudo = data.Escudos.find((k) => k.type === "Escudo" && k.data.Equipado=="true");
+if (Escudo){
+  Protección_Agilidad=Escudo.data.Nivel;
+  Protección_Penalización+=Escudo.data.Penalizador;
+}
+
+
 this.actor.update ({ 'data.Agilidad.Valor': Agilidad });
 this.actor.update ({ 'data.Aplomo.Valor': Aplomo });
 this.actor.update ({ 'data.Perspicacia.Valor': Perspicacia });
@@ -42,7 +57,11 @@ this.actor.update ({ 'data.Salud.max': Salud });
 this.actor.update ({ 'data.Resistencia_Física': R_Física });
 this.actor.update ({ 'data.Estabilidad.max': Estabilidad });
 this.actor.update ({ 'data.Resistencia_Mental': R_Mental });
+this.actor.update ({ 'data.Protección_Daño': Protección_Daño });
+this.actor.update ({ 'data.Protección_Agilidad': Protección_Agilidad });
+this.actor.update ({ 'data.Protección_Penalización': Protección_Penalización });
 this.actor.update ({ 'data.Proezas.max': Proezas });
+
 }
 
 
@@ -61,6 +80,11 @@ this.actor.update ({ 'data.Proezas.max': Proezas });
       let item = i.data;
       i.img = i.img || DEFAULT_TOKEN;
       if (i.type === 'Arma') {
+        if (i.data.Habilidad=="Lucha"){i.data.Ataque=actorData.data.Habilidades.Lucha.Valor+"D6+"+actorData.data.Destreza}
+        if (i.data.Habilidad=="Puntería"){i.data.Ataque=actorData.data.Habilidades.Puntería.Valor+"D6+"+actorData.data.Percepción}
+        if (i.data.Bono=="FUE_2"){i.data.Daño_Total=Number(i.data.Daño)+Math.floor(Number(actorData.data.Fuerza)/2)}
+        if (i.data.Bono=="FUE"){i.data.Daño_Total=Number(i.data.Daño)+Number(actorData.data.Fuerza)}
+        if (i.data.Bono=="PER"){i.data.Daño_Total=Number(i.data.Daño)+Number(actorData.data.Percepción)}
         Armas.push(i);
       }
       else if (i.type === 'Armadura') {

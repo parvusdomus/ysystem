@@ -1,6 +1,6 @@
   <div class="Jugador_contenedor_equipo">
         <label class="Titulo_Arma Titulo_Equipo">Arma</label>
-        <label class="Titulo_Habilidad Titulo_Equipo">Habilidad</label>
+        <label class="Titulo_Habilidad Titulo_Equipo">Ataque</label>
         <label class="Titulo_Daño Titulo_Equipo">Daño</label>
         <span class="align_right boton_mas_arma"><a class="item-control item-create" data-type="Arma"><i class="fas fa-plus"></i></a></span>
 
@@ -10,14 +10,8 @@
           {{#each Armas as |item id|}}
             <li class="armas item" data-item-id="{{item._id}}">
               <div class="arma_linea1"><label>{{item.name}}</label></div>
-                <label class="arma_linea2">{{item.data.Habilidad}} </label>
-                <label class="arma_linea3">{{item.data.Daño}}+
-                {{#if (eq item.data.Bono "FUE_2")}}
-                  FUE/2
-                {{else}}
-                  {{item.data.Bono}}
-                {{/if}}
-                 </label>
+                <label class="arma_linea2">{{item.data.Ataque}}</label>
+                <label class="arma_linea3">{{item.data.Daño_Total}}</label>
                 <span class="controles_armas">
                   <a class="item-control item-edit"><i class="fas fa-edit"><span class="tooltiptext"></span></i></a>
                   <a class="item-control item-delete"><i class="fas fa-trash"><span class="tooltiptext"></span></i></a>
@@ -95,5 +89,5 @@
         </ol>
     </div>
     <img class="imagen_penalizador" src="/systems/ysystem/assets/fichas/penalizador.svg" alt="?"/>
-    <label class="caract_Estorbo caract_valor">{{data.Estorbo}}</label>
+    <label class="caract_Estorbo caract_valor">{{data.Protección_Penalización}}</label>
   </div>
