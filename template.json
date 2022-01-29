@@ -47,6 +47,7 @@
                 "Iniciativa": 0,
                 "Estorbo": 0,
                 "Recuerdo_Cuando": "false",
+                "Recuerdo_Cuando_Activo": "false",
                 "Habilidades": {
                   "Atletismo":{
                     "Nombre": "Atletismo",
@@ -167,20 +168,20 @@
                     "Nombre": "Supervivencia",
                     "Valor": 1,
                     "Atributo": "Percepción"
-                  },
-                  "Magia_Psiónica":{
-                    "Nombre": "Magia/Psión.",
-                    "Valor": 1,
-                    "Atributo": "Inteligencia"
                   }
                 },
                 "Profesión": "",
-                "Defecto_Leve": "Defecto Leve",
-                "Defecto_Grave": "OJO",
-                "Talento": "RAAAAAA",
-                "Arquetipo": "DFADAFDADFFDS",
+                "Defecto_Leve": "",
+                "Defecto_Grave": "",
+                "Talento": "",
+                "Arquetipo": "",
                 "Biografía": "",
-                "Experiencia": 0
+                "Experiencia": 0,
+                "Magia_Psiónica":{
+                  "Nombre": "Magia/Psión.",
+                  "Valor": 1,
+                  "Atributo": "Inteligencia"
+                }
             },
             "PNJ": {
               "Salud": {
@@ -220,19 +221,26 @@
 
     },
     "Item":{
-    "types": ["Arma", "Armadura", "Escudo"],
+    "types": ["Arma", "Armadura", "Escudo", "Objeto"],
     "Arma":{
       "Habilidad": "",
       "Daño": 0,
-      "Bono": ""
+      "Bono": "",
+      "Equipado": "false"
+
     },
     "Armadura":{
       "Nivel": 0,
-      "Penalizador": 0
+      "Penalizador": 0,
+      "Equipado": "false"
     },
     "Escudo":{
       "Nivel": 0,
-      "Penalizador": 0
+      "Penalizador": 0,
+      "Equipado": "false"
+    },
+    "Objeto":{
+      "Cantidad": 0
     }
   }
 }

@@ -55,7 +55,7 @@ this.actor.update ({ 'data.Proezas.max': Proezas });
      const Armaduras = [];
      const Escudos = [];
      //const Hechizos = [];
-     //const Objetos = [];
+     const Objetos = [];
      // Ordena los objetos por tipo y los mete en el array correspondiente
     for (let i of sheetData.items) {
       let item = i.data;
@@ -72,16 +72,16 @@ this.actor.update ({ 'data.Proezas.max': Proezas });
        //else if (i.type === "Hechizo") {
       //   Hechizos.push(i);
       // }
-      // else if (i.type === "Objeto") {
-      //   Objetos.push(i);
-      // }
+       else if (i.type === "Objeto") {
+         Objetos.push(i);
+       }
     }
     //Asigno cada array al actordata
 actorData.Armas = Armas;
 actorData.Armaduras = Armaduras;
 actorData.Escudos = Escudos;
 //actorData.Hechizos = Hechizos;
-//actorData.Objetos = Objetos;
+actorData.Objetos = Objetos;
 }
 
 activateListeners(html) {
@@ -162,6 +162,7 @@ activateListeners(html) {
         });
         //Equipar objeto, solo armadura y escudo
         html.find('.item-equip').click(ev => {
+          console.log ("EQUIPAR OBJETO")
           const li = $(ev.currentTarget).parents(".item");
           const objeto_a_equipar = this.actor.items.get(li.data("itemId"));
           if (objeto_a_equipar.data.data.Equipado =="false"){

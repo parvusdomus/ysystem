@@ -41,7 +41,11 @@
                 <label class="armadura_linea2">{{item.data.Nivel}} </label>
                 <label class="armadura_linea3">{{item.data.Penalizador}}</label>
                 <span class="controles_armaduras">
-                  <a class="item-control item-equip"><i class="fas fa-tshirt"><span class="tooltiptext"></span></i></a>
+                  {{#if (eq item.data.Equipado "false")}}
+                    <a class="item-control item-equip" style="color:Grey"><i class="fas fa-tshirt"><span class="tooltiptext"></span></i></a>
+                  {{else}}
+                    <a class="item-control item-equip" style="color:Black"><i class="fas fa-tshirt"><span class="tooltiptext"></span></i></a>
+                  {{/if}}
                   <a class="item-control item-edit"><i class="fas fa-edit"><span class="tooltiptext"></span></i></a>
                   <a class="item-control item-delete"><i class="fas fa-trash"><span class="tooltiptext"></span></i></a>
                 </span>
@@ -60,7 +64,11 @@
                 <label class="escudo_linea2">{{item.data.Nivel}} </label>
                 <label class="escudo_linea3">{{item.data.Penalizador}}</label>
                 <span class="controles_escudo">
-                  <a class="item-control item-equip"><i class="fas fa-tshirt"><span class="tooltiptext"></span></i></a>
+                  {{#if (eq item.data.Equipado "false")}}
+                    <a class="item-control item-equip" style="color:Grey"><i class="fas fa-tshirt"><span class="tooltiptext"></span></i></a>
+                  {{else}}
+                    <a class="item-control item-equip" style="color:Black"><i class="fas fa-tshirt"><span class="tooltiptext"></span></i></a>
+                  {{/if}}
                   <a class="item-control item-edit"><i class="fas fa-edit"><span class="tooltiptext"></span></i></a>
                   <a class="item-control item-delete"><i class="fas fa-trash"><span class="tooltiptext"></span></i></a>
                 </span>
@@ -68,7 +76,24 @@
           {{/each}}
         </ol>
     </div>
-    <div class="espacio_objetos">
+    <label class="Titulo_Objeto Titulo_Equipo">Objeto</label>
+    <label class="Titulo_Cantidad Titulo_Equipo">Cantidad</label>
+    <span class="align_right boton_mas_objeto"><a class="item-control item-create" data-type="Objeto"><i class="fas fa-plus"></i></a></span>
 
+    <div class="espacio_objetos">
+      <ol class="lista-armas" data-item-id="{{item._id}}">
+          {{#each Objetos as |item id|}}
+            <li class="armas item" data-item-id="{{item._id}}">
+              <div class="objeto_linea1"><label>{{item.name}}</label></div>
+                <label class="objeto_linea2">{{item.data.Cantidad}} </label>
+                <span class="controles_objeto">
+                  <a class="item-control item-edit"><i class="fas fa-edit"><span class="tooltiptext"></span></i></a>
+                  <a class="item-control item-delete"><i class="fas fa-trash"><span class="tooltiptext"></span></i></a>
+                </span>
+              </li>
+          {{/each}}
+        </ol>
     </div>
+    <img class="imagen_penalizador" src="/systems/ysystem/assets/fichas/penalizador.svg" alt="?"/>
+    <label class="caract_Estorbo caract_valor">{{data.Estorbo}}</label>
   </div>

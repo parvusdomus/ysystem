@@ -151,3 +151,23 @@
   border: none;
   height: auto;
 }
+
+.Objeto_Cantidad_input {
+  background-color: transparent;
+  position: absolute;
+  top: 3em;
+  left: 9.8em;
+  text-align: center;
+  z-index: 6;
+  width: 3em;
+  font-family: "Bangers";
+  color: Black !important;
+  font-size: 1.7em;
+}
+.Objeto_Cantidad_input input{
+  text-align: center;
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+  height: auto;
+}

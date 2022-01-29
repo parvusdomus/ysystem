@@ -1,9 +1,9 @@
 .espacio_habilidades {
   columns: 3;
   left: 22px;
-  top: 308px;
+  top: 318px;
   width: 54em;
-  height: 17em;
+  height: 16em;
   position: absolute;
 }
 
@@ -89,6 +89,12 @@ img {
   position: absolute;
 }
 
+.caract_Iniciativa {
+  position: absolute;
+  top: 3.6em;
+  left: 0.4em;
+}
+
 .atributo_select {
   background-color: transparent;
   position: absolute;
@@ -113,27 +119,27 @@ img {
 
 .atributo_Carisma {
   top: 3.1em;
-  left: 1.9em;
+  left: 3em;
 }
 
 .atributo_Destreza {
   top: 3.1em;
-  left: 4.2em;
+  left: 5.3em;
 }
 
 .atributo_Fuerza {
   top: 3.1em;
-  left: 6.7em;
+  left: 7.4em;
 }
 
 .atributo_Inteligencia {
   top: 3.1em;
-  left: 9.2em;
+  left: 9.6em;
 }
 
 .atributo_Percepción {
   top: 3.1em;
-  left: 11.5em;
+  left: 11.7em;
 }
 
 .espacio_caract {
@@ -484,14 +490,12 @@ a.habilidades-tab.active, .equipo-tab.active, .biografia-tab.active{
 
 .Jugador_contenedor_equipo {
   left: 22px;
-  background-color: rgba(255, 0, 0, 0.3);
   top: 258px;
   width: 54em;
   height: 21em;
   position: absolute;
 }
 .espacio_armas {
-  background-color: rgba(0, 0, 255, 0.3);
   overflow-y: scroll;
   left: 0px;
   top: 30px;
@@ -589,7 +593,6 @@ ol.lista-armas {
 }
 
 .espacio_armaduras {
-  background-color: rgba(0, 255, 255, 0.3);
   overflow-y: scroll;
   left: 0px;
   top: 172px;
@@ -623,14 +626,14 @@ ol.lista-armas {
 
 .armadura_linea2 {
   position: relative;
-  left: -1em;
+  left: -2.5em;
   overflow: hidden;
   background-color: transparent;
   text-overflow: clip;
   text-align: center;
   display: inline-block;
   z-index: 6;
-  width: 4em;
+  width: 2em;
   height: 1.1em;
   font-family: "Lora";
   white-space: nowrap;
@@ -640,14 +643,14 @@ ol.lista-armas {
 
 .armadura_linea3 {
   position: relative;
-  left: -2em;
+  left: -4em;
   overflow: hidden;
   background-color: transparent;
   text-overflow: clip;
   text-align: center;
   display: inline-block;
   z-index: 6;
-  width: 5em;
+  width: 2em;
   height: 1.1em;
   font-family: "Lora";
   white-space: nowrap;
@@ -686,7 +689,7 @@ ol.lista-armas {
 
 .escudo_linea2 {
   position: relative;
-  left: -1em;
+  left: -2.5em;
   overflow: hidden;
   background-color: transparent;
   text-overflow: clip;
@@ -703,14 +706,14 @@ ol.lista-armas {
 
 .escudo_linea3 {
   position: relative;
-  left: -2em;
+  left: -4em;
   overflow: hidden;
   background-color: transparent;
   text-overflow: clip;
   text-align: center;
   display: inline-block;
   z-index: 6;
-  width: 5em;
+  width: 2em;
   height: 1.1em;
   font-family: "Lora";
   white-space: nowrap;
@@ -745,7 +748,6 @@ ol.lista-armas {
 
 
 .espacio_escudos {
-  background-color: rgba(0, 255, 0, 0.3);
   overflow-y: scroll;
   left: 0px;
   top: 233px;
@@ -755,13 +757,76 @@ ol.lista-armas {
 }
 
 .espacio_objetos {
-  background-color: rgba(0, 255, 0, 0.3);
   overflow-y: scroll;
   left: 419px;
-  top: 29px;
+  top: 28px;
   width: 24em;
-  height: 19em;
+  height: 13em;
   position: absolute;
+}
+
+.boton_mas_objeto {
+  position: absolute;
+  top: 0.5em;
+  left: 28.6em;
+}
+
+.Titulo_Objeto {
+  position: absolute;
+  top: 0.1em;
+  left: 21.6em;
+}
+
+.Titulo_Cantidad {
+  position: absolute;
+  top: 0.1em;
+  left: 30em;
+}
+
+.objeto_linea1 {
+  position: relative;
+  left: -1em;
+  overflow: hidden;
+  background-color: transparent;
+  text-overflow: clip;
+  text-align: left;
+  display: inline-block;
+  z-index: 6;
+  width: 11em;
+  height: 1.1em;
+  font-family: "Lora";
+  white-space: nowrap;
+  color: Black !important;
+  font-size: 1em;
+}
+
+.objeto_linea2 {
+  position: relative;
+  left: -2em;
+  overflow: hidden;
+  background-color: transparent;
+  text-overflow: clip;
+  text-align: center;
+  display: inline-block;
+  z-index: 6;
+  width: 4em;
+  height: 1.1em;
+  font-family: "Lora";
+  white-space: nowrap;
+  color: Black !important;
+  font-size: 1em;
+}
+
+.controles_objeto {
+  position: absolute;
+  left: 21.6em;
+  font-size: 0.7em;
+}
+
+.caract_Estorbo {
+  position: absolute;
+  top: 6.3em;
+  left: 19.2em;
 }
 
 .Titulo_Habilidad {
@@ -772,7 +837,7 @@ ol.lista-armas {
 
 .recuerdo_Cuando {
   position: absolute;
-  top: 10em;
+  top: 9em;
   left: 1em;
   background-color: transparent;
   text-align: center;
@@ -785,7 +850,7 @@ ol.lista-armas {
 
 .Profesion_label {
   position: absolute;
-  top: 10em;
+  top: 9em;
   left: 15em;
   background-color: transparent;
   text-align: center;
@@ -799,7 +864,7 @@ ol.lista-armas {
 .Profesion_valor_input {
   background-color: transparent;
   position: absolute;
-  top: 7em;
+  top: 6.3em;
   left: 15.8em;
   text-align: center;
   z-index: 6;
@@ -833,4 +898,20 @@ ol.lista-armas {
   font-family: "Girassol";
   color: Black !important;
   font-size: 2.3em;
+}
+
+.imagen_penalizador {
+  top: 15em;
+  left: 47.6em;
+  position: absolute;
+  width: 6em;
+  height: 6em;
+  text-align: center;
+  z-index: 0;
+}
+
+.imagen_penalizador img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
 }
