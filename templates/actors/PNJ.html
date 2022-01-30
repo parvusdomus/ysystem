@@ -1,4 +1,34 @@
 <form class="{{cssClass}} flexcol" autocomplete="off">
   <img class="content-background" src="/systems/ysystem/assets/fichas/PNJ-B_N-Bg.svg" alt="?"/>
-
+  <div class="PNJINFO">
+    <div class="PNJ-nombre"><input name="name" type="text" value="{{name}}" placeholder='Nombre'
+                                         onClick="this.select();"/></div>
+      <div class="PNJ-foto">
+        <img class="profile-img" src="{{img}}" data-edit="img" title="{{name}}" alt='Imagen del Personaje'/>
+      </div>
+    <div class="PNJ_caract_Carisma">
+      <input type="text" name="data.Carisma" value="{{data.Carisma}}" data-dtype="Number" maxlength="2"/>
+    </div>
+    <div class="PNJ_caract_Destreza">
+      <input type="text" name="data.Destreza" value="{{data.Destreza}}" data-dtype="Number" maxlength="2"/>
+    </div>
+    <div class="PNJ_caract_Fuerza">
+      <input type="text" name="data.Fuerza" value="{{data.Fuerza}}" data-dtype="Number" maxlength="2"/>
+    </div>
+    <div class="PNJ_caract_Inteligencia">
+      <input type="text" name="data.Inteligencia" value="{{data.Inteligencia}}" data-dtype="Number" maxlength="2"/>
+    </div>
+    <div class="PNJ_caract_Percepción">
+      <input type="text" name="data.Percepción" value="{{data.Percepción}}" data-dtype="Number" maxlength="2"/>
+    </div>
+    <div class="PNJ_caract_Salud_input">
+      <input type="text" name="data.Salud.value" value="{{data.Salud.value}}" data-dtype="Number" maxlength="2"/>
+    </div>
+    <label class="PNJ_caract_Salud_max">{{data.Salud.max}}</label>
+    <label class="PNJ_caract_R_Fisica">{{data.Resistencia_Física}}</label>
+    <label class="PNJ_caract_Iniciativa">{{data.Iniciativa}}</label>
+    <label class="PNJ_caract_Agilidad">{{data.Agilidad}}</label>
+    <label class="PNJ_caract_Aplomo">{{data.Aplomo}}</label>
+    <label class="PNJ_caract_Perspicacia">{{data.Perspicacia}}</label>
+  </div>
 </form>

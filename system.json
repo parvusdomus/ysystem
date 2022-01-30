@@ -12,7 +12,8 @@
     ],
   "styles": ["styles/fichaPJ.css",
               "styles/fichaObj.css",
-              "styles/ysystem.css"
+              "styles/ysystem.css",
+              "styles/fichaPNJ.css"
   ],
   "packs": [],
   "languages": [],

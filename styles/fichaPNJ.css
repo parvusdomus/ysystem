@@ -1,0 +1,243 @@
+.PNJINFO {
+  left: 9px;
+  top: 36px;
+  width: 55em;
+  height: 13em;
+  position: absolute;
+}
+
+.PNJ-foto {
+  top: 2.3em;
+  left: 43.3em;
+  position: absolute;
+  width: 10em;
+  height: 10em;
+  text-align: center;
+  z-index: 0;
+}
+
+.PNJ-foto img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
+}
+
+
+.PNJ-nombre {
+  position: absolute;
+  top: 2.2em;
+  text-align: center;
+  z-index: 6;
+  left: 10.7em;
+  width: 26.5em;
+}
+
+.PNJ-nombre input[type='text'] {
+  background-color: transparent;
+  font-family: inherit;
+  width: 8.6em;
+  height: 1em;
+  font-size: 3em;
+  text-align: center;
+  font-family: "Dexotick";
+  color: White !important;
+  border: none;
+}
+
+.PNJ_caract_Carisma {
+  background-color: transparent;
+  position: absolute;
+  top: 2.3em;
+  left: 2.9em;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Annie";
+  color: Black !important;
+  font-size: 3em;
+}
+.PNJ_caract_Carisma input{
+  text-align: center;
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+  height: auto;
+}
+
+.PNJ_caract_Destreza {
+  background-color: transparent;
+  position: absolute;
+  top: 2.3em;
+  left: 5.3em;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Annie";
+  color: Black !important;
+  font-size: 3em;
+}
+.PNJ_caract_Destreza input{
+  text-align: center;
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+  height: auto;
+}
+
+.PNJ_caract_Fuerza {
+  background-color: transparent;
+  position: absolute;
+  top: 2.3em;
+  left: 7.4em;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Annie";
+  color: Black !important;
+  font-size: 3em;
+}
+.PNJ_caract_Fuerza input{
+  text-align: center;
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+  height: auto;
+}
+
+.PNJ_caract_Inteligencia {
+  background-color: transparent;
+  position: absolute;
+  top: 2.3em;
+  left: 9.5em;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Annie";
+  color: Black !important;
+  font-size: 3em;
+}
+.PNJ_caract_Inteligencia input{
+  text-align: center;
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+  height: auto;
+}
+
+.PNJ_caract_Percepción {
+  background-color: transparent;
+  position: absolute;
+  top: 2.3em;
+  left: 11.6em;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Annie";
+  color: Black !important;
+  font-size: 3em;
+}
+.PNJ_caract_Percepción input{
+  text-align: center;
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+  height: auto;
+}
+
+.PNJ_caract_Salud_input {
+  background-color: transparent;
+  position: absolute;
+  top: 5.2em;
+  left: 5.5em;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Annie";
+  color: Black !important;
+  font-size: 2.5em;
+}
+.PNJ_caract_Salud_input input{
+  text-align: center;
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+  height: auto;
+}
+
+.PNJ_caract_Salud_max {
+  position: absolute;
+  top: 7.7em;
+  left: 10.4em;
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Annie";
+  color: Black !important;
+  font-size: 1.7em;
+}
+
+.PNJ_caract_R_Fisica {
+  position: absolute;
+  top: 5.2em;
+  left: 8em;
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Annie";
+  color: Black !important;
+  font-size: 2.5em;
+}
+
+.PNJ_caract_Iniciativa {
+  position: absolute;
+  top: 5.2em;
+  left: 3.1em;
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Annie";
+  color: Black !important;
+  font-size: 2.5em;
+}
+
+.PNJ_caract_Agilidad {
+  position: absolute;
+  top: 0.8em;
+  left: 0.3em;
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Annie";
+  color: Black !important;
+  font-size: 2.5em;
+}
+
+.PNJ_caract_Aplomo {
+  position: absolute;
+  top: 3.1em;
+  left: 0.3em;
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Annie";
+  color: Black !important;
+  font-size: 2.5em;
+}
+
+.PNJ_caract_Perspicacia {
+  position: absolute;
+  top: 5.3em;
+  left: 0.3em;
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Annie";
+  color: Black !important;
+  font-size: 2.5em;
+}
