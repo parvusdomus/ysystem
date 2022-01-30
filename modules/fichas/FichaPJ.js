@@ -186,7 +186,6 @@ activateListeners(html) {
         });
         //Equipar objeto, solo armadura y escudo
         html.find('.item-equip').click(ev => {
-          console.log ("EQUIPAR OBJETO")
           const li = $(ev.currentTarget).parents(".item");
           const objeto_a_equipar = this.actor.items.get(li.data("itemId"));
           if (objeto_a_equipar.data.data.Equipado =="false"){
@@ -199,10 +198,8 @@ activateListeners(html) {
         });
 
         html.find('.recuerdo_toggle').click(ev => {
-          console.log ("RECUERDO TOGGLE")
           const element = ev.currentTarget;
           const dataset = element.dataset;
-          const bono_nombre=dataset.bono_nombre;
           var valor_nuevo="true";
           const update = {};
           update.data = {};
@@ -219,10 +216,8 @@ activateListeners(html) {
         });
 
         html.find('.recuerdo_toggle').contextmenu(ev => {
-          console.log ("RECUERDO TOGGLE BOTON DERECHO")
           const element = ev.currentTarget;
           const dataset = element.dataset;
-          const bono_nombre=dataset.bono_nombre;
           var valor_nuevo="false";
           const update = {};
           update.data = {};
@@ -232,6 +227,21 @@ activateListeners(html) {
               update.id = this.actor.id;
               this.actor.update(update, {diff: true});
 
+        });
+        //RESTAURAR PROEZAS SALUD Y ESTABILIDAD
+        html.find('.restaura_proeza').contextmenu(ev => {
+          const element = ev.currentTarget;
+          this.actor.update ({ 'data.Proezas.value': this.actor.data.data.Proezas.max });
+        });
+
+        html.find('.restaura_salud').contextmenu(ev => {
+          const element = ev.currentTarget;
+          this.actor.update ({ 'data.Salud.value': this.actor.data.data.Salud.max });
+        });
+
+        html.find('.restaura_estabilidad').contextmenu(ev => {
+          const element = ev.currentTarget;
+          this.actor.update ({ 'data.Estabilidad.value': this.actor.data.data.Estabilidad.max });
         });
 
 

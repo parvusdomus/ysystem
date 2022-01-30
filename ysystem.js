@@ -13,7 +13,7 @@ Hooks.once("init", function(){
     Items.unregisterSheet("core", ItemSheet);
     Items.registerSheet("Ysystem", FichaObjetoYsystem,{
       makeDefault: true,
-      types: ['Arma','Armadura','Escudo','Objeto']
+      types: ['Arma','Armadura','Escudo','Objeto', 'Poder']
     });
     console.log ("test | HOJAS INICIALIZADAS");
     console.log ("test | CARGANDO TEMPLATES");

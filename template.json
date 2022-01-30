@@ -220,28 +220,41 @@
 
     },
     "Item":{
-    "types": ["Arma", "Armadura", "Escudo", "Objeto"],
+    "types": ["Arma", "Armadura", "Escudo", "Objeto", "Poder"],
     "Arma":{
       "Habilidad": "Lucha",
       "Daño": 0,
       "Bono": "FUE",
       "Ataque": "",
       "Daño_Total": 0,
-      "Equipado": "false"
-
+      "Equipado": "false",
+      "Descripción": ""
     },
     "Armadura":{
       "Nivel": 0,
       "Penalizador": 0,
-      "Equipado": "false"
+      "Equipado": "false",
+      "Descripción": ""
     },
     "Escudo":{
       "Nivel": 0,
       "Penalizador": 0,
-      "Equipado": "false"
+      "Equipado": "false",
+      "Descripción": ""
     },
     "Objeto":{
-      "Cantidad": 0
+      "Cantidad": 0,
+      "Descripción": ""
+    },
+    "Poder":{
+      "Tipo": "",
+      "Atributo": "",
+      "Dificultad": "",
+      "Descripción": "",
+      "Preparación": "",
+      "Lanzamiento": "",
+      "Duración": "",
+      "Caducidad": ""
     }
   }
 }
