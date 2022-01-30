@@ -5,8 +5,7 @@
       <ol class="lista-habilidades">
           {{#each data.Habilidades as |habilidad id|}}
             <li class="habilidad">
-              <label>{{habilidad.Nombre}}</label>
-
+              <label class="tirada_habilidad" data-Habilidad_id="{{id}}">{{habilidad.Nombre}}</label>
                 <span class="mod_habilidad" data-habilidad_id="{{id}}">
                   {{#if (eq habilidad.Atributo "Percepción")}}<label> (PER)</label>{{/if}}
                   {{#if (eq habilidad.Atributo "Carisma")}}<label> (CAR)</label>{{/if}}

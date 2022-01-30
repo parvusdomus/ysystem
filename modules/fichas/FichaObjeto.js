@@ -3,7 +3,7 @@ export default class FichaObjetoYsystem extends ItemSheet{
     return mergeObject(super.defaultOptions, {
       classes: ["Ysystem", "sheet", "item"],
       width: 320,
-      height: 170,
+      height: 370,
       resizable: false
     });
   }

@@ -1,3 +1,5 @@
+import {TiradaHabilidad} from "../tiradas/tirada_habilidad.js";
+
 export default class FichaYsystem extends ActorSheet{
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
@@ -246,6 +248,7 @@ activateListeners(html) {
 
 
         //AQUI IRIAN LOS LISTENERS DE LAS TIRADAS
+        html.find('.tirada_habilidad').click(this._onTiradaHabilidad.bind(this));
 
 }
 _onItemCreate(event) {
@@ -271,5 +274,11 @@ _onItemCreate(event) {
   return Item.create(itemData, {parent: this.actor});
 }
 
+async _onTiradaHabilidad(event) {
+  const element = event.currentTarget;
+  const dataset = element.dataset;
+  let objetivo = Array.from(game.user.targets)[0];
+  TiradaHabilidad (this.actor, dataset.habilidad_id, objetivo)
+}
 
 }

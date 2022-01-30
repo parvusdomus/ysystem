@@ -1,16 +1,14 @@
 .espacio_objeto {
-  opacity: 0.5;
   left: 2px;
   top: 31px;
   width: 22.5em;
   height: 9.8em;
   position: absolute;
-  background-color: red;
 }
 
 .Objeto-foto {
-  top: 2.1em;
-  left: 1.6em;
+  top: 2.5em;
+  left: 1.9em;
   position: absolute;
   width: 6em;
   height: 6em;
@@ -26,12 +24,11 @@
 
 .Objeto-nombre {
   position: absolute;
-  top: 1.5em;
+  top: 1.7em;
   text-align: center;
   z-index: 6;
-  left: 9em;
-  width: 12.5em;
-  background-color: blue;
+  left: 10.2em;
+  width: 11em;
 }
 
 .Objeto-nombre input[type='text'] {
@@ -40,21 +37,22 @@
   width: 6.6em;
   font-size: 1.6em;
   text-align: center;
-  color: Black !important;
+  color: White !important;
+  font-family: "Dexotick";
   border: none;
 }
 
 .Arma_Habilidad_select {
-  top: 2.4em;
-  left: 9.2em;
+  top: 2.3em;
+  left: 9em;
   background-color: transparent;
   position: absolute;
   appearance: none;
   text-align: center;
   z-index: 6;
-  width: 3em;
-  height: 1em;
-  font-family: "Bangers";
+  width: 4em;
+  height: 1.4em;
+  font-family: "Annie";
   color: Black !important;
   font-size: 1.7em;
   border: none;
@@ -62,7 +60,7 @@
 .Arma_Habilidad_select select{
   appearance: none;
   text-align: center;
-  font-family: "Bangers";
+  font-family: "Annie";
   color: Black !important;
   background-color: transparent;
   border: none;
@@ -72,11 +70,11 @@
   background-color: transparent;
   position: absolute;
   top: 3.8em;
-  left: 6.8em;
+  left: 7.3em;
   text-align: center;
   z-index: 6;
   width: 2em;
-  font-family: "Bangers";
+  font-family: "Annie";
   color: Black !important;
   font-size: 1.7em;
 }
@@ -96,9 +94,9 @@
   appearance: none;
   text-align: center;
   z-index: 6;
-  width: 3em;
-  height: 1em;
-  font-family: "Bangers";
+  width: 3.5em;
+  height: 1.4em;
+  font-family: "Annie";
   color: Black !important;
   font-size: 1.7em;
   border: none;
@@ -106,7 +104,7 @@
 .Arma_Bono_select select{
   appearance: none;
   text-align: center;
-  font-family: "Bangers";
+  font-family: "Annie";
   color: Black !important;
   background-color: transparent;
   border: none;
@@ -116,11 +114,11 @@
   background-color: transparent;
   position: absolute;
   top: 2.3em;
-  left: 10.3em;
+  left: 10.7em;
   text-align: center;
   z-index: 6;
   width: 2em;
-  font-family: "Bangers";
+  font-family: "Annie";
   color: Black !important;
   font-size: 1.7em;
 }
@@ -136,11 +134,11 @@
   background-color: transparent;
   position: absolute;
   top: 3.7em;
-  left: 10.3em;
+  left: 10.7em;
   text-align: center;
   z-index: 6;
   width: 2em;
-  font-family: "Bangers";
+  font-family: "Annie";
   color: Black !important;
   font-size: 1.7em;
 }
@@ -155,12 +153,12 @@
 .Objeto_Cantidad_input {
   background-color: transparent;
   position: absolute;
-  top: 3em;
-  left: 9.8em;
+  top: 2.7em;
+  left: 9.6em;
   text-align: center;
   z-index: 6;
   width: 3em;
-  font-family: "Bangers";
+  font-family: "Annie";
   color: Black !important;
   font-size: 1.7em;
 }
@@ -170,4 +168,17 @@
   background-color: transparent;
   border: none;
   height: auto;
+}
+
+.Objeto_contenedor_descripcion{
+  position: absolute;
+    left: 7px;
+    top: 178px;
+    width: 22em;
+    height: 13em;
+    background-color: rgba(242, 242, 242, 0.4);
+    overflow-y: scroll;
+    border: none;
+    border-width: 0;
+    font-family: 'Annie';
 }
