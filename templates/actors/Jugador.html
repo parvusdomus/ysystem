@@ -16,7 +16,9 @@
           <option value="0">+0</option>
           <option value="1">+1</option>
           <option value="2">+2</option>
+          <option value="3">+3</option>
           <option value="4">+4</option>
+          <option value="5">+5</option>
           <option value="6">+6</option>
         {{/select}}
       </select>
@@ -25,7 +27,9 @@
           <option value="0">+0</option>
           <option value="1">+1</option>
           <option value="2">+2</option>
+          <option value="3">+3</option>
           <option value="4">+4</option>
+          <option value="5">+5</option>
           <option value="6">+6</option>
         {{/select}}
       </select>
@@ -34,7 +38,9 @@
           <option value="0">+0</option>
           <option value="1">+1</option>
           <option value="2">+2</option>
+          <option value="3">+3</option>
           <option value="4">+4</option>
+          <option value="5">+5</option>
           <option value="6">+6</option>
         {{/select}}
       </select>
@@ -43,7 +49,9 @@
           <option value="0">+0</option>
           <option value="1">+1</option>
           <option value="2">+2</option>
+          <option value="3">+3</option>
           <option value="4">+4</option>
+          <option value="5">+5</option>
           <option value="6">+6</option>
         {{/select}}
       </select>
@@ -52,7 +60,9 @@
           <option value="0">+0</option>
           <option value="1">+1</option>
           <option value="2">+2</option>
+          <option value="3">+3</option>
           <option value="4">+4</option>
+          <option value="5">+5</option>
           <option value="6">+6</option>
         {{/select}}
       </select>
@@ -68,7 +78,17 @@
         <input type="text" name="data.Proezas.value" value="{{data.Proezas.value}}" data-dtype="Number" maxlength="2"/>
       </div>
       <label class="caract_Proezas_Max caract_bono restaura_proeza">{{data.Proezas.max}}</label>
-      <div class="caract_Salud_valor_input">
+      {{#if (lte data.Salud.value 3)}}
+          <div class="caract_Salud_valor_input_red">
+          {{else}} {{#if (lte data.Salud.value 6)}}
+            <div class="caract_Salud_valor_input_orange">
+            {{else}} {{#if (lte data.Salud.value 10)}}
+              <div class="caract_Salud_valor_input_yellow">
+              {{else}}
+                <div class="caract_Salud_valor_input_black">
+            {{/if}}
+          {{/if}}
+        {{/if}}
         <input type="text" name="data.Salud.value" value="{{data.Salud.value}}" data-dtype="Number" maxlength="2"/>
       </div>
       <label class="caract_Salud_max caract_bono restaura_salud">{{data.Salud.max}}</label>

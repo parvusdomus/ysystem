@@ -232,7 +232,7 @@ img {
   left: 14.9em;
 }
 
-.caract_Salud_valor_input {
+.caract_Salud_valor_input_black {
   background-color: transparent;
   position: absolute;
   top: 0.4em;
@@ -244,12 +244,78 @@ img {
   color: Black !important;
   font-size: 2.5em;
 }
-.caract_Salud_valor_input input{
+.caract_Salud_valor_input_black input{
   text-align: center;
   color: Black !important;
   background-color: transparent;
   border: none;
   height: auto;
+}
+
+.caract_Salud_valor_input_yellow {
+  background-color: transparent;
+  position: absolute;
+  top: 0.4em;
+  left: 11.9em;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Annie";
+  color: Yellow !important;
+  font-size: 2.5em;
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+.caract_Salud_valor_input_yellow input{
+  text-align: center;
+  color: Yellow !important;
+  background-color: transparent;
+  border: none;
+  height: auto;
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+
+.caract_Salud_valor_input_orange {
+  background-color: transparent;
+  position: absolute;
+  top: 0.4em;
+  left: 11.9em;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Annie";
+  color: Orange !important;
+  font-size: 2.5em;
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+.caract_Salud_valor_input_orange input{
+  text-align: center;
+  color: Orange !important;
+  background-color: transparent;
+  border: none;
+  height: auto;
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+
+.caract_Salud_valor_input_red {
+  background-color: transparent;
+  position: absolute;
+  top: 0.4em;
+  left: 11.9em;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Annie";
+  color: Red !important;
+  font-size: 2.5em;
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+.caract_Salud_valor_input_red input{
+  text-align: center;
+  color: Red !important;
+  background-color: transparent;
+  border: none;
+  height: auto;
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
 }
 
 .caract_Salud_max {
