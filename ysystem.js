@@ -1,6 +1,7 @@
 import FichaYsystem from "./modules/fichas/FichaPJ.js";
 import FichaPNJYsystem from "./modules/fichas/FichaPNJ.js";
 import FichaObjetoYsystem from "./modules/fichas/FichaObjeto.js";
+import FichaPoderYsystem from "./modules/fichas/FichaPoder.js";
 import { preloadHandlebarsTemplates } from "./modules/preloadTemplates.js";
 
 Hooks.once("init", function(){
@@ -18,7 +19,11 @@ Hooks.once("init", function(){
     Items.unregisterSheet("core", ItemSheet);
     Items.registerSheet("Ysystem", FichaObjetoYsystem,{
       makeDefault: true,
-      types: ['Arma','Armadura','Escudo','Objeto', 'Poder']
+      types: ['Arma','Armadura','Escudo','Objeto']
+    });
+    Items.registerSheet("Ysystem", FichaPoderYsystem,{
+      makeDefault: true,
+      types: ['Poder']
     });
     console.log ("test | HOJAS INICIALIZADAS");
     console.log ("test | CARGANDO TEMPLATES");
