@@ -176,8 +176,8 @@
                 "Arquetipo": "",
                 "Biografía": "",
                 "Experiencia": 0,
-                "Magia_Psiónica":{
-                  "Nombre": "Magia/Psión.",
+                "Magia":{
+                  "Nombre": "Magia/Psiónica",
                   "Valor": 1,
                   "Atributo": "Inteligencia"
                 }
@@ -187,6 +187,11 @@
                   "value": 0,
                   "max": 0,
                   "min": 0
+              },
+              "Poder": {
+                "value": 0,
+                "max": 0,
+                "min": 0
               },
               "Carisma": 0,
               "Destreza": 0,

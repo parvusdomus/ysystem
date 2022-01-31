@@ -33,8 +33,8 @@ const Salud=13+Number(data.data.Fuerza)*2;
 const R_Física=12-Number(data.data.Fuerza);
 const Estabilidad=8+Aplomo;
 const R_Mental=12-Number(data.data.Carisma);
-const Proezas=3+Math.floor((data.data.Fuerza+data.data.Inteligencia)/2)
-//FALTA ESTORBO Y ESCUDO Y ARMADURA, PERO TODAVÍA NO EXISTEN ITEMS
+const Proezas=3+Math.floor((data.data.Fuerza+data.data.Inteligencia)/2);
+const Poder=5+Number(data.data.Percepción)+Number(data.data.Inteligencia)+Number(data.data.Magia.Valor)*3;
 //ACTUALIZO TODOS LOS VALORES
 let Protección_Daño=0;
 let Protección_Penalización=0;
@@ -63,6 +63,7 @@ this.actor.update ({ 'data.Protección_Daño': Protección_Daño });
 this.actor.update ({ 'data.Protección_Agilidad': Protección_Agilidad });
 this.actor.update ({ 'data.Protección_Penalización': Protección_Penalización });
 this.actor.update ({ 'data.Proezas.max': Proezas });
+this.actor.update ({ 'data.Poder.max': Poder });
 
 }
 
@@ -75,7 +76,7 @@ this.actor.update ({ 'data.Proezas.max': Proezas });
      const Armas = [];
      const Armaduras = [];
      const Escudos = [];
-     //const Hechizos = [];
+     const Poderes = [];
      const Objetos = [];
      // Ordena los objetos por tipo y los mete en el array correspondiente
     for (let i of sheetData.items) {
@@ -95,9 +96,9 @@ this.actor.update ({ 'data.Proezas.max': Proezas });
        else if (i.type === "Escudo") {
          Escudos.push(i);
        }
-       //else if (i.type === "Hechizo") {
-      //   Hechizos.push(i);
-      // }
+       else if (i.type === "Poder") {
+         Poderes.push(i);
+       }
        else if (i.type === "Objeto") {
          Objetos.push(i);
        }
@@ -106,7 +107,7 @@ this.actor.update ({ 'data.Proezas.max': Proezas });
 actorData.Armas = Armas;
 actorData.Armaduras = Armaduras;
 actorData.Escudos = Escudos;
-//actorData.Hechizos = Hechizos;
+actorData.Poderes = Poderes;
 actorData.Objetos = Objetos;
 }
 
@@ -136,6 +137,21 @@ activateListeners(html) {
           var valor_nuevo=valor_actual+1
           if (valor_nuevo>=4){valor_nuevo=1}
           const habilidad='data.Habilidades.'+habilidad_id+'.Valor'
+          update[habilidad] = valor_nuevo;
+          update.id = this.actor.id;
+          this.actor.update(update, {diff: true});
+        });
+
+        html.find('.mod_magia').click(ev => {
+          const element = ev.currentTarget;
+          const dataset = element.dataset;
+          const habilidad_id=dataset.habilidad_id
+          const update = {};
+          update.data = {};
+          var valor_actual=Number(this.actor.data.data.Magia.Valor)
+          var valor_nuevo=valor_actual+1
+          if (valor_nuevo>=4){valor_nuevo=1}
+          const habilidad='data.Magia.Valor'
           update[habilidad] = valor_nuevo;
           update.id = this.actor.id;
           this.actor.update(update, {diff: true});
@@ -230,7 +246,7 @@ activateListeners(html) {
               this.actor.update(update, {diff: true});
 
         });
-        //RESTAURAR PROEZAS SALUD Y ESTABILIDAD
+        //RESTAURAR PROEZAS, SALUD, ESTABILIDAD Y PODER
         html.find('.restaura_proeza').contextmenu(ev => {
           const element = ev.currentTarget;
           this.actor.update ({ 'data.Proezas.value': this.actor.data.data.Proezas.max });
@@ -244,6 +260,11 @@ activateListeners(html) {
         html.find('.restaura_estabilidad').contextmenu(ev => {
           const element = ev.currentTarget;
           this.actor.update ({ 'data.Estabilidad.value': this.actor.data.data.Estabilidad.max });
+        });
+
+        html.find('.restaura_poder').contextmenu(ev => {
+          const element = ev.currentTarget;
+          this.actor.update ({ 'data.Poder.value': this.actor.data.data.Poder.max });
         });
 
 

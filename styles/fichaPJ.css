@@ -382,7 +382,7 @@ img {
     border-bottom: 0px solid #b5b3a4;
 }
 
-.habilidades-tab, .equipo-tab, .biografia-tab {
+.habilidades-tab, .equipo-tab, .biografia-tab, .magia-tab {
   background-image: url(/systems/ysystem/assets/fichas/Tabs.svg);
   background-position-x: -2px;
   padding-top: 0.15em;
@@ -392,13 +392,13 @@ img {
   background-color: unset !important;
 }
 
-a.habilidades-tab:hover, .equipo-tab:hover, .biografia-tab:hover{
+a.habilidades-tab:hover, .equipo-tab:hover, .biografia-tab:hover, .magia-tab_hover{
   background-image: url(/systems/ysystem/assets/fichas/Tabs-Hover.svg);
   background-size: 100% 100%;
   color: LightGrey;
 }
 
-a.habilidades-tab.active, .equipo-tab.active, .biografia-tab.active{
+a.habilidades-tab.active, .equipo-tab.active, .biografia-tab.active, .magia-tab.active{
   background-image: url(/systems/ysystem/assets/fichas/Tabs-Active.svg);
   background-size: 100% 100%;
   color: LightGrey;
@@ -984,4 +984,81 @@ ol.lista-armas {
   vertical-align: middle;
   max-height: 100%;
   z-index: -1;
+}
+
+.Jugador_contenedor_magia {
+  left: 22px;
+  top: 258px;
+  width: 54em;
+  height: 21em;
+  position: absolute;
+}
+.espacio_hechizos {
+  overflow-y: scroll;
+  left: 0px;
+  top: 104px;
+  width: 53em;
+  height: 13em;
+  position: absolute;
+  background-color: rgba(242, 242, 242, 0.4);
+}
+
+.caract_Poder_valor_input {
+  background-color: transparent;
+  position: absolute;
+  top: 0.5em;
+  left: 18.4em;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Annie";
+  color: Black !important;
+  font-size: 2.5em;
+}
+.caract_Poder_valor_input input{
+  text-align: center;
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+  height: auto;
+}
+
+.caract_Poder_max {
+  position: absolute;
+  top: 0.8em;
+  left: 29.3em;
+}
+
+.imagen_poder {
+  top: 0em;
+  left: 46.6em;
+  position: absolute;
+  width: 6em;
+  height: 6em;
+  text-align: center;
+  z-index: 0;
+}
+
+.imagen_poder img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
+}
+
+.habilidad_magia{
+  position: absolute;
+  top: 2em;
+  left: 0em;
+  font-size: 1.2em;
+  font-family: "Lora";
+  display: flex;
+}
+
+.habilidad_magia_valor{
+  position: absolute;
+  top: 2em;
+  left: 7.6em;
+  font-size: 1.2em;
+  font-family: "Lora";
+  display: flex;
 }
