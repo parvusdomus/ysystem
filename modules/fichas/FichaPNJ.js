@@ -146,6 +146,31 @@ actorData.Objetos = Objetos;
                 li.slideUp(200, () => this.render(false));
               });
 
+              html.find('.mod_magia').click(ev => {
+                const element = ev.currentTarget;
+                const dataset = element.dataset;
+                const habilidad_id=dataset.habilidad_id
+                const update = {};
+                update.data = {};
+                var valor_actual=Number(this.actor.data.data.Magia.Valor)
+                var valor_nuevo=valor_actual+1
+                if (valor_nuevo>=4){valor_nuevo=1}
+                const habilidad='data.Magia.Valor'
+                update[habilidad] = valor_nuevo;
+                update.id = this.actor.id;
+                this.actor.update(update, {diff: true});
+              });
+
+              html.find('.restaura_salud').contextmenu(ev => {
+                const element = ev.currentTarget;
+                this.actor.update ({ 'data.Salud.value': this.actor.data.data.Salud.max });
+              });
+
+              html.find('.restaura_poder').contextmenu(ev => {
+                const element = ev.currentTarget;
+                this.actor.update ({ 'data.Poder.value': this.actor.data.data.Poder.max });
+              });
+
               //AQUI IRIAN LOS LISTENERS DE LAS TIRADAS
 
       }
@@ -171,6 +196,6 @@ actorData.Objetos = Objetos;
         // Finally, create the item!
         //     return this.actor.createOwnedItem(itemData);
         return Item.create(itemData, {parent: this.actor});
-      }      
+      }
 
 }

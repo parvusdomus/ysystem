@@ -1,23 +1,23 @@
-<div class="Jugador_contenedor_magia">
+<div class="PNJ_contenedor_magia">
 
-  <label class="tirada_habilidad habilidad_magia" data-Habilidad_id="Magia">{{data.Magia.Nombre}}</label>
-    <span class="mod_magia habilidad_magia_valor" data-habilidad_id="Magia">
+  <label class="tirada_habilidad PNJ_habilidad_magia" data-Habilidad_id="Magia">{{data.Magia.Nombre}}</label>
+    <span class="mod_magia PNJ_habilidad_magia_valor" data-habilidad_id="Magia">
       <label> (INT) </label>
       {{#if (gt data.Magia.Valor 0)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
       {{#if (gt data.Magia.Valor 1)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
       {{#if (gt data.Magia.Valor 2)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
   </span>
 
-  <img class="imagen_poder" src="/systems/ysystem/assets/fichas/poder_valor.svg" alt="?"/>
-  <div class="caract_Poder_valor_input">
+  <img class="PNJ_imagen_poder" src="/systems/ysystem/assets/fichas/poder_valor.svg" alt="?"/>
+  <div class="PNJ_caract_Poder_valor_input">
     <input type="text" name="data.Poder.value" value="{{data.Poder.value}}" data-dtype="Number" maxlength="2"/>
   </div>
-  <label class="caract_Poder_max caract_bono restaura_poder">{{data.Poder.max}}</label>
-  <label class="Titulo_Poder Titulo_Equipo">Poder</label>
-  <label class="Titulo_Atributo Titulo_Equipo">Atributo</label>
-  <label class="Titulo_Dificultad Titulo_Equipo">Dificultad</label>
-  <span class="align_right boton_mas_poderes"><a class="item-control item-create" data-type="Poder"><i class="fas fa-plus"></i></a></span>
-  <div class="espacio_hechizos">
+  <label class="PNJ_caract_Poder_max caract_bono restaura_poder">{{data.Poder.max}}</label>
+  <label class="PNJ_Titulo_Poder Titulo_Equipo">Poder</label>
+  <label class="PNJ_Titulo_Atributo Titulo_Equipo">Atributo</label>
+  <label class="PNJ_Titulo_Dificultad Titulo_Equipo">Dificultad</label>
+  <span class="align_right boton_PNJ_mas_poderes"><a class="item-control item-create" data-type="Poder"><i class="fas fa-plus"></i></a></span>
+  <div class="PNJ_espacio_hechizos">
     <ol class="lista-armas" data-item-id="{{item._id}}">
 
         {{#each Poderes as |item id|}}

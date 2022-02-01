@@ -378,3 +378,121 @@ a.PNJ_general-tab.active, .PNJ_biografia-tab.active, .PNJ_magia-tab.active {
   left: 25.6em;
   font-size: 0.7em;
 }
+
+
+
+
+.PNJ_contenedor_magia {
+  left: 22px;
+  top: 278px;
+  width: 54em;
+  height: 10em;
+  position: absolute;
+}
+
+.PNJ_caract_Poder_valor_input {
+  background-color: transparent;
+  position: absolute;
+  top: -1.1em;
+  left: 18.4em;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Annie";
+  color: Black !important;
+  font-size: 2.5em;
+}
+.PNJ_caract_Poder_valor_input input{
+  text-align: center;
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+  height: auto;
+}
+
+.PNJ_caract_Poder_max {
+  position: absolute;
+  top: -1.4em;
+  left: 29.3em;
+}
+
+.PNJ_imagen_poder {
+  top: -4em;
+  left: 46.6em;
+  position: absolute;
+  width: 6em;
+  height: 6em;
+  text-align: center;
+  z-index: 0;
+}
+
+.PNJ_imagen_poder img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
+}
+
+.PNJ_habilidad_magia{
+  position: absolute;
+  top: -2em;
+  left: 22em;
+  font-size: 1.2em;
+  font-family: "Lora";
+  display: flex;
+}
+
+.PNJ_habilidad_magia_valor{
+  position: absolute;
+  top: -2em;
+  left: 30.6em;
+  font-size: 1.2em;
+  font-family: "Lora";
+  display: flex;
+}
+
+.boton_PNJ_mas_poderes {
+  position: absolute;
+  top: 1em;
+  left: 0em;
+}
+
+.PNJ_Titulo_Poder {
+  position: absolute;
+  top: 1em;
+  left: 1.6em;
+}
+
+.PNJ_Titulo_Atributo {
+  position: absolute;
+  top: 1em;
+  left: 22.6em;
+}
+
+.PNJ_Titulo_Dificultad {
+  position: absolute;
+  top: 1em;
+  left: 29.6em;
+}
+
+.PNJ_espacio_hechizos {
+  overflow-y: scroll;
+  left: 0px;
+  top: 43px;
+  width: 53em;
+  height: 7em;
+  position: absolute;
+  background-color: rgba(242, 242, 242, 0.4);
+}
+
+.PNJ_contenedor_biografia{
+  position: absolute;
+  left: 22px;
+  top: 286px;
+  width: 54em;
+  height: 9em;
+  background-color: rgba(242, 242, 242, 0.4);
+  overflow-y: scroll;
+  border: none;
+  border-width: 0;
+  font-family: 'Annie';
+}
