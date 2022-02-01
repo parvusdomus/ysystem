@@ -122,6 +122,18 @@ actorData.Objetos = Objetos;
                 const item = this.actor.items.get(li.data("itemId"));
                 item.sheet.render(true);
               });
+              //Equipar y desequipar
+              html.find('.item-equip').click(ev => {
+                const li = $(ev.currentTarget).parents(".item");
+                const objeto_a_equipar = this.actor.items.get(li.data("itemId"));
+                if (objeto_a_equipar.data.data.Equipado =="false"){
+                  objeto_a_equipar.update ({ 'data.Equipado': "true" });
+                } else {
+                  objeto_a_equipar.update ({ 'data.Equipado': "false" });
+                }
+
+                this.render(false);
+              });
               // Modificar valor de habilidades
               html.find('.mod_habilidad').click(ev => {
                 const element = ev.currentTarget;

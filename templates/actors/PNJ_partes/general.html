@@ -38,4 +38,50 @@
           {{/each}}
         </ol>
     </div>
+    <label class="PNJ_Titulo_Protección Titulo_Equipo">Protección</label>
+    <label class="PNJ_Titulo_Nivel Titulo_Equipo">Nivel</label>
+    <label class="PNJ_Titulo_Efecto Titulo_Equipo">Efecto</label>
+    <span class="align_right boton_PNJ_mas_armadura"><a class="item-control item-create" data-type="Armadura"><i class="fas fa-plus"></i></a></span>
+
+    <div class="PNJ_espacio_armaduras">
+      <ol class="lista-armas" data-item-id="{{item._id}}">
+        {{#each Armaduras as |item id|}}
+          <li class="armas item" data-item-id="{{item._id}}">
+            <div class="PNJ_armadura_linea1"><label>{{item.name}}</label></div>
+            <label class="PNJ_armadura_linea2">{{item.data.Nivel}} </label>
+            <label class="PNJ_armadura_linea3">{{item.data.Penalizador}}</label>
+            <span class="PNJ_controles_armaduras">
+              {{#if (eq item.data.Equipado "false")}}
+                <a class="item-control item-equip" style="color:Grey"><i class="fas fa-tshirt"><span class="tooltiptext"></span></i></a>
+              {{else}}
+                <a class="item-control item-equip" style="color:Black"><i class="fas fa-tshirt"><span class="tooltiptext"></span></i></a>
+              {{/if}}
+              <a class="item-control item-edit"><i class="fas fa-edit"><span class="tooltiptext"></span></i></a>
+              <a class="item-control item-delete"><i class="fas fa-trash"><span class="tooltiptext"></span></i></a>
+            </span>
+          </li>
+        {{/each}}
+      </ol>
+    </div>
+    <span class="align_right boton_PNJ_mas_escudo"><a class="item-control item-create" data-type="Escudo"><i class="fas fa-plus"></i></a></span>
+    <div class="PNJ_espacio_escudos">
+      <ol class="lista-armas" data-item-id="{{item._id}}">
+          {{#each Escudos as |item id|}}
+            <li class="armas item" data-item-id="{{item._id}}">
+              <div class="PNJ_escudo_linea1"><label>{{item.name}}</label></div>
+                <label class="PNJ_escudo_linea2">{{item.data.Nivel}} </label>
+                <label class="PNJ_escudo_linea3">{{item.data.Penalizador}}</label>
+                <span class="PNJ_controles_escudo">
+                  {{#if (eq item.data.Equipado "false")}}
+                    <a class="item-control item-equip" style="color:Grey"><i class="fas fa-tshirt"><span class="tooltiptext"></span></i></a>
+                  {{else}}
+                    <a class="item-control item-equip" style="color:Black"><i class="fas fa-tshirt"><span class="tooltiptext"></span></i></a>
+                  {{/if}}
+                  <a class="item-control item-edit"><i class="fas fa-edit"><span class="tooltiptext"></span></i></a>
+                  <a class="item-control item-delete"><i class="fas fa-trash"><span class="tooltiptext"></span></i></a>
+                </span>
+              </li>
+          {{/each}}
+        </ol>
+    </div>
   </div>

@@ -282,9 +282,9 @@ a.PNJ_general-tab.active, .PNJ_biografia-tab.active, .PNJ_magia-tab.active {
 
 .PNJ_espacio_habilidades {
   left: 20px;
-  top: 287px;
+  top: 306px;
   width: 23em;
-  height: 8em;
+  height: 6em;
   position: absolute;
 }
 
@@ -293,7 +293,7 @@ a.PNJ_general-tab.active, .PNJ_biografia-tab.active, .PNJ_magia-tab.active {
   left: 366px;
   top: 239px;
   width: 29em;
-  height: 6.5em;
+  height: 4.5em;
   position: absolute;
   background-color: rgba(242, 242, 242, 0.4);
 }
@@ -379,6 +379,169 @@ a.PNJ_general-tab.active, .PNJ_biografia-tab.active, .PNJ_magia-tab.active {
   font-size: 0.7em;
 }
 
+.PNJ_Titulo_Protección {
+  position: absolute;
+  top: 14.5em;
+  left: 18.6em;
+}
+
+.PNJ_Titulo_Nivel {
+  position: absolute;
+  top: 14.5em;
+  left: 26.3em;
+}
+
+.PNJ_Titulo_Efecto {
+  position: absolute;
+  top: 14.5em;
+  left: 30.1em;
+}
+
+.boton_PNJ_mas_armadura {
+  position: absolute;
+  top: 22em;
+  left: 25em;
+}
+
+.PNJ_espacio_armaduras {
+  overflow-y: scroll;
+  left: 364px;
+  top: 330px;
+  width: 29em;
+  height: 4em;
+  position: absolute;
+  background-color: rgba(242, 242, 242, 0.4);
+}
+
+.PNJ_armadura_linea1 {
+  position: relative;
+  left: -1em;
+  overflow: hidden;
+  background-color: transparent;
+  text-overflow: clip;
+  text-align: left;
+  display: inline-block;
+  z-index: 6;
+  width: 7em;
+  height: 1.1em;
+  font-family: "Lora";
+  white-space: nowrap;
+  color: Black !important;
+  font-size: 1em;
+}
+
+.PNJ_armadura_linea2 {
+  position: relative;
+  left: -2.5em;
+  overflow: hidden;
+  background-color: transparent;
+  text-overflow: clip;
+  text-align: center;
+  display: inline-block;
+  z-index: 6;
+  width: 2em;
+  height: 1.1em;
+  font-family: "Lora";
+  white-space: nowrap;
+  color: Black !important;
+  font-size: 1em;
+}
+
+.PNJ_armadura_linea3 {
+  position: relative;
+  left: -4em;
+  overflow: hidden;
+  background-color: transparent;
+  text-overflow: clip;
+  text-align: center;
+  display: inline-block;
+  z-index: 6;
+  width: 2em;
+  height: 1.1em;
+  font-family: "Lora";
+  white-space: nowrap;
+  color: Black !important;
+  font-size: 1em;
+}
+
+.PNJ_controles_armaduras {
+  position: absolute;
+  left: 23.6em;
+  font-size: 0.7em;
+}
+
+.PNJ_espacio_escudos {
+  overflow-y: scroll;
+  left: 365px;
+  top: 389px;
+  width: 29em;
+  height: 2em;
+  position: absolute;
+  background-color: rgba(242, 242, 242, 0.4);
+}
+
+.boton_PNJ_mas_escudo {
+  position: absolute;
+  top: 28em;
+  left: 25em;
+}
+
+.PNJ_escudo_linea1 {
+  position: relative;
+  left: -1em;
+  overflow: hidden;
+  background-color: transparent;
+  text-overflow: clip;
+  text-align: left;
+  display: inline-block;
+  z-index: 6;
+  width: 7em;
+  height: 1.1em;
+  font-family: "Lora";
+  white-space: nowrap;
+  color: Black !important;
+  font-size: 1em;
+}
+
+.PNJ_escudo_linea2 {
+  position: relative;
+  left: -2.5em;
+  overflow: hidden;
+  background-color: transparent;
+  text-overflow: clip;
+  text-align: center;
+  display: inline-block;
+  z-index: 6;
+  width: 4em;
+  height: 1.1em;
+  font-family: "Lora";
+  white-space: nowrap;
+  color: Black !important;
+  font-size: 1em;
+}
+
+.PNJ_escudo_linea3 {
+  position: relative;
+  left: -4em;
+  overflow: hidden;
+  background-color: transparent;
+  text-overflow: clip;
+  text-align: center;
+  display: inline-block;
+  z-index: 6;
+  width: 2em;
+  height: 1.1em;
+  font-family: "Lora";
+  white-space: nowrap;
+  color: Black !important;
+  font-size: 1em;
+}
+
+.PNJ_controles_escudo {
+  position: absolute;
+  left: 23.6em;
+  font-size: 0.7em;
+}
 
 
 
