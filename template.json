@@ -217,14 +217,17 @@
               "Iniciativa": 0,
               "Habilidades": {
                 "Atletismo":{
+                  "Nombre": "Atletismo",
                   "Valor": 1,
                   "Atributo": "Destreza"
                 },
                 "Lucha":{
+                  "Nombre": "Lucha",
                   "Valor": 1,
                   "Atributo": "Destreza"
                 },
                 "Puntería":{
+                  "Nombre": "Puntería",
                   "Valor": 1,
                   "Atributo": "Percepción"
                 }

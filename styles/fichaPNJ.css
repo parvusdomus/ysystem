@@ -241,3 +241,140 @@
   color: Black !important;
   font-size: 2.5em;
 }
+
+.ysystem_PNJ_charsheet_tab{
+  top: 19.5em;
+  left: 18.5em;
+  width: 0em;
+  font-family: "Annie";
+  color: Black !important;
+  font-size: 1.5em;
+  text-align: center;
+  position: absolute;
+}
+
+.PNJ_general-tab, .PNJ_biografia-tab, .PNJ_magia-tab {
+  background-image: url(/systems/ysystem/assets/fichas/Tabs.svg);
+  background-position-x: -2px;
+  padding-top: 0.15em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  display: block;
+  background-color: unset !important;
+}
+
+a.PNJ_general-tab:hover, .PNJ_biografia-tab:hover, .PNJ_magia-tab:hover {
+  background-image: url(/systems/ysystem/assets/fichas/Tabs-Hover.svg);
+  background-size: 100% 100%;
+  color: LightGrey;
+}
+
+a.PNJ_general-tab.active, .PNJ_biografia-tab.active, .PNJ_magia-tab.active {
+  background-image: url(/systems/ysystem/assets/fichas/Tabs-Active.svg);
+  background-size: 100% 100%;
+  color: LightGrey;
+  text-shadow: none !important;
+}
+
+.character-tabs-info {
+  background: transparent !important;
+}
+
+.PNJ_espacio_habilidades {
+  left: 20px;
+  top: 287px;
+  width: 23em;
+  height: 8em;
+  position: absolute;
+}
+
+.PNJ_espacio_armas {
+  overflow-y: scroll;
+  left: 366px;
+  top: 239px;
+  width: 29em;
+  height: 6.5em;
+  position: absolute;
+  background-color: rgba(242, 242, 242, 0.4);
+}
+
+.boton_PNJ_mas_arma {
+  position: absolute;
+  top: 15.5em;
+  left: 26em;
+}
+
+.PNJ_Titulo_Arma {
+  position: absolute;
+  top: 10.1em;
+  left: 18.6em;
+}
+
+.PNJ_Titulo_Habilidad {
+  position: absolute;
+  top: 10.1em;
+  left: 25.6em;
+}
+
+.PNJ_Titulo_Daño {
+  position: absolute;
+  top: 10.1em;
+  left: 31.6em;
+}
+
+.PNJ_arma_linea1 {
+  position: relative;
+  left: -1em;
+  overflow: hidden;
+  background-color: transparent;
+  text-overflow: clip;
+  text-align: left;
+  display: inline-block;
+  z-index: 6;
+  width: 7em;
+  height: 1.1em;
+  font-family: "Lora";
+  white-space: nowrap;
+  color: Black !important;
+  font-size: 1em;
+}
+
+.PNJ_arma_linea2 {
+  position: relative;
+  left: -2.5em;
+  overflow: hidden;
+  background-color: transparent;
+  text-overflow: clip;
+  text-align: center;
+  display: inline-block;
+  z-index: 6;
+  width: 4em;
+  height: 1.1em;
+  font-family: "Lora";
+  white-space: nowrap;
+  color: Black !important;
+  font-size: 1em;
+}
+
+.PNJ_arma_linea3 {
+  position: relative;
+  left: -2.5em;
+  overflow: hidden;
+  background-color: transparent;
+  text-overflow: clip;
+  text-align: center;
+  display: inline-block;
+  z-index: 6;
+  width: 3em;
+  height: 1.1em;
+  font-family: "Lora";
+  white-space: nowrap;
+  color: Black !important;
+  font-size: 1em;
+}
+
+.PNJ_controles_armas {
+  position: absolute;
+  left: 25.6em;
+  font-size: 0.7em;
+}

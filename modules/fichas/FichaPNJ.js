@@ -6,7 +6,8 @@ export default class FichaPNJYsystem extends ActorSheet{
       template: "systems/ysystem/templates/actors/PNJ.html",
       width: 800,
       height: 470,
-      resizable: false
+      resizable: false,
+      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "general" }]
     });
   }
 
@@ -112,8 +113,64 @@ actorData.Objetos = Objetos;
               // Si la hoja no es editable me salgo
               if (!this.options.editable) return;
 
+              // Añadir Objeto
+              html.find('.item-create').click(this._onItemCreate.bind(this));
+
+              // Editar objetos
+              html.find('.item-edit').click(ev => {
+                const li = $(ev.currentTarget).parents(".item");
+                const item = this.actor.items.get(li.data("itemId"));
+                item.sheet.render(true);
+              });
+              // Modificar valor de habilidades
+              html.find('.mod_habilidad').click(ev => {
+                const element = ev.currentTarget;
+                const dataset = element.dataset;
+                const habilidad_id=dataset.habilidad_id
+                const update = {};
+                update.data = {};
+                var valor_actual=Number(this.actor.data.data.Habilidades[habilidad_id].Valor)
+                var valor_nuevo=valor_actual+1
+                if (valor_nuevo>=4){valor_nuevo=1}
+                const habilidad='data.Habilidades.'+habilidad_id+'.Valor'
+                update[habilidad] = valor_nuevo;
+                update.id = this.actor.id;
+                this.actor.update(update, {diff: true});
+              });
+
+              html.find('.item-delete').click(ev => {
+                const li = $(ev.currentTarget).parents(".item");
+                const objeto_a_borrar = this.actor.items.get(li.data("itemId"));
+                objeto_a_borrar.delete();
+                this.render(false);
+                li.slideUp(200, () => this.render(false));
+              });
+
               //AQUI IRIAN LOS LISTENERS DE LAS TIRADAS
 
       }
+
+      _onItemCreate(event) {
+        event.preventDefault();
+        const header = event.currentTarget;
+        // Get the type of item to create.
+        const type = header.dataset.type;
+        // Grab any data associated with this control.
+        const data = duplicate(header.dataset);
+        // Initialize a default name.
+        const name = `${type.capitalize()}`;
+        // Prepare the item object.
+        const itemData = {
+          name: name,
+          type: type,
+          data: data
+        };
+        // Remove the type from the dataset since it's in the itemData.type prop.
+        delete itemData.data["type"];
+
+        // Finally, create the item!
+        //     return this.actor.createOwnedItem(itemData);
+        return Item.create(itemData, {parent: this.actor});
+      }      
 
 }
