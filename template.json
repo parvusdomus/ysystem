@@ -198,9 +198,18 @@
               "Fuerza": 0,
               "Inteligencia": 0,
               "Percepción": 0,
-              "Agilidad": 0,
-              "Aplomo": 0,
-              "Perspicacia": 0,
+              "Agilidad": {
+                "Valor": 0,
+                "Bono": 0
+                },
+              "Aplomo": {
+                "Valor": 0,
+                "Bono": 0
+                },
+              "Perspicacia": {
+                "Valor": 0,
+                "Bono": 0
+                },
               "Resistencia_Física": 0,
               "Protección_Daño": 0,
               "Protección_Agilidad": 0,
@@ -219,6 +228,11 @@
                   "Valor": 1,
                   "Atributo": "Percepción"
                 }
+              },
+              "Magia":{
+                "Nombre": "Magia/Psiónica",
+                "Valor": 1,
+                "Atributo": "Inteligencia"
               },
               "Biografía": ""
             }
