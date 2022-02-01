@@ -1,6 +1,38 @@
 <form class="{{cssClass}} flexcol" autocomplete="off">
   <img class="content-background" src="/systems/ysystem/assets/fichas/poder-Bg.svg" alt="?"/>
   <div class=espacio_poder>
+    <div class="Poder-nombre"><input name="name" type="text" value="{{data.name}}" placeholder='Nombre'
+                                         onClick="this.select();"/></div>
+      <div class="Poder-foto">
+        <img class="profile-img" src="{{data.img}}" data-edit="img" title="{{name}}" alt='Imagen del Objeto'/>
+      </div>
+      <div class="Poder_Tipo_input">
+        <input type="text" name="data.Tipo" value="{{data.data.Tipo}}" data-dtype="String"/>
+      </div>
+      <select class="Poder_Atributo_select" name="data.Atributo" data-dtype="String">
+        {{#select data.data.Atributo}}
+        <option value="Carisma">Carisma</option>
+        <option value="Destreza">Destreza</option>
+        <option value="Fuerza">Fuerza</option>
+        <option value="Inteligencia">Inteligencia</option>
+        <option value="Percepción">Percepción</option>
+        {{/select}}
+      </select>
+      <div class="Poder_Dificultad_input">
+        <input type="text" name="data.Dificultad" value="{{data.data.Dificultad}}" data-dtype="Number" maxlength="2"/>
+      </div>
+      <div class="Poder_Preparación_input">
+        <input type="text" name="data.Preparación" value="{{data.data.Preparación}}" data-dtype="String"/>
+      </div>
+      <div class="Poder_Lanzamiento_input">
+        <input type="text" name="data.Lanzamiento" value="{{data.data.Lanzamiento}}" data-dtype="String"/>
+      </div>
+      <div class="Poder_Duración_input">
+        <input type="text" name="data.Duración" value="{{data.data.Duración}}" data-dtype="String"/>
+      </div>
+      <div class="Poder_Caducidad_input">
+        <input type="text" name="data.Caducidad" value="{{data.data.Caducidad}}" data-dtype="String"/>
+      </div>
 
     </div>
     <div class="Poder_contenedor_descripcion">

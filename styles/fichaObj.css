@@ -203,3 +203,183 @@
     border-width: 0;
     font-family: 'Annie';
 }
+
+.Poder-foto {
+  top: 2.8em;
+  left: 2.8em;
+  position: absolute;
+  width: 6em;
+  height: 6em;
+  text-align: center;
+  z-index: 0;
+}
+
+.Poder-foto img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
+}
+
+.Poder-nombre {
+  position: absolute;
+  top: 1.7em;
+  text-align: center;
+  z-index: 6;
+  left: 13.2em;
+  width: 11em;
+}
+
+.Poder-nombre input[type='text'] {
+  background-color: transparent;
+  font-family: inherit;
+  width: 6.6em;
+  font-size: 1.6em;
+  text-align: center;
+  color: White !important;
+  font-family: "Dexotick";
+  border: none;
+}
+
+.Poder_Atributo_select {
+  top: 4.6em;
+  left: 12.3em;
+  background-color: transparent;
+  position: absolute;
+  appearance: none;
+  text-align: center;
+  z-index: 6;
+  width: 5em;
+  height: 1.4em;
+  font-family: "Annie";
+  color: Black !important;
+  font-size: 1.5em;
+  border: none;
+}
+.Poder_Atributo_select select{
+  appearance: none;
+  text-align: center;
+  font-family: "Annie";
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+}
+
+.Poder_Tipo_input {
+  background-color: transparent;
+    position: absolute;
+    top: 2.6em;
+    left: 10em;
+    text-align: center;
+    z-index: 6;
+    width: 7em;
+    font-family: "Annie";
+    color: Black !important;
+    font-size: 1.5em;
+}
+.Poder_Tipo_input input{
+  text-align: center;
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+  height: auto;
+}
+
+.Poder_Dificultad_input {
+  background-color: transparent;
+  position: absolute;
+  top: 7.2em;
+  left: 14.4em;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Annie";
+  color: Black !important;
+  font-size: 1.5em;
+}
+.Poder_Dificultad_input input{
+  text-align: center;
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+  height: auto;
+}
+
+.Poder_Preparación_input {
+  background-color: transparent;
+  position: absolute;
+  top: 9em;
+  left: 7.8em;
+  text-align: center;
+  z-index: 6;
+  width: 9em;
+  font-family: "Annie";
+  color: Black !important;
+  font-size: 1.5em;
+}
+.Poder_Preparación_input input{
+  text-align: center;
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+  height: auto;
+}
+
+.Poder_Lanzamiento_input {
+  background-color: transparent;
+  position: absolute;
+  top: 11.1em;
+  left: 7.8em;
+  text-align: center;
+  z-index: 6;
+  width: 9em;
+  font-family: "Annie";
+  color: Black !important;
+  font-size: 1.5em;
+}
+.Poder_Lanzamiento_input input{
+  text-align: center;
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+  height: auto;
+}
+
+.Poder_Duración_input {
+  background-color: transparent;
+  position: absolute;
+  top: 13.1em;
+  left: 7.8em;
+  text-align: center;
+  z-index: 6;
+  width: 9em;
+  font-family: "Annie";
+  color: Black !important;
+  font-size: 1.5em;
+}
+.Poder_Duración_input input{
+  text-align: center;
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+  height: auto;
+}
+
+.Poder_Caducidad_input {
+  background-color: transparent;
+  position: absolute;
+  top: 15.2em;
+  left: 7.8em;
+  text-align: center;
+  z-index: 6;
+  width: 9em;
+  font-family: "Annie";
+  color: Black !important;
+  font-size: 1.5em;
+}
+.Poder_Caducidad_input input{
+  text-align: center;
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+  height: auto;
+}
