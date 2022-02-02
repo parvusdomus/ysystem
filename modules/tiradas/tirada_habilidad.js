@@ -28,8 +28,6 @@ export async function TiradaHabilidad(actor, id_habilidad, objetivo) {
   //MONTO LA TIRADA
   if (valor_habilidad < 0){valor_habilidad=0}
   let tirada=valor_habilidad+"d6+"+valor_atributo
-  console.log ("TIRADA")
-  console.log (tirada)
 
   const archivo_template = '/systems/ysystem/templates/dialogos/tirada_habilidad.html';
           const datos_template = { tirada: tirada
@@ -44,8 +42,16 @@ export async function TiradaHabilidad(actor, id_habilidad, objetivo) {
               label: "Lanzar",
               callback: () => {
                 let proezas=actor.data.data.Proezas.value;
-                if (document.getElementById("mod_dados").value > 0){tirada+="+"+document.getElementById("mod_dados").value+"d6"}
-                if (document.getElementById("mod_num").value > 0){tirada+="+"+document.getElementById("mod_num").value}
+                if (document.getElementById("mod_dados").value != 0){
+                  valor_habilidad+=Number(document.getElementById("mod_dados").value)
+                  if (valor_habilidad < 0){valor_habilidad=0}
+                  tirada=valor_habilidad+"d6+"+valor_atributo
+                  }
+                if (document.getElementById("mod_num").value != 0){
+                  if (document.getElementById("mod_num").value > 0){tirada+="+"+document.getElementById("mod_num").value}
+                  else{tirada+=document.getElementById("mod_num").value}
+
+              }
                 if (document.getElementById("proezas").value > 0){
                   if (proezas >0){
                     tirada+="+"+document.getElementById("proezas").value+"d6"
