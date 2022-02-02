@@ -46,7 +46,7 @@ export async function TiradaHabilidad(actor, id_habilidad, objetivo) {
                 let proezas=actor.data.data.Proezas.value;
                 if (document.getElementById("mod_dados").value > 0){tirada+="+"+document.getElementById("mod_dados").value+"d6"}
                 if (document.getElementById("mod_dados").value > 0){tirada+="+"+document.getElementById("mod_num").value}
-                if (document.getElementById("mod_dados").value > 0){
+                if (document.getElementById("proezas").value > 0){
                   if (proezas >0){
                     tirada+="+"+document.getElementById("proezas").value+"d6"
                     proezas--
