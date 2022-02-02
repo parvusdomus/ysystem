@@ -2,3 +2,108 @@
   width: 384px;
   height: 200px;
 }
+
+.dialogo_tirada_habilidad_tirada {
+  position: absolute;
+  top: 1em;
+  left: 5.2em;
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Annie";
+  color: Black !important;
+  font-size: 2.3em;
+}
+
+.dialogo_tirada_habilidad_mod_dados {
+  background-color: transparent;
+  position: absolute;
+  top: 4.7em;
+  left: 1em;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Annie";
+  color: Black !important;
+  font-size: 1.7em;
+}
+.dialogo_tirada_habilidad_mod_dados input{
+  text-align: center;
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+  font-family: "Annie";
+  height: auto;
+  font-size: 1.7em;
+}
+
+.dialogo_tirada_habilidad_mod_num {
+  background-color: transparent;
+  position: absolute;
+  top: 4.7em;
+  left: 6.7em;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Annie";
+  color: Black !important;
+  font-size: 1.7em;
+}
+.dialogo_tirada_habilidad_mod_num input{
+  text-align: center;
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+  height: auto;
+  font-family: "Annie";
+  font-size: 1.7em;
+}
+
+.dialogo_tirada_habilidad_proezas {
+  top: 6.3em;
+  left: 15.1em;
+  background-color: transparent;
+  position: absolute;
+  appearance: none;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  height: 1.4em;
+  font-family: "Annie";
+  color: Black !important;
+  font-size: 1.5em;
+  border: none;
+}
+.dialogo_tirada_habilidad_proezas select{
+  appearance: none;
+  text-align: center;
+  font-family: "Annie";
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+}
+
+.dialogo_tirada_habilidad_dificultad {
+  top: 8.5em;
+  left: 6.3em;
+  background-color: transparent;
+  position: absolute;
+  appearance: none;
+  text-align: center;
+  z-index: 6;
+  width: 8em;
+  height: 1.4em;
+  font-family: "Annie";
+  color: Black !important;
+  font-size: 1.5em;
+  border: none;
+}
+.dialogo_tirada_habilidad_dificultad select{
+  appearance: none;
+  text-align: center;
+  font-family: "Annie";
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+}

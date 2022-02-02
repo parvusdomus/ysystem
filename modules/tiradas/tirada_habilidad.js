@@ -43,10 +43,22 @@ export async function TiradaHabilidad(actor, id_habilidad, objetivo) {
               icon: '<i class="fas fa-dice"></i>',
               label: "Lanzar",
               callback: () => {
+                let proezas=actor.data.data.Proezas.value;
+                if (document.getElementById("mod_dados").value > 0){tirada+="+"+document.getElementById("mod_dados").value+"d6"}
+                if (document.getElementById("mod_dados").value > 0){tirada+="+"+document.getElementById("mod_num").value}
+                if (document.getElementById("mod_dados").value > 0){
+                  if (proezas >0){
+                    tirada+="+"+document.getElementById("proezas").value+"d6"
+                    proezas--
+                    actor.update ({ 'data.Proezas.value': proezas });
+                  }
+                  else{ui.notifications.warn("No te quedan puntos de PROEZA!!");}
+                }
                  let d6Roll = new Roll(tirada).roll({async: false});
+                 let flavor = tirada+" VS "+ document.getElementById("dificultad").value
                  d6Roll.toMessage({
                  speaker: ChatMessage.getSpeaker({ actor: actor }),
-                 flavor: tirada
+                 flavor: flavor
               });
     		 }
              }

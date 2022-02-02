@@ -59,11 +59,11 @@
        style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.81595778;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path2847-9-4"
        cx="16.791868"
-       cy="271.33847"
+       cy="275.04269"
        r="6.3023248" />
     <g
        id="g830-1"
-       transform="matrix(0.00109628,0,0,-0.00109628,9.8294733,278.42771)"
+       transform="matrix(0.00109628,0,0,-0.00109628,9.8294733,282.1319)"
        style="fill:#000000;stroke:none">
       <path
          id="path826-0"
@@ -78,27 +78,27 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:4.23333311px;line-height:1.25;font-family:Girassol;-inkscape-font-specification:'Girassol, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        x="16.307446"
-       y="258.22678"
+       y="261.931"
        id="text1171-9-6"><tspan
          sodipodi:role="line"
          id="tspan1169-7-4"
          x="16.307446"
-         y="258.22678"
+         y="261.931"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:4.23333311px;font-family:Girassol;-inkscape-font-specification:'Girassol, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332">Modificador</tspan><tspan
          sodipodi:role="line"
          x="16.307446"
-         y="263.51843"
+         y="267.22266"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:4.23333311px;font-family:Girassol;-inkscape-font-specification:'Girassol, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332"
          id="tspan2210">Dados</tspan></text>
     <circle
        style="opacity:1;vector-effect:none;fill:#fefefe;fill-opacity:1;stroke:none;stroke-width:0.81595778;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path2847-9-4-8"
        cx="54.450798"
-       cy="271.23062"
+       cy="274.93484"
        r="6.3023248" />
     <g
        id="g830-1-4"
-       transform="matrix(0.00109628,0,0,-0.00109628,47.488395,278.31983)"
+       transform="matrix(0.00109628,0,0,-0.00109628,47.488395,282.02402)"
        style="fill:#000000;stroke:none">
       <path
          id="path826-0-8"
@@ -113,27 +113,27 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:4.23333311px;line-height:1.25;font-family:Girassol;-inkscape-font-specification:'Girassol, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        x="53.966373"
-       y="258.1189"
+       y="261.82312"
        id="text1171-9-6-0"><tspan
          sodipodi:role="line"
          id="tspan1169-7-4-3"
          x="53.966373"
-         y="258.1189"
+         y="261.82312"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:4.23333311px;font-family:Girassol;-inkscape-font-specification:'Girassol, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332">Modificador</tspan><tspan
          sodipodi:role="line"
          x="53.966373"
-         y="263.41055"
+         y="267.11478"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:4.23333311px;font-family:Girassol;-inkscape-font-specification:'Girassol, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332"
          id="tspan2212">Numérico</tspan></text>
     <circle
        style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.81595778;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path2847-9-4-8-0"
        cx="91.127708"
-       cy="271.34698"
+       cy="275.05121"
        r="6.3023248" />
     <g
        id="g830-1-4-4"
-       transform="matrix(0.00109628,0,0,-0.00109628,84.165303,278.43617)"
+       transform="matrix(0.00109628,0,0,-0.00109628,84.165303,282.14036)"
        style="fill:#000000;stroke:none">
       <path
          id="path826-0-8-4"
@@ -148,18 +148,13 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:4.23333311px;line-height:1.25;font-family:Girassol;-inkscape-font-specification:'Girassol, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        x="90.78199"
-       y="258.00259"
+       y="261.70682"
        id="text1171-9-6-0-4"><tspan
          sodipodi:role="line"
-         id="tspan1169-7-4-3-7"
          x="90.78199"
-         y="258.00259"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:4.23333311px;font-family:Girassol;-inkscape-font-specification:'Girassol, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332">Usar Puntos</tspan><tspan
-         sodipodi:role="line"
-         x="90.78199"
-         y="263.29425"
+         y="261.70682"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:4.23333311px;font-family:Girassol;-inkscape-font-specification:'Girassol, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332"
-         id="tspan2214">de Proeza</tspan></text>
+         id="tspan2214">Usar Proeza</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:4.23333311px;line-height:1.25;font-family:Girassol;-inkscape-font-specification:'Girassol, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
