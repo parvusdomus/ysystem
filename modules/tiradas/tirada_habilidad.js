@@ -48,8 +48,9 @@ export async function TiradaHabilidad(actor, id_habilidad, objetivo) {
                   tirada=valor_habilidad+"d6+"+valor_atributo
                   }
                 if (document.getElementById("mod_num").value != 0){
-                  if (document.getElementById("mod_num").value > 0){tirada+="+"+document.getElementById("mod_num").value}
-                  else{tirada+=document.getElementById("mod_num").value}
+                  valor_atributo+=Number(document.getElementById("mod_num").value)
+                  if (valor_atributo > 0){tirada=valor_habilidad+"d6+"+valor_atributo}
+                  else{tirada=valor_habilidad+"d6"+valor_atributo}
 
               }
                 if (document.getElementById("proezas").value > 0){
