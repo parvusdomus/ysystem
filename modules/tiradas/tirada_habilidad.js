@@ -10,6 +10,7 @@ export async function TiradaHabilidad(actor, id_habilidad, objetivo) {
   console.log (objetivo)
   //SACO LOS VALORES DE HABILIDAD Y ATRIBUTO
   let valor_habilidad=actor.data.data.Habilidades[id_habilidad].Valor;
+  let nombre_habilidad=actor.data.data.Habilidades[id_habilidad].Nombre;
 
   console.log ("HABILIDAD")
   console.log (valor_habilidad)
@@ -29,24 +30,29 @@ export async function TiradaHabilidad(actor, id_habilidad, objetivo) {
   let tirada=valor_habilidad+"d6+"+valor_atributo
   console.log ("TIRADA")
   console.log (tirada)
-  let dialogo = new Dialog({
-          title: `Nueva tirada de ${actor.data.data.Habilidades[id_habilidad].Nombre}`,
-          content: tirada,
-          buttons: {
-           Ataque: {
-            icon: '<i class="fas fa-dice"></i>',
-            label: "Tirada",
-            callback: () => {
-               let d6Roll = new Roll(tirada).roll({async: false});
-               d6Roll.toMessage({
+
+  const archivo_template = '/systems/ysystem/templates/dialogos/tirada_habilidad.html';
+          const datos_template = { tirada: tirada
+                                };
+          const contenido_Dialogo = await renderTemplate(archivo_template, datos_template);
+          let dialogo = new Dialog({
+            title: `Nueva tirada de ${nombre_habilidad}`,
+            content: contenido_Dialogo,
+            buttons: {
+             Lanzar: {
+              icon: '<i class="fas fa-dice"></i>',
+              label: "Lanzar",
+              callback: () => {
+                 let d6Roll = new Roll(tirada).roll({async: false});
+                 d6Roll.toMessage({
                  speaker: ChatMessage.getSpeaker({ actor: actor }),
                  flavor: tirada
-               });
-            }
-  		    }
-         },
-         render: html => console.log("Register interactivity in the rendered dialog"),
-         close: html => console.log("This always is logged no matter which option is chosen")
-       });
-       dialogo.render(true);
+              });
+    		 }
+             }
+           },
+           render: html => console.log("Register interactivity in the rendered dialog"),
+           close: html => console.log("This always is logged no matter which option is chosen")
+         });
+         dialogo.render(true);
 }
