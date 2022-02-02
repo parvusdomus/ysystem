@@ -54,6 +54,10 @@ export async function TiradaHabilidad(actor, id_habilidad, objetivo) {
                   }
                   else{ui.notifications.warn("No te quedan puntos de PROEZA!!");}
                 }
+                if (actor.data.data.Recuerdo_Cuando_Activo=="true"){
+                  tirada+="+2d6"
+                  actor.update ({ 'data.Recuerdo_Cuando_Activo': "false" });
+                }
                  let d6Roll = new Roll(tirada).roll({async: false});
                  let flavor = tirada+" VS "+ document.getElementById("dificultad").value
                  d6Roll.toMessage({

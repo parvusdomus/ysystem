@@ -219,13 +219,24 @@ activateListeners(html) {
           const element = ev.currentTarget;
           const dataset = element.dataset;
           var valor_nuevo="true";
+          let contenido_Dialogo_chat= this.actor.data.name+ " recuerda cuando..."
           const update = {};
           update.data = {};
+          const update2 = {};
+          update2.data = {};
           if (this.actor.data.data.Recuerdo_Cuando == "false"){
               const recuerdo='data.Recuerdo_Cuando'
               update[recuerdo] = valor_nuevo;
               update.id = this.actor.id;
               this.actor.update(update, {diff: true});
+              const recuerdo2='data.Recuerdo_Cuando_Activo'
+              update2[recuerdo2] = valor_nuevo;
+              update2.id = this.actor.id;
+              this.actor.update(update2, {diff: true});
+              const chatData = {
+                content: contenido_Dialogo_chat,
+              };
+              ChatMessage.create(chatData);
             }
           else {
             ui.notifications.warn("Ya has usado tu RECUERDO esta sesión");
@@ -239,12 +250,21 @@ activateListeners(html) {
           var valor_nuevo="false";
           const update = {};
           update.data = {};
-
-              const recuerdo='data.Recuerdo_Cuando'
-              update[recuerdo] = valor_nuevo;
-              update.id = this.actor.id;
-              this.actor.update(update, {diff: true});
-
+          const update2 = {};
+          update2.data = {};
+          const recuerdo='data.Recuerdo_Cuando'
+          update[recuerdo] = valor_nuevo;
+          update.id = this.actor.id;
+          this.actor.update(update, {diff: true});
+          const recuerdo2='data.Recuerdo_Cuando_Activo'
+          update2[recuerdo2] = valor_nuevo;
+          update2.id = this.actor.id;
+          this.actor.update(update2, {diff: true});
+          let contenido_Dialogo_chat= this.actor.data.name+ " resetea su Recuerdo Cuando"
+          const chatData = {
+            content: contenido_Dialogo_chat,
+          };
+          ChatMessage.create(chatData);
         });
         //RESTAURAR PROEZAS, SALUD, ESTABILIDAD Y PODER
         html.find('.restaura_proeza').contextmenu(ev => {
