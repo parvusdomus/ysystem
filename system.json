@@ -14,7 +14,8 @@
               "styles/fichaObj.css",
               "styles/ysystem.css",
               "styles/fichaPNJ.css",
-              "styles/dialogos.css"
+              "styles/dialogos.css",
+              "styles/chat.css"
   ],
   "packs": [],
   "languages": [],

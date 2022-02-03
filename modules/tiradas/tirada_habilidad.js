@@ -79,7 +79,8 @@ export async function TiradaHabilidad(actor, id_habilidad, objetivo) {
          nombre_habilidad: nombre_habilidad,
          tirada: tirada,
          resultado: resultado,
-         total: d6Roll.total
+         total: d6Roll.total,
+         dificultad: document.getElementById("dificultad").value
         };
         console.log ("TOTAL: "+d6Roll.total)
         var contenido_Dialogo_chat;

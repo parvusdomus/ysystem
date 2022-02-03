@@ -1,0 +1,54 @@
+.chat_resultado_circulo {
+  top: 2em;
+  left: 5em;
+  position: relative;
+  width: 10em;
+  height: 9em;
+  text-align: center;
+  z-index: 0;
+}
+
+.chat_resultado_circulo img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
+}
+
+.chat_tirada_titulo {
+  position: relative;
+  top: -5.9em;
+  left: 3.3em;
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 6em;
+  font-family: "Girassol";
+  color: Black !important;
+  font-size: 1.5em;
+}
+
+.chat_tirada_tirada {
+  position: relative;
+  top: 0.1em;
+  left: 4.2em;
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 7em;
+  font-family: "Girassol";
+  color: Black !important;
+  font-size: 1.3em;
+}
+
+.chat_tirada_total {
+  position: relative;
+  top: -3em;
+  left: 2.2em;
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Girassol";
+  color: Black !important;
+  font-size: 3em;
+}
