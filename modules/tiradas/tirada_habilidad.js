@@ -44,6 +44,7 @@ export async function TiradaHabilidad(actor, id_habilidad, objetivo) {
           if (proezas >0){
             valor_habilidad++
             proezas--
+            tirada=valor_habilidad+"d6+"+valor_atributo
             actor.update ({ 'data.Proezas.value': proezas });
             const chatData = {
               content: mensaje_Proeza,
@@ -63,6 +64,16 @@ export async function TiradaHabilidad(actor, id_habilidad, objetivo) {
         else {resultado="FALLO"}
         console.log ("d6Roll")
         console.log (d6Roll)
+        let seises=0;
+        let unos=0;
+        for (let i = 0; i < valor_habilidad; i++) {
+          console.log (d6Roll.terms[0].results[i].result)
+          if (d6Roll.terms[0].results[i].result == 6){seises++}
+          if (d6Roll.terms[0].results[i].result == 1){unos++}
+        }
+        if (seises>=2){resultado="CRÍTICO"}
+        if (unos>0 && unos == valor_habilidad){resultado="PIFIA"}
+
         const datos_template_chat = {
          tirada: flavor,
          nombre_habilidad: nombre_habilidad,
