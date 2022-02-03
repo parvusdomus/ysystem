@@ -23,6 +23,16 @@
     src: url("/systems/ysystem/fonts/Minion.ttf");
 }
 
+.chat-message{
+  background-color: white;
+  background: url("/systems/ysystem/assets/white.webp") repeat;
+}
+
+.window-app .window-content {
+    background-color: white;
+    background: url("/systems/ysystem/assets/white.webp") repeat;
+}
+
 .editor {
   height: 100%;
   background: transparent;

@@ -415,7 +415,7 @@ a.habilidades-tab.active, .equipo-tab.active, .biografia-tab.active, .magia-tab.
   top: 346px;
   width: 54em;
   height: 14em;
-  background-color: rgba(242, 242, 242, 0.4);
+  background-color: #eeeeee;
   overflow-y: scroll;
   border: none;
   border-width: 0;
@@ -568,7 +568,7 @@ a.habilidades-tab.active, .equipo-tab.active, .biografia-tab.active, .magia-tab.
   width: 28em;
   height: 8em;
   position: absolute;
-  background-color: rgba(242, 242, 242, 0.4);
+  background-color: #eeeeee;
 }
 .armas{
   font-size: 1.4em;
@@ -666,7 +666,7 @@ ol.lista-armas {
   width: 28em;
   height: 4em;
   position: absolute;
-  background-color: rgba(242, 242, 242, 0.4);
+  background-color: #eeeeee;
 }
 
 .boton_mas_armadura {
@@ -822,7 +822,7 @@ ol.lista-armas {
   width: 28em;
   height: 4em;
   position: absolute;
-  background-color: rgba(242, 242, 242, 0.4);
+  background-color: #eeeeee;
 }
 
 .espacio_objetos {
@@ -832,7 +832,7 @@ ol.lista-armas {
   width: 24em;
   height: 13em;
   position: absolute;
-  background-color: rgba(242, 242, 242, 0.4);
+  background-color: #eeeeee;
 }
 
 .boton_mas_objeto {
@@ -1000,7 +1000,7 @@ ol.lista-armas {
   width: 53em;
   height: 13em;
   position: absolute;
-  background-color: rgba(242, 242, 242, 0.4);
+  background-color: #eeeeee;
 }
 
 .caract_Poder_valor_input {

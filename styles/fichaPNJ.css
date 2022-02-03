@@ -7,7 +7,7 @@
 }
 
 .PNJ-foto {
-  top: 2.3em;
+  top: 1.5em;
   left: 43.3em;
   position: absolute;
   width: 10em;
@@ -295,7 +295,7 @@ a.PNJ_general-tab.active, .PNJ_biografia-tab.active, .PNJ_magia-tab.active {
   width: 29em;
   height: 4.5em;
   position: absolute;
-  background-color: rgba(242, 242, 242, 0.4);
+  background-color: #eeeeee;
 }
 
 .boton_PNJ_mas_arma {
@@ -410,7 +410,7 @@ a.PNJ_general-tab.active, .PNJ_biografia-tab.active, .PNJ_magia-tab.active {
   width: 29em;
   height: 4em;
   position: absolute;
-  background-color: rgba(242, 242, 242, 0.4);
+  background-color: #eeeeee;
 }
 
 .PNJ_armadura_linea1 {
@@ -477,7 +477,7 @@ a.PNJ_general-tab.active, .PNJ_biografia-tab.active, .PNJ_magia-tab.active {
   width: 29em;
   height: 2em;
   position: absolute;
-  background-color: rgba(242, 242, 242, 0.4);
+  background-color: #eeeeee;
 }
 
 .boton_PNJ_mas_escudo {
@@ -644,7 +644,7 @@ a.PNJ_general-tab.active, .PNJ_biografia-tab.active, .PNJ_magia-tab.active {
   width: 53em;
   height: 7em;
   position: absolute;
-  background-color: rgba(242, 242, 242, 0.4);
+  background-color: #eeeeee;
 }
 
 .PNJ_contenedor_biografia{
@@ -653,7 +653,7 @@ a.PNJ_general-tab.active, .PNJ_biografia-tab.active, .PNJ_magia-tab.active {
   top: 286px;
   width: 54em;
   height: 9em;
-  background-color: rgba(242, 242, 242, 0.4);
+  background-color: #eeeeee;
   overflow-y: scroll;
   border: none;
   border-width: 0;
