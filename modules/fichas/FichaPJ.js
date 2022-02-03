@@ -161,6 +161,7 @@ activateListeners(html) {
           const element = ev.currentTarget;
           const dataset = element.dataset;
           const bono_nombre=dataset.bono_nombre;
+          let contenido_Dialogo_chat= this.actor.data.name+ " usa Proeza para mejorar su "+bono_nombre;
           const update = {};
           update.data = {};
           var valor_nuevo=0;
@@ -174,6 +175,10 @@ activateListeners(html) {
               update.id = this.actor.id;
               this.actor.update(update, {diff: true});
               this.actor.update ({ 'data.Proezas.value': proezas });
+              const chatData = {
+                content: contenido_Dialogo_chat,
+              };
+              ChatMessage.create(chatData);
         }
         else {
           ui.notifications.warn("No te quedan puntos de PROEZA!!");
@@ -185,6 +190,7 @@ activateListeners(html) {
           const element = ev.currentTarget;
           const dataset = element.dataset;
           const bono_nombre=dataset.bono_nombre;
+          let contenido_Dialogo_chat= this.actor.data.name+ " resetea su "+bono_nombre;
           const update = {};
           update.data = {};
           var valor_nuevo=0;
@@ -192,6 +198,10 @@ activateListeners(html) {
           update[bono] = valor_nuevo;
           update.id = this.actor.id;
           this.actor.update(update, {diff: true});
+          const chatData = {
+            content: contenido_Dialogo_chat,
+          };
+          ChatMessage.create(chatData);
         });
 
         // Borrar objetos
@@ -270,21 +280,41 @@ activateListeners(html) {
         html.find('.restaura_proeza').contextmenu(ev => {
           const element = ev.currentTarget;
           this.actor.update ({ 'data.Proezas.value': this.actor.data.data.Proezas.max });
+          let contenido_Dialogo_chat= this.actor.data.name+ " resetea sus Proezas"
+          const chatData = {
+            content: contenido_Dialogo_chat,
+          };
+          ChatMessage.create(chatData);
         });
 
         html.find('.restaura_salud').contextmenu(ev => {
           const element = ev.currentTarget;
           this.actor.update ({ 'data.Salud.value': this.actor.data.data.Salud.max });
+          let contenido_Dialogo_chat= this.actor.data.name+ " resetea su Salud"
+          const chatData = {
+            content: contenido_Dialogo_chat,
+          };
+          ChatMessage.create(chatData);
         });
 
         html.find('.restaura_estabilidad').contextmenu(ev => {
           const element = ev.currentTarget;
           this.actor.update ({ 'data.Estabilidad.value': this.actor.data.data.Estabilidad.max });
+          let contenido_Dialogo_chat= this.actor.data.name+ " resetea su Estabilidad"
+          const chatData = {
+            content: contenido_Dialogo_chat,
+          };
+          ChatMessage.create(chatData);
         });
 
         html.find('.restaura_poder').contextmenu(ev => {
           const element = ev.currentTarget;
           this.actor.update ({ 'data.Poder.value': this.actor.data.data.Poder.max });
+          let contenido_Dialogo_chat= this.actor.data.name+ " resetea su Poder"
+          const chatData = {
+            content: contenido_Dialogo_chat,
+          };
+          ChatMessage.create(chatData);
         });
 
 

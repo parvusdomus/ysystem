@@ -1,22 +1,10 @@
 export async function TiradaHabilidad(actor, id_habilidad, objetivo) {
   const element = event.currentTarget;
   const dataset = element.dataset;
-  console.log ("TIRADA DE HABILIDAD")
-  console.log ("ID HABILIDAD")
-  console.log (id_habilidad)
-  console.log ("ACTOR")
-  console.log (actor)
-  console.log ("OBJETIVO")
-  console.log (objetivo)
   //SACO LOS VALORES DE HABILIDAD Y ATRIBUTO
   let valor_habilidad=actor.data.data.Habilidades[id_habilidad].Valor;
   let nombre_habilidad=actor.data.data.Habilidades[id_habilidad].Nombre;
-
-  console.log ("HABILIDAD")
-  console.log (valor_habilidad)
   let valor_atributo=actor.data.data[actor.data.data.Habilidades[id_habilidad].Atributo]
-  console.log ("ATRIBUTO")
-  console.log (valor_atributo)
   //PENALIZO POR HERIDAS
   if (actor.data.data.Salud.value <= 3){
     valor_habilidad-=3;
@@ -29,6 +17,7 @@ export async function TiradaHabilidad(actor, id_habilidad, objetivo) {
   if (valor_habilidad < 0){valor_habilidad=0}
   let tirada=valor_habilidad+"d6+"+valor_atributo
   let resultado=""
+  let mensaje_Proeza= actor.data.name+ " usa Proeza para la tirada..."
   const archivo_template = '/systems/ysystem/templates/dialogos/tirada_habilidad.html';
   const datos_template = { tirada: tirada };
   const contenido_Dialogo = await renderTemplate(archivo_template, datos_template);
@@ -53,9 +42,13 @@ export async function TiradaHabilidad(actor, id_habilidad, objetivo) {
         }
         if (document.getElementById("proezas").value > 0){
           if (proezas >0){
-            tirada+="+"+document.getElementById("proezas").value+"d6"
+            valor_habilidad++
             proezas--
             actor.update ({ 'data.Proezas.value': proezas });
+            const chatData = {
+              content: mensaje_Proeza,
+            };
+            ChatMessage.create(chatData);
           }
           else{ui.notifications.warn("No te quedan puntos de PROEZA!!");}
         }
