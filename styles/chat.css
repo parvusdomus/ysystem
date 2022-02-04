@@ -52,3 +52,15 @@
   color: Black !important;
   font-size: 3em;
 }
+
+.chat_tirada_cada {
+  position: relative;
+  top: -1.9em;
+  left: 4.2em;
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 7em;
+  font-family: "Girassol";
+  font-size: 1.3em;
+}

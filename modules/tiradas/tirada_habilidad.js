@@ -54,7 +54,8 @@ export async function TiradaHabilidad(actor, id_habilidad, objetivo) {
           else{ui.notifications.warn("No te quedan puntos de PROEZA!!");}
         }
         if (actor.data.data.Recuerdo_Cuando_Activo=="true"){
-          tirada+="+2d6"
+          valor_habilidad+=2
+          tirada=valor_habilidad+"d6+"+valor_atributo
           actor.update ({ 'data.Recuerdo_Cuando_Activo': "false" });
         }
         let d6Roll = new Roll(tirada).roll({async: false});
@@ -62,27 +63,28 @@ export async function TiradaHabilidad(actor, id_habilidad, objetivo) {
         const archivo_template_chat = '/systems/ysystem/templates/chat/tirada_habilidad_chat.html';
         if (d6Roll.total >= document.getElementById("dificultad").value){resultado="ÉXITO"}
         else {resultado="FALLO"}
-        console.log ("d6Roll")
-        console.log (d6Roll)
         let seises=0;
         let unos=0;
+        let dados=[];
         for (let i = 0; i < valor_habilidad; i++) {
-          console.log (d6Roll.terms[0].results[i].result)
           if (d6Roll.terms[0].results[i].result == 6){seises++}
           if (d6Roll.terms[0].results[i].result == 1){unos++}
+          dados.push(d6Roll.terms[0].results[i].result);
         }
         if (seises>=2){resultado="CRÍTICO"}
         if (unos>0 && unos == valor_habilidad){resultado="PIFIA"}
-
         const datos_template_chat = {
          tirada: flavor,
          nombre_habilidad: nombre_habilidad,
+         valor_habilidad: valor_habilidad,
+         valor_atributo: valor_atributo,
          tirada: tirada,
          resultado: resultado,
          total: d6Roll.total,
-         dificultad: document.getElementById("dificultad").value
+         dificultad: document.getElementById("dificultad").value,
+         dados: dados,
+         actor: actor.data._id
         };
-        console.log ("TOTAL: "+d6Roll.total)
         var contenido_Dialogo_chat;
         renderTemplate(archivo_template_chat, datos_template_chat).then(
          (contenido_Dialogo_chat)=> {

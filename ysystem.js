@@ -2,6 +2,7 @@ import FichaYsystem from "./modules/fichas/FichaPJ.js";
 import FichaPNJYsystem from "./modules/fichas/FichaPNJ.js";
 import FichaObjetoYsystem from "./modules/fichas/FichaObjeto.js";
 import FichaPoderYsystem from "./modules/fichas/FichaPoder.js";
+import YsystemChat from "./modules/Chat.js";
 import { preloadHandlebarsTemplates } from "./modules/preloadTemplates.js";
 
 Hooks.once("init", function(){
@@ -30,3 +31,5 @@ Hooks.once("init", function(){
     preloadHandlebarsTemplates();
     console.log ("test | TEMPLATES CARGADOS");
 });
+
+Hooks.on('renderChatLog', (app, html, data) => YsystemChat.chatListeners(html))
