@@ -18,8 +18,24 @@ export async function TiradaHabilidad(actor, id_habilidad, objetivo) {
   let tirada=valor_habilidad+"d6+"+valor_atributo
   let resultado=""
   let mensaje_Proeza= actor.data.name+ " usa Proeza para la tirada..."
-  const archivo_template = '/systems/ysystem/templates/dialogos/tirada_habilidad.html';
-  const datos_template = { tirada: tirada };
+  var archivo_template = "";
+  var datos_template={};
+  if (objetivo){
+    archivo_template = '/systems/ysystem/templates/dialogos/tirada_habilidad_objetivo.html';
+    console.log ("OBJETIVO")
+    console.log (objetivo)
+    datos_template = { tirada: tirada,
+                        agilidad: objetivo.document._actor.data.data.Agilidad.Valor,
+                        aplomo: objetivo.document._actor.data.data.Aplomo.Valor,
+                        perspicacia: objetivo.document._actor.data.data.Perspicacia.Valor
+                      };
+  }
+  else{
+    archivo_template = '/systems/ysystem/templates/dialogos/tirada_habilidad.html';
+    datos_template = { tirada: tirada
+                      };
+  }
+
   const contenido_Dialogo = await renderTemplate(archivo_template, datos_template);
   let dialogo = new Dialog({
     title: `Nueva tirada de ${nombre_habilidad}`,
