@@ -6,11 +6,11 @@
 .dialogo_tirada_habilidad_tirada {
   position: absolute;
   top: 1em;
-  left: 5.2em;
+  left: 0.2em;
   background-color: transparent;
   text-align: center;
   z-index: 6;
-  width: 2em;
+  width: 12em;
   font-family: "Annie";
   color: Black !important;
   font-size: 2.3em;

@@ -22,9 +22,17 @@ export async function TiradaHabilidad(actor, id_habilidad, objetivo) {
   } else if (actor.data.data.Salud.value <= 10) {
     valor_habilidad-=1;
   }
+  //PENALIZO POR ARMADURA Y Escudo
+  valor_atributo-=Number(actor.data.data.Protección_Penalización);
   //MONTO LA TIRADA
   if (valor_habilidad < 0){valor_habilidad=0}
-  let tirada=valor_habilidad+"d6+"+valor_atributo
+  let tirada=valor_habilidad+"d6"
+  if (valor_atributo>0){
+    tirada+="+"+valor_atributo
+  } else if(valor_atributo<0){
+    tirada+=valor_atributo
+  }
+
   let resultado=""
   let mensaje_Proeza= actor.data.name+ " usa Proeza para la tirada..."
   var archivo_template = "";
