@@ -1,0 +1,23 @@
+<form class="{{cssClass}} dialogo_tirada_atributo" autocomplete="off">
+  {{#if (eq resultado "ÉXITO")}}
+    <img class="chat_resultado_circulo" src="/systems/ysystem/assets/chat/total_chat_exito.svg" alt="?"/>
+  {{/if}}
+  {{#if (eq resultado "FALLO")}}
+    <img class="chat_resultado_circulo" src="/systems/ysystem/assets/chat/total_chat_fallo.svg" alt="?"/>
+  {{/if}}
+  {{#if (eq resultado "CRÍTICO")}}
+    <img class="chat_resultado_circulo" src="/systems/ysystem/assets/chat/total_chat_critico.svg" alt="?"/>
+  {{/if}}
+  {{#if (eq resultado "PIFIA")}}
+    <img class="chat_resultado_circulo" src="/systems/ysystem/assets/chat/total_chat_pifia.svg" alt="?"/>
+  {{/if}}
+
+  <div class="chat_tirada_titulo"><label>{{nombre_habilidad}}</label></div>
+  <div class="chat_tirada_tirada"><label>{{tirada}} VS {{dificultad}}</label></div>
+  <div class="chat_tirada_total"><label>{{total}}</label></div>
+  <div class="chat_tirada_cada">
+  {{#each dados as |item|}}
+    <label>{{item}}</label>
+  {{/each}}
+  </div>
+</form>

@@ -1,4 +1,4 @@
-export async function TiradaHabilidad(actor, id_habilidad, objetivo) {
+export async function TiradaHabilidadPNJ(actor, id_habilidad, objetivo) {
   const element = event.currentTarget;
   const dataset = element.dataset;
   //SACO LOS VALORES DE HABILIDAD Y ATRIBUTO
@@ -14,6 +14,7 @@ export async function TiradaHabilidad(actor, id_habilidad, objetivo) {
     nombre_habilidad=actor.data.data.Habilidades[id_habilidad].Nombre;
     valor_atributo=actor.data.data[actor.data.data.Habilidades[id_habilidad].Atributo]
   }
+
   //PENALIZO POR HERIDAS
   if (actor.data.data.Salud.value <= 3){
     valor_habilidad-=3;
@@ -26,12 +27,10 @@ export async function TiradaHabilidad(actor, id_habilidad, objetivo) {
   if (valor_habilidad < 0){valor_habilidad=0}
   let tirada=valor_habilidad+"d6+"+valor_atributo
   let resultado=""
-  let mensaje_Proeza= actor.data.name+ " usa Proeza para la tirada..."
   var archivo_template = "";
   var datos_template={};
   if (objetivo){
-    archivo_template = '/systems/ysystem/templates/dialogos/tirada_habilidad_objetivo.html';
-
+    archivo_template = '/systems/ysystem/templates/dialogos/tirada_habilidad_objetivoPNJ.html';
     datos_template = { tirada: tirada,
                         agilidad: objetivo.document._actor.data.data.Agilidad.Valor,
                         aplomo: objetivo.document._actor.data.data.Aplomo.Valor,
@@ -39,7 +38,7 @@ export async function TiradaHabilidad(actor, id_habilidad, objetivo) {
                       };
   }
   else{
-    archivo_template = '/systems/ysystem/templates/dialogos/tirada_habilidad.html';
+    archivo_template = '/systems/ysystem/templates/dialogos/tirada_habilidadPNJ.html';
     datos_template = { tirada: tirada
                       };
   }
@@ -53,7 +52,6 @@ export async function TiradaHabilidad(actor, id_habilidad, objetivo) {
       icon: '<i class="fas fa-dice"></i>',
       label: "Lanzar",
       callback: () => {
-        let proezas=actor.data.data.Proezas.value;
         if (document.getElementById("mod_dados").value != 0){
           valor_habilidad+=Number(document.getElementById("mod_dados").value)
           if (valor_habilidad < 0){valor_habilidad=0}
@@ -64,27 +62,9 @@ export async function TiradaHabilidad(actor, id_habilidad, objetivo) {
           if (valor_atributo > 0){tirada=valor_habilidad+"d6+"+valor_atributo}
           else{tirada=valor_habilidad+"d6"+valor_atributo}
         }
-        if (document.getElementById("proezas").value > 0){
-          if (proezas >0){
-            valor_habilidad++
-            proezas--
-            tirada=valor_habilidad+"d6+"+valor_atributo
-            actor.update ({ 'data.Proezas.value': proezas });
-            const chatData = {
-              content: mensaje_Proeza,
-            };
-            ChatMessage.create(chatData);
-          }
-          else{ui.notifications.warn("No te quedan puntos de PROEZA!!");}
-        }
-        if (actor.data.data.Recuerdo_Cuando_Activo=="true"){
-          valor_habilidad+=2
-          tirada=valor_habilidad+"d6+"+valor_atributo
-          actor.update ({ 'data.Recuerdo_Cuando_Activo': "false" });
-        }
         let d6Roll = new Roll(tirada).roll({async: false});
         let flavor = tirada+" VS "+ document.getElementById("dificultad").value
-        const archivo_template_chat = '/systems/ysystem/templates/chat/tirada_habilidad_chat.html';
+        const archivo_template_chat = '/systems/ysystem/templates/chat/tirada_habilidad_chatPNJ.html';
         if (d6Roll.total >= document.getElementById("dificultad").value){resultado="ÉXITO"}
         else {resultado="FALLO"}
         let seises=0;
@@ -107,8 +87,7 @@ export async function TiradaHabilidad(actor, id_habilidad, objetivo) {
          total: d6Roll.total,
          dificultad: document.getElementById("dificultad").value,
          dados: dados,
-         actor: actor.data._id,
-         proezas: actor.data.data.Proezas.value
+         actor: actor.data._id
         };
         var contenido_Dialogo_chat;
         renderTemplate(archivo_template_chat, datos_template_chat).then(

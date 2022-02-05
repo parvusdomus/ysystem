@@ -1,3 +1,5 @@
+import {TiradaHabilidadPNJ} from "../tiradas/tirada_habilidadPNJ.js";
+
 export default class FichaPNJYsystem extends ActorSheet{
 
   static get defaultOptions() {
@@ -184,7 +186,7 @@ actorData.Objetos = Objetos;
               });
 
               //AQUI IRIAN LOS LISTENERS DE LAS TIRADAS
-
+              html.find('.tirada_habilidad').click(this._onTiradaHabilidad.bind(this));
       }
 
       _onItemCreate(event) {
@@ -210,4 +212,10 @@ actorData.Objetos = Objetos;
         return Item.create(itemData, {parent: this.actor});
       }
 
+      async _onTiradaHabilidad(event) {
+        const element = event.currentTarget;
+        const dataset = element.dataset;
+        let objetivo = Array.from(game.user.targets)[0];
+        TiradaHabilidadPNJ (this.actor, dataset.habilidad_id, objetivo)
+      }
 }
