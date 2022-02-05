@@ -83,7 +83,8 @@ export async function TiradaHabilidad(actor, id_habilidad, objetivo) {
          total: d6Roll.total,
          dificultad: document.getElementById("dificultad").value,
          dados: dados,
-         actor: actor.data._id
+         actor: actor.data._id,
+         proezas: actor.data.data.Proezas.value
         };
         var contenido_Dialogo_chat;
         renderTemplate(archivo_template_chat, datos_template_chat).then(

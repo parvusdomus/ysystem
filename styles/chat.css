@@ -17,11 +17,11 @@
 .chat_tirada_titulo {
   position: relative;
   top: -5.9em;
-  left: 3.3em;
+  left: 0.2em;
   background-color: transparent;
   text-align: center;
   z-index: 6;
-  width: 6em;
+  width: 12.5em;
   font-family: "Girassol";
   color: Black !important;
   font-size: 1.5em;

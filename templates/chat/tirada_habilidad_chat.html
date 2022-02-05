@@ -17,14 +17,23 @@
   <div class="chat_tirada_total"><label>{{total}}</label></div>
   <div class="chat_tirada_cada">
   {{#each dados as |item|}}
-    {{#if (eq item.elegido "true")}}<label style="color:red;">{{item.dado}}</label>
-    {{else}}<label style="color:black;">{{item.dado}}</label>{{/if}}
+    <label>{{item}}</label>
   {{/each}}
   </div>
-  <div class="chat_tirada_repetir repite_habilidad_proeza"
-      data-dados="{{dados}}" data-tirada="{{tirada}}" data-nombre_habilidad="{{nombre_habilidad}}"
-      data-valor_habilidad="{{valor_habilidad}}" data-dificultad="{{dificultad}}" data-actor_id="{{actor}}"
-      data-valor_atributo="{{valor_atributo}}"
-      >
-    <label>Repetir usando Proeza</label></div>
+  {{#if (gt proezas 0)}}
+    {{#if (eq resultado "FALLO")}}
+      <div class="chat_tirada_repetir repite_habilidad_proeza"
+        data-dados="{{dados}}" data-tirada="{{tirada}}" data-nombre_habilidad="{{nombre_habilidad}}"
+        data-valor_habilidad="{{valor_habilidad}}" data-dificultad="{{dificultad}}" data-actor_id="{{actor}}"
+        data-valor_atributo="{{valor_atributo}}">
+      <label>Repetir usando Proeza</label></div>
+    {{/if}}
+    {{#if (eq resultado "PIFIA")}}
+      <div class="chat_tirada_repetir repite_habilidad_proeza"
+        data-dados="{{dados}}" data-tirada="{{tirada}}" data-nombre_habilidad="{{nombre_habilidad}}"
+        data-valor_habilidad="{{valor_habilidad}}" data-dificultad="{{dificultad}}" data-actor_id="{{actor}}"
+        data-valor_atributo="{{valor_atributo}}">
+        <label>Repetir usando Proeza</label></div>
+    {{/if}}
+  {{/if}}
 </form>
