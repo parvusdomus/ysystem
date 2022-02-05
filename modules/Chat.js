@@ -50,7 +50,16 @@ export default class YsystemChat {
                  dados_final.push(dados[i].dado);
                }
              }
-             let tirada=conservado+"+"+habilidad+"d6+"+dataset.valor_atributo;
+             let tirada="";
+             if (conservado>0){
+               tirada=conservado+"+"+habilidad+"d6"
+             } else
+             {
+               tirada=habilidad+"d6"
+             }
+             if (dataset.valor_atributo > 0){
+               tirada+="+"+dataset.valor_atributo;
+             }
              let d6Roll = new Roll(tirada).roll({async: false});
              var proezas=actor.data.data.Proezas.value;
              proezas--;
@@ -59,9 +68,16 @@ export default class YsystemChat {
              const archivo_template_chat = '/systems/ysystem/templates/chat/tirada_habilidad_repetida_chat.html';
              if (d6Roll.total >= dataset.dificultad){resultado="ÉXITO"}
              else {resultado="FALLO"}
-             for (let i = 0; i < habilidad; i++) {
-             dados_final.push(d6Roll.terms[2].results[i].result);
+             if (conservado>0){
+               for (let i = 0; i < habilidad; i++) {
+               dados_final.push(d6Roll.terms[2].results[i].result);
+              }
+            } else{
+              for (let i = 0; i < habilidad; i++) {
+              dados_final.push(d6Roll.terms[0].results[i].result);
+             }
             }
+
             let unos=0;
              for (let i = 0; i < dataset.valor_habilidad; i++) {
                if (dados_final[i] == 1){unos++}
