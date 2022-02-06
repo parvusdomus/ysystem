@@ -64,3 +64,16 @@
   font-family: "Girassol";
   font-size: 1.3em;
 }
+
+.chat_tirada_daño_total {
+  position: relative;
+  top: -2.7em;
+  left: 2.2em;
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Girassol";
+  color: Black !important;
+  font-size: 3em;
+}

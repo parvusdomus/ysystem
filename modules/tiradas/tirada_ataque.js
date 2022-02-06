@@ -92,6 +92,11 @@ export async function TiradaAtaque(actor, nombre_arma, id_habilidad, daño, obje
           tirada=valor_habilidad+"d6+"+valor_atributo
           actor.update ({ 'data.Recuerdo_Cuando_Activo': "false" });
         }
+        if (document.getElementById("apuntar").value>0 && valor_habilidad>=document.getElementById("apuntar").value){
+          valor_habilidad-= document.getElementById("apuntar").value
+          tirada=valor_habilidad+"d6+"+valor_atributo
+        }
+
         let d6Roll = new Roll(tirada).roll({async: false});
         let flavor = tirada+" VS "+ document.getElementById("dificultad").value
         const archivo_template_chat = '/systems/ysystem/templates/chat/tirada_ataque_chat.html';
@@ -107,7 +112,7 @@ export async function TiradaAtaque(actor, nombre_arma, id_habilidad, daño, obje
         }
         if (seises>=2){
           resultado="CRÍTICO";
-          daño_total=Number(daño)*2;
+          daño_total=String(Number(daño)*2);
       }
         if (unos>0 && unos == valor_habilidad){resultado="PIFIA"}
         const datos_template_chat = {
@@ -133,7 +138,33 @@ export async function TiradaAtaque(actor, nombre_arma, id_habilidad, daño, obje
              content: contenido_Dialogo_chat,
            };
           ChatMessage.create(chatData);
-    } )
+          let tirada_daño=daño_total;
+          if (resultado=="ÉXITO" || resultado=="CRÍTICO"){
+              if (document.getElementById("apuntar").value>0 && valor_habilidad>=0){
+                  tirada_daño+="+"+document.getElementById("apuntar").value+"d6"
+              }
+              let d6DañoRoll = new Roll(tirada_daño).roll({async: false});
+              daño_total=d6DañoRoll.total;
+              const archivo_template_daño_chat = '/systems/ysystem/templates/chat/tirada_daño_chat.html';
+              const datos_template_daño_chat = {
+               daño: daño_total,
+               tirada: tirada_daño
+              };
+              renderTemplate(archivo_template_daño_chat, datos_template_daño_chat).then(
+               (contenido_Dialogo_Daño_chat)=> {
+                 const chatData = {
+                   type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+                   roll: d6DañoRoll,
+                   content: contenido_Dialogo_Daño_chat,
+                 };
+                ChatMessage.create(chatData);
+          } )
+
+          }
+        }) //FIN DEL THEN DEL CREAR MENSAJE
+
+
+
     		 }
              }
            },
