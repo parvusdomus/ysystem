@@ -9,7 +9,8 @@
       <ol class="lista-armas" data-item-id="{{item._id}}">
           {{#each Armas as |item id|}}
             <li class="armas item" data-item-id="{{item._id}}">
-              <div class="arma_linea1"><label>{{item.name}}</label></div>
+              <div class="arma_linea1 ataque_arma" data-arma="{{item.arma}}" data-daño="{{item.data.Daño_Total}}"
+              data-habilidad_id="{{item.data.Habilidad}}"><label>{{item.name}}</label></div>
                 <label class="arma_linea2">{{item.data.Ataque}}</label>
                 <label class="arma_linea3">{{item.data.Daño_Total}}</label>
                 <span class="controles_armas">

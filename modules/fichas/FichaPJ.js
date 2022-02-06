@@ -1,4 +1,5 @@
 import {TiradaHabilidad} from "../tiradas/tirada_habilidad.js";
+import {TiradaAtaque} from "../tiradas/tirada_ataque.js";
 
 export default class FichaYsystem extends ActorSheet{
   static get defaultOptions() {
@@ -320,6 +321,7 @@ activateListeners(html) {
 
         //AQUI IRIAN LOS LISTENERS DE LAS TIRADAS
         html.find('.tirada_habilidad').click(this._onTiradaHabilidad.bind(this));
+        html.find('.ataque_arma').click(this._onAtaqueArma.bind(this));
 
 }
 _onItemCreate(event) {
@@ -350,6 +352,14 @@ async _onTiradaHabilidad(event) {
   const dataset = element.dataset;
   let objetivo = Array.from(game.user.targets)[0];
   TiradaHabilidad (this.actor, dataset.habilidad_id, objetivo)
+}
+
+async _onAtaqueArma(event) {
+  console.log ("ON ATAQUE ARMA")
+  const element = event.currentTarget;
+  const dataset = element.dataset;
+  let objetivo = Array.from(game.user.targets)[0];
+  TiradaAtaque (this.actor, dataset.arma, dataset.habilidad_id, dataset.daño, objetivo)
 }
 
 }
