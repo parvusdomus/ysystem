@@ -62,8 +62,13 @@ export async function TiradaAtaque(actor, nombre_arma, id_habilidad, daño, obje
       icon: '<i class="fas fa-dice"></i>',
       label: "Lanzar",
       callback: () => {
+        let dificultad=document.getElementById("dificultad").value;
         let proezas=actor.data.data.Proezas.value;
         let daño_total=daño;
+        if (objetivo){
+          dificultad=Number(dificultad)+Number(objetivo.document._actor.data.data.Protección_Agilidad);
+          daño_total=Number(daño_total)-Number(objetivo.document._actor.data.data.Protección_Daño);
+        }
         if (document.getElementById("mod_dados").value != 0){
           valor_habilidad+=Number(document.getElementById("mod_dados").value)
           if (valor_habilidad < 0){valor_habilidad=0}
@@ -98,9 +103,9 @@ export async function TiradaAtaque(actor, nombre_arma, id_habilidad, daño, obje
         }
 
         let d6Roll = new Roll(tirada).roll({async: false});
-        let flavor = tirada+" VS "+ document.getElementById("dificultad").value
+        let flavor = tirada+" VS "+ dificultad;
         const archivo_template_chat = '/systems/ysystem/templates/chat/tirada_ataque_chat.html';
-        if (d6Roll.total >= document.getElementById("dificultad").value){resultado="ÉXITO"}
+        if (d6Roll.total >= dificultad){resultado="ÉXITO"}
         else {resultado="FALLO"}
         let seises=0;
         let unos=0;
@@ -123,7 +128,7 @@ export async function TiradaAtaque(actor, nombre_arma, id_habilidad, daño, obje
          tirada: tirada,
          resultado: resultado,
          total: d6Roll.total,
-         dificultad: document.getElementById("dificultad").value,
+         dificultad: dificultad,
          dados: dados,
          actor: actor.data._id,
          proezas: actor.data.data.Proezas.value,
