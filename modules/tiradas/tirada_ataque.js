@@ -38,7 +38,7 @@ export async function TiradaAtaque(actor, nombre_arma, id_habilidad, daño, obje
   var archivo_template = "";
   var datos_template={};
   if (objetivo){
-    archivo_template = '/systems/ysystem/templates/dialogos/tirada_habilidad_objetivo.html';
+    archivo_template = '/systems/ysystem/templates/dialogos/tirada_ataque_objetivo.html';
 
     datos_template = { tirada: tirada,
                         agilidad: objetivo.document._actor.data.data.Agilidad.Valor,
