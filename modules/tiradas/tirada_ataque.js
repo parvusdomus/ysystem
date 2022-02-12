@@ -97,16 +97,30 @@ export async function TiradaAtaque(actor, nombre_arma, id_habilidad, daño, obje
           tirada=valor_habilidad+"d6+"+valor_atributo
           actor.update ({ 'data.Recuerdo_Cuando_Activo': "false" });
         }
+        if (document.getElementById("apuntar").value > valor_habilidad){
+          ui.notifications.warn("No puedes pasar más dados a apuntar que los que tienes en la Habilidad");
+          return 1;
+        }
         if (document.getElementById("apuntar").value>0 && valor_habilidad>=document.getElementById("apuntar").value){
           valor_habilidad-= document.getElementById("apuntar").value
           tirada=valor_habilidad+"d6+"+valor_atributo
         }
 
-        let d6Roll = new Roll(tirada).roll({async: false});
+
+        let d6Roll = new Roll(String(tirada)).roll({async: false});
+
         let flavor = tirada+" VS "+ dificultad;
         const archivo_template_chat = '/systems/ysystem/templates/chat/tirada_ataque_chat.html';
         if (d6Roll.total >= dificultad){resultado="ÉXITO"}
         else {resultado="FALLO"}
+        let tirada_daño=daño_total;
+        if (document.getElementById("apuntar").value>0){
+            tirada_daño+="+"+document.getElementById("apuntar").value+"d6"
+        }
+
+        let d6DañoRoll = new Roll(String(tirada_daño)).roll({async: false});
+        daño_total=d6DañoRoll.total;
+        console.log ("DAÑO TOTAL1: "+daño_total)
         let seises=0;
         let unos=0;
         let dados=[];
@@ -117,9 +131,16 @@ export async function TiradaAtaque(actor, nombre_arma, id_habilidad, daño, obje
         }
         if (seises>=2){
           resultado="CRÍTICO";
-          daño_total=String(Number(daño)*2);
+          daño_total=String(Number(daño_total)*2);
       }
+        console.log ("DAÑO TOTAL2: "+daño_total)
         if (unos>0 && unos == valor_habilidad){resultado="PIFIA"}
+        const rolls = []; //array of Roll
+        rolls.push(d6Roll)
+        rolls.push(d6DañoRoll)
+        const pool = PoolTerm.fromRolls(rolls);
+        let roll = Roll.fromTerms([pool]);
+
         const datos_template_chat = {
          tirada: flavor,
          nombre_habilidad: nombre_habilidad,
@@ -139,33 +160,11 @@ export async function TiradaAtaque(actor, nombre_arma, id_habilidad, daño, obje
          (contenido_Dialogo_chat)=> {
            const chatData = {
              type: CONST.CHAT_MESSAGE_TYPES.ROLL,
-             roll: d6Roll,
+             roll: roll,
              content: contenido_Dialogo_chat,
            };
           ChatMessage.create(chatData);
-          let tirada_daño=daño_total;
-          if (resultado=="ÉXITO" || resultado=="CRÍTICO"){
-              if (document.getElementById("apuntar").value>0 && valor_habilidad>=0){
-                  tirada_daño+="+"+document.getElementById("apuntar").value+"d6"
-              }
-              let d6DañoRoll = new Roll(tirada_daño).roll({async: false});
-              daño_total=d6DañoRoll.total;
-              const archivo_template_daño_chat = '/systems/ysystem/templates/chat/tirada_daño_chat.html';
-              const datos_template_daño_chat = {
-               daño: daño_total,
-               tirada: tirada_daño
-              };
-              renderTemplate(archivo_template_daño_chat, datos_template_daño_chat).then(
-               (contenido_Dialogo_Daño_chat)=> {
-                 const chatData = {
-                   type: CONST.CHAT_MESSAGE_TYPES.ROLL,
-                   roll: d6DañoRoll,
-                   content: contenido_Dialogo_Daño_chat,
-                 };
-                ChatMessage.create(chatData);
-          } )
 
-          }
         }) //FIN DEL THEN DEL CREAR MENSAJE
 
 

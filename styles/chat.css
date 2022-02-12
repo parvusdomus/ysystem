@@ -1,3 +1,19 @@
+.chat_tirada_ataque {
+  position: relative;
+  width: 10em;
+  height: 17em;
+  text-align: center;
+  z-index: 0;
+}
+
+.chat_tirada_habilidad {
+  position: relative;
+  width: 10em;
+  height: 17em;
+  text-align: center;
+  z-index: 0;
+}
+
 .chat_resultado_circulo {
   top: 2em;
   left: 5em;
@@ -16,7 +32,7 @@
 
 .chat_tirada_titulo {
   position: relative;
-  top: -5.9em;
+  top: -9em;
   left: 0.2em;
   background-color: transparent;
   text-align: center;
@@ -29,7 +45,7 @@
 
 .chat_tirada_tirada {
   position: relative;
-  top: 0.1em;
+  top: -10.5em;
   left: 4.2em;
   background-color: transparent;
   text-align: center;
@@ -42,7 +58,7 @@
 
 .chat_tirada_total {
   position: relative;
-  top: -3em;
+  top: -1.9em;
   left: 2.2em;
   background-color: transparent;
   text-align: center;
@@ -55,7 +71,7 @@
 
 .chat_tirada_cada {
   position: relative;
-  top: -1.9em;
+  top: -4.3em;
   left: 4.2em;
   background-color: transparent;
   text-align: center;
@@ -65,9 +81,163 @@
   font-size: 1.3em;
 }
 
-.chat_tirada_daño_total {
+.chat_tirada_cada_exito {
   position: relative;
-  top: -2.7em;
+  top: -13.3em;
+  left: 4.2em;
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 7em;
+  font-family: "Girassol";
+  font-size: 1.3em;
+}
+
+.chat_tirada_total_exito {
+  position: relative;
+  top: -4.7em;
+  left: 0.6em;
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Girassol";
+  color: Black !important;
+  font-size: 3em;
+}
+
+.chat_tirada_total_daño {
+  position: relative;
+  top: -5.9em;
+  left: 3.6em;
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 2em;
+  font-family: "Girassol";
+  color: Black !important;
+  font-size: 3em;
+}
+
+.chat_resultado_circulo_exito {
+  top: 3em;
+  left: 0em;
+  position: relative;
+  width: 10em;
+  height: 9em;
+  text-align: center;
+  z-index: 0;
+}
+
+.chat_resultado_circulo_exito img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
+}
+
+.chat_resultado_circulo_daño {
+  top: -7em;
+  left: 9em;
+  position: relative;
+  width: 10em;
+  height: 9em;
+  text-align: center;
+  z-index: 0;
+}
+
+.chat_resultado_circulo_daño img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
+}
+
+.chat_tirada_repetir {
+  top: -5em;
+  left: 5em;
+  position: relative;
+  width: 10em;
+  height: 3em;
+  text-align: center;
+  z-index: 0;
+}
+
+.chat_tirada_repetir img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
+}
+
+.chat_tirada_aumentar {
+  top: -17em;
+  left: 5em;
+  position: relative;
+  width: 10em;
+  height: 3em;
+  text-align: center;
+  z-index: 0;
+}
+
+.chat_tirada_aumentar img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
+}
+
+.chat_tirada_titulo_exito {
+  position: relative;
+  top: -17em;
+  left: 0.2em;
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 12.5em;
+  font-family: "Girassol";
+  color: Black !important;
+  font-size: 1.5em;
+}
+
+.chat_tirada_tirada_exito {
+  position: relative;
+  top: -19.5em;
+  left: 4.2em;
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 7em;
+  font-family: "Girassol";
+  color: Black !important;
+  font-size: 1.3em;
+}
+
+.chat_tirada_titulo_habilidad {
+  position: relative;
+  top: -6.5em;
+  left: 0.2em;
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 12.5em;
+  font-family: "Girassol";
+  color: Black !important;
+  font-size: 1.5em;
+}
+
+.chat_tirada_tirada_habilidad {
+  position: relative;
+  top: -7.5em;
+  left: 4.2em;
+  background-color: transparent;
+  text-align: center;
+  z-index: 6;
+  width: 7em;
+  font-family: "Girassol";
+  color: Black !important;
+  font-size: 1.3em;
+}
+
+.chat_tirada_total_habilidad {
+  position: relative;
+  top: -3em;
   left: 2.2em;
   background-color: transparent;
   text-align: center;
