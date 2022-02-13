@@ -1,4 +1,4 @@
-export async function TiradaAtaque(actor, nombre_arma, id_habilidad, daño, objetivo) {
+export async function TiradaAtaquePNJ(actor, nombre_arma, id_habilidad, daño, objetivo) {
   const element = event.currentTarget;
   const dataset = element.dataset;
   //SACO LOS VALORES DE HABILIDAD Y ATRIBUTO
@@ -39,18 +39,20 @@ export async function TiradaAtaque(actor, nombre_arma, id_habilidad, daño, obje
   var archivo_template = "";
   var datos_template={};
   if (objetivo){
-    archivo_template = '/systems/ysystem/templates/dialogos/tirada_ataque_objetivo.html';
+    archivo_template = '/systems/ysystem/templates/dialogos/tirada_ataque_objetivoPNJ.html';
 
     datos_template = { tirada: tirada,
                         agilidad: objetivo.document._actor.data.data.Agilidad.Valor,
                         aplomo: objetivo.document._actor.data.data.Aplomo.Valor,
-                        perspicacia: objetivo.document._actor.data.data.Perspicacia.Valor
+                        perspicacia: objetivo.document._actor.data.data.Perspicacia.Valor,
+                        retrato: actor.data.img
                       };
   }
   else{
-    archivo_template = '/systems/ysystem/templates/dialogos/tirada_ataque.html';
+    archivo_template = '/systems/ysystem/templates/dialogos/tirada_ataquePNJ.html';
     datos_template = { tirada: tirada,
-                        daño: daño
+                        daño: daño,
+                        retrato: actor.data.img
                       };
   }
 
@@ -64,7 +66,6 @@ export async function TiradaAtaque(actor, nombre_arma, id_habilidad, daño, obje
       label: "Lanzar",
       callback: () => {
         let dificultad=document.getElementById("dificultad").value;
-        let proezas=actor.data.data.Proezas.value;
         let daño_total=daño;
         if (objetivo){
           dificultad=Number(dificultad)+Number(objetivo.document._actor.data.data.Protección_Agilidad);
@@ -81,24 +82,6 @@ export async function TiradaAtaque(actor, nombre_arma, id_habilidad, daño, obje
           if (valor_atributo > 0){tirada=valor_habilidad+"d6+"+valor_atributo}
           else{tirada=valor_habilidad+"d6"+valor_atributo}
         }
-        if (document.getElementById("proezas").value > 0){
-          if (proezas >0){
-            valor_habilidad++
-            proezas--
-            tirada=valor_habilidad+"d6+"+valor_atributo
-            actor.update ({ 'data.Proezas.value': proezas });
-            const chatData = {
-              content: mensaje_Proeza,
-            };
-            ChatMessage.create(chatData);
-          }
-          else{ui.notifications.warn("No te quedan puntos de PROEZA!!");}
-        }
-        if (actor.data.data.Recuerdo_Cuando_Activo=="true"){
-          valor_habilidad+=2
-          tirada=valor_habilidad+"d6+"+valor_atributo
-          actor.update ({ 'data.Recuerdo_Cuando_Activo': "false" });
-        }
         if (document.getElementById("apuntar").value > valor_habilidad){
           ui.notifications.warn("No puedes pasar más dados a apuntar que los que tienes en la Habilidad");
           return 1;
@@ -112,14 +95,13 @@ export async function TiradaAtaque(actor, nombre_arma, id_habilidad, daño, obje
         let d6Roll = new Roll(String(tirada)).roll({async: false});
 
         let flavor = tirada+" VS "+ dificultad;
-        const archivo_template_chat = '/systems/ysystem/templates/chat/tirada_ataque_chat.html';
+        const archivo_template_chat = '/systems/ysystem/templates/chat/tirada_ataque_chatPNJ.html';
         if (d6Roll.total >= dificultad){resultado="ÉXITO"}
         else {resultado="FALLO"}
         let tirada_daño=daño_total;
         if (document.getElementById("apuntar").value>0){
             tirada_daño+="+"+document.getElementById("apuntar").value+"d6"
         }
-
         let d6DañoRoll = new Roll(String(tirada_daño)).roll({async: false});
         daño_total=d6DañoRoll.total;
         let seises=0;
@@ -134,6 +116,7 @@ export async function TiradaAtaque(actor, nombre_arma, id_habilidad, daño, obje
           resultado="CRÍTICO";
           daño_total=String(Number(daño_total)*2);
       }
+
         if (unos>0 && unos == valor_habilidad){resultado="PIFIA"}
         const rolls = []; //array of Roll
         rolls.push(d6Roll)
@@ -152,10 +135,9 @@ export async function TiradaAtaque(actor, nombre_arma, id_habilidad, daño, obje
          dificultad: dificultad,
          dados: dados,
          actor: actor.data._id,
-         proezas: actor.data.data.Proezas.value,
          daño: daño_total,
          objetivo: objetivo_id,
-         personaje: actor.data.name        
+         personaje: actor.data.name
         };
         var contenido_Dialogo_chat;
         renderTemplate(archivo_template_chat, datos_template_chat).then(

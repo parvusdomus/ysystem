@@ -97,7 +97,8 @@ export async function TiradaHabilidadPNJ(actor, id_habilidad, objetivo) {
          total: d6Roll.total,
          dificultad: document.getElementById("dificultad").value,
          dados: dados,
-         actor: actor.data._id
+         actor: actor.data._id,
+         personaje: actor.data.name
         };
         var contenido_Dialogo_chat;
         renderTemplate(archivo_template_chat, datos_template_chat).then(

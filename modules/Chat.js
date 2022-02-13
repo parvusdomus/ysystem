@@ -95,7 +95,8 @@ export default class YsystemChat {
               total: d6Roll.total,
               dificultad: dataset.dificultad,
               dados: dados_final,
-              actor: actor.data._id
+              actor: actor.data._id,
+              personaje: actor.data.name    
              };
              renderTemplate(archivo_template_chat, datos_template_chat).then(
               (contenido_Dialogo_chat)=> {
@@ -217,7 +218,8 @@ export default class YsystemChat {
               actor: actor.data._id,
               proezas: actor.data.data.Proezas.value,
               daño: dataset.daño,
-              objetivo: objetivo_id
+              objetivo: objetivo_id,
+              personaje: actor.data.name
              };
              renderTemplate(archivo_template_chat, datos_template_chat).then(
               (contenido_Dialogo_chat)=> {

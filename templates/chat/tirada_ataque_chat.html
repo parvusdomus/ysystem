@@ -7,7 +7,7 @@
       data-actor_id="{{actor}}" data-objetivo_id="{{objetivo}}" data-daño="{{daño}}">
       <label>{{daño}}</label>
     </div>
-    <div class="chat_tirada_titulo_exito"><label>{{nombre_habilidad}}</label></div>
+    <div class="chat_tirada_titulo_exito"><label>{{personaje}}: {{nombre_habilidad}}</label></div>
     <div class="chat_tirada_tirada_exito"><label>{{tirada}} VS {{dificultad}}</label></div>
     <div class="chat_tirada_cada_exito">
     {{#each dados as |item|}}
@@ -18,7 +18,7 @@
   {{#if (eq resultado "FALLO")}}
     <img class="chat_resultado_circulo" src="/systems/ysystem/assets/chat/total_chat_fallo.svg" alt="?"/>
     <div class="chat_tirada_total"><label>{{total}}</label></div>
-    <div class="chat_tirada_titulo"><label>{{nombre_habilidad}}</label></div>
+    <div class="chat_tirada_titulo"><label>{{personaje}}: {{nombre_habilidad}}</label></div>
     <div class="chat_tirada_tirada"><label>{{tirada}} VS {{dificultad}}</label></div>
     <div class="chat_tirada_cada">
     {{#each dados as |item|}}
@@ -34,7 +34,7 @@
       data-actor_id="{{actor}}" data-objetivo_id="{{objetivo}}" data-daño="{{daño}}">
       <label>{{daño}}</label>
     </div>
-    <div class="chat_tirada_titulo_exito"><label>{{nombre_habilidad}}</label></div>
+    <div class="chat_tirada_titulo_exito"><label>{{personaje}}: {{nombre_habilidad}}</label></div>
     <div class="chat_tirada_tirada_exito"><label>{{tirada}} VS {{dificultad}}</label></div>
     <div class="chat_tirada_cada_exito">
     {{#each dados as |item|}}
@@ -45,7 +45,7 @@
   {{#if (eq resultado "PIFIA")}}
     <img class="chat_resultado_circulo" src="/systems/ysystem/assets/chat/total_chat_pifia.svg" alt="?"/>
     <div class="chat_tirada_total"><label>{{total}}</label></div>
-    <div class="chat_tirada_titulo"><label>{{nombre_habilidad}}</label></div>
+    <div class="chat_tirada_titulo"><label>{{personaje}}: {{nombre_habilidad}}</label></div>
     <div class="chat_tirada_tirada"><label>{{tirada}} VS {{dificultad}}</label></div>
     <div class="chat_tirada_cada">
     {{#each dados as |item|}}
