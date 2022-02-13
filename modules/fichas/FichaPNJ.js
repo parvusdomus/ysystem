@@ -1,5 +1,6 @@
 import {TiradaHabilidadPNJ} from "../tiradas/tirada_habilidadPNJ.js";
 import {TiradaAtaquePNJ} from "../tiradas/tirada_ataquePNJ.js";
+import {TiradaHechizoPNJ} from "../tiradas/tirada_hechizoPNJ.js";
 
 export default class FichaPNJYsystem extends ActorSheet{
 
@@ -189,6 +190,7 @@ actorData.Objetos = Objetos;
               //AQUI IRIAN LOS LISTENERS DE LAS TIRADAS
               html.find('.tirada_habilidad').click(this._onTiradaHabilidad.bind(this));
               html.find('.tirada_ataque_arma').click(this._onTiradaAtaque.bind(this));
+              html.find('.tirada_hechizo').click(this._onTiradaHechizo.bind(this));
       }
 
       _onItemCreate(event) {
@@ -227,6 +229,16 @@ actorData.Objetos = Objetos;
         const dataset = element.dataset;
         let objetivo = Array.from(game.user.targets)[0];
         TiradaAtaquePNJ (this.actor, dataset.arma, dataset.habilidad_id, dataset.daño, objetivo)
+      }
+
+      async _onTiradaHechizo(event) {
+        console.log("ON TIRADA HECHIZO PNJ")
+        const element = event.currentTarget;
+        const dataset = element.dataset;
+        let objetivo = Array.from(game.user.targets)[0];
+        console.log ("DATASE")
+        console.log (dataset)
+        TiradaHechizoPNJ (this.actor, dataset.poder, dataset.id_atributo, dataset.dificultad, objetivo)
       }
 
 }

@@ -364,12 +364,9 @@ async _onAtaqueArma(event) {
 }
 
 async _onTiradaHechizo(event) {
-  console.log("ON TIRADA HECHIZO")
   const element = event.currentTarget;
   const dataset = element.dataset;
   let objetivo = Array.from(game.user.targets)[0];
-  console.log ("DATASE")
-  console.log (dataset)
   TiradaHechizo (this.actor, dataset.poder, dataset.id_atributo, dataset.dificultad, objetivo)
 }
 
