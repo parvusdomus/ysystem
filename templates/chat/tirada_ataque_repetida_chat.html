@@ -7,7 +7,7 @@
       data-actor_id="{{actor}}" data-objetivo_id="{{objetivo}}" data-daño="{{daño}}">
       <label>{{daño}}</label>
     </div>
-    <div class="chat_tirada_titulo_exito"><label>{{nombre_habilidad}}</label></div>
+    <div class="chat_tirada_titulo_exito"><label>{{nombre_habilidad}} (Repetida)</label></div>
     <div class="chat_tirada_tirada_exito"><label>{{tirada}} VS {{dificultad}}</label></div>
     <div class="chat_tirada_cada_exito">
     {{#each dados as |item|}}
@@ -18,7 +18,7 @@
   {{#if (eq resultado "FALLO")}}
     <img class="chat_resultado_circulo" src="/systems/ysystem/assets/chat/total_chat_fallo.svg" alt="?"/>
     <div class="chat_tirada_total"><label>{{total}}</label></div>
-    <div class="chat_tirada_titulo"><label>{{nombre_habilidad}}</label></div>
+    <div class="chat_tirada_titulo"><label>{{nombre_habilidad}} (Repetida)</label></div>
     <div class="chat_tirada_tirada"><label>{{tirada}} VS {{dificultad}}</label></div>
     <div class="chat_tirada_cada">
     {{#each dados as |item|}}
@@ -34,7 +34,7 @@
       data-actor_id="{{actor}}" data-objetivo_id="{{objetivo}}" data-daño="{{daño}}">
       <label>{{daño}}</label>
     </div>
-    <div class="chat_tirada_titulo_exito"><label>{{nombre_habilidad}}</label></div>
+    <div class="chat_tirada_titulo_exito"><label>{{nombre_habilidad}} (Repetida)</label></div>
     <div class="chat_tirada_tirada_exito"><label>{{tirada}} VS {{dificultad}}</label></div>
     <div class="chat_tirada_cada_exito">
     {{#each dados as |item|}}
@@ -45,7 +45,7 @@
   {{#if (eq resultado "PIFIA")}}
     <img class="chat_resultado_circulo" src="/systems/ysystem/assets/chat/total_chat_pifia.svg" alt="?"/>
     <div class="chat_tirada_total"><label>{{total}}</label></div>
-    <div class="chat_tirada_titulo"><label>{{nombre_habilidad}}</label></div>
+    <div class="chat_tirada_titulo"><label>{{nombre_habilidad}} (Repetida)</label></div>
     <div class="chat_tirada_tirada"><label>{{tirada}} VS {{dificultad}}</label></div>
     <div class="chat_tirada_cada">
     {{#each dados as |item|}}
@@ -64,22 +64,6 @@
       <div class="chat_tirada_aumentar">
         <img class="chat_repetir" src="/systems/ysystem/assets/chat/aumentar_daño_chat.svg" alt="?"/>
       </div>
-    {{/if}}
-  {{/if}}
-  {{#if (gt proezas 0)}}
-    {{#if (eq resultado "FALLO")}}
-      <div class="chat_tirada_repetir repite_ataque_proeza"
-        data-dados="{{dados}}" data-tirada="{{tirada}}" data-nombre_habilidad="{{nombre_habilidad}}"
-        data-valor_habilidad="{{valor_habilidad}}" data-dificultad="{{dificultad}}" data-actor_id="{{actor}}"
-        data-valor_atributo="{{valor_atributo}}" data-daño="{{daño}}" data-objetivo_id="{{objetivo}}">
-      <img class="chat_repetir" src="/systems/ysystem/assets/chat/repetir_chat.svg" alt="?"/></div>
-    {{/if}}
-    {{#if (eq resultado "PIFIA")}}
-      <div class="chat_tirada_repetir repite_ataque_proeza"
-        data-dados="{{dados}}" data-tirada="{{tirada}}" data-nombre_habilidad="{{nombre_habilidad}}"
-        data-valor_habilidad="{{valor_habilidad}}" data-dificultad="{{dificultad}}" data-actor_id="{{actor}}"
-        data-valor_atributo="{{valor_atributo}}" data-daño="{{daño}}" data-objetivo_id="{{objetivo}}">
-        <img class="chat_repetir" src="/systems/ysystem/assets/chat/repetir_chat.svg" alt="?"/></div>
     {{/if}}
   {{/if}}
 </form>

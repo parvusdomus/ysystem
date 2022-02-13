@@ -5,6 +5,7 @@ export async function TiradaAtaque(actor, nombre_arma, id_habilidad, daño, obje
   let valor_habilidad="";
   let nombre_habilidad="";
   let valor_atributo="";
+  let objetivo_id;
   if (id_habilidad=="Magia"){
     valor_habilidad=actor.data.data.Magia.Valor;
     nombre_habilidad=actor.data.data.Magia.Nombre;
@@ -68,6 +69,7 @@ export async function TiradaAtaque(actor, nombre_arma, id_habilidad, daño, obje
         if (objetivo){
           dificultad=Number(dificultad)+Number(objetivo.document._actor.data.data.Protección_Agilidad);
           daño_total=Number(daño_total)-Number(objetivo.document._actor.data.data.Protección_Daño);
+          objetivo_id=objetivo.data._id;
         }
         if (document.getElementById("mod_dados").value != 0){
           valor_habilidad+=Number(document.getElementById("mod_dados").value)
@@ -120,7 +122,6 @@ export async function TiradaAtaque(actor, nombre_arma, id_habilidad, daño, obje
 
         let d6DañoRoll = new Roll(String(tirada_daño)).roll({async: false});
         daño_total=d6DañoRoll.total;
-        console.log ("DAÑO TOTAL1: "+daño_total)
         let seises=0;
         let unos=0;
         let dados=[];
@@ -133,7 +134,6 @@ export async function TiradaAtaque(actor, nombre_arma, id_habilidad, daño, obje
           resultado="CRÍTICO";
           daño_total=String(Number(daño_total)*2);
       }
-        console.log ("DAÑO TOTAL2: "+daño_total)
         if (unos>0 && unos == valor_habilidad){resultado="PIFIA"}
         const rolls = []; //array of Roll
         rolls.push(d6Roll)
@@ -153,7 +153,8 @@ export async function TiradaAtaque(actor, nombre_arma, id_habilidad, daño, obje
          dados: dados,
          actor: actor.data._id,
          proezas: actor.data.data.Proezas.value,
-         daño: daño_total
+         daño: daño_total,
+         objetivo: objetivo_id        
         };
         var contenido_Dialogo_chat;
         renderTemplate(archivo_template_chat, datos_template_chat).then(
