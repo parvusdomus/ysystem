@@ -56,14 +56,34 @@
 
   {{#if (gt proezas 0)}}
     {{#if (eq resultado "ÉXITO")}}
-      <div class="chat_tirada_aumentar">
-          <img class="chat_repetir" src="/systems/ysystem/assets/chat/aumentar_daño_chat.svg" alt="?"/>
-      </div>
+    <div class="chat_tirada_aumentar aumenta_daño"
+      data-actor_id="{{actor}}"
+      data-objetivo_id="{{objetivo}}"
+      data-daño="{{daño}}"
+      data-tirada="{{tirada}}"
+      data-nombre_habilidad="{{nombre_habilidad}}"
+      data-resultado="{{resultado}}"
+      data-total="{{total}}"
+      data-dificultad="{{dificultad}}"
+      data-dados="{{dados}}"
+      data-valor_habilidad="{{valor_habilidad}}">
+      <img class="chat_repetir" src="/systems/ysystem/assets/chat/aumentar_daño_chat.svg" alt="?"/>
+    </div>
     {{/if}}
     {{#if (eq resultado "CRÍTICO")}}
-      <div class="chat_tirada_aumentar">
-        <img class="chat_repetir" src="/systems/ysystem/assets/chat/aumentar_daño_chat.svg" alt="?"/>
-      </div>
+    <div class="chat_tirada_aumentar aumenta_daño"
+      data-actor_id="{{actor}}"
+      data-objetivo_id="{{objetivo}}"
+      data-daño="{{daño}}"
+      data-tirada="{{tirada}}"
+      data-nombre_habilidad="{{nombre_habilidad}}"
+      data-resultado="{{resultado}}"
+      data-total="{{total}}"
+      data-dificultad="{{dificultad}}"
+      data-dados="{{dados}}"
+      data-valor_habilidad="{{valor_habilidad}}">
+      <img class="chat_repetir" src="/systems/ysystem/assets/chat/aumentar_daño_chat.svg" alt="?"/>
+    </div>
     {{/if}}
   {{/if}}
 </form>

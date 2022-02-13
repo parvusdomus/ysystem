@@ -3,6 +3,7 @@ export default class YsystemChat {
     html.on('click', '.repite_habilidad_proeza', this._onrepite_habilidad_proeza.bind(this));
     html.on('click', '.repite_ataque_proeza', this._onrepite_ataque_proeza.bind(this));
     html.on('click', '.aplica_daño', this._onaplica_daño.bind(this));
+    html.on('click', '.aumenta_daño', this._onaumenta_daño.bind(this));
   }
 
   static _onrepite_habilidad_proeza (event){
@@ -96,7 +97,7 @@ export default class YsystemChat {
               dificultad: dataset.dificultad,
               dados: dados_final,
               actor: actor.data._id,
-              personaje: actor.data.name    
+              personaje: actor.data.name
              };
              renderTemplate(archivo_template_chat, datos_template_chat).then(
               (contenido_Dialogo_chat)=> {
@@ -265,6 +266,48 @@ export default class YsystemChat {
       ui.notifications.notify("No hay objetivo");
       return 1;
     }
+
+  }
+
+  static _onaumenta_daño (event){
+    const element = event.currentTarget;
+    const dataset = element.dataset;
+    const actor = game.actors.get(dataset.actor_id);
+    const objetivo = canvas.tokens.get(dataset.objetivo_id);
+    const messageId = $(element)
+            .parents('[data-message-id]')
+            .attr('data-message-id');
+    let dados_split = dataset.dados.split(',');
+    let tirada=dataset.daño+"+1d6x"
+    let d6xRoll = new Roll(tirada).roll({async: false});
+    let daño=d6xRoll.total;
+    let proezas=Number(actor.data.data.Proezas.value)-1;
+    actor.update ({ 'data.Proezas.value': proezas });
+    const message = game.messages.get(messageId)
+    let flavor=actor.data.name+" usa Proeza para aumentar el daño"
+    d6xRoll.toMessage({
+      speaker: ChatMessage.getSpeaker({ actor: actor }),
+      flavor: flavor
+   });
+    const archivo_template_chat = '/systems/ysystem/templates/chat/tirada_ataque_chat.html';
+    const datos_template_chat = {
+     tirada: dataset.tirada,
+     nombre_habilidad: dataset.nombre_habilidad,
+     resultado: dataset.resultado,
+     total: dataset.total,
+     dificultad: dataset.dificultad,
+     dados: dados_split,
+     actor: dataset.actor_id,
+     proezas: actor.data.data.Proezas.value,
+     daño: daño,
+     objetivo: dataset.objetivo_id,
+     personaje: actor.data.name,
+     valor_habilidad: dataset.valor_habilidad
+    };
+    renderTemplate(archivo_template_chat, datos_template_chat).then(
+     (contenido_Dialogo_chat)=> {
+       message.update({id: messageId, content: contenido_Dialogo_chat})
+    })
 
   }
 
