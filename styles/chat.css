@@ -225,11 +225,11 @@
 .chat_tirada_tirada_habilidad {
   position: relative;
   top: -7.5em;
-  left: 4.2em;
+  left: 0em;
   background-color: transparent;
   text-align: center;
   z-index: 6;
-  width: 7em;
+  width: 15em;
   font-family: "Girassol";
   color: Black !important;
   font-size: 1.3em;

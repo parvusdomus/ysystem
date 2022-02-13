@@ -87,7 +87,7 @@ export async function TiradaHechizo(actor, poder, id_atributo, dificultad, objet
         }
         let d6Roll = new Roll(tirada).roll({async: false});
         let flavor = tirada+" VS "+ document.getElementById("dificultad").value
-        const archivo_template_chat = '/systems/ysystem/templates/chat/tirada_habilidad_chat.html';
+        const archivo_template_chat = '/systems/ysystem/templates/chat/tirada_hechizo_chat.html';
         dificultad1 = document.getElementById("dificultad").value;
         if (d6Roll.total >= dificultad1 && d6Roll.total >= dificultad2){resultado="ÉXITO"}
         else {resultado="FALLO"}
@@ -109,7 +109,8 @@ export async function TiradaHechizo(actor, poder, id_atributo, dificultad, objet
          tirada: tirada,
          resultado: resultado,
          total: d6Roll.total,
-         dificultad: document.getElementById("dificultad").value,
+         dificultad1: dificultad1,
+         dificultad2: dificultad2,
          dados: dados,
          actor: actor.data._id,
          proezas: actor.data.data.Proezas.value,
