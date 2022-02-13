@@ -296,12 +296,13 @@
   color: Black !important;
   font-size: 1.5em;
 }
-.Poder_Dificultad_input input{
+.Poder_Dificultad_input select{
+  appearance: none;
   text-align: center;
+  font-family: "Annie";
   color: Black !important;
   background-color: transparent;
   border: none;
-  height: auto;
 }
 
 .Poder_Preparación_input {

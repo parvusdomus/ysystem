@@ -22,7 +22,12 @@
 
         {{#each Poderes as |item id|}}
           <li class="armas item" data-item-id="{{item._id}}">
-            <div class="poder_linea1 tirada_hechizo"><label>{{item.name}}</label></div>
+            <div class="poder_linea1 tirada_hechizo"
+            data-poder="{{item.name}}"
+            data-id_atributo="{{item.data.Atributo}}"
+            data-dificultad="{{item.data.Dificultad}}">
+              <label>{{item.name}}</label>
+            </div>
               <label class="magiapoder_linea2">{{item.data.Atributo}} </label>
               <label class="poder_linea3">{{item.data.Dificultad}}</label>
               <span class="controles_poderes">

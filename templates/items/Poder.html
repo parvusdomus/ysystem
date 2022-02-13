@@ -19,7 +19,13 @@
         {{/select}}
       </select>
       <div class="Poder_Dificultad_input">
-        <input type="text" name="data.Dificultad" value="{{data.data.Dificultad}}" data-dtype="Number" maxlength="2"/>
+        <select class="Poder_Dificultad_select" name="data.Dificultad" data-dtype="String">
+          {{#select data.data.Dificultad}}
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+          {{/select}}
+        </select>
       </div>
       <div class="Poder_Preparación_input">
         <input type="text" name="data.Preparación" value="{{data.data.Preparación}}" data-dtype="String"/>

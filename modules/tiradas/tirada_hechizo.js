@@ -1,20 +1,13 @@
-export async function TiradaHechizo(actor, id_habilidad, objetivo) {
+export async function TiradaHechizo(actor, poder, id_atributo, dificultad, objetivo) {
   console.log ("TIRADA HECHIZO")
   const element = event.currentTarget;
   const dataset = element.dataset;
   //SACO LOS VALORES DE HABILIDAD Y ATRIBUTO
-  let valor_habilidad="";
-  let nombre_habilidad="";
-  let valor_atributo="";
-  if (id_habilidad=="Magia"){
-    valor_habilidad=actor.data.data.Magia.Valor;
-    nombre_habilidad=actor.data.data.Magia.Nombre;
-    valor_atributo=actor.data.data[actor.data.data.Magia.Atributo]
-  } else{
-    valor_habilidad=actor.data.data.Habilidades[id_habilidad].Valor;
-    nombre_habilidad=actor.data.data.Habilidades[id_habilidad].Nombre;
-    valor_atributo=actor.data.data[actor.data.data.Habilidades[id_habilidad].Atributo]
-  }
+  let valor_habilidad=actor.data.data.Magia.Valor;
+  let nombre_habilidad=poder;
+  let valor_atributo=actor.data.data[id_atributo];
+  let dificultad1=0;
+  let dificultad2=dificultad;
   //PENALIZO POR HERIDAS
   if (actor.data.data.Salud.value <= 3){
     valor_habilidad-=3;
@@ -39,7 +32,7 @@ export async function TiradaHechizo(actor, id_habilidad, objetivo) {
   var archivo_template = "";
   var datos_template={};
   if (objetivo){
-    archivo_template = '/systems/ysystem/templates/dialogos/tirada_habilidad_objetivo.html';
+    archivo_template = '/systems/ysystem/templates/dialogos/tirada_hechizo_objetivo.html';
 
     datos_template = { tirada: tirada,
                         agilidad: objetivo.document._actor.data.data.Agilidad.Valor,
@@ -48,8 +41,9 @@ export async function TiradaHechizo(actor, id_habilidad, objetivo) {
                       };
   }
   else{
-    archivo_template = '/systems/ysystem/templates/dialogos/tirada_habilidad.html';
-    datos_template = { tirada: tirada
+    archivo_template = '/systems/ysystem/templates/dialogos/tirada_hechizo.html';
+    datos_template = { tirada: tirada,
+                        dificultad2: dificultad2
                       };
   }
 
@@ -94,7 +88,8 @@ export async function TiradaHechizo(actor, id_habilidad, objetivo) {
         let d6Roll = new Roll(tirada).roll({async: false});
         let flavor = tirada+" VS "+ document.getElementById("dificultad").value
         const archivo_template_chat = '/systems/ysystem/templates/chat/tirada_habilidad_chat.html';
-        if (d6Roll.total >= document.getElementById("dificultad").value){resultado="ÉXITO"}
+        dificultad1 = document.getElementById("dificultad").value;
+        if (d6Roll.total >= dificultad1 && d6Roll.total >= dificultad2){resultado="ÉXITO"}
         else {resultado="FALLO"}
         let seises=0;
         let unos=0;
