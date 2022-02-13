@@ -41,12 +41,15 @@ export async function TiradaHabilidadPNJ(actor, id_habilidad, objetivo) {
     datos_template = { tirada: tirada,
                         agilidad: objetivo.document._actor.data.data.Agilidad.Valor,
                         aplomo: objetivo.document._actor.data.data.Aplomo.Valor,
-                        perspicacia: objetivo.document._actor.data.data.Perspicacia.Valor
+                        perspicacia: objetivo.document._actor.data.data.Perspicacia.Valor,
+                        retrato: actor.data.img
                       };
   }
   else{
     archivo_template = '/systems/ysystem/templates/dialogos/tirada_habilidadPNJ.html';
-    datos_template = { tirada: tirada
+    datos_template = {
+                        tirada: tirada,
+                        retrato: actor.data.img
                       };
   }
 

@@ -198,3 +198,19 @@
   height: auto;
   font-size: 1.7em;
 }
+
+.dialogo_retrato_PNJ {
+  top: -9.5em;
+  left: 20em;
+  position: relative;
+  width: 5em;
+  height: 5em;
+  text-align: center;
+  z-index: 0;
+}
+
+.dialogo_retrato_PNJ img {
+  vertical-align: middle;
+  max-height: 100%;
+  z-index: -1;
+}

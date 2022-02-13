@@ -22,7 +22,19 @@
       <input type="text" name="data.Percepción" value="{{data.Percepción}}" data-dtype="Number" maxlength="2"/>
     </div>
     <div class="PNJ_caract_Salud_input">
+      {{#if (lte data.Salud.value 3)}}
+          <div class="caract_Salud_valor_input_red_PNJ">
+          {{else}} {{#if (lte data.Salud.value 6)}}
+            <div class="caract_Salud_valor_input_orange_PNJ">
+            {{else}} {{#if (lte data.Salud.value 10)}}
+              <div class="caract_Salud_valor_input_yellow_PNJ">
+              {{else}}
+                <div class="caract_Salud_valor_input_black_PNJ">
+            {{/if}}
+          {{/if}}
+        {{/if}}
       <input type="text" name="data.Salud.value" value="{{data.Salud.value}}" data-dtype="Number" maxlength="2"/>
+      </div>
     </div>
     <label class="PNJ_caract_Salud_max restaura_salud">{{data.Salud.max}}</label>
     <label class="PNJ_caract_R_Fisica">{{data.Resistencia_Física}}</label>

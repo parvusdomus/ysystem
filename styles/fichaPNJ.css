@@ -659,3 +659,36 @@ a.PNJ_general-tab.active, .PNJ_biografia-tab.active, .PNJ_magia-tab.active {
   border-width: 0;
   font-family: 'Annie';
 }
+
+.caract_Salud_valor_input_red_PNJ {
+  color: Red !important;
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+.caract_Salud_valor_input_red_PNJ input{
+  color: Red !important;
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+
+.caract_Salud_valor_input_orange_PNJ {
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+.caract_Salud_valor_input_orange_PNJ input{
+  color: Orange !important;
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+
+.caract_Salud_valor_input_black_PNJ {
+  color: Black !important;
+}
+.caract_Salud_valor_input_black_PNJ input{
+  color: Black !important;
+}
+
+.caract_Salud_valor_input_yellow_PNJ {
+  color: Yellow !important;
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+.caract_Salud_valor_input_yellow_PNJ input{
+  color: Yellow !important;
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
