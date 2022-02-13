@@ -2,6 +2,9 @@ export async function TiradaHechizo(actor, poder, id_atributo, dificultad, objet
   console.log ("TIRADA HECHIZO")
   const element = event.currentTarget;
   const dataset = element.dataset;
+  let Ppoder=(Number(dificultad)/5)-1;
+  let PpoderActual=actor.data.data.Poder.value;
+
   //SACO LOS VALORES DE HABILIDAD Y ATRIBUTO
   let valor_habilidad=actor.data.data.Magia.Valor;
   let nombre_habilidad=poder;
@@ -67,6 +70,12 @@ export async function TiradaHechizo(actor, poder, id_atributo, dificultad, objet
           if (valor_atributo > 0){tirada=valor_habilidad+"d6+"+valor_atributo}
           else{tirada=valor_habilidad+"d6"+valor_atributo}
         }
+        if (actor.data.data.Poder.value < Ppoder){
+          ui.notifications.warn("No tienes suficientes puntos de Poder");
+          return 1;
+        }
+        PpoderActual-=Ppoder;
+        actor.update ({ 'data.Poder.value': PpoderActual });
         if (document.getElementById("proezas").value > 0){
           if (proezas >0){
             valor_habilidad++
