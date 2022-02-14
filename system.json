@@ -26,6 +26,6 @@
   "gridDistance": 1.5,
   "gridUnits": "m",
   "url": "https://github.com/parvusdomus/ysystem",
-  "manifest": "https://github.com/parvusdomus/ysystem/blob/main/system.json",
-  "download": "https://github.com/parvusdomus/ysystem/archive/refs/tags/v0.9.1.zip"
+  "manifest": "https://github.com/parvusdomus/ysystem/releases/latest/download/system.json",
+  "download": "https://github.com/parvusdomus/ysystem/releases/latest/download/ysystem.zip"
 }
