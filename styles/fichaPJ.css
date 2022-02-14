@@ -383,7 +383,7 @@ img {
 }
 
 .habilidades-tab, .equipo-tab, .biografia-tab, .magia-tab {
-  background-image: url(/systems/ysystem/assets/fichas/Tabs.svg);
+  background-image: url(/systems/ysystem/assets/Negro/fichas/Tabs.svg);
   background-position-x: -2px;
   padding-top: 0.15em;
   padding-left: 1.5em;
@@ -393,13 +393,13 @@ img {
 }
 
 a.habilidades-tab:hover, .equipo-tab:hover, .biografia-tab:hover, .magia-tab:hover{
-  background-image: url(/systems/ysystem/assets/fichas/Tabs-Hover.svg);
+  background-image: url(/systems/ysystem/assets/Negro/fichas/Tabs-Hover.svg);
   background-size: 100% 100%;
   color: LightGrey;
 }
 
 a.habilidades-tab.active, .equipo-tab.active, .biografia-tab.active, .magia-tab.active{
-  background-image: url(/systems/ysystem/assets/fichas/Tabs-Active.svg);
+  background-image: url(/systems/ysystem/assets/Negro/fichas/Tabs-Active.svg);
   background-size: 100% 100%;
   color: LightGrey;
   text-shadow: none !important;

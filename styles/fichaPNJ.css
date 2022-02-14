@@ -254,7 +254,7 @@
 }
 
 .PNJ_general-tab, .PNJ_biografia-tab, .PNJ_magia-tab {
-  background-image: url(/systems/ysystem/assets/fichas/Tabs.svg);
+  background-image: url(/systems/ysystem/assets/Negro/fichas/Tabs.svg);
   background-position-x: -2px;
   padding-top: 0.15em;
   padding-left: 1.5em;
@@ -264,13 +264,13 @@
 }
 
 a.PNJ_general-tab:hover, .PNJ_biografia-tab:hover, .PNJ_magia-tab:hover {
-  background-image: url(/systems/ysystem/assets/fichas/Tabs-Hover.svg);
+  background-image: url(/systems/ysystem/assets/Negro/fichas/Tabs-Hover.svg);
   background-size: 100% 100%;
   color: LightGrey;
 }
 
 a.PNJ_general-tab.active, .PNJ_biografia-tab.active, .PNJ_magia-tab.active {
-  background-image: url(/systems/ysystem/assets/fichas/Tabs-Active.svg);
+  background-image: url(/systems/ysystem/assets/Negro/fichas/Tabs-Active.svg);
   background-size: 100% 100%;
   color: LightGrey;
   text-shadow: none !important;
