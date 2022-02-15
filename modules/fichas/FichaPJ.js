@@ -1,7 +1,8 @@
 import {TiradaHabilidad} from "../tiradas/tirada_habilidad.js";
 import {TiradaAtaque} from "../tiradas/tirada_ataque.js";
 import {TiradaHechizo} from "../tiradas/tirada_hechizo.js";
-
+import {TiradaResistenciaFisica} from "../tiradas/tirada_resistencia_fisica.js";
+import {TiradaResistenciaMental} from "../tiradas/tirada_resistencia_mental.js";
 export default class FichaYsystem extends ActorSheet{
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
@@ -324,6 +325,9 @@ activateListeners(html) {
         html.find('.tirada_habilidad').click(this._onTiradaHabilidad.bind(this));
         html.find('.ataque_arma').click(this._onAtaqueArma.bind(this));
         html.find('.tirada_hechizo').click(this._onTiradaHechizo.bind(this));
+        html.find('.tirada_Resistencia_Fisica').click(this._onTiradaResistenciaFisica.bind(this));
+        html.find('.tirada_Resistencia_Mental').click(this._onTiradaResistenciaMental.bind(this));
+        html.find('.tirada_Resistencia_Mental').contextmenu(this._onTiradaPanico.bind(this));
 
 }
 _onItemCreate(event) {
@@ -368,6 +372,27 @@ async _onTiradaHechizo(event) {
   const dataset = element.dataset;
   let objetivo = Array.from(game.user.targets)[0];
   TiradaHechizo (this.actor, dataset.poder, dataset.id_atributo, dataset.dificultad, objetivo)
+}
+
+async _onTiradaResistenciaFisica(event) {
+  const element = event.currentTarget;
+  const dataset = element.dataset;
+  console.log ("ON TIRADA RESISTENCIA FISICA");
+  TiradaResistenciaFisica (this.actor);
+}
+
+async _onTiradaResistenciaMental(event) {
+  const element = event.currentTarget;
+  const dataset = element.dataset;
+  console.log ("ON TIRADA RESISTENCIA MENTAL");
+  TiradaResistenciaMental (this.actor);
+}
+
+async _onTiradaPanico(event) {
+  const element = event.currentTarget;
+  const dataset = element.dataset;
+  console.log ("ON TIRADA PANICO")
+  //TiradaHechizo (this.actor, dataset.poder, dataset.id_atributo, dataset.dificultad, objetivo)
 }
 
 }
