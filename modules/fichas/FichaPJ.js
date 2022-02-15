@@ -379,7 +379,6 @@ async _onTiradaResistenciaFisica(event) {
   const dataset = element.dataset;
   console.log ("ON TIRADA RESISTENCIA FISICA");
   TiradaResistenciaFisica (this.actor);
-  //TiradaHechizo (this.actor, dataset.poder, dataset.id_atributo, dataset.dificultad, objetivo)
 }
 
 async _onTiradaResistenciaMental(event) {
@@ -387,7 +386,6 @@ async _onTiradaResistenciaMental(event) {
   const dataset = element.dataset;
   console.log ("ON TIRADA RESISTENCIA MENTAL");
   TiradaResistenciaMental (this.actor);
-  //TiradaHechizo (this.actor, dataset.poder, dataset.id_atributo, dataset.dificultad, objetivo)
 }
 
 async _onTiradaPanico(event) {
