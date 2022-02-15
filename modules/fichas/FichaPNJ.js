@@ -1,6 +1,7 @@
 import {TiradaHabilidadPNJ} from "../tiradas/tirada_habilidadPNJ.js";
 import {TiradaAtaquePNJ} from "../tiradas/tirada_ataquePNJ.js";
 import {TiradaHechizoPNJ} from "../tiradas/tirada_hechizoPNJ.js";
+import {TiradaResistenciaFisicaPNJ} from "../tiradas/tirada_resistencia_fisicaPNJ.js"
 
 export default class FichaPNJYsystem extends ActorSheet{
 
@@ -191,6 +192,7 @@ actorData.Objetos = Objetos;
               html.find('.tirada_habilidad').click(this._onTiradaHabilidad.bind(this));
               html.find('.tirada_ataque_arma').click(this._onTiradaAtaque.bind(this));
               html.find('.tirada_hechizo').click(this._onTiradaHechizo.bind(this));
+              html.find('.tirada_Resistencia_Fisica').click(this._onTiradaResistenciaFisica.bind(this));
       }
 
       _onItemCreate(event) {
@@ -239,6 +241,13 @@ actorData.Objetos = Objetos;
         console.log ("DATASE")
         console.log (dataset)
         TiradaHechizoPNJ (this.actor, dataset.poder, dataset.id_atributo, dataset.dificultad, objetivo)
+      }
+
+      async _onTiradaResistenciaFisica(event) {
+        const element = event.currentTarget;
+        const dataset = element.dataset;
+        console.log ("ON TIRADA RESISTENCIA FISICA");
+        TiradaResistenciaFisicaPNJ (this.actor);
       }
 
 }
