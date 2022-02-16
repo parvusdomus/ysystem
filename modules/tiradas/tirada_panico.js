@@ -8,7 +8,7 @@ export async function TiradaPanico(actor) {
   //MONTO LA TIRADA
   let tirada=""
   let dificultad=actor.data.data.Aplomo.Valor;
-  //dificultad+=actor.data.data.Aplomo.Bono;
+  dificultad+=actor.data.data.Aplomo.Bono;
   let resultado=""
   let estabilidad_actual=Number(actor.data.data.Estabilidad.value);
   let estabilidad_nueva=0;

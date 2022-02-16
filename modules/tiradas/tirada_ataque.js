@@ -33,18 +33,23 @@ export async function TiradaAtaque(actor, nombre_arma, id_habilidad, daño, obje
   } else if(valor_atributo<0){
     tirada+=valor_atributo
   }
-
+  let agilidad=0;
+  let aplomo=0;
+  let perspicacia=0;
   let resultado=""
   let mensaje_Proeza= actor.data.name+ " usa Proeza para la tirada..."
   var archivo_template = "";
   var datos_template={};
   if (objetivo){
+    agilidad=Number(objetivo.document._actor.data.data.Agilidad.Valor)+Number(objetivo.document._actor.data.data.Agilidad.Bono)
+    aplomo=Number(objetivo.document._actor.data.data.Aplomo.Valor)+Number(objetivo.document._actor.data.data.Aplomo.Bono)
+    perspicacia=Number(objetivo.document._actor.data.data.Perspicacia.Valor)+Number(objetivo.document._actor.data.data.Perspicacia.Bono)
     archivo_template = '/systems/ysystem/templates/dialogos/tirada_ataque_objetivo.html';
 
     datos_template = { tirada: tirada,
-                        agilidad: objetivo.document._actor.data.data.Agilidad.Valor,
-                        aplomo: objetivo.document._actor.data.data.Aplomo.Valor,
-                        perspicacia: objetivo.document._actor.data.data.Perspicacia.Valor
+                        agilidad: agilidad,
+                        aplomo: aplomo,
+                        perspicacia: perspicacia
                       };
   }
   else{
@@ -155,7 +160,7 @@ export async function TiradaAtaque(actor, nombre_arma, id_habilidad, daño, obje
          proezas: actor.data.data.Proezas.value,
          daño: daño_total,
          objetivo: objetivo_id,
-         personaje: actor.data.name        
+         personaje: actor.data.name
         };
         var contenido_Dialogo_chat;
         renderTemplate(archivo_template_chat, datos_template_chat).then(
