@@ -10,6 +10,8 @@ export async function TiradaPanico(actor) {
   let dificultad=actor.data.data.Aplomo.Valor;
   //dificultad+=actor.data.data.Aplomo.Bono;
   let resultado=""
+  let estabilidad_actual=Number(actor.data.data.Estabilidad.value);
+  let estabilidad_nueva=0;
   var archivo_template = "";
   var datos_template={};
   archivo_template = '/systems/ysystem/templates/dialogos/tirada_panico.html';
@@ -31,7 +33,12 @@ export async function TiradaPanico(actor) {
           let flavor = tirada+" VS "+ dificultad
         const archivo_template_chat = '/systems/ysystem/templates/chat/tirada_habilidad_chatPNJ.html';
         if (d6Roll.total <= dificultad){resultado="ÉXITO"}
-        else {resultado="FALLO"}
+        else {
+          resultado="FALLO";
+          estabilidad_nueva=estabilidad_actual-valor_habilidad;
+          actor.update ({ 'data.Estabilidad.value': estabilidad_nueva });
+
+        }
         let dados=[];
         for (let i = 0; i < valor_habilidad; i++) {
           dados.push(d6Roll.terms[0].results[i].result);
