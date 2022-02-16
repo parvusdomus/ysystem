@@ -214,3 +214,27 @@
   max-height: 100%;
   z-index: -1;
 }
+
+.dialogo_tirada_panico {
+  top: 2.5em;
+  left: 3.4em;
+  background-color: transparent;
+  position: absolute;
+  appearance: none;
+  text-align: center;
+  z-index: 6;
+  width: 1em;
+  height: 1.4em;
+  font-family: "Annie";
+  color: Black !important;
+  font-size: 3.5em;
+  border: none;
+}
+.dialogo_tirada_panico select{
+  appearance: none;
+  text-align: center;
+  font-family: "Annie";
+  color: Black !important;
+  background-color: transparent;
+  border: none;
+}

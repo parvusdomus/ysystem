@@ -3,6 +3,7 @@ import {TiradaAtaque} from "../tiradas/tirada_ataque.js";
 import {TiradaHechizo} from "../tiradas/tirada_hechizo.js";
 import {TiradaResistenciaFisica} from "../tiradas/tirada_resistencia_fisica.js";
 import {TiradaResistenciaMental} from "../tiradas/tirada_resistencia_mental.js";
+import {TiradaPanico} from "../tiradas/tirada_panico.js";
 export default class FichaYsystem extends ActorSheet{
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
@@ -392,6 +393,7 @@ async _onTiradaPanico(event) {
   const element = event.currentTarget;
   const dataset = element.dataset;
   console.log ("ON TIRADA PANICO")
+  TiradaPanico (this.actor);
   //TiradaHechizo (this.actor, dataset.poder, dataset.id_atributo, dataset.dificultad, objetivo)
 }
 
