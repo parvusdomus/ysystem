@@ -3,7 +3,7 @@ export async function TiradaResistenciaFisicaAuto(actor, VidaActual) {
   //SACO LOS VALORES DE HABILIDAD Y ATRIBUTO
   let valor_habilidad=3;
   let dificultad=actor.data.document._actor.data.data.Resistencia_Física;
-  let nombre_habilidad="Resistencia Física";
+  let nombre_habilidad="R. Física";
   //PENALIZO POR HERIDAS
   if (VidaActual <= 3){
     valor_habilidad-=3;
