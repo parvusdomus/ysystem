@@ -383,7 +383,7 @@ img {
 }
 
 .habilidades-tab, .equipo-tab, .biografia-tab, .magia-tab {
-  background-image: url(/systems/ysystem/assets/Negro/fichas/Tabs.svg);
+  background-image: url(/systems/ysystem/assets/Negro/fichas/Tabs.webp);
   background-position-x: -2px;
   padding-top: 0.15em;
   padding-left: 1.5em;
@@ -393,13 +393,13 @@ img {
 }
 
 a.habilidades-tab:hover, .equipo-tab:hover, .biografia-tab:hover, .magia-tab:hover{
-  background-image: url(/systems/ysystem/assets/Negro/fichas/Tabs-Hover.svg);
+  background-image: url(/systems/ysystem/assets/Negro/fichas/Tabs-Hover.webp);
   background-size: 100% 100%;
   color: LightGrey;
 }
 
 a.habilidades-tab.active, .equipo-tab.active, .biografia-tab.active, .magia-tab.active{
-  background-image: url(/systems/ysystem/assets/Negro/fichas/Tabs-Active.svg);
+  background-image: url(/systems/ysystem/assets/Negro/fichas/Tabs-Active.webp);
   background-size: 100% 100%;
   color: LightGrey;
   text-shadow: none !important;
@@ -972,9 +972,9 @@ ol.lista-armas {
 
 .imagen_penalizador {
   top: 15em;
-  left: 47.6em;
+  left: 48em;
   position: absolute;
-  width: 6em;
+  width: 5em;
   height: 6em;
   text-align: center;
   z-index: 0;
@@ -1030,11 +1030,11 @@ ol.lista-armas {
 }
 
 .imagen_poder {
-  top: 0em;
+  top: 0.4em;
   left: 46.6em;
   position: absolute;
   width: 6em;
-  height: 6em;
+  height: 5em;
   text-align: center;
   z-index: 0;
 }
@@ -1099,6 +1099,23 @@ ol.lista-armas {
 }
 
 .poder_linea2 {
+  position: relative;
+  left: 0em;
+  overflow: hidden;
+  background-color: transparent;
+  text-overflow: clip;
+  text-align: center;
+  display: inline-block;
+  z-index: 6;
+  width: 6em;
+  height: 1.3em;
+  font-family: "Lora";
+  white-space: nowrap;
+  color: Black !important;
+  font-size: 1em;
+}
+
+.poder_linea2PNJ {
   position: relative;
   left: -2.5em;
   overflow: hidden;
