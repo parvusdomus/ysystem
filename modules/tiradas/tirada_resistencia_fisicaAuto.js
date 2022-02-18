@@ -1,19 +1,15 @@
-export async function TiradaResistenciaFisica(actor) {
-  console.log ("TIRADA RESISTENCIA FISICA")
-  console.log (actor)
+export async function TiradaResistenciaFisicaAuto(actor, VidaActual) {
   const element = event.currentTarget;
   //SACO LOS VALORES DE HABILIDAD Y ATRIBUTO
   let valor_habilidad=3;
-  console.log ("ACTOR DATA")
-  console.log (actor.data)
-  let dificultad=actor.data.data.Resistencia_Física;
+  let dificultad=actor.data.document._actor.data.data.Resistencia_Física;
   let nombre_habilidad="Resistencia Física";
   //PENALIZO POR HERIDAS
-  if (actor.data.data.Salud.value <= 3){
+  if (VidaActual <= 3){
     valor_habilidad-=3;
-  } else if (actor.data.data.Salud.value <= 6) {
+  } else if (VidaActual <= 6) {
     valor_habilidad-=2;
-  } else if (actor.data.data.Salud.value <= 10) {
+  } else if (VidaActual <= 10) {
     valor_habilidad-=1;
   }
   //MONTO LA TIRADA
@@ -21,7 +17,7 @@ export async function TiradaResistenciaFisica(actor) {
   let tirada=valor_habilidad+"d6"
 
   let resultado=""
-        let proezas=actor.data.data.Proezas.value;
+        let proezas=actor.data.document._actor.data.data.Proezas.value;
         let d6Roll = new Roll(tirada).roll({async: false});
         let flavor = tirada+" VS "+ dificultad;
         const archivo_template_chat = '/systems/ysystem/templates/chat/tirada_habilidad_chat.html';
@@ -47,9 +43,9 @@ export async function TiradaResistenciaFisica(actor) {
          total: d6Roll.total,
          dificultad: dificultad,
          dados: dados,
-         actor: actor.data._id,
-         proezas: actor.data.data.Proezas.value,
-         personaje: actor.data.name
+         actor: actor.data.document._actor.data._id,
+         proezas: actor.data.document._actor.data.data.Proezas.value,
+         personaje: actor.data.document._actor.name
         };
         var contenido_Dialogo_chat;
         renderTemplate(archivo_template_chat, datos_template_chat).then(
