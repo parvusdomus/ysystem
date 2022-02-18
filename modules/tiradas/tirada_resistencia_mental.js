@@ -4,8 +4,8 @@ export async function TiradaResistenciaMental(actor) {
   //SACO LOS VALORES DE HABILIDAD Y ATRIBUTO
   let valor_habilidad=3;
   let dificultad=actor.data.data.Resistencia_Mental;
-  let nombre_habilidad="Resistencia Mental";
-  
+  let nombre_habilidad="R. Mental";
+
   //MONTO LA TIRADA
   if (valor_habilidad < 0){valor_habilidad=0}
   let tirada=valor_habilidad+"d6"

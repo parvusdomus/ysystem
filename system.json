@@ -19,7 +19,13 @@
               "styles/dialogos.css",
               "styles/chat.css"
   ],
-  "packs": [],
+  "packs": [{
+                        "name": "documentacion",
+                        "label": "Documentación Básica",
+                        "system": "ysystem",
+                        "path": "./packs/documentacion.db",
+                        "type": "JournalEntry"
+                }],
   "languages": [],
   "socket": false,
   "initiative": "1d6 + @Iniciativa",
