@@ -271,13 +271,13 @@ export default class YsystemChat {
   }
 
   static _onaumenta_daño (event){
+    const element = event.currentTarget;
+    const dataset = element.dataset;
+    const actor = game.actors.get(dataset.actor_id);
     if (actor.data.data.Proezas.value <=0){
       ui.notifications.warn("No te quedan Proezas");
       return 1;
     }
-    const element = event.currentTarget;
-    const dataset = element.dataset;
-    const actor = game.actors.get(dataset.actor_id);
     const objetivo = canvas.tokens.get(dataset.objetivo_id);
     const messageId = $(element)
             .parents('[data-message-id]')
