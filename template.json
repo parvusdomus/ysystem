@@ -193,6 +193,11 @@
                 "max": 0,
                 "min": 0
               },
+              "Proezas": {
+                "value": 0,
+                "max": 0,
+                "min": 0
+              },
               "Carisma": 0,
               "Destreza": 0,
               "Fuerza": 0,

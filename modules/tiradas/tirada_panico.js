@@ -1,3 +1,4 @@
+import {TiradaResistenciaMental} from "../tiradas/tirada_resistencia_mental.js";
 export async function TiradaPanico(actor) {
   console.log ("TIRADA PANICO")
   const element = event.currentTarget;
@@ -10,7 +11,7 @@ export async function TiradaPanico(actor) {
   let dificultad=actor.data.data.Aplomo.Valor;
   dificultad+=actor.data.data.Aplomo.Bono;
   let resultado=""
-  let estabilidad_actual=Number(actor.data.data.Estabilidad.value);
+  let estabilidad_original=Number(actor.data.data.Estabilidad.value);
   let estabilidad_nueva=0;
   var archivo_template = "";
   var datos_template={};
@@ -31,11 +32,12 @@ export async function TiradaPanico(actor) {
           tirada=valor_habilidad+"d6"
           let d6Roll = new Roll(tirada).roll({async: false});
           let flavor = tirada+" VS "+ dificultad
+          let NumTiradasResistencia=0;
         const archivo_template_chat = '/systems/ysystem/templates/chat/tirada_habilidad_chatPNJ.html';
         if (d6Roll.total <= dificultad){resultado="ÉXITO"}
         else {
           resultado="FALLO";
-          estabilidad_nueva=estabilidad_actual-valor_habilidad;
+          estabilidad_nueva=estabilidad_original-valor_habilidad;
           actor.update ({ 'data.Estabilidad.value': estabilidad_nueva });
 
         }
@@ -64,6 +66,34 @@ export async function TiradaPanico(actor) {
              content: contenido_Dialogo_chat,
            };
           ChatMessage.create(chatData);
+          if (estabilidad_original>=16){
+            if (estabilidad_nueva<16){NumTiradasResistencia++;}
+            if (estabilidad_nueva<11){NumTiradasResistencia++;}
+            if (estabilidad_nueva<7){NumTiradasResistencia++;}
+            if (estabilidad_nueva<4){NumTiradasResistencia++;}
+            if (estabilidad_nueva<2){NumTiradasResistencia++;}
+          }
+          if (estabilidad_original<16 && estabilidad_original>=11){
+            if (estabilidad_nueva<11){NumTiradasResistencia++;}
+            if (estabilidad_nueva<7){NumTiradasResistencia++;}
+            if (estabilidad_nueva<4){NumTiradasResistencia++;}
+            if (estabilidad_nueva<2){NumTiradasResistencia++;}
+          }
+          if (estabilidad_original<11 && estabilidad_original>=7){
+            if (estabilidad_nueva<7){NumTiradasResistencia++;}
+            if (estabilidad_nueva<4){NumTiradasResistencia++;}
+            if (estabilidad_nueva<2){NumTiradasResistencia++;}
+          }
+          if (estabilidad_original<7 && estabilidad_original>=4){
+            if (estabilidad_nueva<4){NumTiradasResistencia++;}
+            if (estabilidad_nueva<2){NumTiradasResistencia++;}
+          }
+          if (estabilidad_original<4 && estabilidad_original>=2){
+            if (estabilidad_nueva<2){NumTiradasResistencia++;}
+          }
+          console.log ("CORRESPONDEN TIRADAS DE RESISTENCIA: "+NumTiradasResistencia)
+          for (let i = 0; i < NumTiradasResistencia; i++){
+            TiradaResistenciaMental (actor);}
     } )
     		 }
              }
