@@ -36,7 +36,7 @@ export default class FichaPNJYsystem extends ActorSheet{
     const Aplomo =5+Number(data.data.Carisma)+Number(data.data.Inteligencia);
     const Perspicacia=5+Number(data.data.Percepción)+Number(data.data.Inteligencia);
     const Iniciativa=Number(data.data.Destreza)+Number(data.data.Inteligencia);
-    const Salud=13+Number(data.data.Fuerza)*2;
+    const Salud=16+Number(data.data.Fuerza)*2;
     const R_Física=12-Number(data.data.Fuerza);
 
     const Poder=5+Number(data.data.Percepción)+Number(data.data.Inteligencia)+Number(data.data.Magia.Valor)*3;
