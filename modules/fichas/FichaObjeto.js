@@ -11,6 +11,11 @@ export default class FichaObjetoYsystem extends ItemSheet{
     });
   }
   get template(){
-          return `systems/ysystem/templates/items/${this.item.data.type}.html`;
+        if (game.settings.get ("ysystem", "aspectoFicha") == "Negro"){
+          return `systems/ysystem/templates/items/Negro/${this.item.data.type}.html`;
+        }
+        if (game.settings.get ("ysystem", "aspectoFicha") == "Rojo"){
+          return `systems/ysystem/templates/items/Rojo/${this.item.data.type}.html`;
+        }
       }
 }

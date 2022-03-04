@@ -11,6 +11,11 @@ export default class FichaPoderYsystem extends ItemSheet{
     });
   }
   get template(){
-          return `systems/ysystem/templates/items/Poder.html`;
+          if (game.settings.get ("ysystem", "aspectoFicha") == "Negro"){
+            return `systems/ysystem/templates/items/Negro/Poder.html`;
+          }
+          if (game.settings.get ("ysystem", "aspectoFicha") == "Rojo"){
+            return `systems/ysystem/templates/items/Rojo/Poder.html`;
+          }
       }
 }

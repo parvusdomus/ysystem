@@ -253,7 +253,7 @@
   position: absolute;
 }
 
-.PNJ_general-tab, .PNJ_biografia-tab, .PNJ_magia-tab {
+.PNJ_general-tab-Negro, .PNJ_biografia-tab-Negro, .PNJ_magia-tab-Negro {
   background-image: url(/systems/ysystem/assets/Negro/fichas/Tabs.webp);
   background-position-x: -2px;
   padding-top: 0.15em;
@@ -263,14 +263,37 @@
   background-color: unset !important;
 }
 
-a.PNJ_general-tab:hover, .PNJ_biografia-tab:hover, .PNJ_magia-tab:hover {
+a.PNJ_general-tab-Negro:hover, .PNJ_biografia-tab-Negro:hover, .PNJ_magia-tab-Negro:hover {
   background-image: url(/systems/ysystem/assets/Negro/fichas/Tabs-Hover.webp);
   background-size: 100% 100%;
   color: LightGrey;
 }
 
-a.PNJ_general-tab.active, .PNJ_biografia-tab.active, .PNJ_magia-tab.active {
+a.PNJ_general-tab-Negro.active, .PNJ_biografia-tab-Negro.active, .PNJ_magia-tab-Negro.active {
   background-image: url(/systems/ysystem/assets/Negro/fichas/Tabs-Active.webp);
+  background-size: 100% 100%;
+  color: LightGrey;
+  text-shadow: none !important;
+}
+
+.PNJ_general-tab-Rojo, .PNJ_biografia-tab-Rojo, .PNJ_magia-tab-Rojo {
+  background-image: url(/systems/ysystem/assets/Rojo/fichas/Tabs.webp);
+  background-position-x: -2px;
+  padding-top: 0.15em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  display: block;
+  background-color: unset !important;
+}
+
+a.PNJ_general-tab-Rojo:hover, .PNJ_biografia-tab-Rojo:hover, .PNJ_magia-tab-Rojo:hover {
+  background-image: url(/systems/ysystem/assets/Rojo/fichas/Tabs-Hover.webp);
+  background-size: 100% 100%;
+  color: LightGrey;
+}
+
+a.PNJ_general-tab-Rojo.active, .PNJ_biografia-tab-Rojo.active, .PNJ_magia-tab-Rojo.active {
+  background-image: url(/systems/ysystem/assets/Rojo/fichas/Tabs-Active.webp);
   background-size: 100% 100%;
   color: LightGrey;
   text-shadow: none !important;
