@@ -30,10 +30,29 @@ Hooks.once("init", function(){
     console.log ("test | CARGANDO TEMPLATES");
     preloadHandlebarsTemplates();
     console.log ("test | TEMPLATES CARGADOS");
-    console.log ("test | FORZANDO TAMAÑO DE LETRA");
-    console.log (game.settings.settings)
-    game.settings.set("core","fontSize", "5");
-    console.log ("test | TAMAÑO DE LETRA FORZADO");
+
+    game.settings.register("ysystem", "forceFontSize", {
+      name: "Forzar Tamaño de Fuente",
+      hint: "Activa esta opción si la ficha se ve rara. Activarla forzará el tamaño de la fuente a 5.",
+      scope: "world",
+      type: Boolean,
+      default: false,
+      config: true
+    });
+
+    game.settings.register("ysystem", "aspectoFicha", {
+      name: "Aspecto",
+      hint: "Este setting cambia los assets usados en la ficha modificando su aspecto.",
+      scope: "world",
+      type: String,
+      default: "Negro",
+      choices: {
+        "Negro": "Por defecto. ficha moderna de color negro.",
+        "Rojo": "Ficha moderna de color rojo"
+      },
+      config: true
+    });
+
 });
 
 Hooks.on('renderChatLog', (app, html, data) => YsystemChat.chatListeners(html))

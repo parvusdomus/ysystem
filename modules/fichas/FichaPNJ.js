@@ -6,7 +6,9 @@ import {TiradaResistenciaFisicaPNJ} from "../tiradas/tirada_resistencia_fisicaPN
 export default class FichaPNJYsystem extends ActorSheet{
 
   static get defaultOptions() {
-    game.settings.set("core","fontSize", "5");
+    if (game.settings.get ("ysystem", "forceFontSize")){
+      game.settings.set("core","fontSize", "5");
+    }
     return mergeObject(super.defaultOptions, {
       classes: ["Ysystem", "sheet", "actor", "PNJ"],
       template: "systems/ysystem/templates/actors/PNJ.html",
