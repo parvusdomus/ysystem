@@ -30,6 +30,10 @@ Hooks.once("init", function(){
     console.log ("test | CARGANDO TEMPLATES");
     preloadHandlebarsTemplates();
     console.log ("test | TEMPLATES CARGADOS");
+    console.log ("test | FORZANDO TAMAÑO DE LETRA");
+    console.log (game.settings.settings)
+    game.settings.set("core","fontSize", "5");
+    console.log ("test | TAMAÑO DE LETRA FORZADO");
 });
 
 Hooks.on('renderChatLog', (app, html, data) => YsystemChat.chatListeners(html))
