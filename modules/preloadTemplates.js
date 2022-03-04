@@ -8,12 +8,19 @@ export const preloadHandlebarsTemplates = async function () {
       "/systems/ysystem/templates/actors/Rojo/Jugador_partes/equipo.html",
       "/systems/ysystem/templates/actors/Rojo/Jugador_partes/bio.html",
       "/systems/ysystem/templates/actors/Rojo/Jugador_partes/magia.html",
+      "/systems/ysystem/templates/actors/Medieval/Jugador_partes/habilidades.html",
+      "/systems/ysystem/templates/actors/Medieval/Jugador_partes/equipo.html",
+      "/systems/ysystem/templates/actors/Medieval/Jugador_partes/bio.html",
+      "/systems/ysystem/templates/actors/Medieval/Jugador_partes/magia.html",
       "/systems/ysystem/templates/actors/Negro/PNJ_partes/general.html",
       "/systems/ysystem/templates/actors/Negro/PNJ_partes/bio.html",
       "/systems/ysystem/templates/actors/Negro/PNJ_partes/magia.html",
       "/systems/ysystem/templates/actors/Rojo/PNJ_partes/general.html",
       "/systems/ysystem/templates/actors/Rojo/PNJ_partes/bio.html",
-      "/systems/ysystem/templates/actors/Rojo/PNJ_partes/magia.html"
+      "/systems/ysystem/templates/actors/Rojo/PNJ_partes/magia.html",
+      "/systems/ysystem/templates/actors/Medieval/PNJ_partes/general.html",
+      "/systems/ysystem/templates/actors/Medieval/PNJ_partes/bio.html",
+      "/systems/ysystem/templates/actors/Medieval/PNJ_partes/magia.html"
     ];
         return loadTemplates(templatePaths);
 };

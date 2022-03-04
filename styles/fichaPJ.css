@@ -428,6 +428,29 @@ a.habilidades-tab-Rojo.active, .equipo-tab-Rojo.active, .biografia-tab-Rojo.acti
   text-shadow: none !important;
 }
 
+.habilidades-tab-Medieval, .equipo-tab-Medieval, .biografia-tab-Medieval, .magia-tab-Medieval {
+  background-image: url(/systems/ysystem/assets/Medieval/fichas/Tabs.webp);
+  background-position-x: -2px;
+  padding-top: 0.15em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  display: block;
+  background-color: unset !important;
+}
+
+a.habilidades-tab-Medieval:hover, .equipo-tab-Medieval:hover, .biografia-tab-Medieval:hover, .magia-tab-Medieval:hover{
+  background-image: url(/systems/ysystem/assets/Medieval/fichas/Tabs-Hover.webp);
+  background-size: 100% 100%;
+  color: LightGrey;
+}
+
+a.habilidades-tab-Medieval.active, .equipo-tab-Medieval.active, .biografia-tab-Medieval.active, .magia-tab-Medieval.active{
+  background-image: url(/systems/ysystem/assets/Medieval/fichas/Tabs-Active.webp);
+  background-size: 100% 100%;
+  color: LightGrey;
+  text-shadow: none !important;
+}
+
 .character-tabs-info {
   background: transparent !important;
 }

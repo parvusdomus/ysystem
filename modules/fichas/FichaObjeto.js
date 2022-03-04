@@ -17,5 +17,8 @@ export default class FichaObjetoYsystem extends ItemSheet{
         if (game.settings.get ("ysystem", "aspectoFicha") == "Rojo"){
           return `systems/ysystem/templates/items/Rojo/${this.item.data.type}.html`;
         }
+        if (game.settings.get ("ysystem", "aspectoFicha") == "Medieval"){
+          return `systems/ysystem/templates/items/Medieval/${this.item.data.type}.html`;
+        }
       }
 }

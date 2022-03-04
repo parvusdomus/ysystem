@@ -1,0 +1,11 @@
+<form class="{{cssClass}} dialogo_tirada_habilidad" autocomplete="off">
+  <img class="content-background" src="/systems/ysystem/assets/Medieval/dialogos/dialogo_tirada_ataque_objetivoPNJ.webp" alt="?"/>
+  <div class="dialogo_tirada_habilidad_tirada"><label>{{tirada}}</label></div>
+  <div class="dialogo_tirada_ataque_mod_dados"><input id="mod_dados" value="0" size=2  data-dtype="Number"></div>
+  <div class="dialogo_tirada_ataque_mod_num"><input id="mod_num" value="0" size=2  data-dtype="Number"></div>
+  <div class="dialogo_tirada_ataque_apuntar"><input id="apuntar" value="0" size=2  data-dtype="Number"></div>
+  <select  class="dialogo_tirada_habilidad_dificultad" name="dificultad" id="dificultad" data-dtype="Number">
+        <option value="{{agilidad}}">Agilidad ({{agilidad}})</option>
+       </select>
+  <img class="dialogo_retrato_PNJ" src="{{retrato}}" alt="?"/>
+</form>

@@ -15,7 +15,16 @@ export async function TiradaPanico(actor) {
   let estabilidad_nueva=0;
   var archivo_template = "";
   var datos_template={};
-  archivo_template = '/systems/ysystem/templates/dialogos/tirada_panico.html';
+  if (game.settings.get ("ysystem", "aspectoFicha") == "Negro"){
+    archivo_template = '/systems/ysystem/templates/dialogos/Negro/tirada_panico.html';
+  }
+  if (game.settings.get ("ysystem", "aspectoFicha") == "Rojo"){
+    archivo_template = '/systems/ysystem/templates/dialogos/Rojo/tirada_panico.html';
+  }
+  if (game.settings.get ("ysystem", "aspectoFicha") == "Medieval"){
+    archivo_template = '/systems/ysystem/templates/dialogos/Medieval/tirada_panico.html';
+  }
+
   datos_template = {
                       };
 

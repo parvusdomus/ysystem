@@ -43,7 +43,16 @@ export async function TiradaHabilidadPNJ(actor, id_habilidad, objetivo) {
     agilidad=Number(objetivo.document._actor.data.data.Agilidad.Valor)+Number(objetivo.document._actor.data.data.Agilidad.Bono)
     aplomo=Number(objetivo.document._actor.data.data.Aplomo.Valor)+Number(objetivo.document._actor.data.data.Aplomo.Bono)
     perspicacia=Number(objetivo.document._actor.data.data.Perspicacia.Valor)+Number(objetivo.document._actor.data.data.Perspicacia.Bono)
-    archivo_template = '/systems/ysystem/templates/dialogos/tirada_habilidad_objetivoPNJ.html';
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Negro"){
+      archivo_template = '/systems/ysystem/templates/dialogos/Negro/tirada_habilidad_objetivoPNJ.html';
+    }
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Rojo"){
+      archivo_template = '/systems/ysystem/templates/dialogos/Rojo/tirada_habilidad_objetivoPNJ.html';
+    }
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Medieval"){
+      archivo_template = '/systems/ysystem/templates/dialogos/Medieval/tirada_habilidad_objetivoPNJ.html';
+    }
+
     datos_template = { tirada: tirada,
                         agilidad: agilidad,
                         aplomo: aplomo,
@@ -52,7 +61,16 @@ export async function TiradaHabilidadPNJ(actor, id_habilidad, objetivo) {
                       };
   }
   else{
-    archivo_template = '/systems/ysystem/templates/dialogos/tirada_habilidadPNJ.html';
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Negro"){
+      archivo_template = '/systems/ysystem/templates/dialogos/Negro/tirada_habilidadPNJ.html';
+    }
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Rojo"){
+      archivo_template = '/systems/ysystem/templates/dialogos/Rojo/tirada_habilidadPNJ.html';
+    }
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Medieval"){
+      archivo_template = '/systems/ysystem/templates/dialogos/Medieval/tirada_habilidadPNJ.html';
+    }
+
     datos_template = {
                         tirada: tirada,
                         retrato: actor.data.img

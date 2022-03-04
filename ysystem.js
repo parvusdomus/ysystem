@@ -48,7 +48,8 @@ Hooks.once("init", function(){
       default: "Negro",
       choices: {
         "Negro": "Por defecto. ficha moderna de color negro.",
-        "Rojo": "Ficha moderna de color rojo"
+        "Rojo": "Ficha moderna de color rojo",
+        "Medieval": "Ficha con aspecto medieval"
       },
       config: true
     });

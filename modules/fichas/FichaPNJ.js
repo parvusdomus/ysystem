@@ -29,6 +29,16 @@ export default class FichaPNJYsystem extends ActorSheet{
         tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "general" }]
       });
     }
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Medieval"){
+      return mergeObject(super.defaultOptions, {
+        classes: ["Ysystem", "sheet", "actor", "PNJ"],
+        template: "systems/ysystem/templates/actors/Medieval/PNJ.html",
+        width: 800,
+        height: 470,
+        resizable: false,
+        tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "general" }]
+      });
+    }
   }
 
   getData() {

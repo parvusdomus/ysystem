@@ -40,7 +40,16 @@ export async function TiradaHechizo(actor, poder, id_atributo, dificultad, objet
     agilidad=Number(objetivo.document._actor.data.data.Agilidad.Valor)+Number(objetivo.document._actor.data.data.Agilidad.Bono)
     aplomo=Number(objetivo.document._actor.data.data.Aplomo.Valor)+Number(objetivo.document._actor.data.data.Aplomo.Bono)
     perspicacia=Number(objetivo.document._actor.data.data.Perspicacia.Valor)+Number(objetivo.document._actor.data.data.Perspicacia.Bono)
-    archivo_template = '/systems/ysystem/templates/dialogos/tirada_hechizo_objetivo.html';
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Negro"){
+      archivo_template = '/systems/ysystem/templates/dialogos/Negro/tirada_hechizo_objetivo.html';
+    }
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Rojo"){
+      archivo_template = '/systems/ysystem/templates/dialogos/Rojo/tirada_hechizo_objetivo.html';
+    }
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Medieval"){
+      archivo_template = '/systems/ysystem/templates/dialogos/Medieval/tirada_hechizo_objetivo.html';
+    }
+
 
     datos_template = { tirada: tirada,
                         agilidad: agilidad,
@@ -49,7 +58,16 @@ export async function TiradaHechizo(actor, poder, id_atributo, dificultad, objet
                       };
   }
   else{
-    archivo_template = '/systems/ysystem/templates/dialogos/tirada_hechizo.html';
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Negro"){
+      archivo_template = '/systems/ysystem/templates/dialogos/Negro/tirada_hechizo.html';
+    }
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Rojo"){
+      archivo_template = '/systems/ysystem/templates/dialogos/Rojo/tirada_hechizo.html';
+    }
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Medieval"){
+      archivo_template = '/systems/ysystem/templates/dialogos/Medieval/tirada_hechizo.html';
+    }
+
     datos_template = { tirada: tirada,
                         dificultad2: dificultad2
                       };

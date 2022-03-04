@@ -29,6 +29,16 @@ export default class FichaYsystem extends ActorSheet{
         tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "habilidades" }]
       });
     }
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Medieval"){
+      return mergeObject(super.defaultOptions, {
+        classes: ["Ysystem", "sheet", "actor"],
+        template: "systems/ysystem/templates/actors/Medieval/Jugador.html",
+        width: 800,
+        height: 700,
+        resizable: false,
+        tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "habilidades" }]
+      });
+    }
 
   }
   getData() {

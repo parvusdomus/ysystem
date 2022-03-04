@@ -43,7 +43,15 @@ export async function TiradaHabilidad(actor, id_habilidad, objetivo) {
     agilidad=Number(objetivo.document._actor.data.data.Agilidad.Valor)+Number(objetivo.document._actor.data.data.Agilidad.Bono)
     aplomo=Number(objetivo.document._actor.data.data.Aplomo.Valor)+Number(objetivo.document._actor.data.data.Aplomo.Bono)
     perspicacia=Number(objetivo.document._actor.data.data.Perspicacia.Valor)+Number(objetivo.document._actor.data.data.Perspicacia.Bono)
-    archivo_template = '/systems/ysystem/templates/dialogos/tirada_habilidad_objetivo.html';
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Negro"){
+      archivo_template = '/systems/ysystem/templates/dialogos/Negro/tirada_habilidad_objetivo.html';
+    }
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Rojo"){
+      archivo_template = '/systems/ysystem/templates/dialogos/Rojo/tirada_habilidad_objetivo.html';
+    }
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Medieval"){
+      archivo_template = '/systems/ysystem/templates/dialogos/Medieval/tirada_habilidad_objetivo.html';
+    }
 
     datos_template = { tirada: tirada,
                         agilidad: agilidad,
@@ -52,7 +60,16 @@ export async function TiradaHabilidad(actor, id_habilidad, objetivo) {
                       };
   }
   else{
-    archivo_template = '/systems/ysystem/templates/dialogos/tirada_habilidad.html';
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Negro"){
+      archivo_template = '/systems/ysystem/templates/dialogos/Negro/tirada_habilidad.html';
+    }
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Rojo"){
+      archivo_template = '/systems/ysystem/templates/dialogos/Rojo/tirada_habilidad.html';
+    }
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Medieval"){
+      archivo_template = '/systems/ysystem/templates/dialogos/Medieval/tirada_habilidad.html';
+    }
+
     datos_template = { tirada: tirada
                       };
   }
