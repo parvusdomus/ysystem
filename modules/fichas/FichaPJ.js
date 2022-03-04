@@ -6,6 +6,7 @@ import {TiradaResistenciaMental} from "../tiradas/tirada_resistencia_mental.js";
 import {TiradaPanico} from "../tiradas/tirada_panico.js";
 export default class FichaYsystem extends ActorSheet{
   static get defaultOptions() {
+    game.settings.set("core","fontSize", "5");  
     return mergeObject(super.defaultOptions, {
       classes: ["Ysystem", "sheet", "actor"],
       template: "systems/ysystem/templates/actors/Jugador.html",
