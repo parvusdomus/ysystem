@@ -1,0 +1,42 @@
+<div class="PNJ_contenedor_magia">
+
+  <label class="tirada_habilidad PNJ_habilidad_magia" data-Habilidad_id="Magia">{{data.Magia.Nombre}}</label>
+    <span class="mod_magia PNJ_habilidad_magia_valor" data-habilidad_id="Magia">
+      <label> (INT) </label>
+      {{#if (gt data.Magia.Valor 0)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
+      {{#if (gt data.Magia.Valor 1)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
+      {{#if (gt data.Magia.Valor 2)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
+  </span>
+
+  <img class="PNJ_imagen_poder" src="/systems/ysystem/assets/Rojo/fichas/poder_valor.webp" alt="?"/>
+  <div class="PNJ_caract_Poder_valor_input">
+    <input type="text" name="data.Poder.value" value="{{data.Poder.value}}" data-dtype="Number" maxlength="2"/>
+  </div>
+  <label class="PNJ_caract_Poder_max caract_bono restaura_poder">{{data.Poder.max}}</label>
+  <label class="PNJ_Titulo_Poder Titulo_Equipo">Poder</label>
+  <label class="PNJ_Titulo_Atributo Titulo_Equipo">Atributo</label>
+  <label class="PNJ_Titulo_Dificultad Titulo_Equipo">Dificultad</label>
+  <span class="align_right boton_PNJ_mas_poderes"><a class="item-control item-create" data-type="Poder"><i class="fas fa-plus"></i></a></span>
+  <div class="PNJ_espacio_hechizos">
+    <ol class="lista-armas" data-item-id="{{item._id}}">
+
+        {{#each Poderes as |item id|}}
+          <li class="armas item" data-item-id="{{item._id}}">
+            <div class="poder_linea1 tirada_hechizo"
+            data-poder="{{item.name}}"
+            data-id_atributo="{{item.data.Atributo}}"
+            data-dificultad="{{item.data.Dificultad}}">
+              <label>{{item.name}}</label>
+            </div>
+              <label class="poder_linea2PNJ">{{item.data.Atributo}} </label>
+              <label class="poder_linea3">{{item.data.Dificultad}}</label>
+              <span class="controles_poderes">
+                <a class="item-control item-edit"><i class="fas fa-edit"><span class="tooltiptext"></span></i></a>
+                <a class="item-control item-delete"><i class="fas fa-trash"><span class="tooltiptext"></span></i></a>
+              </span>
+            </li>
+        {{/each}}
+      </ol>
+
+  </div>
+</div>

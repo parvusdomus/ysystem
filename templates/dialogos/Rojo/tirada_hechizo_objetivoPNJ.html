@@ -1,0 +1,12 @@
+<form class="{{cssClass}} dialogo_tirada_habilidad" autocomplete="off">
+  <img class="content-background" src="/systems/ysystem/assets/Rojo/dialogos/dialogo_tirada_habilidad_objetivoPNJ.webp" alt="?"/>
+  <div class="dialogo_tirada_habilidad_tirada"><label>{{tirada}}</label></div>
+  <div class="dialogo_tirada_habilidad_mod_dados"><input id="mod_dados" value="0" size=2  data-dtype="Number"></div>
+  <div class="dialogo_tirada_habilidad_mod_num"><input id="mod_num" value="0" size=2  data-dtype="Number"></div>
+  <select  class="dialogo_tirada_habilidad_dificultad" name="dificultad" id="dificultad" data-dtype="Number">
+        <option value="{{agilidad}}">Agilidad ({{agilidad}})</option>
+        <option value="{{aplomo}}">Aplomo ({{aplomo}})</option>
+         <option value="{{perspicacia}}">Perspicacia ({{perspicacia}})</option>
+       </select>
+  <img class="dialogo_retrato_PNJ" src="{{retrato}}" alt="?"/>
+</form>

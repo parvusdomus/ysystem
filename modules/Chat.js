@@ -28,7 +28,7 @@ export default class YsystemChat {
                   indice:i
       });
     }
-    const archivo_template = '/systems/ysystem/templates/dialogos/repite_tirada_habilidad.html';
+    const archivo_template = '/systems/ysystem/templates/dialogos/Negro/repite_tirada_habilidad.html';
     const datos_template = {
      dados: dados,
      dificultad: dataset.dificultad,
@@ -148,7 +148,7 @@ export default class YsystemChat {
                   indice:i
       });
     }
-    const archivo_template = '/systems/ysystem/templates/dialogos/repite_tirada_habilidad.html';
+    const archivo_template = '/systems/ysystem/templates/dialogos/Negro/repite_tirada_habilidad.html';
     const datos_template = {
      dados: dados,
      dificultad: dataset.dificultad,
@@ -368,7 +368,7 @@ export default class YsystemChat {
                   indice:i
       });
     }
-    const archivo_template = '/systems/ysystem/templates/dialogos/repite_tirada_hechizo.html';
+    const archivo_template = '/systems/ysystem/templates/dialogos/Negro/repite_tirada_hechizo.html';
     const datos_template = {
      dados: dados,
      dificultad1: dataset.dificultad1,

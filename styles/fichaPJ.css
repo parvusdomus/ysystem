@@ -382,7 +382,7 @@ img {
     border-bottom: 0px solid #b5b3a4;
 }
 
-.habilidades-tab, .equipo-tab, .biografia-tab, .magia-tab {
+.habilidades-tab-Negro, .equipo-tab-Negro, .biografia-tab-Negro, .magia-tab-Negro {
   background-image: url(/systems/ysystem/assets/Negro/fichas/Tabs.webp);
   background-position-x: -2px;
   padding-top: 0.15em;
@@ -392,14 +392,60 @@ img {
   background-color: unset !important;
 }
 
-a.habilidades-tab:hover, .equipo-tab:hover, .biografia-tab:hover, .magia-tab:hover{
+a.habilidades-tab-Negro:hover, .equipo-tab-Negro:hover, .biografia-tab-Negro:hover, .magia-tab-Negro:hover{
   background-image: url(/systems/ysystem/assets/Negro/fichas/Tabs-Hover.webp);
   background-size: 100% 100%;
   color: LightGrey;
 }
 
-a.habilidades-tab.active, .equipo-tab.active, .biografia-tab.active, .magia-tab.active{
+a.habilidades-tab-Negro.active, .equipo-tab-Negro.active, .biografia-tab-Negro.active, .magia-tab-Negro.active{
   background-image: url(/systems/ysystem/assets/Negro/fichas/Tabs-Active.webp);
+  background-size: 100% 100%;
+  color: LightGrey;
+  text-shadow: none !important;
+}
+
+.habilidades-tab-Rojo, .equipo-tab-Rojo, .biografia-tab-Rojo, .magia-tab-Rojo {
+  background-image: url(/systems/ysystem/assets/Rojo/fichas/Tabs.webp);
+  background-position-x: -2px;
+  padding-top: 0.15em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  display: block;
+  background-color: unset !important;
+}
+
+a.habilidades-tab-Rojo:hover, .equipo-tab-Rojo:hover, .biografia-tab-Rojo:hover, .magia-tab-Rojo:hover{
+  background-image: url(/systems/ysystem/assets/Rojo/fichas/Tabs-Hover.webp);
+  background-size: 100% 100%;
+  color: LightGrey;
+}
+
+a.habilidades-tab-Rojo.active, .equipo-tab-Rojo.active, .biografia-tab-Rojo.active, .magia-tab-Rojo.active{
+  background-image: url(/systems/ysystem/assets/Rojo/fichas/Tabs-Active.webp);
+  background-size: 100% 100%;
+  color: LightGrey;
+  text-shadow: none !important;
+}
+
+.habilidades-tab-Medieval, .equipo-tab-Medieval, .biografia-tab-Medieval, .magia-tab-Medieval {
+  background-image: url(/systems/ysystem/assets/Medieval/fichas/Tabs.webp);
+  background-position-x: -2px;
+  padding-top: 0.15em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  display: block;
+  background-color: unset !important;
+}
+
+a.habilidades-tab-Medieval:hover, .equipo-tab-Medieval:hover, .biografia-tab-Medieval:hover, .magia-tab-Medieval:hover{
+  background-image: url(/systems/ysystem/assets/Medieval/fichas/Tabs-Hover.webp);
+  background-size: 100% 100%;
+  color: LightGrey;
+}
+
+a.habilidades-tab-Medieval.active, .equipo-tab-Medieval.active, .biografia-tab-Medieval.active, .magia-tab-Medieval.active{
+  background-image: url(/systems/ysystem/assets/Medieval/fichas/Tabs-Active.webp);
   background-size: 100% 100%;
   color: LightGrey;
   text-shadow: none !important;

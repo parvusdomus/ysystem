@@ -6,14 +6,40 @@ import {TiradaResistenciaMental} from "../tiradas/tirada_resistencia_mental.js";
 import {TiradaPanico} from "../tiradas/tirada_panico.js";
 export default class FichaYsystem extends ActorSheet{
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
-      classes: ["Ysystem", "sheet", "actor"],
-      template: "systems/ysystem/templates/actors/Jugador.html",
-      width: 800,
-      height: 700,
-      resizable: false,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "habilidades" }]
-    });
+    if (game.settings.get ("ysystem", "forceFontSize")){
+      game.settings.set("core","fontSize", "5");
+    }
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Negro"){
+      return mergeObject(super.defaultOptions, {
+        classes: ["Ysystem", "sheet", "actor"],
+        template: "systems/ysystem/templates/actors/Negro/Jugador.html",
+        width: 800,
+        height: 700,
+        resizable: false,
+        tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "habilidades" }]
+      });
+    }
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Rojo"){
+      return mergeObject(super.defaultOptions, {
+        classes: ["Ysystem", "sheet", "actor"],
+        template: "systems/ysystem/templates/actors/Rojo/Jugador.html",
+        width: 800,
+        height: 700,
+        resizable: false,
+        tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "habilidades" }]
+      });
+    }
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Medieval"){
+      return mergeObject(super.defaultOptions, {
+        classes: ["Ysystem", "sheet", "actor"],
+        template: "systems/ysystem/templates/actors/Medieval/Jugador.html",
+        width: 800,
+        height: 700,
+        resizable: false,
+        tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "habilidades" }]
+      });
+    }
+
   }
   getData() {
       const data = super.getData().data;

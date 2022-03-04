@@ -1,0 +1,20 @@
+
+  <label class="D_Leve_label">Defecto Leve:</label>
+  <div class="D_Leve_input">
+    <input type="text" name="data.Defecto_Leve" value="{{data.Defecto_Leve}}" data-dtype="String"/>
+  </div>
+  <label class="D_Grave_label">Defecto Grave:</label>
+  <div class="D_Grave_input">
+    <input type="text" name="data.Defecto_Grave" value="{{data.Defecto_Grave}}" data-dtype="String"/>
+  </div>
+  <label class="Talento_label">Talento:</label>
+  <div class="Talento_input">
+    <input type="text" name="data.Talento" value="{{data.Talento}}" data-dtype="String"/>
+  </div>
+  <label class="Arquetipo_label">Arquetipo:</label>
+  <div class="Arquetipo_input">
+    <input type="text" name="data.Arquetipo" value="{{data.Arquetipo}}" data-dtype="String"/>
+  </div>
+  <div class="Jugador_contenedor_biografia">
+      {{editor content=data.Biografía target="data.Biografía" button=true owner=owner editable=true}}
+  </div>

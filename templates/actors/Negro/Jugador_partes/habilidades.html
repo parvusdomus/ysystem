@@ -1,0 +1,34 @@
+
+  <div class="Jugador_contenedor_general">
+    <label class="titulo_Habilidades">HABILIDADES</label>
+    <div class="espacio_habilidades">
+      <ol class="lista-habilidades">
+          {{#each data.Habilidades as |habilidad id|}}
+            <li class="habilidad">
+              <label class="tirada_habilidad" data-Habilidad_id="{{id}}">{{habilidad.Nombre}}</label>
+                <span class="mod_habilidad" data-habilidad_id="{{id}}">
+                  {{#if (eq habilidad.Atributo "Percepción")}}<label> (PER)</label>{{/if}}
+                  {{#if (eq habilidad.Atributo "Carisma")}}<label> (CAR)</label>{{/if}}
+                  {{#if (eq habilidad.Atributo "Destreza")}}<label> (DES)</label>{{/if}}
+                  {{#if (eq habilidad.Atributo "Inteligencia")}}<label> (INT)</label>{{/if}}
+                  {{#if (eq habilidad.Atributo "Fuerza")}}<label> (FUE)</label>{{/if}}
+                  {{#if (gt habilidad.Valor 0)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
+                  {{#if (gt habilidad.Valor 1)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
+                  {{#if (gt habilidad.Valor 2)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
+              </span>
+            </li>
+          {{/each}}
+        </ol>
+        <span class="recuerdo_toggle">
+        {{#if (eq data.Recuerdo_Cuando "true")}}
+          <label class="recuerdo_Cuando" style="text-decoration:line-through;">Recuerdo cuando...</label>
+        {{else}}
+          <label class="recuerdo_Cuando">Recuerdo cuando...</label>
+        {{/if}}
+        </span>
+        <label class="Profesion_label">Profesión:</label>
+        <div class="Profesion_valor_input">
+          <input type="text" name="data.Profesión" value="{{data.Profesión}}" data-dtype="String"/>
+        </div>
+    </div>
+  </div>

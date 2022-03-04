@@ -6,14 +6,39 @@ import {TiradaResistenciaFisicaPNJ} from "../tiradas/tirada_resistencia_fisicaPN
 export default class FichaPNJYsystem extends ActorSheet{
 
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
-      classes: ["Ysystem", "sheet", "actor", "PNJ"],
-      template: "systems/ysystem/templates/actors/PNJ.html",
-      width: 800,
-      height: 470,
-      resizable: false,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "general" }]
-    });
+    if (game.settings.get ("ysystem", "forceFontSize")){
+      game.settings.set("core","fontSize", "5");
+    }
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Negro"){
+      return mergeObject(super.defaultOptions, {
+        classes: ["Ysystem", "sheet", "actor", "PNJ"],
+        template: "systems/ysystem/templates/actors/Negro/PNJ.html",
+        width: 800,
+        height: 470,
+        resizable: false,
+        tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "general" }]
+      });
+    }
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Rojo"){
+      return mergeObject(super.defaultOptions, {
+        classes: ["Ysystem", "sheet", "actor", "PNJ"],
+        template: "systems/ysystem/templates/actors/Rojo/PNJ.html",
+        width: 800,
+        height: 470,
+        resizable: false,
+        tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "general" }]
+      });
+    }
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Medieval"){
+      return mergeObject(super.defaultOptions, {
+        classes: ["Ysystem", "sheet", "actor", "PNJ"],
+        template: "systems/ysystem/templates/actors/Medieval/PNJ.html",
+        width: 800,
+        height: 470,
+        resizable: false,
+        tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "general" }]
+      });
+    }
   }
 
   getData() {
