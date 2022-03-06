@@ -1,4 +1,10 @@
 <form class="{{cssClass}} chat_tirada_habilidad" autocomplete="off">
+  <div class="chat_tirada_titulo_habilidad"><label>{{personaje}}: {{nombre_habilidad}}</label></div>
+  {{#if (eq dificultad1 dificultad2)}}
+    <div class="chat_tirada_tirada_habilidad"><label>{{tirada}} VS {{dificultad1}}</label></div>
+  {{else}}
+    <div class="chat_tirada_tirada_habilidad"><label>{{tirada}} VS {{dificultad1}} VS {{dificultad2}}</label></div>
+  {{/if}}
   {{#if (eq resultado "ÉXITO")}}
     <img class="chat_resultado_circulo" src="/systems/ysystem/assets/Negro/chat/total_chat_exito.webp" alt="?"/>
   {{/if}}
@@ -12,12 +18,6 @@
     <img class="chat_resultado_circulo" src="/systems/ysystem/assets/Negro/chat/total_chat_pifia.webp" alt="?"/>
   {{/if}}
 
-  <div class="chat_tirada_titulo_habilidad"><label>{{personaje}}: {{nombre_habilidad}}</label></div>
-  {{#if (eq dificultad1 dificultad2)}}
-    <div class="chat_tirada_tirada_habilidad"><label>{{tirada}} VS {{dificultad1}}</label></div>
-  {{else}}
-    <div class="chat_tirada_tirada_habilidad"><label>{{tirada}} VS {{dificultad1}} VS {{dificultad2}}</label></div>
-  {{/if}}
   <div class="chat_tirada_total_habilidad"><label>{{total}}</label></div>
   <div class="chat_tirada_cada">
   {{#each dados as |item|}}

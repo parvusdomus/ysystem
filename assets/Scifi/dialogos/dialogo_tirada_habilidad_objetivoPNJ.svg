@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="400"
+   height="200"
+   viewBox="0 0 105.83333 52.91667"
+   version="1.1"
+   id="svg1174"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   sodipodi:docname="dialogo_tirada_habilidad_objetivoPNJ.svg">
+  <defs
+     id="defs1168" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.5949516"
+     inkscape:cx="232.08046"
+     inkscape:cy="79.476032"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1022"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     borderlayer="true" />
+  <metadata
+     id="metadata1171">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-244.08334)">
+    <circle
+       style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.81595778;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path2847-9-4"
+       cx="16.791868"
+       cy="275.04269"
+       r="6.3023248" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:4.23333311px;line-height:1.25;font-family:Girassol;-inkscape-font-specification:'Girassol, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="16.307446"
+       y="261.931"
+       id="text1171-9-6"><tspan
+         sodipodi:role="line"
+         id="tspan1169-7-4"
+         x="16.307446"
+         y="261.931"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:4.23333311px;font-family:Girassol;-inkscape-font-specification:'Girassol, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332">Modificador</tspan><tspan
+         sodipodi:role="line"
+         x="16.307446"
+         y="267.22266"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:4.23333311px;font-family:Girassol;-inkscape-font-specification:'Girassol, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332"
+         id="tspan2210">Dados</tspan></text>
+    <circle
+       style="opacity:1;vector-effect:none;fill:#fefefe;fill-opacity:1;stroke:none;stroke-width:0.81595778;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path2847-9-4-8"
+       cx="54.450798"
+       cy="274.93484"
+       r="6.3023248" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:4.23333311px;line-height:1.25;font-family:Girassol;-inkscape-font-specification:'Girassol, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="53.966373"
+       y="261.82312"
+       id="text1171-9-6-0"><tspan
+         sodipodi:role="line"
+         id="tspan1169-7-4-3"
+         x="53.966373"
+         y="261.82312"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:4.23333311px;font-family:Girassol;-inkscape-font-specification:'Girassol, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332">Modificador</tspan><tspan
+         sodipodi:role="line"
+         x="53.966373"
+         y="267.11478"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:4.23333311px;font-family:Girassol;-inkscape-font-specification:'Girassol, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332"
+         id="tspan2212">Numérico</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:4.23333311px;line-height:1.25;font-family:Girassol;-inkscape-font-specification:'Girassol, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="4.4683762"
+       y="290.66425"
+       id="text1171-9-6-6"><tspan
+         sodipodi:role="line"
+         id="tspan1169-7-4-31"
+         x="4.4683762"
+         y="290.66425"
+         style="stroke-width:0.26458332">Valor del Objetivo</tspan></text>
+    <path
+       style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 12.303584,270.21386 1.369052,-1.39623 h 3.164208 3.354713 3.35471 v 3.25014 3.25013 3.25014 l -1.695426,1.65445 -1.564034,1.59569 h -3.259461 -3.25946 -3.259457 v -3.25014 -3.25014 -3.25013 z"
+       id="rect6587-3-9"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccscccccccccccccc" />
+    <path
+       style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:0.75745481;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 12.822554,270.79069 1.208913,-1.24209 h 2.794087 2.962301 2.962305 v 2.89132 2.89132 2.89131 l -1.497105,1.47179 -1.381088,1.41953 h -2.878196 -2.878196 -2.878196 v -2.89132 -2.89131 -2.89132 z"
+       id="rect6587-1-04-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccscccccccccccccc" />
+    <path
+       style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 49.962506,270.10598 1.369052,-1.39623 h 3.164207 3.354713 3.35471 v 3.25014 3.25013 3.25014 l -1.695426,1.65445 -1.564034,1.59569 h -3.25946 -3.25946 -3.259458 v -3.25014 -3.25014 -3.25013 z"
+       id="rect6587-3-9-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccscccccccccccccc" />
+    <path
+       style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:0.75745481;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 50.481475,270.68281 1.208913,-1.24209 h 2.794088 2.962301 2.962304 v 2.89132 2.89132 2.89131 l -1.497105,1.47179 -1.381088,1.41953 h -2.878196 -2.878195 -2.878196 v -2.89132 -2.89131 -2.89132 z"
+       id="rect6587-1-04-6-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccscccccccccccccc" />
+    <rect
+       style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:0.90601501;stroke:#000000;stroke-width:0.07865568;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect6982-9"
+       width="41.985653"
+       height="0.23053391"
+       x="38.352623"
+       y="291.27304" />
+    <g
+       transform="matrix(0.15718813,0,0,0.16111652,-23.044104,254.27598)"
+       id="g7020">
+      <g
+         transform="translate(317.57703,-261.72739)"
+         id="g6952">
+        <path
+           style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.04844248;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           d="m 301.84321,292.31138 13.48771,-7.84739 h 22.40383 22.40383 22.40384 l 11.87787,11.77109 h 30.82463 43.08429 l -0.27863,29.54877 v 41.88037 41.8804 41.88039 l -21.89044,0.0701 -21.89045,0.07 -26.62712,-0.49045 -15.76058,-11.14051 -23.28359,-0.49046 -21.89045,0.07 -21.89042,0.0701 -13.25294,0.07 -8.91613,0.0796 0.27863,-29.62839 v -20.94022 -20.9402 -20.94019 -20.94018 l 0.27863,-29.34813 z"
+           id="rect6932-4"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccccccccccccccccccccccccccc" />
+        <path
+           style="opacity:1;vector-effect:none;fill:#bababa;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           d="m 305.55429,295.60822 12.90221,-7.46294 h 21.43129 21.43129 21.43129 l 11.36226,11.19441 h 29.48655 41.21402 l -0.26653,28.10116 v 39.82863 39.82864 39.82863 l -20.94018,0.0666 -20.94019,0.0666 -25.47125,-0.46644 -15.07644,-10.59471 -22.27285,-0.46644 -20.94019,0.0666 -20.94018,0.0666 -12.67763,0.0666 -8.52908,0.0757 0.26653,-28.17687 v -19.91431 -19.91432 -19.91432 -19.91431 l 0.26653,-27.91033 z"
+           id="rect6932"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccccccccccccccccccccccccccc" />
+      </g>
+    </g>
+  </g>
+</svg>
