@@ -15,11 +15,11 @@
 }
 
 .chat_resultado_circulo {
-  top: 2em;
+  top: 1em;
   left: 5em;
   position: relative;
   width: 10em;
-  height: 9em;
+  height: 8em;
   text-align: center;
   z-index: 0;
 }
@@ -32,7 +32,7 @@
 
 .chat_tirada_titulo {
   position: relative;
-  top: -9em;
+  top: 0em;
   left: 0.2em;
   background-color: transparent;
   text-align: center;
@@ -45,7 +45,7 @@
 
 .chat_tirada_tirada {
   position: relative;
-  top: -10.5em;
+  top: 0em;
   left: 4.2em;
   background-color: transparent;
   text-align: center;
@@ -58,7 +58,7 @@
 
 .chat_tirada_total {
   position: relative;
-  top: -1.9em;
+  top: -2em;
   left: 2.2em;
   background-color: transparent;
   text-align: center;
@@ -71,7 +71,7 @@
 
 .chat_tirada_cada {
   position: relative;
-  top: -4.3em;
+  top: -2.3em;
   left: 4.2em;
   background-color: transparent;
   text-align: center;
@@ -83,7 +83,7 @@
 
 .chat_tirada_cada_exito {
   position: relative;
-  top: -13.3em;
+  top: -13em;
   left: 4.2em;
   background-color: transparent;
   text-align: center;
@@ -95,7 +95,7 @@
 
 .chat_tirada_total_exito {
   position: relative;
-  top: -4.7em;
+  top: -5.1em;
   left: 0.6em;
   background-color: transparent;
   text-align: center;
@@ -108,7 +108,7 @@
 
 .chat_tirada_total_daño {
   position: relative;
-  top: -5.9em;
+  top: -6.3em;
   left: 3.6em;
   background-color: transparent;
   text-align: center;
@@ -120,11 +120,11 @@
 }
 
 .chat_resultado_circulo_exito {
-  top: 3em;
+  top: 0em;
   left: 0em;
   position: relative;
   width: 10em;
-  height: 9em;
+  height: 8em;
   text-align: center;
   z-index: 0;
 }
@@ -136,11 +136,11 @@
 }
 
 .chat_resultado_circulo_daño {
-  top: -7em;
+  top: -9em;
   left: 9em;
   position: relative;
   width: 10em;
-  height: 9em;
+  height: 8em;
   text-align: center;
   z-index: 0;
 }
@@ -152,7 +152,7 @@
 }
 
 .chat_tirada_repetir {
-  top: -5em;
+  top: -3em;
   left: 5em;
   position: relative;
   width: 10em;
@@ -185,7 +185,8 @@
 
 .chat_tirada_titulo_exito {
   position: relative;
-  top: -17em;
+  text-overflow: clip;
+  top: 0em;
   left: 0.2em;
   background-color: transparent;
   text-align: center;
@@ -198,7 +199,7 @@
 
 .chat_tirada_tirada_exito {
   position: relative;
-  top: -19.5em;
+  top: 0em;
   left: 4.2em;
   background-color: transparent;
   text-align: center;
@@ -211,7 +212,8 @@
 
 .chat_tirada_titulo_habilidad {
   position: relative;
-  top: -7.5em;
+  text-overflow: clip;
+  top: 0.5em;
   left: 0.2em;
   background-color: transparent;
   text-align: center;
@@ -224,7 +226,7 @@
 
 .chat_tirada_tirada_habilidad {
   position: relative;
-  top: -7.5em;
+  top: 0.5em;
   left: 0em;
   background-color: transparent;
   text-align: center;
@@ -237,7 +239,7 @@
 
 .chat_tirada_total_habilidad {
   position: relative;
-  top: -3em;
+  top: -2em;
   left: 2.2em;
   background-color: transparent;
   text-align: center;

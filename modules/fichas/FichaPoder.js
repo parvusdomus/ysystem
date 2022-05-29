@@ -1,5 +1,8 @@
 export default class FichaPoderYsystem extends ItemSheet{
   static get defaultOptions() {
+    if (game.settings.get ("ysystem", "forceFontSize")){
+      game.settings.set("core","fontSize", "5");
+    }
     return mergeObject(super.defaultOptions, {
       classes: ["Ysystem", "sheet", "item"],
       width: 620,
@@ -8,6 +11,14 @@ export default class FichaPoderYsystem extends ItemSheet{
     });
   }
   get template(){
-          return `systems/ysystem/templates/items/Poder.html`;
+          if (game.settings.get ("ysystem", "aspectoFicha") == "Negro"){
+            return `systems/ysystem/templates/items/Negro/Poder.html`;
+          }
+          if (game.settings.get ("ysystem", "aspectoFicha") == "Rojo"){
+            return `systems/ysystem/templates/items/Rojo/Poder.html`;
+          }
+          if (game.settings.get ("ysystem", "aspectoFicha") == "Medieval"){
+            return `systems/ysystem/templates/items/Medieval/Poder.html`;
+          }
       }
 }

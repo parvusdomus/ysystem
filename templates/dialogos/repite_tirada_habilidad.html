@@ -1,9 +1,0 @@
-<form class="{{cssClass}} dialogo_tirada_habilidad" autocomplete="off">
-  <img class="content-background" src="/systems/ysystem/assets/Negro/dialogos/dialogo_repetir_tirada_habilidad.svg" alt="?"/>
-  <div class="dialogo_repetir_tirada_habilidad_tirada"><label>{{tirada}} VS {{dificultad}}</label></div>
-  <div class="dialogo_repetir_tirada_habilidad_dados">
-    {{#each dados as |item|}}
-      <label> <input type="checkbox" id="{{item.indice}}">{{item.dado}}</label>
-    {{/each}}
-  </div>
-</form>

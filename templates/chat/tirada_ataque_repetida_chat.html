@@ -1,14 +1,14 @@
 <form class="{{cssClass}} chat_tirada_ataque" autocomplete="off">
   {{#if (eq resultado "ÉXITO")}}
-    <img class="chat_resultado_circulo_exito" src="/systems/ysystem/assets/Negro/chat/total_chat_exito.svg" alt="?"/>
-    <img class="chat_resultado_circulo_daño" src="/systems/ysystem/assets/Negro/chat/total_daño_chat.svg" alt="?"/>
+    <div class="chat_tirada_titulo_exito"><label>{{personaje}}: {{nombre_habilidad}}</label></div>
+    <div class="chat_tirada_tirada_exito"><label>{{tirada}} VS {{dificultad}}</label></div>
+    <img class="chat_resultado_circulo_exito" src="/systems/ysystem/assets/Negro/chat/total_chat_exito.webp" alt="?"/>
+    <img class="chat_resultado_circulo_daño" src="/systems/ysystem/assets/Negro/chat/total_daño_chat.webp" alt="?"/>
     <div class="chat_tirada_total_exito"><label>{{total}}</label></div>
     <div class="chat_tirada_total_daño aplica_daño"
       data-actor_id="{{actor}}" data-objetivo_id="{{objetivo}}" data-daño="{{daño}}">
       <label>{{daño}}</label>
     </div>
-    <div class="chat_tirada_titulo_exito"><label>{{personaje}}: {{nombre_habilidad}}</label></div>
-    <div class="chat_tirada_tirada_exito"><label>{{tirada}} VS {{dificultad}}</label></div>
     <div class="chat_tirada_cada_exito">
     {{#each dados as |item|}}
       <label>{{item}}</label>
@@ -16,10 +16,10 @@
     </div>
   {{/if}}
   {{#if (eq resultado "FALLO")}}
-    <img class="chat_resultado_circulo" src="/systems/ysystem/assets/Negro/chat/total_chat_fallo.svg" alt="?"/>
-    <div class="chat_tirada_total"><label>{{total}}</label></div>
     <div class="chat_tirada_titulo"><label>{{personaje}}: {{nombre_habilidad}}</label></div>
     <div class="chat_tirada_tirada"><label>{{tirada}} VS {{dificultad}}</label></div>
+    <img class="chat_resultado_circulo" src="/systems/ysystem/assets/Negro/chat/total_chat_fallo.webp" alt="?"/>
+    <div class="chat_tirada_total"><label>{{total}}</label></div>
     <div class="chat_tirada_cada">
     {{#each dados as |item|}}
       <label>{{item}}</label>
@@ -27,15 +27,15 @@
     </div>
   {{/if}}
   {{#if (eq resultado "CRÍTICO")}}
-    <img class="chat_resultado_circulo_exito" src="/systems/ysystem/assets/Negro/chat/total_chat_critico.svg" alt="?"/>
-    <img class="chat_resultado_circulo_daño" src="/systems/ysystem/assets/Negro/chat/total_daño_chat.svg" alt="?"/>
+    <div class="chat_tirada_titulo_exito"><label>{{personaje}}: {{nombre_habilidad}}</label></div>
+    <div class="chat_tirada_tirada_exito"><label>{{tirada}} VS {{dificultad}}</label></div>
+    <img class="chat_resultado_circulo_exito" src="/systems/ysystem/assets/Negro/chat/total_chat_critico.webp" alt="?"/>
+    <img class="chat_resultado_circulo_daño" src="/systems/ysystem/assets/Negro/chat/total_daño_chat.webp" alt="?"/>
     <div class="chat_tirada_total_exito"><label>{{total}}</label></div>
     <div class="chat_tirada_total_daño aplica_daño"
       data-actor_id="{{actor}}" data-objetivo_id="{{objetivo}}" data-daño="{{daño}}">
       <label>{{daño}}</label>
     </div>
-    <div class="chat_tirada_titulo_exito"><label>{{personaje}}: {{nombre_habilidad}}</label></div>
-    <div class="chat_tirada_tirada_exito"><label>{{tirada}} VS {{dificultad}}</label></div>
     <div class="chat_tirada_cada_exito">
     {{#each dados as |item|}}
       <label>{{item}}</label>
@@ -43,10 +43,10 @@
     </div>
   {{/if}}
   {{#if (eq resultado "PIFIA")}}
-    <img class="chat_resultado_circulo" src="/systems/ysystem/assets/Negro/chat/total_chat_pifia.svg" alt="?"/>
-    <div class="chat_tirada_total"><label>{{total}}</label></div>
     <div class="chat_tirada_titulo"><label>{{personaje}}: {{nombre_habilidad}}</label></div>
     <div class="chat_tirada_tirada"><label>{{tirada}} VS {{dificultad}}</label></div>
+    <img class="chat_resultado_circulo" src="/systems/ysystem/assets/Negro/chat/total_chat_pifia.webp" alt="?"/>
+    <div class="chat_tirada_total"><label>{{total}}</label></div>
     <div class="chat_tirada_cada">
     {{#each dados as |item|}}
       <label>{{item}}</label>
@@ -67,7 +67,7 @@
       data-dificultad="{{dificultad}}"
       data-dados="{{dados}}"
       data-valor_habilidad="{{valor_habilidad}}">
-      <img class="chat_repetir" src="/systems/ysystem/assets/Negro/chat/aumentar_daño_chat.svg" alt="?"/>
+      <img class="chat_repetir" src="/systems/ysystem/assets/Negro/chat/aumentar_daño_chat.webp" alt="?"/>
     </div>
     {{/if}}
     {{#if (eq resultado "CRÍTICO")}}
@@ -82,7 +82,7 @@
       data-dificultad="{{dificultad}}"
       data-dados="{{dados}}"
       data-valor_habilidad="{{valor_habilidad}}">
-      <img class="chat_repetir" src="/systems/ysystem/assets/Negro/chat/aumentar_daño_chat.svg" alt="?"/>
+      <img class="chat_repetir" src="/systems/ysystem/assets/Negro/chat/aumentar_daño_chat.webp" alt="?"/>
     </div>
     {{/if}}
   {{/if}}

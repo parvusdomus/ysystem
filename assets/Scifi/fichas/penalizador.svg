@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="23mm"
+   height="27mm"
+   viewBox="0 0 23 27"
+   version="1.1"
+   id="svg963"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   sodipodi:docname="penalizador.svg">
+  <defs
+     id="defs957" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.4181332"
+     inkscape:cx="13.271564"
+     inkscape:cy="45.279775"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1022"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata960">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-270)">
+    <path
+       style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.31788367;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 5.2916819,277.49814 1.644846,-1.67751 h 3.8016391 4.03052 4.030517 v 3.90488 3.90488 3.90488 l -2.036969,1.98773 -1.87911,1.91714 h -3.91608 -3.9160771 -3.916077 v -3.90488 -3.90487 -3.90488 z"
+       id="rect6587-7-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccscccccccccccccc" />
+    <path
+       style="opacity:1;vector-effect:none;fill:#bababa;fill-opacity:1;stroke:#000000;stroke-width:0.91004419;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 5.9151969,278.19116 1.452448,-1.4923 h 3.3569571 3.559059 3.559058 v 3.47377 3.47377 3.47377 l -1.798695,1.76828 -1.659308,1.70549 h -3.45801 -3.4580081 -3.458009 v -3.47377 -3.47377 -3.47377 z"
+       id="rect6587-1-6-18"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccscccccccccccccc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:4.23333311px;line-height:1.25;font-family:Girassol;-inkscape-font-specification:'Girassol, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="0.12070867"
+       y="273.80414"
+       id="text1171-9-5-3-8"><tspan
+         sodipodi:role="line"
+         id="tspan1169-7-3-1-9"
+         x="0.12070867"
+         y="273.80414"
+         style="stroke-width:0.26458332">Penalización</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:4.23333311px;line-height:1.25;font-family:Girassol;-inkscape-font-specification:'Girassol, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="0.11984095"
+       y="296.5238"
+       id="text1171-9-5-3-8-1"><tspan
+         sodipodi:role="line"
+         id="tspan1169-7-3-1-9-1"
+         x="0.11984095"
+         y="296.5238"
+         style="stroke-width:0.26458332">Protecciones</tspan></text>
+  </g>
+</svg>

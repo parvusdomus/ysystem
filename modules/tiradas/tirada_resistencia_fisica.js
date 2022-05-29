@@ -1,10 +1,13 @@
 export async function TiradaResistenciaFisica(actor) {
   console.log ("TIRADA RESISTENCIA FISICA")
+  console.log (actor)
   const element = event.currentTarget;
   //SACO LOS VALORES DE HABILIDAD Y ATRIBUTO
   let valor_habilidad=3;
+  console.log ("ACTOR DATA")
+  console.log (actor.data)
   let dificultad=actor.data.data.Resistencia_Física;
-  let nombre_habilidad="Resistencia Física";
+  let nombre_habilidad="R. Física";
   //PENALIZO POR HERIDAS
   if (actor.data.data.Salud.value <= 3){
     valor_habilidad-=3;

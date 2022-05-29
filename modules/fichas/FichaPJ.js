@@ -3,16 +3,43 @@ import {TiradaAtaque} from "../tiradas/tirada_ataque.js";
 import {TiradaHechizo} from "../tiradas/tirada_hechizo.js";
 import {TiradaResistenciaFisica} from "../tiradas/tirada_resistencia_fisica.js";
 import {TiradaResistenciaMental} from "../tiradas/tirada_resistencia_mental.js";
+import {TiradaPanico} from "../tiradas/tirada_panico.js";
 export default class FichaYsystem extends ActorSheet{
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
-      classes: ["Ysystem", "sheet", "actor"],
-      template: "systems/ysystem/templates/actors/Jugador.html",
-      width: 800,
-      height: 700,
-      resizable: false,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "habilidades" }]
-    });
+    if (game.settings.get ("ysystem", "forceFontSize")){
+      game.settings.set("core","fontSize", "5");
+    }
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Negro"){
+      return mergeObject(super.defaultOptions, {
+        classes: ["Ysystem", "sheet", "actor"],
+        template: "systems/ysystem/templates/actors/Negro/Jugador.html",
+        width: 800,
+        height: 700,
+        resizable: false,
+        tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "habilidades" }]
+      });
+    }
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Rojo"){
+      return mergeObject(super.defaultOptions, {
+        classes: ["Ysystem", "sheet", "actor"],
+        template: "systems/ysystem/templates/actors/Rojo/Jugador.html",
+        width: 800,
+        height: 700,
+        resizable: false,
+        tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "habilidades" }]
+      });
+    }
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Medieval"){
+      return mergeObject(super.defaultOptions, {
+        classes: ["Ysystem", "sheet", "actor"],
+        template: "systems/ysystem/templates/actors/Medieval/Jugador.html",
+        width: 800,
+        height: 700,
+        resizable: false,
+        tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "habilidades" }]
+      });
+    }
+
   }
   getData() {
       const data = super.getData().data;
@@ -32,9 +59,9 @@ const Agilidad =Number(data.data.Destreza)+Number(data.data.Habilidades.Atletism
 const Aplomo =5+Number(data.data.Carisma)+Number(data.data.Inteligencia);
 const Perspicacia=5+Number(data.data.Percepción)+Number(data.data.Inteligencia);
 const Iniciativa=Number(data.data.Destreza)+Number(data.data.Inteligencia);
-const Salud=13+Number(data.data.Fuerza)*2;
+const Salud=16+Number(data.data.Fuerza)*2;
 const R_Física=12-Number(data.data.Fuerza);
-const Estabilidad=8+Aplomo;
+const Estabilidad=11+Aplomo;
 const R_Mental=12-Number(data.data.Carisma);
 const Proezas=3+Math.floor((data.data.Fuerza+data.data.Inteligencia)/2);
 const Poder=5+Number(data.data.Percepción)+Number(data.data.Inteligencia)+Number(data.data.Magia.Valor)*3;
@@ -392,6 +419,7 @@ async _onTiradaPanico(event) {
   const element = event.currentTarget;
   const dataset = element.dataset;
   console.log ("ON TIRADA PANICO")
+  TiradaPanico (this.actor);
   //TiradaHechizo (this.actor, dataset.poder, dataset.id_atributo, dataset.dificultad, objetivo)
 }
 

@@ -28,23 +28,46 @@ export async function TiradaHechizoPNJ(actor, poder, id_atributo, dificultad, ob
   } else if(valor_atributo<0){
     tirada+=valor_atributo
   }
-
+  let agilidad=0;
+  let aplomo=0;
+  let perspicacia=0;
   let resultado=""
   let mensaje_Proeza= actor.data.name+ " usa Proeza para la tirada..."
   var archivo_template = "";
   var datos_template={};
   if (objetivo){
-    archivo_template = '/systems/ysystem/templates/dialogos/tirada_hechizo_objetivoPNJ.html';
+    agilidad=Number(objetivo.document._actor.data.data.Agilidad.Valor)+Number(objetivo.document._actor.data.data.Agilidad.Bono)
+    aplomo=Number(objetivo.document._actor.data.data.Aplomo.Valor)+Number(objetivo.document._actor.data.data.Aplomo.Bono)
+    perspicacia=Number(objetivo.document._actor.data.data.Perspicacia.Valor)+Number(objetivo.document._actor.data.data.Perspicacia.Bono)
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Negro"){
+      archivo_template = '/systems/ysystem/templates/dialogos/Negro/tirada_hechizo_objetivoPNJ.html';
+    }
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Rojo"){
+      archivo_template = '/systems/ysystem/templates/dialogos/Rojo/tirada_hechizo_objetivoPNJ.html';
+    }
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Medieval"){
+      archivo_template = '/systems/ysystem/templates/dialogos/Medieval/tirada_hechizo_objetivoPNJ.html';
+    }
+
 
     datos_template = { tirada: tirada,
-                        agilidad: objetivo.document._actor.data.data.Agilidad.Valor,
-                        aplomo: objetivo.document._actor.data.data.Aplomo.Valor,
-                        perspicacia: objetivo.document._actor.data.data.Perspicacia.Valor,
+                        agilidad: agilidad,
+                        aplomo: aplomo,
+                        perspicacia: perspicacia,
                         retrato: actor.data.img
                       };
   }
   else{
-    archivo_template = '/systems/ysystem/templates/dialogos/tirada_hechizoPNJ.html';
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Negro"){
+      archivo_template = '/systems/ysystem/templates/dialogos/Negro/tirada_hechizoPNJ.html';
+    }
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Rojo"){
+      archivo_template = '/systems/ysystem/templates/dialogos/Rojo/tirada_hechizoPNJ.html';
+    }
+    if (game.settings.get ("ysystem", "aspectoFicha") == "Medieval"){
+      archivo_template = '/systems/ysystem/templates/dialogos/Medieval/tirada_hechizoPNJ.html';
+    }
+
     datos_template = { tirada: tirada,
                         dificultad2: dificultad2,
                         retrato: actor.data.img

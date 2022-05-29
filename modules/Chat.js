@@ -1,3 +1,4 @@
+import {TiradaResistenciaFisicaAuto} from "./tiradas/tirada_resistencia_fisicaAuto.js";
 export default class YsystemChat {
   static chatListeners (html) {
     html.on('click', '.repite_habilidad_proeza', this._onrepite_habilidad_proeza.bind(this));
@@ -27,7 +28,7 @@ export default class YsystemChat {
                   indice:i
       });
     }
-    const archivo_template = '/systems/ysystem/templates/dialogos/repite_tirada_habilidad.html';
+    const archivo_template = '/systems/ysystem/templates/dialogos/Negro/repite_tirada_habilidad.html';
     const datos_template = {
      dados: dados,
      dificultad: dataset.dificultad,
@@ -147,7 +148,7 @@ export default class YsystemChat {
                   indice:i
       });
     }
-    const archivo_template = '/systems/ysystem/templates/dialogos/repite_tirada_habilidad.html';
+    const archivo_template = '/systems/ysystem/templates/dialogos/Negro/repite_tirada_habilidad.html';
     const datos_template = {
      dados: dados,
      dificultad: dataset.dificultad,
@@ -246,8 +247,10 @@ export default class YsystemChat {
     const dataset = element.dataset;
     const actor = game.actors.get(dataset.actor_id);
     const objetivo = canvas.tokens.get(dataset.objetivo_id);
+    let VidaOriginal=Number(objetivo.document._actor.data.data.Salud.value);
     let VidaActual=0;
-    let Mensaje=""
+    let Mensaje="";
+    let NumTiradasResistencia=0;
     if (Number(dataset.daño)<=0){
       ui.notifications.notify("No se puede aplicar un valor de daño menor que 0");
       return 1
@@ -259,9 +262,38 @@ export default class YsystemChat {
       Mensaje = dataset.daño + " puntos de daño aplicado/s a "+objetivo.document._actor.data.name;
       ui.notifications.notify(Mensaje);
       const chatData = {
-        content: contenido_Dialogo_chat,
+        content: Mensaje,
       };
       ChatMessage.create(chatData);
+      if (VidaOriginal>=16){
+        if (VidaActual<16){NumTiradasResistencia++;}
+        if (VidaActual<11){NumTiradasResistencia++;}
+        if (VidaActual<7){NumTiradasResistencia++;}
+        if (VidaActual<4){NumTiradasResistencia++;}
+        if (VidaActual<2){NumTiradasResistencia++;}
+      }
+      if (VidaOriginal<16 && VidaOriginal>=11){
+        if (VidaActual<11){NumTiradasResistencia++;}
+        if (VidaActual<7){NumTiradasResistencia++;}
+        if (VidaActual<4){NumTiradasResistencia++;}
+        if (VidaActual<2){NumTiradasResistencia++;}
+      }
+      if (VidaOriginal<11 && VidaOriginal>=7){
+        if (VidaActual<7){NumTiradasResistencia++;}
+        if (VidaActual<4){NumTiradasResistencia++;}
+        if (VidaActual<2){NumTiradasResistencia++;}
+      }
+      if (VidaOriginal<7 && VidaOriginal>=4){
+        if (VidaActual<4){NumTiradasResistencia++;}
+        if (VidaActual<2){NumTiradasResistencia++;}
+      }
+      if (VidaOriginal<4 && VidaOriginal>=2){
+        if (VidaActual<2){NumTiradasResistencia++;}
+      }
+      console.log ("CORRESPONDEN TIRADAS DE RESISTENCIA: "+NumTiradasResistencia)
+      for (let i = 0; i < NumTiradasResistencia; i++){
+        TiradaResistenciaFisicaAuto (objetivo, VidaActual);}
+
     }
     else {
       ui.notifications.notify("No hay objetivo");
@@ -271,13 +303,13 @@ export default class YsystemChat {
   }
 
   static _onaumenta_daño (event){
+    const element = event.currentTarget;
+    const dataset = element.dataset;
+    const actor = game.actors.get(dataset.actor_id);
     if (actor.data.data.Proezas.value <=0){
       ui.notifications.warn("No te quedan Proezas");
       return 1;
     }
-    const element = event.currentTarget;
-    const dataset = element.dataset;
-    const actor = game.actors.get(dataset.actor_id);
     const objetivo = canvas.tokens.get(dataset.objetivo_id);
     const messageId = $(element)
             .parents('[data-message-id]')
@@ -336,7 +368,7 @@ export default class YsystemChat {
                   indice:i
       });
     }
-    const archivo_template = '/systems/ysystem/templates/dialogos/repite_tirada_hechizo.html';
+    const archivo_template = '/systems/ysystem/templates/dialogos/Negro/repite_tirada_hechizo.html';
     const datos_template = {
      dados: dados,
      dificultad1: dataset.dificultad1,
@@ -426,6 +458,7 @@ export default class YsystemChat {
        })
        dialogo.render(true);
     } )
+
 
   }
 

@@ -24,7 +24,7 @@
 
 .Objeto-nombre {
   position: absolute;
-  top: 1.7em;
+  top: 1em;
   text-align: center;
   z-index: 6;
   left: 10.2em;
@@ -69,7 +69,7 @@
 .Arma_Daño_input {
   background-color: transparent;
   position: absolute;
-  top: 3.8em;
+  top: 3.6em;
   left: 7.3em;
   text-align: center;
   z-index: 6;
@@ -113,7 +113,7 @@
 .Armadura_Nivel_input {
   background-color: transparent;
   position: absolute;
-  top: 2.3em;
+  top: 2em;
   left: 10.7em;
   text-align: center;
   z-index: 6;
@@ -133,7 +133,7 @@
 .Armadura_Penalizador_input {
   background-color: transparent;
   position: absolute;
-  top: 3.7em;
+  top: 3.6em;
   left: 10.7em;
   text-align: center;
   z-index: 6;
@@ -153,7 +153,7 @@
 .Objeto_Cantidad_input {
   background-color: transparent;
   position: absolute;
-  top: 2.7em;
+  top: 2.4em;
   left: 9.6em;
   text-align: center;
   z-index: 6;
@@ -222,7 +222,7 @@
 
 .Poder-nombre {
   position: absolute;
-  top: 1.7em;
+  top: 1.2em;
   text-align: center;
   z-index: 6;
   left: 13.2em;
