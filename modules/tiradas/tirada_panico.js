@@ -102,7 +102,8 @@ export async function TiradaPanico(actor) {
           }
           console.log ("CORRESPONDEN TIRADAS DE RESISTENCIA: "+NumTiradasResistencia)
           for (let i = 0; i < NumTiradasResistencia; i++){
-            //TiradaResistenciaMental (actor);}
+            //TiradaResistenciaMental (actor);
+          }
     } )
     		 }
              }
