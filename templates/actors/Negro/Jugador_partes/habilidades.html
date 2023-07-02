@@ -3,7 +3,7 @@
     <label class="titulo_Habilidades">HABILIDADES</label>
     <div class="espacio_habilidades">
       <ol class="lista-habilidades">
-          {{#each data.Habilidades as |habilidad id|}}
+          {{#each system.Habilidades as |habilidad id|}}
             <li class="habilidad">
               <label class="tirada_habilidad" data-Habilidad_id="{{id}}">{{habilidad.Nombre}}</label>
                 <span class="mod_habilidad" data-habilidad_id="{{id}}">
@@ -20,7 +20,7 @@
           {{/each}}
         </ol>
         <span class="recuerdo_toggle">
-        {{#if (eq data.Recuerdo_Cuando "true")}}
+        {{#if (eq system.Recuerdo_Cuando "true")}}
           <label class="recuerdo_Cuando" style="text-decoration:line-through;">Recuerdo cuando...</label>
         {{else}}
           <label class="recuerdo_Cuando">Recuerdo cuando...</label>
@@ -28,7 +28,7 @@
         </span>
         <label class="Profesion_label">Profesión:</label>
         <div class="Profesion_valor_input">
-          <input type="text" name="data.Profesión" value="{{data.Profesión}}" data-dtype="String"/>
+          <input type="text" name="system.Profesión" value="{{system.Profesión}}" data-dtype="String"/>
         </div>
     </div>
   </div>

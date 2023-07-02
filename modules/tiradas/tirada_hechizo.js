@@ -1,26 +1,25 @@
 export async function TiradaHechizo(actor, poder, id_atributo, dificultad, objetivo) {
-  console.log ("TIRADA HECHIZO")
   const element = event.currentTarget;
   const dataset = element.dataset;
   let Ppoder=(Number(dificultad)/5)-1;
-  let PpoderActual=actor.data.data.Poder.value;
+  let PpoderActual=actor.system.Poder.value;
 
   //SACO LOS VALORES DE HABILIDAD Y ATRIBUTO
-  let valor_habilidad=actor.data.data.Magia.Valor;
+  let valor_habilidad=actor.system.Magia.Valor;
   let nombre_habilidad=poder;
-  let valor_atributo=actor.data.data[id_atributo];
+  let valor_atributo=actor.system[id_atributo];
   let dificultad1=0;
   let dificultad2=dificultad;
   //PENALIZO POR HERIDAS
-  if (actor.data.data.Salud.value <= 3){
+  if (actor.system.Salud.value <= 3){
     valor_habilidad-=3;
-  } else if (actor.data.data.Salud.value <= 6) {
+  } else if (actor.system.Salud.value <= 6) {
     valor_habilidad-=2;
-  } else if (actor.data.data.Salud.value <= 10) {
+  } else if (actor.system.Salud.value <= 10) {
     valor_habilidad-=1;
   }
   //PENALIZO POR ARMADURA Y Escudo
-  valor_atributo-=Number(actor.data.data.Protección_Penalización);
+  valor_atributo-=Number(actor.system.Protección_Penalización);
   //MONTO LA TIRADA
   if (valor_habilidad < 0){valor_habilidad=0}
   let tirada=valor_habilidad+"d6"
@@ -33,13 +32,13 @@ export async function TiradaHechizo(actor, poder, id_atributo, dificultad, objet
   let aplomo=0;
   let perspicacia=0;
   let resultado=""
-  let mensaje_Proeza= actor.data.name+ " usa Proeza para la tirada..."
+  let mensaje_Proeza= actor.name+ " usa Proeza para la tirada..."
   var archivo_template = "";
   var datos_template={};
   if (objetivo){
-    agilidad=Number(objetivo.document._actor.data.data.Agilidad.Valor)+Number(objetivo.document._actor.data.data.Agilidad.Bono)
-    aplomo=Number(objetivo.document._actor.data.data.Aplomo.Valor)+Number(objetivo.document._actor.data.data.Aplomo.Bono)
-    perspicacia=Number(objetivo.document._actor.data.data.Perspicacia.Valor)+Number(objetivo.document._actor.data.data.Perspicacia.Bono)
+    agilidad=Number(objetivo.system.Agilidad.Valor)+Number(objetivo.system.Agilidad.Bono)
+    aplomo=Number(objetivo.system.Aplomo.Valor)+Number(objetivo.system.Aplomo.Bono)
+    perspicacia=Number(objetivo.system.Perspicacia.Valor)+Number(objetivo.system.Perspicacia.Bono)
     if (game.settings.get ("ysystem", "aspectoFicha") == "Negro"){
       archivo_template = '/systems/ysystem/templates/dialogos/Negro/tirada_hechizo_objetivo.html';
     }
@@ -82,7 +81,7 @@ export async function TiradaHechizo(actor, poder, id_atributo, dificultad, objet
       icon: '<i class="fas fa-dice"></i>',
       label: "Lanzar",
       callback: () => {
-        let proezas=actor.data.data.Proezas.value;
+        let proezas=actor.system.Proezas.value;
         if (document.getElementById("mod_dados").value != 0){
           valor_habilidad+=Number(document.getElementById("mod_dados").value)
           if (valor_habilidad < 0){valor_habilidad=0}
@@ -93,18 +92,18 @@ export async function TiradaHechizo(actor, poder, id_atributo, dificultad, objet
           if (valor_atributo > 0){tirada=valor_habilidad+"d6+"+valor_atributo}
           else{tirada=valor_habilidad+"d6"+valor_atributo}
         }
-        if (actor.data.data.Poder.value < Ppoder){
+        if (actor.system.Poder.value < Ppoder){
           ui.notifications.warn("No tienes suficientes puntos de Poder");
           return 1;
         }
         PpoderActual-=Ppoder;
-        actor.update ({ 'data.Poder.value': PpoderActual });
+        actor.update ({ 'system.Poder.value': PpoderActual });
         if (document.getElementById("proezas").value > 0){
           if (proezas >0){
             valor_habilidad++
             proezas--
             tirada=valor_habilidad+"d6+"+valor_atributo
-            actor.update ({ 'data.Proezas.value': proezas });
+            actor.update ({ 'system.Proezas.value': proezas });
             const chatData = {
               content: mensaje_Proeza,
             };
@@ -112,10 +111,10 @@ export async function TiradaHechizo(actor, poder, id_atributo, dificultad, objet
           }
           else{ui.notifications.warn("No te quedan puntos de PROEZA!!");}
         }
-        if (actor.data.data.Recuerdo_Cuando_Activo=="true"){
+        if (actor.system.Recuerdo_Cuando_Activo=="true"){
           valor_habilidad+=2
           tirada=valor_habilidad+"d6+"+valor_atributo
-          actor.update ({ 'data.Recuerdo_Cuando_Activo': "false" });
+          actor.update ({ 'system.Recuerdo_Cuando_Activo': "false" });
         }
         let d6Roll = new Roll(tirada).roll({async: false});
         let flavor = tirada+" VS "+ document.getElementById("dificultad").value
@@ -144,9 +143,9 @@ export async function TiradaHechizo(actor, poder, id_atributo, dificultad, objet
          dificultad1: dificultad1,
          dificultad2: dificultad2,
          dados: dados,
-         actor: actor.data._id,
-         proezas: actor.data.data.Proezas.value,
-         personaje: actor.data.name
+         actor: actor._id,
+         proezas: actor.system.Proezas.value,
+         personaje: actor.name
         };
         var contenido_Dialogo_chat;
         renderTemplate(archivo_template_chat, datos_template_chat).then(

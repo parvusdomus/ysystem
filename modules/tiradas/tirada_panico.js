@@ -1,6 +1,5 @@
 import {TiradaResistenciaMental} from "../tiradas/tirada_resistencia_mental.js";
 export async function TiradaPanico(actor) {
-  console.log ("TIRADA PANICO")
   const element = event.currentTarget;
   const dataset = element.dataset;
   //SACO LOS VALORES DE HABILIDAD Y ATRIBUTO
@@ -8,10 +7,10 @@ export async function TiradaPanico(actor) {
   let nombre_habilidad="Tirada de Panico";
   //MONTO LA TIRADA
   let tirada=""
-  let dificultad=actor.data.data.Aplomo.Valor;
-  dificultad+=actor.data.data.Aplomo.Bono;
+  let dificultad=actor.system.Aplomo.Valor;
+  dificultad+=actor.system.Aplomo.Bono;
   let resultado=""
-  let estabilidad_original=Number(actor.data.data.Estabilidad.value);
+  let estabilidad_original=Number(actor.system.Estabilidad.value);
   let estabilidad_nueva=0;
   var archivo_template = "";
   var datos_template={};
@@ -47,7 +46,7 @@ export async function TiradaPanico(actor) {
         else {
           resultado="FALLO";
           estabilidad_nueva=estabilidad_original-valor_habilidad;
-          actor.update ({ 'data.Estabilidad.value': estabilidad_nueva });
+          actor.update ({ 'system.Estabilidad.value': estabilidad_nueva });
 
         }
         let dados=[];
@@ -63,8 +62,8 @@ export async function TiradaPanico(actor) {
          total: d6Roll.total,
          dificultad: dificultad,
          dados: dados,
-         actor: actor.data._id,
-         personaje: actor.data.name
+         actor: actor._id,
+         personaje: actor.name
         };
         var contenido_Dialogo_chat;
         renderTemplate(archivo_template_chat, datos_template_chat).then(
@@ -100,7 +99,6 @@ export async function TiradaPanico(actor) {
           if (estabilidad_original<4 && estabilidad_original>=2){
             if (estabilidad_nueva<2){NumTiradasResistencia++;}
           }
-          console.log ("CORRESPONDEN TIRADAS DE RESISTENCIA: "+NumTiradasResistencia)
           for (let i = 0; i < NumTiradasResistencia; i++){
             //TiradaResistenciaMental (actor);
           }

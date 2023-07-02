@@ -2,7 +2,7 @@ export async function TiradaResistenciaFisicaAuto(actor, VidaActual) {
   const element = event.currentTarget;
   //SACO LOS VALORES DE HABILIDAD Y ATRIBUTO
   let valor_habilidad=3;
-  let dificultad=actor.data.document._actor.data.data.Resistencia_Física;
+  let dificultad=actor.system.Resistencia_Física;
   let nombre_habilidad="R. Física";
   //PENALIZO POR HERIDAS
   if (VidaActual <= 3){
@@ -17,7 +17,7 @@ export async function TiradaResistenciaFisicaAuto(actor, VidaActual) {
   let tirada=valor_habilidad+"d6"
 
   let resultado=""
-        let proezas=actor.data.document._actor.data.data.Proezas.value;
+        let proezas=actor.system.Proezas.value;
         let d6Roll = new Roll(tirada).roll({async: false});
         let flavor = tirada+" VS "+ dificultad;
         const archivo_template_chat = '/systems/ysystem/templates/chat/tirada_habilidad_chat.html';
@@ -43,9 +43,9 @@ export async function TiradaResistenciaFisicaAuto(actor, VidaActual) {
          total: d6Roll.total,
          dificultad: dificultad,
          dados: dados,
-         actor: actor.data.document._actor.data._id,
-         proezas: actor.data.document._actor.data.data.Proezas.value,
-         personaje: actor.data.document._actor.name
+         actor: actor._id,
+         proezas: actor.system.Proezas.value,
+         personaje: actor.name
         };
         var contenido_Dialogo_chat;
         renderTemplate(archivo_template_chat, datos_template_chat).then(

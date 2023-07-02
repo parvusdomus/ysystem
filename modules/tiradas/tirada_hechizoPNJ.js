@@ -1,25 +1,24 @@
 export async function TiradaHechizoPNJ(actor, poder, id_atributo, dificultad, objetivo) {
-  console.log ("TIRADA HECHIZO PNJ")
   const element = event.currentTarget;
   const dataset = element.dataset;
   let Ppoder=(Number(dificultad)/5)-1;
-  let PpoderActual=actor.data.data.Poder.value;
+  let PpoderActual=actor.system.Poder.value;
   //SACO LOS VALORES DE HABILIDAD Y ATRIBUTO
-  let valor_habilidad=actor.data.data.Magia.Valor;
+  let valor_habilidad=actor.system.Magia.Valor;
   let nombre_habilidad=poder;
-  let valor_atributo=actor.data.data[id_atributo];
+  let valor_atributo=actor.system[id_atributo];
   let dificultad1=0;
   let dificultad2=dificultad;
   //PENALIZO POR HERIDAS
-  if (actor.data.data.Salud.value <= 3){
+  if (actor.system.Salud.value <= 3){
     valor_habilidad-=3;
-  } else if (actor.data.data.Salud.value <= 6) {
+  } else if (actor.system.Salud.value <= 6) {
     valor_habilidad-=2;
-  } else if (actor.data.data.Salud.value <= 10) {
+  } else if (actor.system.Salud.value <= 10) {
     valor_habilidad-=1;
   }
   //PENALIZO POR ARMADURA Y Escudo
-  valor_atributo-=Number(actor.data.data.Protección_Penalización);
+  valor_atributo-=Number(actor.system.Protección_Penalización);
   //MONTO LA TIRADA
   if (valor_habilidad < 0){valor_habilidad=0}
   let tirada=valor_habilidad+"d6"
@@ -32,13 +31,13 @@ export async function TiradaHechizoPNJ(actor, poder, id_atributo, dificultad, ob
   let aplomo=0;
   let perspicacia=0;
   let resultado=""
-  let mensaje_Proeza= actor.data.name+ " usa Proeza para la tirada..."
+  let mensaje_Proeza= actor.name+ " usa Proeza para la tirada..."
   var archivo_template = "";
   var datos_template={};
   if (objetivo){
-    agilidad=Number(objetivo.document._actor.data.data.Agilidad.Valor)+Number(objetivo.document._actor.data.data.Agilidad.Bono)
-    aplomo=Number(objetivo.document._actor.data.data.Aplomo.Valor)+Number(objetivo.document._actor.data.data.Aplomo.Bono)
-    perspicacia=Number(objetivo.document._actor.data.data.Perspicacia.Valor)+Number(objetivo.document._actor.data.data.Perspicacia.Bono)
+    agilidad=Number(objetivo.system.Agilidad.Valor)+Number(objetivo.system.Agilidad.Bono)
+    aplomo=Number(objetivo.system.Aplomo.Valor)+Number(objetivo.system.Aplomo.Bono)
+    perspicacia=Number(objetivo.system.Perspicacia.Valor)+Number(objetivo.system.Perspicacia.Bono)
     if (game.settings.get ("ysystem", "aspectoFicha") == "Negro"){
       archivo_template = '/systems/ysystem/templates/dialogos/Negro/tirada_hechizo_objetivoPNJ.html';
     }
@@ -54,7 +53,7 @@ export async function TiradaHechizoPNJ(actor, poder, id_atributo, dificultad, ob
                         agilidad: agilidad,
                         aplomo: aplomo,
                         perspicacia: perspicacia,
-                        retrato: actor.data.img
+                        retrato: actor.img
                       };
   }
   else{
@@ -70,7 +69,7 @@ export async function TiradaHechizoPNJ(actor, poder, id_atributo, dificultad, ob
 
     datos_template = { tirada: tirada,
                         dificultad2: dificultad2,
-                        retrato: actor.data.img
+                        retrato: actor.img
                       };
   }
 
@@ -93,12 +92,12 @@ export async function TiradaHechizoPNJ(actor, poder, id_atributo, dificultad, ob
           if (valor_atributo > 0){tirada=valor_habilidad+"d6+"+valor_atributo}
           else{tirada=valor_habilidad+"d6"+valor_atributo}
         }
-        if (actor.data.data.Poder.value < Ppoder){
+        if (actor.system.Poder.value < Ppoder){
           ui.notifications.warn("No tienes suficientes puntos de Poder");
           return 1;
         }
         PpoderActual-=Ppoder;
-        actor.update ({ 'data.Poder.value': PpoderActual });
+        actor.update ({ 'system.Poder.value': PpoderActual });
         let d6Roll = new Roll(tirada).roll({async: false});
         let flavor = tirada+" VS "+ document.getElementById("dificultad").value
         const archivo_template_chat = '/systems/ysystem/templates/chat/tirada_hechizo_chat.html';
@@ -126,8 +125,8 @@ export async function TiradaHechizoPNJ(actor, poder, id_atributo, dificultad, ob
          dificultad1: dificultad1,
          dificultad2: dificultad2,
          dados: dados,
-         actor: actor.data._id,
-         personaje: actor.data.name
+         actor: actor._id,
+         personaje: actor.name
         };
         var contenido_Dialogo_chat;
         renderTemplate(archivo_template_chat, datos_template_chat).then(

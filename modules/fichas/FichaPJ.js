@@ -44,56 +44,54 @@ export default class FichaYsystem extends ActorSheet{
   getData() {
       const data = super.getData().data;
       data.dtypes = ["String", "Number", "Boolean"];
-      if (this.actor.data.type == 'Jugador') {
+      if (this.actor.type == 'Jugador') {
         this._prepareCharacterItems(data);
         this._calculaValores(data);
-        console.log ("ACTOR")
-        console.log (this.actor)
       }
       return data;
     }
 
     _calculaValores(actorData) {
 const data = actorData;
-const Agilidad =Number(data.data.Destreza)+Number(data.data.Habilidades.Atletismo.Valor)*3;
-const Aplomo =5+Number(data.data.Carisma)+Number(data.data.Inteligencia);
-const Perspicacia=5+Number(data.data.Percepción)+Number(data.data.Inteligencia);
-const Iniciativa=Number(data.data.Destreza)+Number(data.data.Inteligencia);
-const Salud=16+Number(data.data.Fuerza)*2;
-const R_Física=12-Number(data.data.Fuerza);
+const Agilidad =Number(data.system.Destreza)+Number(data.system.Habilidades.Atletismo.Valor)*3;
+const Aplomo =5+Number(data.system.Carisma)+Number(data.system.Inteligencia);
+const Perspicacia=5+Number(data.system.Percepción)+Number(data.system.Inteligencia);
+const Iniciativa=Number(data.system.Destreza)+Number(data.system.Inteligencia);
+const Salud=16+Number(data.system.Fuerza)*2;
+const R_Física=12-Number(data.system.Fuerza);
 const Estabilidad=11+Aplomo;
-const R_Mental=12-Number(data.data.Carisma);
-const Proezas=3+Math.floor((data.data.Fuerza+data.data.Inteligencia)/2);
-const Poder=5+Number(data.data.Percepción)+Number(data.data.Inteligencia)+Number(data.data.Magia.Valor)*3;
+const R_Mental=12-Number(data.system.Carisma);
+const Proezas=3+Math.floor((data.system.Fuerza+data.system.Inteligencia)/2);
+const Poder=5+Number(data.system.Percepción)+Number(data.system.Inteligencia)+Number(data.system.Magia.Valor)*3;
 //ACTUALIZO TODOS LOS VALORES
 let Protección_Daño=0;
 let Protección_Penalización=0;
 let Protección_Agilidad=0;
-let Armadura = data.Armaduras.find((k) => k.type === "Armadura" && k.data.Equipado=="true");
+let Armadura = data.Armaduras.find((k) => k.type === "Armadura" && k.system.Equipado=="true");
 if (Armadura){
-  Protección_Daño=Armadura.data.Nivel;
-  Protección_Penalización+=Armadura.data.Penalizador;
+  Protección_Daño=Armadura.system.Nivel;
+  Protección_Penalización+=Armadura.system.Penalizador;
 }
-let Escudo = data.Escudos.find((k) => k.type === "Escudo" && k.data.Equipado=="true");
+let Escudo = data.Escudos.find((k) => k.type === "Escudo" && k.system.Equipado=="true");
 if (Escudo){
-  Protección_Agilidad=Escudo.data.Nivel;
-  Protección_Penalización+=Escudo.data.Penalizador;
+  Protección_Agilidad=Escudo.system.Nivel;
+  Protección_Penalización+=Escudo.system.Penalizador;
 }
 
 
-this.actor.update ({ 'data.Agilidad.Valor': Agilidad });
-this.actor.update ({ 'data.Aplomo.Valor': Aplomo });
-this.actor.update ({ 'data.Perspicacia.Valor': Perspicacia });
-this.actor.update ({ 'data.Iniciativa': Iniciativa });
-this.actor.update ({ 'data.Salud.max': Salud });
-this.actor.update ({ 'data.Resistencia_Física': R_Física });
-this.actor.update ({ 'data.Estabilidad.max': Estabilidad });
-this.actor.update ({ 'data.Resistencia_Mental': R_Mental });
-this.actor.update ({ 'data.Protección_Daño': Protección_Daño });
-this.actor.update ({ 'data.Protección_Agilidad': Protección_Agilidad });
-this.actor.update ({ 'data.Protección_Penalización': Protección_Penalización });
-this.actor.update ({ 'data.Proezas.max': Proezas });
-this.actor.update ({ 'data.Poder.max': Poder });
+this.actor.update ({ 'system.Agilidad.Valor': Agilidad });
+this.actor.update ({ 'system.Aplomo.Valor': Aplomo });
+this.actor.update ({ 'system.Perspicacia.Valor': Perspicacia });
+this.actor.update ({ 'system.Iniciativa': Iniciativa });
+this.actor.update ({ 'system.Salud.max': Salud });
+this.actor.update ({ 'system.Resistencia_Física': R_Física });
+this.actor.update ({ 'system.Estabilidad.max': Estabilidad });
+this.actor.update ({ 'system.Resistencia_Mental': R_Mental });
+this.actor.update ({ 'system.Protección_Daño': Protección_Daño });
+this.actor.update ({ 'system.Protección_Agilidad': Protección_Agilidad });
+this.actor.update ({ 'system.Protección_Penalización': Protección_Penalización });
+this.actor.update ({ 'system.Proezas.max': Proezas });
+this.actor.update ({ 'system.Poder.max': Poder });
 
 }
 
@@ -110,14 +108,14 @@ this.actor.update ({ 'data.Poder.max': Poder });
      const Objetos = [];
      // Ordena los objetos por tipo y los mete en el array correspondiente
     for (let i of sheetData.items) {
-      let item = i.data;
+      let item = i.system;
       i.img = i.img || DEFAULT_TOKEN;
       if (i.type === 'Arma') {
-        if (i.data.Habilidad=="Lucha"){i.data.Ataque=actorData.data.Habilidades.Lucha.Valor+"D6+"+actorData.data.Destreza}
-        if (i.data.Habilidad=="Puntería"){i.data.Ataque=actorData.data.Habilidades.Puntería.Valor+"D6+"+actorData.data.Percepción}
-        if (i.data.Bono=="FUE_2"){i.data.Daño_Total=Number(i.data.Daño)+Math.floor(Number(actorData.data.Fuerza)/2)}
-        if (i.data.Bono=="FUE"){i.data.Daño_Total=Number(i.data.Daño)+Number(actorData.data.Fuerza)}
-        if (i.data.Bono=="PER"){i.data.Daño_Total=Number(i.data.Daño)+Number(actorData.data.Percepción)}
+        if (i.system.Habilidad=="Lucha"){i.system.Ataque=actorData.system.Habilidades.Lucha.Valor+"D6+"+actorData.system.Destreza}
+        if (i.system.Habilidad=="Puntería"){i.system.Ataque=actorData.system.Habilidades.Puntería.Valor+"D6+"+actorData.system.Percepción}
+        if (i.system.Bono=="FUE_2"){i.system.Daño_Total=Number(i.system.Daño)+Math.floor(Number(actorData.system.Fuerza)/2)}
+        if (i.system.Bono=="FUE"){i.system.Daño_Total=Number(i.system.Daño)+Number(actorData.system.Fuerza)}
+        if (i.system.Bono=="PER"){i.system.Daño_Total=Number(i.system.Daño)+Number(actorData.system.Percepción)}
         Armas.push(i);
       }
       else if (i.type === 'Armadura') {
@@ -163,10 +161,10 @@ activateListeners(html) {
           const habilidad_id=dataset.habilidad_id
           const update = {};
           update.data = {};
-          var valor_actual=Number(this.actor.data.data.Habilidades[habilidad_id].Valor)
+          var valor_actual=Number(this.actor.system.Habilidades[habilidad_id].Valor)
           var valor_nuevo=valor_actual+1
           if (valor_nuevo>=4){valor_nuevo=1}
-          const habilidad='data.Habilidades.'+habilidad_id+'.Valor'
+          const habilidad='system.Habilidades.'+habilidad_id+'.Valor'
           update[habilidad] = valor_nuevo;
           update.id = this.actor.id;
           this.actor.update(update, {diff: true});
@@ -178,10 +176,10 @@ activateListeners(html) {
           const habilidad_id=dataset.habilidad_id
           const update = {};
           update.data = {};
-          var valor_actual=Number(this.actor.data.data.Magia.Valor)
+          var valor_actual=Number(this.actor.system.Magia.Valor)
           var valor_nuevo=valor_actual+1
           if (valor_nuevo>=4){valor_nuevo=1}
-          const habilidad='data.Magia.Valor'
+          const habilidad='system.Magia.Valor'
           update[habilidad] = valor_nuevo;
           update.id = this.actor.id;
           this.actor.update(update, {diff: true});
@@ -191,20 +189,20 @@ activateListeners(html) {
           const element = ev.currentTarget;
           const dataset = element.dataset;
           const bono_nombre=dataset.bono_nombre;
-          let contenido_Dialogo_chat= this.actor.data.name+ " usa Proeza para mejorar su "+bono_nombre;
+          let contenido_Dialogo_chat= this.actor.name+ " usa Proeza para mejorar su "+bono_nombre;
           const update = {};
           update.data = {};
           var valor_nuevo=0;
-          var proezas=this.actor.data.data.Proezas.value;
-          var valor_actual=Number(this.actor.data.data[bono_nombre].Bono)
-          if (this.actor.data.data.Proezas.value > 0){
+          var proezas=this.actor.system.Proezas.value;
+          var valor_actual=Number(this.actor.system[bono_nombre].Bono)
+          if (this.actor.system.Proezas.value > 0){
               valor_nuevo=valor_actual+3
-              proezas=this.actor.data.data.Proezas.value-1
+              proezas=this.actor.system.Proezas.value-1
               const bono='data.'+bono_nombre+'.Bono'
               update[bono] = valor_nuevo;
               update.id = this.actor.id;
               this.actor.update(update, {diff: true});
-              this.actor.update ({ 'data.Proezas.value': proezas });
+              this.actor.update ({ 'system.Proezas.value': proezas });
               const chatData = {
                 content: contenido_Dialogo_chat,
               };
@@ -220,11 +218,11 @@ activateListeners(html) {
           const element = ev.currentTarget;
           const dataset = element.dataset;
           const bono_nombre=dataset.bono_nombre;
-          let contenido_Dialogo_chat= this.actor.data.name+ " resetea su "+bono_nombre;
+          let contenido_Dialogo_chat= this.actor.name+ " resetea su "+bono_nombre;
           const update = {};
           update.data = {};
           var valor_nuevo=0;
-          const bono='data.'+bono_nombre+'.Bono'
+          const bono='system.'+bono_nombre+'.Bono'
           update[bono] = valor_nuevo;
           update.id = this.actor.id;
           this.actor.update(update, {diff: true});
@@ -246,7 +244,7 @@ activateListeners(html) {
         html.find('.item-equip').click(ev => {
           const li = $(ev.currentTarget).parents(".item");
           const objeto_a_equipar = this.actor.items.get(li.data("itemId"));
-          if (objeto_a_equipar.data.data.Equipado =="false"){
+          if (objeto_a_equipar.system.Equipado =="false"){
             objeto_a_equipar.update ({ 'data.Equipado': "true" });
           } else {
             objeto_a_equipar.update ({ 'data.Equipado': "false" });
@@ -259,17 +257,17 @@ activateListeners(html) {
           const element = ev.currentTarget;
           const dataset = element.dataset;
           var valor_nuevo="true";
-          let contenido_Dialogo_chat= this.actor.data.name+ " recuerda cuando..."
+          let contenido_Dialogo_chat= this.actor.name+ " recuerda cuando..."
           const update = {};
           update.data = {};
           const update2 = {};
           update2.data = {};
-          if (this.actor.data.data.Recuerdo_Cuando == "false"){
-              const recuerdo='data.Recuerdo_Cuando'
+          if (this.actor.system.Recuerdo_Cuando == "false"){
+              const recuerdo='system.Recuerdo_Cuando'
               update[recuerdo] = valor_nuevo;
               update.id = this.actor.id;
               this.actor.update(update, {diff: true});
-              const recuerdo2='data.Recuerdo_Cuando_Activo'
+              const recuerdo2='system.Recuerdo_Cuando_Activo'
               update2[recuerdo2] = valor_nuevo;
               update2.id = this.actor.id;
               this.actor.update(update2, {diff: true});
@@ -296,11 +294,11 @@ activateListeners(html) {
           update[recuerdo] = valor_nuevo;
           update.id = this.actor.id;
           this.actor.update(update, {diff: true});
-          const recuerdo2='data.Recuerdo_Cuando_Activo'
+          const recuerdo2='system.Recuerdo_Cuando_Activo'
           update2[recuerdo2] = valor_nuevo;
           update2.id = this.actor.id;
           this.actor.update(update2, {diff: true});
-          let contenido_Dialogo_chat= this.actor.data.name+ " resetea su Recuerdo Cuando"
+          let contenido_Dialogo_chat= this.actor.name+ " resetea su Recuerdo Cuando"
           const chatData = {
             content: contenido_Dialogo_chat,
           };
@@ -309,8 +307,8 @@ activateListeners(html) {
         //RESTAURAR PROEZAS, SALUD, ESTABILIDAD Y PODER
         html.find('.restaura_proeza').contextmenu(ev => {
           const element = ev.currentTarget;
-          this.actor.update ({ 'data.Proezas.value': this.actor.data.data.Proezas.max });
-          let contenido_Dialogo_chat= this.actor.data.name+ " resetea sus Proezas"
+          this.actor.update ({ 'system.Proezas.value': this.actor.system.Proezas.max });
+          let contenido_Dialogo_chat= this.actor.name+ " resetea sus Proezas"
           const chatData = {
             content: contenido_Dialogo_chat,
           };
@@ -319,8 +317,8 @@ activateListeners(html) {
 
         html.find('.restaura_salud').contextmenu(ev => {
           const element = ev.currentTarget;
-          this.actor.update ({ 'data.Salud.value': this.actor.data.data.Salud.max });
-          let contenido_Dialogo_chat= this.actor.data.name+ " resetea su Salud"
+          this.actor.update ({ 'system.Salud.value': this.actor.system.Salud.max });
+          let contenido_Dialogo_chat= this.actor.name+ " resetea su Salud"
           const chatData = {
             content: contenido_Dialogo_chat,
           };
@@ -329,8 +327,8 @@ activateListeners(html) {
 
         html.find('.restaura_estabilidad').contextmenu(ev => {
           const element = ev.currentTarget;
-          this.actor.update ({ 'data.Estabilidad.value': this.actor.data.data.Estabilidad.max });
-          let contenido_Dialogo_chat= this.actor.data.name+ " resetea su Estabilidad"
+          this.actor.update ({ 'system.Estabilidad.value': this.actor.system.Estabilidad.max });
+          let contenido_Dialogo_chat= this.actor.name+ " resetea su Estabilidad"
           const chatData = {
             content: contenido_Dialogo_chat,
           };
@@ -339,8 +337,8 @@ activateListeners(html) {
 
         html.find('.restaura_poder').contextmenu(ev => {
           const element = ev.currentTarget;
-          this.actor.update ({ 'data.Poder.value': this.actor.data.data.Poder.max });
-          let contenido_Dialogo_chat= this.actor.data.name+ " resetea su Poder"
+          this.actor.update ({ 'system.Poder.value': this.actor.system.Poder.max });
+          let contenido_Dialogo_chat= this.actor.name+ " resetea su Poder"
           const chatData = {
             content: contenido_Dialogo_chat,
           };
@@ -383,42 +381,39 @@ _onItemCreate(event) {
 async _onTiradaHabilidad(event) {
   const element = event.currentTarget;
   const dataset = element.dataset;
-  let objetivo = Array.from(game.user.targets)[0];
+  let objetivo = Array.from(game.user.targets)[0]?.actor;
   TiradaHabilidad (this.actor, dataset.habilidad_id, objetivo)
 }
 
 async _onAtaqueArma(event) {
   const element = event.currentTarget;
   const dataset = element.dataset;
-  let objetivo = Array.from(game.user.targets)[0];
+  let objetivo = Array.from(game.user.targets)[0]?.actor;
   TiradaAtaque (this.actor, dataset.arma, dataset.habilidad_id, dataset.daño, objetivo)
 }
 
 async _onTiradaHechizo(event) {
   const element = event.currentTarget;
   const dataset = element.dataset;
-  let objetivo = Array.from(game.user.targets)[0];
+  let objetivo = Array.from(game.user.targets)[0]?.actor;
   TiradaHechizo (this.actor, dataset.poder, dataset.id_atributo, dataset.dificultad, objetivo)
 }
 
 async _onTiradaResistenciaFisica(event) {
   const element = event.currentTarget;
   const dataset = element.dataset;
-  console.log ("ON TIRADA RESISTENCIA FISICA");
   TiradaResistenciaFisica (this.actor);
 }
 
 async _onTiradaResistenciaMental(event) {
   const element = event.currentTarget;
   const dataset = element.dataset;
-  console.log ("ON TIRADA RESISTENCIA MENTAL");
   TiradaResistenciaMental (this.actor);
 }
 
 async _onTiradaPanico(event) {
   const element = event.currentTarget;
   const dataset = element.dataset;
-  console.log ("ON TIRADA PANICO")
   TiradaPanico (this.actor);
   //TiradaHechizo (this.actor, dataset.poder, dataset.id_atributo, dataset.dificultad, objetivo)
 }

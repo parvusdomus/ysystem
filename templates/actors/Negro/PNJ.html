@@ -7,41 +7,41 @@
         <img class="profile-img" src="{{img}}" data-edit="img" title="{{name}}" alt='Imagen del Personaje'/>
       </div>
     <div class="PNJ_caract_Carisma">
-      <input type="text" name="data.Carisma" value="{{data.Carisma}}" data-dtype="Number" maxlength="2"/>
+      <input type="text" name="system.Carisma" value="{{system.Carisma}}" data-dtype="Number" maxlength="2"/>
     </div>
     <div class="PNJ_caract_Destreza">
-      <input type="text" name="data.Destreza" value="{{data.Destreza}}" data-dtype="Number" maxlength="2"/>
+      <input type="text" name="system.Destreza" value="{{system.Destreza}}" data-dtype="Number" maxlength="2"/>
     </div>
     <div class="PNJ_caract_Fuerza">
-      <input type="text" name="data.Fuerza" value="{{data.Fuerza}}" data-dtype="Number" maxlength="2"/>
+      <input type="text" name="system.Fuerza" value="{{system.Fuerza}}" data-dtype="Number" maxlength="2"/>
     </div>
     <div class="PNJ_caract_Inteligencia">
-      <input type="text" name="data.Inteligencia" value="{{data.Inteligencia}}" data-dtype="Number" maxlength="2"/>
+      <input type="text" name="system.Inteligencia" value="{{system.Inteligencia}}" data-dtype="Number" maxlength="2"/>
     </div>
     <div class="PNJ_caract_Percepción">
-      <input type="text" name="data.Percepción" value="{{data.Percepción}}" data-dtype="Number" maxlength="2"/>
+      <input type="text" name="system.Percepción" value="{{system.Percepción}}" data-dtype="Number" maxlength="2"/>
     </div>
     <div class="PNJ_caract_Salud_input">
-      {{#if (lte data.Salud.value 3)}}
+      {{#if (lte system.Salud.value 3)}}
           <div class="caract_Salud_valor_input_red_PNJ">
-          {{else}} {{#if (lte data.Salud.value 6)}}
+          {{else}} {{#if (lte system.Salud.value 6)}}
             <div class="caract_Salud_valor_input_orange_PNJ">
-            {{else}} {{#if (lte data.Salud.value 10)}}
+            {{else}} {{#if (lte system.Salud.value 10)}}
               <div class="caract_Salud_valor_input_yellow_PNJ">
               {{else}}
                 <div class="caract_Salud_valor_input_black_PNJ">
             {{/if}}
           {{/if}}
         {{/if}}
-      <input type="text" name="data.Salud.value" value="{{data.Salud.value}}" data-dtype="Number" maxlength="2"/>
+      <input type="text" name="system.Salud.value" value="{{system.Salud.value}}" data-dtype="Number" maxlength="2"/>
       </div>
     </div>
-    <label class="PNJ_caract_Salud_max restaura_salud">{{data.Salud.max}}</label>
-    <label class="PNJ_caract_R_Fisica tirada_Resistencia_Fisica">{{data.Resistencia_Física}}</label>
-    <label class="PNJ_caract_Iniciativa">{{data.Iniciativa}}</label>
-    <label class="PNJ_caract_Agilidad">{{data.Agilidad.Valor}}</label>
-    <label class="PNJ_caract_Aplomo">{{data.Aplomo.Valor}}</label>
-    <label class="PNJ_caract_Perspicacia">{{data.Perspicacia.Valor}}</label>
+    <label class="PNJ_caract_Salud_max restaura_salud">{{system.Salud.max}}</label>
+    <label class="PNJ_caract_R_Fisica tirada_Resistencia_Fisica">{{system.Resistencia_Física}}</label>
+    <label class="PNJ_caract_Iniciativa">{{system.Iniciativa}}</label>
+    <label class="PNJ_caract_Agilidad">{{system.Agilidad.Valor}}</label>
+    <label class="PNJ_caract_Aplomo">{{system.Aplomo.Valor}}</label>
+    <label class="PNJ_caract_Perspicacia">{{system.Perspicacia.Valor}}</label>
   </div>
 
   <div class="character-tabs-info sheet-body">

@@ -7,11 +7,11 @@
         <img class="profile-img" src="{{img}}" data-edit="img" title="{{name}}" alt='Imagen del Personaje'/>
       </div>
       <div class="caract_Experiencia_valor_input">
-        <input type="text" name="data.Experiencia" value="{{data.Experiencia}}" data-dtype="Number" maxlength="2"/>
+        <input type="text" name="system.Experiencia" value="{{system.Experiencia}}" data-dtype="Number" maxlength="2"/>
       </div>
-      <label class="caract_Iniciativa caract_valor">{{data.Iniciativa}}</label>
-      <select class="atributo_Carisma atributo_select" name="data.Carisma" data-dtype="Number">
-        {{#select data.Carisma}}
+      <label class="caract_Iniciativa caract_valor">{{system.Iniciativa}}</label>
+      <select class="atributo_Carisma atributo_select" name="system.Carisma" data-dtype="Number">
+        {{#select system.Carisma}}
           <option value="0">+0</option>
           <option value="1">+1</option>
           <option value="2">+2</option>
@@ -21,8 +21,8 @@
           <option value="6">+6</option>
         {{/select}}
       </select>
-      <select class="atributo_Destreza atributo_select" name="data.Destreza" data-dtype="Number">
-        {{#select data.Destreza}}
+      <select class="atributo_Destreza atributo_select" name="system.Destreza" data-dtype="Number">
+        {{#select system.Destreza}}
           <option value="0">+0</option>
           <option value="1">+1</option>
           <option value="2">+2</option>
@@ -32,8 +32,8 @@
           <option value="6">+6</option>
         {{/select}}
       </select>
-      <select class="atributo_Fuerza atributo_select" name="data.Fuerza" data-dtype="Number">
-        {{#select data.Fuerza}}
+      <select class="atributo_Fuerza atributo_select" name="system.Fuerza" data-dtype="Number">
+        {{#select system.Fuerza}}
           <option value="0">+0</option>
           <option value="1">+1</option>
           <option value="2">+2</option>
@@ -43,8 +43,8 @@
           <option value="6">+6</option>
         {{/select}}
       </select>
-      <select class="atributo_Inteligencia atributo_select" name="data.Inteligencia" data-dtype="Number">
-        {{#select data.Inteligencia}}
+      <select class="atributo_Inteligencia atributo_select" name="system.Inteligencia" data-dtype="Number">
+        {{#select system.Inteligencia}}
           <option value="0">+0</option>
           <option value="1">+1</option>
           <option value="2">+2</option>
@@ -54,8 +54,8 @@
           <option value="6">+6</option>
         {{/select}}
       </select>
-      <select class="atributo_Percepción atributo_select" name="data.Percepción" data-dtype="Number">
-        {{#select data.Percepción}}
+      <select class="atributo_Percepción atributo_select" name="system.Percepción" data-dtype="Number">
+        {{#select system.Percepción}}
           <option value="0">+0</option>
           <option value="1">+1</option>
           <option value="2">+2</option>
@@ -67,36 +67,36 @@
       </select>
     </div>
     <div class="espacio_caract">
-      <label class="caract_Agilidad caract_valor">{{data.Agilidad.Valor}}</label>
-      <label class="caract_Agilidad_bono caract_bono activa_mod" data-bono_nombre="Agilidad">{{data.Agilidad.Bono}}</label>
-      <label class="caract_Aplomo caract_valor">{{data.Aplomo.Valor}}</label>
-      <label class="caract_Aplomo_bono caract_bono activa_mod" data-bono_nombre="Aplomo">{{data.Aplomo.Bono}}</label>
-      <label class="caract_Perspicacia caract_valor">{{data.Perspicacia.Valor}}</label>
-      <label class="caract_Perspicacia_bono caract_bono activa_mod" data-bono_nombre="Perspicacia">{{data.Perspicacia.Bono}}</label>
+      <label class="caract_Agilidad caract_valor">{{system.Agilidad.Valor}}</label>
+      <label class="caract_Agilidad_bono caract_bono activa_mod" data-bono_nombre="Agilidad">{{system.Agilidad.Bono}}</label>
+      <label class="caract_Aplomo caract_valor">{{system.Aplomo.Valor}}</label>
+      <label class="caract_Aplomo_bono caract_bono activa_mod" data-bono_nombre="Aplomo">{{system.Aplomo.Bono}}</label>
+      <label class="caract_Perspicacia caract_valor">{{system.Perspicacia.Valor}}</label>
+      <label class="caract_Perspicacia_bono caract_bono activa_mod" data-bono_nombre="Perspicacia">{{system.Perspicacia.Bono}}</label>
       <div class="caract_Proezas_valor_input">
-        <input type="text" name="data.Proezas.value" value="{{data.Proezas.value}}" data-dtype="Number" maxlength="2"/>
+        <input type="text" name="system.Proezas.value" value="{{system.Proezas.value}}" data-dtype="Number" maxlength="2"/>
       </div>
-      <label class="caract_Proezas_Max caract_bono restaura_proeza">{{data.Proezas.max}}</label>
-      {{#if (lte data.Salud.value 3)}}
+      <label class="caract_Proezas_Max caract_bono restaura_proeza">{{system.Proezas.max}}</label>
+      {{#if (lte system.Salud.value 3)}}
           <div class="caract_Salud_valor_input_red">
-          {{else}} {{#if (lte data.Salud.value 6)}}
+          {{else}} {{#if (lte system.Salud.value 6)}}
             <div class="caract_Salud_valor_input_orange">
-            {{else}} {{#if (lte data.Salud.value 10)}}
+            {{else}} {{#if (lte system.Salud.value 10)}}
               <div class="caract_Salud_valor_input_yellow">
               {{else}}
                 <div class="caract_Salud_valor_input_black">
             {{/if}}
           {{/if}}
         {{/if}}
-        <input type="text" name="data.Salud.value" value="{{data.Salud.value}}" data-dtype="Number" maxlength="2"/>
+        <input type="text" name="system.Salud.value" value="{{system.Salud.value}}" data-dtype="Number" maxlength="2"/>
       </div>
-      <label class="caract_Salud_max caract_bono restaura_salud">{{data.Salud.max}}</label>
-      <label class="caract_R_Física caract_valor tirada_Resistencia_Fisica">{{data.Resistencia_Física}}</label>
+      <label class="caract_Salud_max caract_bono restaura_salud">{{system.Salud.max}}</label>
+      <label class="caract_R_Física caract_valor tirada_Resistencia_Fisica">{{system.Resistencia_Física}}</label>
       <div class="caract_Estabilidad_valor_input">
-        <input type="text" name="data.Estabilidad.value" value="{{data.Estabilidad.value}}" data-dtype="Number" maxlength="2"/>
+        <input type="text" name="system.Estabilidad.value" value="{{system.Estabilidad.value}}" data-dtype="Number" maxlength="2"/>
       </div>
-      <label class="caract_Estabilidad_max caract_bono restaura_estabilidad">{{data.Estabilidad.max}}</label>
-      <label class="caract_R_Mental caract_valor tirada_Resistencia_Mental">{{data.Resistencia_Mental}}</label>
+      <label class="caract_Estabilidad_max caract_bono restaura_estabilidad">{{system.Estabilidad.max}}</label>
+      <label class="caract_R_Mental caract_valor tirada_Resistencia_Mental">{{system.Resistencia_Mental}}</label>
     </div>
 
     <div class="character-tabs-info sheet-body">

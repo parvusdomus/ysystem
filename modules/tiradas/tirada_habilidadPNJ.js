@@ -6,25 +6,25 @@ export async function TiradaHabilidadPNJ(actor, id_habilidad, objetivo) {
   let nombre_habilidad="";
   let valor_atributo="";
   if (id_habilidad=="Magia"){
-    valor_habilidad=actor.data.data.Magia.Valor;
-    nombre_habilidad=actor.data.data.Magia.Nombre;
-    valor_atributo=actor.data.data[actor.data.data.Magia.Atributo]
+    valor_habilidad=actor.system.Magia.Valor;
+    nombre_habilidad=actor.system.Magia.Nombre;
+    valor_atributo=actor.system[actor.system.Magia.Atributo]
   } else{
-    valor_habilidad=actor.data.data.Habilidades[id_habilidad].Valor;
-    nombre_habilidad=actor.data.data.Habilidades[id_habilidad].Nombre;
-    valor_atributo=actor.data.data[actor.data.data.Habilidades[id_habilidad].Atributo]
+    valor_habilidad=actor.system.Habilidades[id_habilidad].Valor;
+    nombre_habilidad=actor.system.Habilidades[id_habilidad].Nombre;
+    valor_atributo=actor.system[actor.system.Habilidades[id_habilidad].Atributo]
   }
 
   //PENALIZO POR HERIDAS
-  if (actor.data.data.Salud.value <= 3){
+  if (actor.system.Salud.value <= 3){
     valor_habilidad-=3;
-  } else if (actor.data.data.Salud.value <= 6) {
+  } else if (actor.system.Salud.value <= 6) {
     valor_habilidad-=2;
-  } else if (actor.data.data.Salud.value <= 10) {
+  } else if (actor.system.Salud.value <= 10) {
     valor_habilidad-=1;
   }
   //PENALIZO POR ARMADURA Y Escudo
-  valor_atributo-=Number(actor.data.data.Protección_Penalización);
+  valor_atributo-=Number(actor.system.Protección_Penalización);
   //MONTO LA TIRADA
   if (valor_habilidad < 0){valor_habilidad=0}
   let tirada=valor_habilidad+"d6"
@@ -40,9 +40,9 @@ export async function TiradaHabilidadPNJ(actor, id_habilidad, objetivo) {
   var archivo_template = "";
   var datos_template={};
   if (objetivo){
-    agilidad=Number(objetivo.document._actor.data.data.Agilidad.Valor)+Number(objetivo.document._actor.data.data.Agilidad.Bono)
-    aplomo=Number(objetivo.document._actor.data.data.Aplomo.Valor)+Number(objetivo.document._actor.data.data.Aplomo.Bono)
-    perspicacia=Number(objetivo.document._actor.data.data.Perspicacia.Valor)+Number(objetivo.document._actor.data.data.Perspicacia.Bono)
+    agilidad=Number(objetivo.system.Agilidad.Valor)+Number(objetivo.system.Agilidad.Bono)
+    aplomo=Number(objetivo.system.Aplomo.Valor)+Number(objetivo.system.Aplomo.Bono)
+    perspicacia=Number(objetivo.system.Perspicacia.Valor)+Number(objetivo.system.Perspicacia.Bono)
     if (game.settings.get ("ysystem", "aspectoFicha") == "Negro"){
       archivo_template = '/systems/ysystem/templates/dialogos/Negro/tirada_habilidad_objetivoPNJ.html';
     }
@@ -57,7 +57,7 @@ export async function TiradaHabilidadPNJ(actor, id_habilidad, objetivo) {
                         agilidad: agilidad,
                         aplomo: aplomo,
                         perspicacia: perspicacia,
-                        retrato: actor.data.img
+                        retrato: actor.img
                       };
   }
   else{
@@ -73,7 +73,7 @@ export async function TiradaHabilidadPNJ(actor, id_habilidad, objetivo) {
 
     datos_template = {
                         tirada: tirada,
-                        retrato: actor.data.img
+                        retrato: actor.img
                       };
   }
 
@@ -121,8 +121,8 @@ export async function TiradaHabilidadPNJ(actor, id_habilidad, objetivo) {
          total: d6Roll.total,
          dificultad: document.getElementById("dificultad").value,
          dados: dados,
-         actor: actor.data._id,
-         personaje: actor.data.name
+         actor: actor._id,
+         personaje: actor.name
         };
         var contenido_Dialogo_chat;
         renderTemplate(archivo_template_chat, datos_template_chat).then(

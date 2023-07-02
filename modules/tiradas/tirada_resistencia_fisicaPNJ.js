@@ -1,16 +1,15 @@
 export async function TiradaResistenciaFisicaPNJ(actor) {
-  console.log ("TIRADA RESISTENCIA FISICA")
   const element = event.currentTarget;
   //SACO LOS VALORES DE HABILIDAD Y ATRIBUTO
   let valor_habilidad=3;
-  let dificultad=actor.data.data.Resistencia_Física;
+  let dificultad=actor.system.Resistencia_Física;
   let nombre_habilidad="Resistencia Física";
   //PENALIZO POR HERIDAS
-  if (actor.data.data.Salud.value <= 3){
+  if (actor.system.Salud.value <= 3){
     valor_habilidad-=3;
-  } else if (actor.data.data.Salud.value <= 6) {
+  } else if (actor.system.Salud.value <= 6) {
     valor_habilidad-=2;
-  } else if (actor.data.data.Salud.value <= 10) {
+  } else if (actor.system.Salud.value <= 10) {
     valor_habilidad-=1;
   }
   //MONTO LA TIRADA
@@ -43,8 +42,8 @@ export async function TiradaResistenciaFisicaPNJ(actor) {
          total: d6Roll.total,
          dificultad: dificultad,
          dados: dados,
-         actor: actor.data._id,
-         personaje: actor.data.name
+         actor: actor._id,
+         personaje: actor.name
         };
         var contenido_Dialogo_chat;
         renderTemplate(archivo_template_chat, datos_template_chat).then(

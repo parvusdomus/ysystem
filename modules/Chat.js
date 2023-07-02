@@ -12,7 +12,7 @@ export default class YsystemChat {
     const element = event.currentTarget;
     const dataset = element.dataset;
     const actor = game.actors.get(dataset.actor_id);
-    if (actor.data.data.Proezas.value <= 0){
+    if (actor.system.Proezas.value <= 0){
       ui.notifications.warn("No te quedan puntos de PROEZA!!");
       return 1;
     }
@@ -66,9 +66,9 @@ export default class YsystemChat {
                tirada+="+"+dataset.valor_atributo;
              }
              let d6Roll = new Roll(tirada).roll({async: false});
-             var proezas=actor.data.data.Proezas.value;
+             var proezas=actor.system.Proezas.value;
              proezas--;
-             actor.update ({ 'data.Proezas.value': proezas });
+             actor.update ({ 'system.Proezas.value': proezas });
              let flavor = tirada+" VS "+ dataset.dificultad;
              const archivo_template_chat = '/systems/ysystem/templates/chat/tirada_habilidad_repetida_chat.html';
              if (d6Roll.total >= dataset.dificultad){resultado="ÉXITO"}
@@ -98,8 +98,8 @@ export default class YsystemChat {
               total: d6Roll.total,
               dificultad: dataset.dificultad,
               dados: dados_final,
-              actor: actor.data._id,
-              personaje: actor.data.name
+              actor: actor._id,
+              personaje: actor.name
              };
              renderTemplate(archivo_template_chat, datos_template_chat).then(
               (contenido_Dialogo_chat)=> {
@@ -120,19 +120,16 @@ export default class YsystemChat {
   }
 
   static _onrepite_ataque_proeza (event){
-    console.log ("REPITE ATAQUE PROEZA")
     const element = event.currentTarget;
     const dataset = element.dataset;
     const actor = game.actors.get(dataset.actor_id);
-    console.log ("ANTES")
     let objetivo;
     let objetivo_id;
     if (dataset.objetivo_id){
       objetivo = canvas.tokens.get(dataset.objetivo_id);
-      objetivo_id=objetivo.data._id;
+      objetivo_id=objetivo._id;
     }
-    console.log ("DESPUES")
-    if (actor.data.data.Proezas.value <= 0){
+    if (actor.system.Proezas.value <= 0){
       ui.notifications.warn("No te quedan puntos de PROEZA!!");
       return 1;
     }
@@ -186,7 +183,7 @@ export default class YsystemChat {
                tirada+="+"+dataset.valor_atributo;
              }
              let d6Roll = new Roll(tirada).roll({async: false});
-             var proezas=actor.data.data.Proezas.value;
+             var proezas=actor.system.Proezas.value;
              proezas--;
              actor.update ({ 'data.Proezas.value': proezas });
              let flavor = tirada+" VS "+ dataset.dificultad;
@@ -218,11 +215,11 @@ export default class YsystemChat {
               total: d6Roll.total,
               dificultad: dataset.dificultad,
               dados: dados_final,
-              actor: actor.data._id,
-              proezas: actor.data.data.Proezas.value,
+              actor: actor._id,
+              proezas: actor.system.Proezas.value,
               daño: dataset.daño,
               objetivo: objetivo_id,
-              personaje: actor.data.name
+              personaje: actor.name
              };
              renderTemplate(archivo_template_chat, datos_template_chat).then(
               (contenido_Dialogo_chat)=> {
@@ -246,8 +243,9 @@ export default class YsystemChat {
     const element = event.currentTarget;
     const dataset = element.dataset;
     const actor = game.actors.get(dataset.actor_id);
-    const objetivo = canvas.tokens.get(dataset.objetivo_id);
-    let VidaOriginal=Number(objetivo.document._actor.data.data.Salud.value);
+    //const objetivo = canvas.tokens.objects.children.find(document.actorId => dataset.objetivo_id);
+    const objetivo = canvas.tokens.objects.children.find(objetivo => objetivo.document.actorId ==  dataset.objetivo_id)?.actor;
+    let VidaOriginal=Number(objetivo.system.Salud.value);
     let VidaActual=0;
     let Mensaje="";
     let NumTiradasResistencia=0;
@@ -256,10 +254,10 @@ export default class YsystemChat {
       return 1
     }
     if (objetivo){
-      VidaActual=Number(objetivo.document._actor.data.data.Salud.value)-Number(dataset.daño)
+      VidaActual=Number(objetivo.system.Salud.value)-Number(dataset.daño)
       if (VidaActual < 0){VidaActual=0}
-      objetivo.document._actor.update ({ 'data.Salud.value': VidaActual });
-      Mensaje = dataset.daño + " puntos de daño aplicado/s a "+objetivo.document._actor.data.name;
+      objetivo.update ({ 'system.Salud.value': VidaActual });
+      Mensaje = dataset.daño + " puntos de daño aplicado/s a "+objetivo.name;
       ui.notifications.notify(Mensaje);
       const chatData = {
         content: Mensaje,
@@ -290,7 +288,6 @@ export default class YsystemChat {
       if (VidaOriginal<4 && VidaOriginal>=2){
         if (VidaActual<2){NumTiradasResistencia++;}
       }
-      console.log ("CORRESPONDEN TIRADAS DE RESISTENCIA: "+NumTiradasResistencia)
       for (let i = 0; i < NumTiradasResistencia; i++){
         TiradaResistenciaFisicaAuto (objetivo, VidaActual);}
 
@@ -306,7 +303,7 @@ export default class YsystemChat {
     const element = event.currentTarget;
     const dataset = element.dataset;
     const actor = game.actors.get(dataset.actor_id);
-    if (actor.data.data.Proezas.value <=0){
+    if (actor.system.Proezas.value <=0){
       ui.notifications.warn("No te quedan Proezas");
       return 1;
     }
@@ -318,10 +315,10 @@ export default class YsystemChat {
     let tirada=dataset.daño+"+1d6x"
     let d6xRoll = new Roll(tirada).roll({async: false});
     let daño=d6xRoll.total;
-    let proezas=Number(actor.data.data.Proezas.value)-1;
-    actor.update ({ 'data.Proezas.value': proezas });
+    let proezas=Number(actor.system.Proezas.value)-1;
+    actor.update ({ 'system.Proezas.value': proezas });
     const message = game.messages.get(messageId)
-    let flavor=actor.data.name+" usa Proeza para aumentar el daño"
+    let flavor=actor.name+" usa Proeza para aumentar el daño"
     d6xRoll.toMessage({
       speaker: ChatMessage.getSpeaker({ actor: actor }),
       flavor: flavor
@@ -335,10 +332,10 @@ export default class YsystemChat {
      dificultad: dataset.dificultad,
      dados: dados_split,
      actor: dataset.actor_id,
-     proezas: actor.data.data.Proezas.value,
+     proezas: actor.system.Proezas.value,
      daño: daño,
      objetivo: dataset.objetivo_id,
-     personaje: actor.data.name,
+     personaje: actor.name,
      valor_habilidad: dataset.valor_habilidad
     };
     renderTemplate(archivo_template_chat, datos_template_chat).then(
@@ -352,7 +349,7 @@ export default class YsystemChat {
     const element = event.currentTarget;
     const dataset = element.dataset;
     const actor = game.actors.get(dataset.actor_id);
-    if (actor.data.data.Proezas.value <= 0){
+    if (actor.system.Proezas.value <= 0){
       ui.notifications.warn("No te quedan puntos de PROEZA!!");
       return 1;
     }
@@ -407,9 +404,9 @@ export default class YsystemChat {
                tirada+="+"+dataset.valor_atributo;
              }
              let d6Roll = new Roll(tirada).roll({async: false});
-             var proezas=actor.data.data.Proezas.value;
+             var proezas=actor.system.Proezas.value;
              proezas--;
-             actor.update ({ 'data.Proezas.value': proezas });
+             actor.update ({ 'system.Proezas.value': proezas });
              let flavor = tirada+" VS "+ dataset.dificultad;
              const archivo_template_chat = '/systems/ysystem/templates/chat/tirada_hechizo_repetida_chat.html';
              if (d6Roll.total >= dataset.dificultad1 && d6Roll.total >= dataset.dificultad2){resultado="ÉXITO"}
@@ -440,8 +437,8 @@ export default class YsystemChat {
               dificultad1: dataset.dificultad1,
               dificultad2: dataset.dificultad2,
               dados: dados_final,
-              actor: actor.data._id,
-              personaje: actor.data.name
+              actor: actor._id,
+              personaje: actor.name
              };
              renderTemplate(archivo_template_chat, datos_template_chat).then(
               (contenido_Dialogo_chat)=> {

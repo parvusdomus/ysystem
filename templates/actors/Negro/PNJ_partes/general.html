@@ -2,7 +2,7 @@
   <div class="Jugador_contenedor_general">
     <div class="PNJ_espacio_habilidades">
       <ol class="lista-habilidades">
-          {{#each data.Habilidades as |habilidad id|}}
+          {{#each system.Habilidades as |habilidad id|}}
             <li class="habilidad">
               <label class="tirada_habilidad" data-Habilidad_id="{{id}}">{{habilidad.Nombre}}</label>
                 <span class="mod_habilidad" data-habilidad_id="{{id}}">
@@ -27,10 +27,10 @@
       <ol class="lista-armas" data-item-id="{{item._id}}">
           {{#each Armas as |item id|}}
             <li class="armas item" data-item-id="{{item._id}}">
-              <div class="PNJ_arma_linea1 tirada_ataque_arma" data-arma="{{item.arma}}" data-daño="{{item.data.Daño_Total}}"
-              data-habilidad_id="{{item.data.Habilidad}}"><label>{{item.name}}</label></div>
-                <label class="PNJ_arma_linea2">{{item.data.Ataque}}</label>
-                <label class="PNJ_arma_linea3">{{item.data.Daño_Total}}</label>
+              <div class="PNJ_arma_linea1 tirada_ataque_arma" data-arma="{{item.arma}}" data-daño="{{item.system.Daño_Total}}"
+              data-habilidad_id="{{item.system.Habilidad}}"><label>{{item.name}}</label></div>
+                <label class="PNJ_arma_linea2">{{item.system.Ataque}}</label>
+                <label class="PNJ_arma_linea3">{{item.system.Daño_Total}}</label>
                 <span class="PNJ_controles_armas">
                   <a class="item-control item-edit"><i class="fas fa-edit"><span class="tooltiptext"></span></i></a>
                   <a class="item-control item-delete"><i class="fas fa-trash"><span class="tooltiptext"></span></i></a>
@@ -49,10 +49,10 @@
         {{#each Armaduras as |item id|}}
           <li class="armas item" data-item-id="{{item._id}}">
             <div class="PNJ_armadura_linea1"><label>{{item.name}}</label></div>
-            <label class="PNJ_armadura_linea2">{{item.data.Nivel}} </label>
-            <label class="PNJ_armadura_linea3">{{item.data.Penalizador}}</label>
+            <label class="PNJ_armadura_linea2">{{item.system.Nivel}} </label>
+            <label class="PNJ_armadura_linea3">{{item.system.Penalizador}}</label>
             <span class="PNJ_controles_armaduras">
-              {{#if (eq item.data.Equipado "false")}}
+              {{#if (eq item.system.Equipado "false")}}
                 <a class="item-control item-equip" style="color:Grey"><i class="fas fa-tshirt"><span class="tooltiptext"></span></i></a>
               {{else}}
                 <a class="item-control item-equip" style="color:Black"><i class="fas fa-tshirt"><span class="tooltiptext"></span></i></a>
@@ -70,10 +70,10 @@
           {{#each Escudos as |item id|}}
             <li class="armas item" data-item-id="{{item._id}}">
               <div class="PNJ_escudo_linea1"><label>{{item.name}}</label></div>
-                <label class="PNJ_escudo_linea2">{{item.data.Nivel}} </label>
-                <label class="PNJ_escudo_linea3">{{item.data.Penalizador}}</label>
+                <label class="PNJ_escudo_linea2">{{item.system.Nivel}} </label>
+                <label class="PNJ_escudo_linea3">{{item.system.Penalizador}}</label>
                 <span class="PNJ_controles_escudo">
-                  {{#if (eq item.data.Equipado "false")}}
+                  {{#if (eq item.system.Equipado "false")}}
                     <a class="item-control item-equip" style="color:Grey"><i class="fas fa-tshirt"><span class="tooltiptext"></span></i></a>
                   {{else}}
                     <a class="item-control item-equip" style="color:Black"><i class="fas fa-tshirt"><span class="tooltiptext"></span></i></a>

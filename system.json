@@ -1,37 +1,44 @@
 {
-  "name": "ysystem",
   "title": "Ysystem (No Oficial): sistema genérico.",
   "description": "Ysystem es un reglamento genérico diseñado por Walhalla Ediciones para jugar cualquier aventura de rol. Como sistema de juego, destaca por ser completo, sencillo, versátil, sólido, heroico, ligeramente táctico y con un cierto componente narrativo. Con Ysystem puedes disfrutar plenamente de cualquier ambientación sin necesidad de aprender nuevas mecánicas cada vez. El reglamento es gratuito y está disponible en libre descarga para cualquier aficionado, autor o editorial que lo quiera implementar gracias a su Open Game License.",
   "version": "1.1.3",
-  "templateVersion": 2,
-  "author": "ParvusDomus",
-     "minimumCoreVersion": "9",
-     "compatibleCoreVersion": "9",
-
-  "scripts": [],
-  "esmodules": [
-      "ysystem.js"
-    ],
-  "styles": ["styles/fichaPJ.css",
-              "styles/fichaObj.css",
-              "styles/ysystem.css",
-              "styles/fichaPNJ.css",
-              "styles/dialogos.css",
-              "styles/chat.css"
+  "authors": [
+    {
+      "name": "ParvusDomus",
+      "flags": {}
+    }
   ],
-  "packs": [{
-                        "name": "documentacion",
-                        "label": "Documentación Básica",
-                        "system": "ysystem",
-                        "path": "./packs/documentacion.db",
-                        "type": "JournalEntry"
-                }],
-  "languages": [],
-  "socket": false,
+  "compatibility": {
+    "minimum": "10",
+    "verified": "11"
+  },
+  "esmodules": [
+    "ysystem.js"
+  ],
+  "styles": [
+    "styles/fichaPJ.css",
+    "styles/fichaObj.css",
+    "styles/ysystem.css",
+    "styles/fichaPNJ.css",
+    "styles/dialogos.css",
+    "styles/chat.css"
+  ],
+  "packs": [
+    {
+      "name": "documentacion",
+      "label": "Documentación Básica",
+      "system": "ysystem",
+      "path": "packs/documentacion.db",
+      "type": "JournalEntry",
+      "private": false,
+      "flags": {}
+    }
+  ],
   "initiative": "1d6 + @Iniciativa",
   "gridDistance": 1.5,
   "gridUnits": "m",
   "url": "https://github.com/parvusdomus/ysystem",
   "manifest": "https://github.com/parvusdomus/ysystem/releases/latest/download/system.json",
-  "download": "https://github.com/parvusdomus/ysystem/releases/latest/download/ysystem.zip"
+  "download": "https://github.com/parvusdomus/ysystem/releases/latest/download/ysystem.zip",
+  "id": "ysystem"
 }

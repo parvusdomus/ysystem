@@ -7,24 +7,24 @@ export async function TiradaAtaque(actor, nombre_arma, id_habilidad, daño, obje
   let valor_atributo="";
   let objetivo_id;
   if (id_habilidad=="Magia"){
-    valor_habilidad=actor.data.data.Magia.Valor;
-    nombre_habilidad=actor.data.data.Magia.Nombre;
-    valor_atributo=actor.data.data[actor.data.data.Magia.Atributo]
+    valor_habilidad=actor.system.Magia.Valor;
+    nombre_habilidad=actor.system.Magia.Nombre;
+    valor_atributo=actor.system[actor.system.Magia.Atributo]
   } else{
-    valor_habilidad=actor.data.data.Habilidades[id_habilidad].Valor;
-    nombre_habilidad=actor.data.data.Habilidades[id_habilidad].Nombre;
-    valor_atributo=actor.data.data[actor.data.data.Habilidades[id_habilidad].Atributo]
+    valor_habilidad=actor.system.Habilidades[id_habilidad].Valor;
+    nombre_habilidad=actor.system.Habilidades[id_habilidad].Nombre;
+    valor_atributo=actor.system[actor.system.Habilidades[id_habilidad].Atributo]
   }
   //PENALIZO POR HERIDAS
-  if (actor.data.data.Salud.value <= 3){
+  if (actor.system.Salud.value <= 3){
     valor_habilidad-=3;
-  } else if (actor.data.data.Salud.value <= 6) {
+  } else if (actor.system.Salud.value <= 6) {
     valor_habilidad-=2;
-  } else if (actor.data.data.Salud.value <= 10) {
+  } else if (actor.system.Salud.value <= 10) {
     valor_habilidad-=1;
   }
   //PENALIZO POR ARMADURA Y Escudo
-  valor_atributo-=Number(actor.data.data.Protección_Penalización);
+  valor_atributo-=Number(actor.system.Protección_Penalización);
   //MONTO LA TIRADA
   if (valor_habilidad < 0){valor_habilidad=0}
   let tirada=valor_habilidad+"d6"
@@ -37,13 +37,13 @@ export async function TiradaAtaque(actor, nombre_arma, id_habilidad, daño, obje
   let aplomo=0;
   let perspicacia=0;
   let resultado=""
-  let mensaje_Proeza= actor.data.name+ " usa Proeza para la tirada..."
+  let mensaje_Proeza= actor.name+ " usa Proeza para la tirada..."
   var archivo_template = "";
   var datos_template={};
   if (objetivo){
-    agilidad=Number(objetivo.document._actor.data.data.Agilidad.Valor)+Number(objetivo.document._actor.data.data.Agilidad.Bono)
-    aplomo=Number(objetivo.document._actor.data.data.Aplomo.Valor)+Number(objetivo.document._actor.data.data.Aplomo.Bono)
-    perspicacia=Number(objetivo.document._actor.data.data.Perspicacia.Valor)+Number(objetivo.document._actor.data.data.Perspicacia.Bono)
+    agilidad=Number(objetivo.system.Agilidad.Valor)+Number(objetivo.system.Agilidad.Bono)
+    aplomo=Number(objetivo.system.Aplomo.Valor)+Number(objetivo.system.Aplomo.Bono)
+    perspicacia=Number(objetivo.system.Perspicacia.Valor)+Number(objetivo.system.Perspicacia.Bono)
     if (game.settings.get ("ysystem", "aspectoFicha") == "Negro"){
       archivo_template = '/systems/ysystem/templates/dialogos/Negro/tirada_ataque_objetivo.html';
     }
@@ -87,12 +87,12 @@ export async function TiradaAtaque(actor, nombre_arma, id_habilidad, daño, obje
       label: "Lanzar",
       callback: () => {
         let dificultad=document.getElementById("dificultad").value;
-        let proezas=actor.data.data.Proezas.value;
+        let proezas=actor.system.Proezas.value;
         let daño_total=daño;
         if (objetivo){
-          dificultad=Number(dificultad)+Number(objetivo.document._actor.data.data.Protección_Agilidad);
-          daño_total=Number(daño_total)-Number(objetivo.document._actor.data.data.Protección_Daño);
-          objetivo_id=objetivo.data._id;
+          dificultad=Number(dificultad)+Number(objetivo.system.Protección_Agilidad);
+          daño_total=Number(daño_total)-Number(objetivo.system.Protección_Daño);
+          objetivo_id=objetivo._id;
         }
         if (document.getElementById("mod_dados").value != 0){
           valor_habilidad+=Number(document.getElementById("mod_dados").value)
@@ -117,7 +117,7 @@ export async function TiradaAtaque(actor, nombre_arma, id_habilidad, daño, obje
           }
           else{ui.notifications.warn("No te quedan puntos de PROEZA!!");}
         }
-        if (actor.data.data.Recuerdo_Cuando_Activo=="true"){
+        if (actor.system.Recuerdo_Cuando_Activo=="true"){
           valor_habilidad+=2
           tirada=valor_habilidad+"d6+"+valor_atributo
           actor.update ({ 'data.Recuerdo_Cuando_Activo': "false" });
@@ -174,11 +174,11 @@ export async function TiradaAtaque(actor, nombre_arma, id_habilidad, daño, obje
          total: d6Roll.total,
          dificultad: dificultad,
          dados: dados,
-         actor: actor.data._id,
-         proezas: actor.data.data.Proezas.value,
+         actor: actor._id,
+         proezas: actor.system.Proezas.value,
          daño: daño_total,
          objetivo: objetivo_id,
-         personaje: actor.data.name
+         personaje: actor.name
         };
         var contenido_Dialogo_chat;
         renderTemplate(archivo_template_chat, datos_template_chat).then(

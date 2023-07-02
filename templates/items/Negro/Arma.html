@@ -1,22 +1,21 @@
 <form class="{{cssClass}} flexcol" autocomplete="off">
   <img class="content-background" src="/systems/ysystem/assets/Negro/fichas/arma-Bg.webp" alt="?"/>
   <div class=espacio_objeto>
-    <div class="Objeto-nombre"><input name="name" type="text" value="{{data.name}}" placeholder='Nombre'
-                                         onClick="this.select();"/></div>
+    <div class="Objeto-nombre"><input name="name" type="text" value="{{item.name}}" placeholder='Nombre' onClick="this.select();"/></div>
       <div class="Objeto-foto">
-        <img class="profile-img" src="{{data.img}}" data-edit="img" title="{{name}}" alt='Imagen del Objeto'/>
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" alt='Imagen del Objeto'/>
       </div>
-      <select class="Arma_Habilidad_select" name="data.Habilidad" data-dtype="String">
-        {{#select data.data.Habilidad}}
+      <select class="Arma_Habilidad_select" name="system.Habilidad" data-dtype="String">
+        {{#select item.system.Habilidad}}
         <option value="Lucha">Lucha</option>
         <option value="Puntería">Puntería</option>
         {{/select}}
       </select>
       <div class="Arma_Daño_input">
-          <input type="text" name="data.Daño" value="{{data.data.Daño}}" data-dtype="Number" maxlength="2"/>
+          <input type="text" name="system.Daño" value="{{item.system.Daño}}" data-dtype="Number" maxlength="2"/>
         </div>
-        <select class="Arma_Bono_select" name="data.Bono" data-dtype="String">
-          {{#select data.data.Bono}}
+        <select class="Arma_Bono_select" name="system.Bono" data-dtype="String">
+          {{#select item.system.Bono}}
           <option value="FUE_2">FUE/2</option>
           <option value="FUE">FUE</option>
           <option value="PER">PER</option>
@@ -24,6 +23,6 @@
         </select>
     </div>
     <div class="Objeto_contenedor_descripcion">
-        {{editor content=data.data.Descripción target="data.Descripción" button=true owner=owner editable=true}}
+        {{editor item.system.Descripción target="system.Descripción" button=true owner=owner editable=true}}
     </div>
 </form>

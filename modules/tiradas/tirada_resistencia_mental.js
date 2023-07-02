@@ -1,9 +1,8 @@
 export async function TiradaResistenciaMental(actor) {
-  console.log ("TIRADA RESISTENCIA MENTAL")
   const element = event.currentTarget;
   //SACO LOS VALORES DE HABILIDAD Y ATRIBUTO
   let valor_habilidad=3;
-  let dificultad=actor.data.data.Resistencia_Mental;
+  let dificultad=actor.system.Resistencia_Mental;
   let nombre_habilidad="R. Mental";
 
   //MONTO LA TIRADA
@@ -11,7 +10,7 @@ export async function TiradaResistenciaMental(actor) {
   let tirada=valor_habilidad+"d6"
 
   let resultado=""
-        let proezas=actor.data.data.Proezas.value;
+        let proezas=actor.system.Proezas.value;
         let d6Roll = new Roll(tirada).roll({async: false});
         let flavor = tirada+" VS "+ dificultad;
         const archivo_template_chat = '/systems/ysystem/templates/chat/tirada_habilidad_chat.html';
@@ -37,9 +36,9 @@ export async function TiradaResistenciaMental(actor) {
          total: d6Roll.total,
          dificultad: dificultad,
          dados: dados,
-         actor: actor.data._id,
-         proezas: actor.data.data.Proezas.value,
-         personaje: actor.data.name
+         actor: actor._id,
+         proezas: actor.system.Proezas.value,
+         personaje: actor.name
         };
         var contenido_Dialogo_chat;
         renderTemplate(archivo_template_chat, datos_template_chat).then(
