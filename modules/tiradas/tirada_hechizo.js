@@ -1,7 +1,19 @@
 export async function TiradaHechizo(actor, poder, id_atributo, dificultad, objetivo) {
   const element = event.currentTarget;
   const dataset = element.dataset;
-  let Ppoder=(Number(dificultad)/5)-1;
+  let Ppoder=0;
+  switch (Number(dificultad)){
+    case 8:
+      Ppoder=2;
+      break;
+    case 12:
+      Ppoder=4;
+      break;
+    case 16:
+      Ppoder=6;
+      break;
+  }
+
   let PpoderActual=actor.system.Poder.value;
 
   //SACO LOS VALORES DE HABILIDAD Y ATRIBUTO
