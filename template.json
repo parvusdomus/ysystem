@@ -235,6 +235,11 @@
                   "Nombre": "Puntería",
                   "Valor": 1,
                   "Atributo": "Percepción"
+                },
+                "Fuerza_bruta":{
+                  "Nombre": "Fuerza bruta",
+                  "Valor": 1,
+                  "Atributo": "Fuerza"
                 }
               },
               "Magia":{
